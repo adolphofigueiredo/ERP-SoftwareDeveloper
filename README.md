@@ -1,1 +1,1 @@
-Repository created to insert the exercises developed during the ERP Software Developer course held at ITS ICT Piemonte. In addition to these exercises, I added exercises that I believe will be useful for my development in my knowledge of these programming languages.
+Repository created to insert the exercises developed during the ERP Software Developer course held at ITS ICT Piemonte. In addition to these exercises, I added exercises that I believe will be useful to develop my knowledge of these programming languages.

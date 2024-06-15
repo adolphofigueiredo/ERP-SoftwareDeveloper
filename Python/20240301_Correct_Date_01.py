@@ -1,12 +1,10 @@
 '''
-
 Author: Adolpho Silverio Figueiredo Neto
 Date: 01/03/2024
 
 Exercise: Date format
 Enter a date in the format DDMMYYYY by inputting three numbers DD, MM, and YYYY.
 Verify if the entered date is correct, that is, if it represents a real date.
-
 '''
 
 DD = int(input("Enter the day: "))

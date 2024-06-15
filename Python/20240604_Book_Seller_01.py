@@ -48,7 +48,7 @@ def SortByCostPerPage(Library: list) -> list:
     '''
     Function: SortByCostPerPage
     Sorts the books in the library by cost per page in ascending order.
-    Formal parameters:
+    Formal parameters: 
     Library --> list containing Book objects.
     Return value:
     Library --> the sorted list of books.

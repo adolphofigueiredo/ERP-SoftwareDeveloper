@@ -1,7 +1,5 @@
 '''
-Author: Adolpho Silverio Figueiredo Neto - ICTS23-25.432
-email: adolpho.silverio@edu.itspiemonte.it / adolphoneto@gmail.com
-Tel: +39 345 3359762
+Author: Adolpho Silverio Figueiredo Neto
 Category: Student - Fundamentals of Programming
 Date: 17/06/2024
 

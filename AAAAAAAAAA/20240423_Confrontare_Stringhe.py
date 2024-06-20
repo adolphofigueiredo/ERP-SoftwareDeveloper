@@ -1,0 +1,10 @@
+str1 = "ABC"
+str2 = "abc"
+str3 = "ABC"
+str4 = "ABCD"
+str5 = "ABD"
+print(str1 == str2)
+print(str1 > str2)
+print(str1 == str3)
+print(str1 > str4)
+print(str1 > str5)

@@ -20,7 +20,7 @@ negative_count = 0
 
 # Processing
 
-while choice.lower() == "y":
+while choice.lower() == "y": 
     counter += 1
     num = int(input("\nEnter number {}: ".format(counter)))
     if num == 0:

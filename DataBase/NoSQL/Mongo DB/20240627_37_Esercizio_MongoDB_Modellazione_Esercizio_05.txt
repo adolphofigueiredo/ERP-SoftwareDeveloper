@@ -1,0 +1,63 @@
+MUSEO
+{
+    _id: ObjectId(),
+    Nome: <string>,
+    Indirizzo: {
+        Via: <string>,
+        NumeroCivico: <string , number>,
+        CodicePostale: <string>,
+        Citta: <string>,
+        Geo: {
+            Type: <string>,
+            Coord: [<number>]     //Quando si utilizza [] indica che stiamo creando una lista
+        }
+    }
+    Telefono: <string>,
+    SitoWeb: <string>             //polimorfico because is optional
+}
+
+--------------------------------------------------------------------------
+
+OGGETTI
+{
+    _id: <number>,
+    Titolo: <string>,
+    Descrizione: <string>,
+    Autori: [<string>],
+    Categoria: <string>,
+    Caratteristiche: [
+        {
+            Nome: <string>,
+            Valore: <string , number>,
+            UnitaMisura: <string>
+        }
+    ],
+    Museo: {                      //extended reference
+        _id: ObjectId(),
+        Nome: <string>
+    }
+}
+
+--------------------------------------------------------------------------
+
+MOSTRA                            //modelo a bucket
+{
+    _id: ObjectId(),
+    Titolo: <string>,
+    Descrizione: <string>,
+    Curatori: [<string>],
+    MinData: <date>,
+    MaxData: <date>,
+    NEdizioni: <number>,
+    Oggeti: <number>,
+    Edizione: [
+        {
+            Inizio: <date>,
+            Fine: <date>,
+            Museo: {              //extended reference
+                id:  ObjectId(),
+                Nome: <string>
+            }
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+CLIENTE
+{
+    _id: ObjectId(),
+    Nome: <string>,
+    Cognome: <string>,
+    DataNascita: <date>,
+    Contatto: {                   //poliformico
+            Telefono: <string>,
+            email: <string>,
+            Skype: <string>
+        },
+    Contatto2: [
+        {                   //pattern attributi //è una opzione 
+            Typr: <string>,
+            Valore: <string>
+        }
+    ],
+    Indirizzo: {
+        Via: <string>,
+        NumeroCivico: <string , number>,
+        Citta: <string>,
+        Provincia: <string>,
+        Regione: <string>
+    }
+}
+
+--------------------------------------------------------------------------
+
+POLIZZA ATTUALE
+{
+    _id: ObjectId(),
+    TipoPolizza: <string>,
+    DataFirma: <date>,
+    Voce: [<string>],
+    Versione: <number,
+    Cliente: {
+        Id: ObjectId(),           //Si referisci a ObjectId() di CLIENTE
+        Nome: <string>,
+        Cognome: <string>,
+        Contatto: {               //poliformico
+            Telefono: <string>,
+            email: <string>,
+            Skype: <string>
+        }
+    }
+}
+
+--------------------------------------------------------------------------
+
+POLIZZA VECCHIE //pattern document versioning
+{
+    _id: ObjectId(),
+    TipoPolizza: <string>,
+    DataFirma: <date>,
+    Voce: [<string>],
+    Versione: <number,
+    Cliente: {
+        Id: ObjectId(),           //Si referisci a ObjectId() di CLIENTE
+        Nome: <string>,
+        Cognome: <string>,
+        Contatto: {               //poliformico
+            Telefono: <string>,
+            email: <string>,
+            Skype: <string>
+        }
+    }
+}

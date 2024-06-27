@@ -1,0 +1,19 @@
+LIBRO
+{
+    _id: <string>,                //ISBN
+    titolo: <string>,
+    sottotitolo: <string>,
+    pagine: <number>,
+    lingua: <string>,
+    pubblicazione: <date>,
+    prezzi:[                      //pattern attributi
+        {                         //Quando si utilizza [] indica che stiamo creando una lista
+            valore: <number>,
+            valuta: <string>,
+            paese: <string>,
+            formato: <string>
+        }
+    ],
+    categoria: [<string>],        //Quando si utilizza [] indica che stiamo creando una lista //["fantasy", "classico"]
+    ancestor: [<string>]          //pattern ad albero
+}

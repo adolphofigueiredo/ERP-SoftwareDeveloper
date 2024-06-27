@@ -1,0 +1,44 @@
+PROPRIETA
+{
+    _id: ObjectId(),
+    NomeProprieta: <string>,
+    PrezzoNotte: {
+        Importo: <number>,
+        Valuta: <string>
+    },
+    Posizione: {
+        CodicePostale: <string>,
+        Citta: <string>,
+        Paese: <string>,
+        Loc: {
+            Type: <string>,
+            Coord: [<number>]     //Quando si utilizza [] indica che stiamo creando una lista
+        }
+    },
+    Recensioni: [                 //Pattern sottoinsieme + extended reference //fatto per ottimizzare la ricerca
+        Id: ObjectId(),           //Si referisci a ObjectId() di RECESIONE
+        TimeStamp: <datetime>,
+        Testo: <string>,
+        Voto: <number>
+    ],
+    NumRecensioni: <number>,      //pattern calcolato
+    VotoTotale: <number>          //pattern calcolato //La media si calcola dopo.
+}
+
+--------------------------------------------------------------------------
+
+RECESIONE
+{
+    _id: ObjectId(),
+    TimeStamp: <datetime>,
+    Testo: <string>,
+    Voto: <number>,
+    Autore: {
+        NomeAutore: <string>,
+        EmailAutore: <string>
+        },
+    Proprieta: {                  //extended reference
+        Id: ObjectId(),           //Si referisci a ObjectId() di PROPRIETA
+        NomeProprieta: <string>
+    }
+}

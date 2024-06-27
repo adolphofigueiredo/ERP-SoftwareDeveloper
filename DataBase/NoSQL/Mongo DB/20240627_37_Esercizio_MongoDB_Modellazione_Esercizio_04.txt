@@ -1,0 +1,76 @@
+CLIENTE
+{
+    _id: <string>                 //CodiceFiscale
+    Nome: <string>,
+    Cognome: <string>,
+    email: <string>,
+    Indirizzi: {                  //Poliformismo but you can also create a list and don't use Poliformismo.
+        Casa: {
+            Via: <string>,
+            NumeroCivico: <string , number>,
+            CodicePostale: <string>,
+            Citta: <string>,
+            Provincia: <string>,
+            Paese: <string>
+        }
+        Lavoro: {
+            Via: <string>,
+            NumeroCivico: <string , number>,
+            CodicePostale: <string>,
+            Citta: <string>,
+            Provincia: <string>,
+            Paese: <string>
+        }
+    }
+    Indirizzi2: [                 //pattern attributi //è una opzione 
+        {
+            Type: <string>,
+            Via: <string>,
+            NumeroCivico: <string , number>,
+            CodicePostale: <string>,
+            Citta: <string>,
+            Provincia: <string>,
+            Paese: <string>
+        }
+    ]
+}
+
+--------------------------------------------------------------------------
+
+PACCO
+{
+    _id: <string>                 //CodiceBarre
+    Dimensioni: {
+        Larghezza: <number>,
+        Altezza: <number>,
+        Profondita: <number>,
+        Peso: <number>
+    },
+    Mittente: {                   //extended reference utilizzando o pattern attributi
+        _id: <string>             //CodiceFiscale
+        Nome: <string>,
+        Cognome: <string>,
+        Indirizzo: {
+            Via: <string>,
+            NumeroCivico: <string , number>,
+            CodicePostale: <string>,
+            Citta: <string>,
+            Provincia: <string>,
+            Paese: <string>
+        }
+    },
+    Destinatario: {               //extended reference utilizzando o pattern attributi
+        _id: <string>             //CodiceFiscale
+        Nome: <string>,
+        Cognome: <string>,
+        Indirizzo: {
+            Via: <string>,
+            NumeroCivico: <string , number>,
+            CodicePostale: <string>,
+            Citta: <string>,
+            Provincia: <string>,
+            Paese: <string>
+        }
+    },
+    Posizione: [<string>]         //pattern ad albero
+}

@@ -1,0 +1,228 @@
+--------------------------------------------------------------------------------------
+
+1-A)
+
+SELECT DISTINCT R.CodR, NomeR	   (Pode escrever SELECT DISTINCT R.CodR, R.NomeR)
+FROM RIVISTA AS R, ARTICOLO AS A   (Pode escrever FROM RIVISTA R, ARTICOLO A)
+WHERE R.CodR = A.CodR
+AND Argomento = 'Motociclismo';    (Pode escrever AND Argomento LIKE 'Moto%')
+
+--------------------------------------------------------------------------------------
+
+SELECT CodR, NomeR
+FROM RIVISTA
+WHERE CodR IN (SELECT CodR
+	FROM ARTICOLO
+	WHERE Argomento=’motociclismo’);
+
+--------------------------------------------------------------------------------------
+
+SELECT CodR, NomeR
+FROM RIVISTA R
+WHERE EXISTS (SELECT *
+	FROM ARTICOLO A
+	WHERE A.CodR = R.CodR
+	AND Argomento=’motociclismo’);
+
+--------------------------------------------------------------------------------------
+
+1-B)
+
+SELECT CodR, NomeR 
+FROM RIVISTA
+WHERE CodR NOT IN (SELECT CodR
+	FROM ARTICOLO
+	WHERE Argomento = 'Motociclismo');
+
+--------------------------------------------------------------------------------------
+
+SELECT CodR, NomeR
+FROM RIVISTA R
+WHERE NOT EXISTS (SELECT *
+	FROM ARTICOLO A
+	WHERE A.CodR = R.CodR
+	AND Argomento=’motociclismo’);
+
+--------------------------------------------------------------------------------------
+
+1-C)
+
+SELECT CodR, NomeR
+FROM RIVISTA AS R
+WHERE CodR NOT IN SELECT CodR
+	FROM RIVISTA AS R, ARTICOLO AS A
+	WHERE Argomento <> 'Motociclismo'
+	AND R.CodR = A.CodR
+
+--------------------------------------------------------------------------------------
+
+SELECT CodR, NomeR
+FROM RIVISTA AS R
+WHERE CodR NOT IN SELECT CodR
+	FROM ARTICOLO
+	WHERE Argomento <> 'Motociclismo'
+	AND CodR IN (SELECT CodR FROM ARTICOLO)
+
+--------------------------------------------------------------------------------------
+
+1-D)
+
+SELECT R.CodR, NomeR
+FROM RIVISTA AS R, ARTICOLO AS A
+WHERE R.CodR = A.CodR
+AND (Argomento = 'Motociclismo' OR Argomento = 'Auto);
+
+--------------------------------------------------------------------------------------
+
+1-E)
+
+SELECT CodR, NomeR
+FROM RIVISTA
+WHERE CodR IN	(SELECT A.CodR
+	FROM ARTICOLO AS A
+	WHERE Argomento = 'Motociclismo')
+AND CodR IN (SELECT A.CodR
+	FROM ARTICOLO AS A
+	WHERE Argomento = 'Auto')
+
+--------------------------------------------------------------------------------------
+
+SELECT R.CodR, NomeR
+FROM RIVISTA R,ARTICOLO A
+WHERE R.CodR=A.CodR
+AND Argomento=’motociclismo’
+AND R.CodR IN (SELECT CodR
+	FROM ARTICOLO
+	WHERE Argomento=’auto’);
+
+--------------------------------------------------------------------------------------
+
+1-F)
+
+SELECT R.CodR, NomeR
+FROM RIVISTA AS R, ARTICOLO AS A
+WHERE R.CodR = A.CodR
+AND Argomento = 'Motociclismo'
+GROUP BY R.CodR, NomeR
+HAVING COUNT(*) >= 2;
+
+--------------------------------------------------------------------------------------
+
+1-G) Fazer
+
+SELECT R.CodR, NomeR
+FROM RIVISTA AS R, ARTICOLO AS A
+WHERE R.CodR = A.CodR
+AND Argomento = ’motociclismo’
+GROUP BY R.CodR, NomeR
+HAVING COUNT(*) = 1;
+
+--------------------------------------------------------------------------------------
+
+2-A)
+
+--------------------------------------------------------------------------------------
+
+2-B)
+
+--------------------------------------------------------------------------------------
+
+2-C)
+
+--------------------------------------------------------------------------------------
+
+2-D)
+
+SELECT [DISTINCT] ElencoAttributiDaVisualizzare
+FROM ElencoTabelleDaUtilizzare
+[WHERE CondizioniDiTupla ]
+[GROUP BY ElencoAttributiDiRaggruppamento ]
+[HAVING CondizioniSuAggregati ]
+[ORDER BY ElencoAttributiDiOrdinamento ]
+
+--------------------------------------------------------------------------------------
+
+2-E)
+
+--------------------------------------------------------------------------------------
+
+2-F)
+
+--------------------------------------------------------------------------------------
+
+2-G)
+
+--------------------------------------------------------------------------------------
+
+3-A)
+
+SELECT Did, DNome
+FROM DIPENDENTE
+WHERE Did IN (SELECT Did
+	FROM CERTIFICATO C, AEREO A
+	WHERE C.Aid = A.Aid
+	AND Autonomia >= 5000);
+
+--------------------------------------------------------------------------------------
+
+SELECT D.Did, DNome
+FROM DIPENDENTE D, CERTIFICATO C, AEREO A
+WHERE D.Did = C.Did AND C.Aid = A.Aid
+AND Autonomia >= 5000;
+
+--------------------------------------------------------------------------------------
+
+3-B)
+
+SELECT D.Did, DNome
+FROM DIPENDENTE D, CERTIFICATO C, AEREO A
+WHERE D.Did = C.Did AND C.Aid = A.Aid
+AND Autonomia >= 5000
+AND D.Did IN (
+	SELECT Did
+	FROM AEREO A2, CERTIFICATO C2
+	WHERE A2.aID = C2.Aid
+	AND ANome = 'Boeing'
+)
+GROUP BY D.Did, DNome
+HAVING COUNT(*) >= 2;
+
+--------------------------------------------------------------------------------------
+
+4-A)
+
+SELECT DISTINCT Aula
+FROM ORARIO-LEZIONI
+WHERE Aula NOT IN (SELECT Aula
+	FROM ORARIO-LEZIONI AS O, CORSO AS C
+	WHERE C.CodCorso = O.CodCorso
+	AND C.Anno = '1')
+
+--------------------------------------------------------------------------------------
+
+4-B)
+
+SELECT C.CodCorso, NomeC, SUM(OraFine-OraInizio) AS Durata
+FROM CORSO AS C, ORARIO-LEZIONI AS O
+WHERE C.CodCorso = O.CodCorso
+AND Anno = 3
+GROUP BY C.CodCorso, NomeC
+HAVING SUM(OraFine-OraInizio) > 10
+AND COUNT(DISTINCT GiornoSettimana) > 3
+
+--------------------------------------------------------------------------------------
+
+6-A)
+
+
+
+SELECT C.CodFiscale, C.Nome, AVG(Reddito) AS Media dei Reddito
+FROM CONTRIBUINTE AS C, DICHIARAZIONEAS D, PRESENTA AS P
+WHERE C.CodFiscale = P.CodFiscale
+AND D.CodDichiarazione = P.CodDichiarazione
+AND P.Data >= '2010-01-01'
+GROUP BY C.CodFiscale, C.Nome
+HAVING MAX(Reddito) > (SELECT AVG(Reddito)
+			FROM DICHIARAZIONEAS D)
+
+--------------------------------------------------------------------------------------

@@ -1,0 +1,47 @@
+/* Entities */
+entity UTENTE {
+    email,
+    NickName (id),
+    LinkProfiloSocial
+}
+entity CONTENUTO {
+    Codice (id),
+    Titolo,
+    Descrizione,
+    Tags (multi)
+}
+entity AUDIO {
+    Durata
+}
+entity FOTO {
+    Formato {
+        JPG,
+        PNG
+    }
+}
+entity VIDEO {
+    Durata,
+    Risoluzione
+}
+entity CONESSIONE {
+    OraFine,
+    OraInizio (external),
+    Data (external)
+}
+
+/* Relationships */
+relationship ISCONTENUTO (
+    UTENTE: one..many,
+    CONTENUTO: one..one
+)
+relationship ISCONESSIONE (
+    UTENTE: zero..many,
+    CONESSIONE: one..one external
+)
+
+/* Generalizations */
+CONTENUTO <= {
+    AUDIO,
+    FOTO,
+    VIDEO
+} (total, exclusive)

@@ -1,0 +1,48 @@
+/* Entities */
+entity STANZA {
+    Codice (id),
+    Piano,
+    Superficie,
+    Optional {
+        Balcone,
+        Jacuzzi,
+        MiniBar
+    }
+}
+entity SUITE {
+    CameraDaLetto,
+    Salotto,
+    SalaDaPranzo
+}
+entity AGENZIA {
+    Indirizzo {
+        CAP,
+        Numero,
+        Via,
+        Stato,
+        Citta
+    },
+    Codice (id),
+    Telefono,
+    Sito (optional)
+}
+entity PRENOTAZIONE {
+    DataFine (external),
+    DataInizio (external),
+    Prezzo
+}
+
+/* Relationships */
+relationship IS (
+    STANZA: zero..many,
+    PRENOTAZIONE: one..one external
+)
+relationship HA (
+    AGENZIA: zero..many,
+    PRENOTAZIONE: one..one
+)
+
+/* Generalizations */
+STANZA <= {
+    SUITE
+} (partial, exclusive)

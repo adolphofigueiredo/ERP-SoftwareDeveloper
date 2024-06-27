@@ -1,0 +1,44 @@
+/* Tables */
+CREATE TABLE STANZE (
+    CodiceNum INTEGER NOT NULL,
+    Piano INTEGER NOT NULL,
+    Superficie INTEGER NOT NULL,
+    Type VARCHAR(25) NOT NULL,
+    PRIMARY KEY (CodiceNum)
+);
+CREATE TABLE AGENZIE (
+    CodiceAlfaNum INTEGER NOT NULL,
+    Telefono INTEGER NOT NULL,
+    SitoWeb VARCHAR(100),
+    Via_Indirizzo VARCHAR(100) NOT NULL,
+    Numero_Indirizzo VARCHAR(25) NOT NULL,
+    CAP_Indirizzo INTEGER NOT NULL,
+    Citta_Indirizzo VARCHAR(50) NOT NULL,
+    Stato_Indirizzo VARCHAR(50) NOT NULL,
+    PRIMARY KEY (CodiceAlfaNum)
+);
+CREATE TABLE OPTIONAL (
+    Optional INTEGER NOT NULL,
+    STANZE_CodiceNum INTEGER NOT NULL,
+    PRIMARY KEY (Optional),
+    FOREIGN KEY (STANZE_CodiceNum) REFERENCES STANZE(CodiceNum)
+
+);
+CREATE TABLE PRENOTAZIONE (
+    STANZE_CodiceNum INTEGER NOT NULL,
+    DataInizio DATE NOT NULL,
+    Costo DECIMAL(7,2) NOT NULL,
+    DataFine DATE NOT NULL,
+    AGENZIE_CodiceAlfaNum INTEGER NOT NULL,
+    PRIMARY KEY (STANZE_CodiceNum, DataInizio),
+    FOREIGN KEY (STANZE_CodiceNum) REFERENCES STANZE(CodiceNum),
+    FOREIGN KEY (AGENZIE_CodiceAlfaNum) REFERENCES AGENZIE(CodiceAlfaNum)
+
+);
+CREATE TABLE SPAZIO (
+    STANZE_CodiceNum INTEGER NOT NULL,
+    SPAZI_Spazi VARCHAR(50) NOT NULL,
+    PRIMARY KEY (STANZE_CodiceNum, SPAZI_Spazi),
+    FOREIGN KEY (STANZE_CodiceNum) REFERENCES STANZE(CodiceNum)
+
+);

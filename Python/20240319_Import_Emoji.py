@@ -9,6 +9,6 @@ https://github.com/carpedm20/emoji?tab=readme-ov-file
 import emoji  # Importa a biblioteca emoji
 
 # Seção de saída
-print(emoji.emojize('Olá, Mundo :sunglasses:'))  # Imprime "Olá, Mundo" com emoji de óculos de sol
-print(emoji.emojize('Olá, Mundo :red_heart:'))  # Imprime "Olá, Mundo" com emoji do globo terrestre
-print(emoji.emojize('Olá, Mundo :dashing_away:'))
+print(emoji.emojize('Hello World! :sunglasses:'))  # Imprime "Olá, Mundo" com emoji de óculos de sol
+print(emoji.emojize('Hello World! :red_heart:'))  # Imprime "Olá, Mundo" com emoji do globo terrestre
+print(emoji.emojize('Hello World! :dashing_away:'))

@@ -1,11 +1,13 @@
-page 50103 "Book List"    //usar o comando tpage -> list para criar uma pagina pre formatada
+page 50102 "ITS Book List"    //usar o comando tpage -> list para criar uma pagina pre formatada
 {
+    Caption = 'Book List';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = Book;
-    CardPageId = "Book Card";
-
+    SourceTable = "ITS Book";
+    CardPageId = "ITS Book Card"; //Associar a a card para abrir desta lista
+    Editable = false;     //Agora esta lista nao pode ser mais editada diretamente, mais
+                          //ou menos como se fosse um excel.
     layout
     {
         area(Content)
@@ -37,6 +39,8 @@ page 50103 "Book List"    //usar o comando tpage -> list para criar uma pagina p
                     ApplicationArea = All; //é utilizado para fazer com que o campo serja visivel.
 
                 }
+
+
                 field(Quantity; Rec.Quantity)
                 {
                     ApplicationArea = All; //é utilizado para fazer com que o campo serja visivel.
@@ -57,23 +61,6 @@ page 50103 "Book List"    //usar o comando tpage -> list para criar uma pagina p
             {
                 ApplicationArea = All;
                 Visible = false;
-            }
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-
             }
         }
     }

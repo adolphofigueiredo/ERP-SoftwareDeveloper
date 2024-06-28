@@ -1,9 +1,10 @@
-page 50104 "Book Card"     //usar o comando tpage -> card para criar uma pagina pre formatada
+page 50101 "ITS Book Card"     //usar o comando tpage -> card para criar uma pagina pre formatada
 {
+    Caption = 'Book Card';
     PageType = Card;
     ApplicationArea = All;
-    UsageCategory = Administration;
-    SourceTable = Book;
+    //UsageCategory = Administration; Apagado pois assim a pagina nao aparee no menu.
+    SourceTable = "ITS Book";
 
     layout
     {
@@ -40,6 +41,10 @@ page 50104 "Book Card"     //usar o comando tpage -> card para criar uma pagina 
                 }
 
                 field("Author Name"; Rec."Author Name")
+                {
+                    ApplicationArea = All;
+                }
+                field("Book Series No."; Rec."Book Series No.")
                 {
                     ApplicationArea = All;
                 }
@@ -82,22 +87,4 @@ page 50104 "Book Card"     //usar o comando tpage -> card para criar uma pagina 
 
     }
 
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
-    var
-        myInt: Integer;
 }

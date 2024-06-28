@@ -1,5 +1,6 @@
-table 50101 Book
+table 50101 "ITS Book"                 //Usar o comando ttable para criar uma tabela pre formatada.
 {
+    Caption = 'Book';                  //Usado para colocar um nome que pode ser traduzido e todos podem ver.
     fields
     {
         field(1; "No."; Code[20])
@@ -16,28 +17,31 @@ table 50101 Book
         }
         field(4; "Author No."; Code[20])
         {
-            TableRelation = Author;
+            TableRelation = "ITS Author";
         }
         field(5; "Author Name"; Text[50])
         {
             FieldClass = FlowField;
-            CalcFormula = lookup(Author.Name where("No." = field("Author No.")));
+            CalcFormula = lookup("ITS Author".Name where("No." = field("Author No.")));
+            //falando da formula a cima primeiro digo onde buscar e o que buscar
+            //depois where seguido do campo que deve ir de encontro na linha que
+            //eu quero seguido do campo que eu tenho no momento.
         }
         field(6; Date; Date)
         {
-
         }
         field(7; Price; Decimal)
         {
-
         }
-        field(8; Discount; Decimal)
-        {
-
-        }
+        field(8; Discount; Enum "ITS Book Discount")
+        {                              //Usei F2 e renomeia o campo 
+        }                              //e todas as suas referencias
         field(9; Quantity; Integer)
         {
-
+        }
+        field(10; "Book Series No."; Code[20])
+        {
+            TableRelation = "ITS Book Series";
         }
     }
 

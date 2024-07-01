@@ -1,9 +1,10 @@
-page 50101 "ITS Book Card"     //usar o comando tpage -> card para criar uma pagina pre formatada
+page 50101 "ITS Book Card"     //usar o comando tpage -> card para criar uma
+                               //pagina pre formatada
 {
     Caption = 'Book Card';
     PageType = Card;
     ApplicationArea = All;
-    //UsageCategory = Administration; Apagado pois assim a pagina nao aparee no menu.
+    //UsageCategory = Administration; Apagado pois assim a pagina nao aparece no menu.
     SourceTable = "ITS Book";
 
     layout
@@ -13,7 +14,9 @@ page 50101 "ITS Book Card"     //usar o comando tpage -> card para criar uma pag
             group(General)
             {
 
-                Caption = 'General';// o caption é usado para mudar o nome de verdade, se usa isso para traduzir os nomes de tabelas campos e etc
+                Caption = 'General';// o caption é usado para mudar o nome de verdade,
+                                    //se usa isso para traduzir os nomes de tabelas
+                                    //campos e etc.
 
                 field("No."; Rec."No.")
                 {
@@ -51,7 +54,9 @@ page 50101 "ITS Book Card"     //usar o comando tpage -> card para criar uma pag
             }
             group(Sale)
             {
-                Caption = 'Sale'; // o caption é usado para mudar o nome de verdade, se usa isso para traduzir os nomes de tabelas campos e etc
+                Caption = 'Sale'; // o caption é usado para mudar o nome
+                                  //de verdade, se usa isso para traduzir
+                                  //os nomes de tabelas campos e etc
 
                 field(Quantity; Rec.Quantity)
                 {

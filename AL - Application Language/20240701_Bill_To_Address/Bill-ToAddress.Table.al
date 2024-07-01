@@ -1,80 +1,43 @@
-table 50100 "Bill-To Address"
+table 50103 "ITS Bill-To Address"
 {
     Caption = 'Bill-To Address';
 
     fields
     {
-        field(1; MyField; Integer)
+        field(1; "Entry No."; Integer)
         {
-            DataClassification = ToBeClassified;
-
+            Caption = 'Entry No.';
+            AutoIncrement = true;
         }
 
-        field(2; MyField; Integer)
+        field(2; "Customer No."; Code[20])
         {
-            DataClassification = ToBeClassified;
-
+            Caption = 'Customer No.';
         }
-
-        field(3; MyField; Integer)
+        field(3; "Name"; Text[100])
         {
-            DataClassification = ToBeClassified;
-
+            Caption = 'Name';
         }
-
-        field(4; MyField; Integer)
+        field(4; "Address"; Text[250])
         {
-            DataClassification = ToBeClassified;
-
+            Caption = 'Address';
         }
-
-        field(5; MyField; Integer)
+        field(5; "Country/Region Code"; Code[10])
         {
-            DataClassification = ToBeClassified;
-
+            Caption = 'Country/Region Code';
+            TableRelation = "Country/Region".Code;
         }
-
-        field(6; MyField; Integer)
+        field(6; "City"; Text[30])
         {
-            DataClassification = ToBeClassified;
-
+            Caption = 'Citta';
         }
     }
 
     keys
     {
-        key(Key1; MyField)
+        key(Key1; "Entry No.")
         {
             Clustered = true;
         }
     }
-
-    fieldgroups
-    {
-        // Add changes to field groups here
-    }
-
-    var
-        myInt: Integer;
-
-    trigger OnInsert()
-    begin
-
-    end;
-
-    trigger OnModify()
-    begin
-
-    end;
-
-    trigger OnDelete()
-    begin
-
-    end;
-
-    trigger OnRename()
-    begin
-
-    end;
-
 }

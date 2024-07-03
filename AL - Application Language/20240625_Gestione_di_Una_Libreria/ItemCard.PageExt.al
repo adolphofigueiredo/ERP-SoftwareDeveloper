@@ -9,14 +9,15 @@
 //
 //
 
-pageextension 50100 ITSItemCardPageExt extends "Item Card"
+pageextension 50100 "ITS Item Card Extension" extends "Item Card"
 {
     layout
     {
-        addbefore(Item)
+        addafter(Item)
         {
             group(Book)
             {
+                Caption = 'Libro';
                 field("Book No."; Rec."Book No.")
                 {
                     ApplicationArea = All;
@@ -30,24 +31,27 @@ pageextension 50100 ITSItemCardPageExt extends "Item Card"
         }
     }
     actions
-    {
-        addfirst(reporting)
+    {                   //nao foi adicionado area em actyions pq o botao ja existe
+                        // se eu quisesse criar um botao teria colocado area() e continuaria
+        addfirst(navigation)    //navigation em italiano e correlato
         {
-            group(Books)
+            group(Books)  //esse grupo adiciona uma subpasta dentro da pasta para agrupar os botos em uma lista
             {
-                action(Livro)
+                action(ShowBookCard) //o botao nunca aparecera enquanto ele nao tiver uma acao programada
                 {
+                    Caption = 'Mostra dettaglio Libro';
                     ApplicationArea = All;
-                    Caption = 'Livro';
+                    Image = TestFile;
                     RunObject = page "ITS Book Card";
                     RunPageLink = "No." = field("Book No.");
-                    Image = PrintReport;
+                    Enabled = Rec."Book No." <> ''; //Para dizer que o botao so pode aparecer se tiver
+                                                    //algum valor e se nao tiver nenhum valor
+                                                    //ele nao pode aparecer
                     ToolTip = 'Click for additional information.';
                 }
             }
         }
     }
-
     var
         myInt: Integer;
 }

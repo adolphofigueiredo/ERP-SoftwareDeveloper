@@ -3,7 +3,7 @@
 //tabela padrao da microsoft ou em uma tabela que se
 //for modificada pode criar problemas . Nao faz sentido
 //criar uma extensao em uma tabela que eu posso modificar.
-tableextension 50100 ITSItemTableExt extends Item
+tableextension 50100 "ITS Item Extension" extends Item
 {
     fields
     {
@@ -12,14 +12,15 @@ tableextension 50100 ITSItemTableExt extends Item
         //extensao nao é o mesmo que uma tabela nomral
         //que comeca do um em diante.
         {
-            Caption = 'Book No.';
+            Caption = 'Nr. Libro';
+            TableRelation = "ITS Book";
         }
         field(50102; "Book Title"; Text[50])
         //o numero do campo parte do primeiro numero da
         //extensao nao é o mesmo que uma tabela nomral
         //que comeca do um em diante.
         {
-            Caption = 'Book Title';
+            Caption = 'Titolo Libro';
             FieldClass = FlowField;
             CalcFormula = lookup("ITS Book".Title where("No." = field("Book No.")));
         }

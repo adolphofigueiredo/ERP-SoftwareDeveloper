@@ -44,4 +44,18 @@ page 50100 "ITS Author List"    //usar o comando tpage -> list para criar uma pa
             }
         }
     }
+    actions
+    {
+        area(Navigation)
+        {
+            action(ShowBookList)
+            {
+                Caption = 'Mostra libri';
+                Image = Navigate;
+                ApplicationArea = All;
+                RunObject = page "ITS Book List";
+                RunPageLink = "Author No." = field("No."); //para criar um filtro na abertura de uma pagina
+            }
+        }
+    }
 }

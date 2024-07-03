@@ -43,7 +43,7 @@ pageextension 50100 "ITS Item Card Extension" extends "Item Card"
                     ApplicationArea = All;
                     Image = TestFile;
                     RunObject = page "ITS Book Card";
-                    RunPageLink = "No." = field("Book No.");
+                    RunPageLink = "No." = field("Book No."); //link do valor que deve aparecer
                     Enabled = Rec."Book No." <> ''; //Para dizer que o botao so pode aparecer se tiver
                                                     //algum valor e se nao tiver nenhum valor
                                                     //ele nao pode aparecer

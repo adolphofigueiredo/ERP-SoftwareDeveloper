@@ -1,9 +1,9 @@
-velocidade = float(input('Qual a velocidade do veículo: '))
+velocidade = float(input('What is the vehicle speed: '))
 
 if velocidade > 80:
-    print('Você excedeu o limite de velocidade que é de 80 Km/h e foi multado.\n'
-          'O valor a ser pago é de R$ {:.2f}.'
+    print('You have exceeded the speed limit of 80 km/h and have been fined.\n'
+          'The fine amount is R$ {:.2f}.'
           .format((velocidade - 80.00) * 7.00))
 else:
-    print('Parabéns! Você está dentro do limite de velocidade de 80 Km/h.')
-print('Tenha um bom dia e dirija com segurança!')
+    print('Congratulations! You are within the speed limit of 80 km/h.')
+print('Have a nice day and drive safely!')

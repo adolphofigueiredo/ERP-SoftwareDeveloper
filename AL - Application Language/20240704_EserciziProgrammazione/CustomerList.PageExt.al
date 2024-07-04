@@ -97,6 +97,7 @@ pageextension 50103 "ITS Customer List Extension" extends "Customer List"
                     //Esempio con FindFirst
                     CustomerVar.FindFirst();
                     Message('Nome: %1 / Contatto: %2', CustomerVar.Name, CustomerVar.Contact);
+
                     //Esempio con FindLast
                     CustomerVar.FindLast();
                     Message('Nome: %1 / Contatto: %2', CustomerVar.Name, CustomerVar.Contact)

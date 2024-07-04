@@ -14,7 +14,7 @@ pageextension 50101 "ITS Customer Card Extension" extends "Customer Card"
 
     actions
     {
-        addfirst(navigation)
+        addfirst(navigation)     //Navigation em italiano significa Correlato
         {
             action(BillToAddressList)
             {

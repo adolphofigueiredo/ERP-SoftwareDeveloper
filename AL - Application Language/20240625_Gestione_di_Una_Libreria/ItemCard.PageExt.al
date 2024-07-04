@@ -33,7 +33,7 @@ pageextension 50100 "ITS Item Card Extension" extends "Item Card"
     actions
     {                   //nao foi adicionado area em actyions pq o botao ja existe
                         // se eu quisesse criar um botao teria colocado area() e continuaria
-        addfirst(navigation)    //navigation em italiano e correlato
+        addfirst(navigation)    //Navigation em italiano significa Correlato
         {
             group(Books)  //esse grupo adiciona uma subpasta dentro da pasta para agrupar os botos em uma lista
             {

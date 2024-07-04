@@ -46,7 +46,7 @@ page 50100 "ITS Author List"    //usar o comando tpage -> list para criar uma pa
     }
     actions
     {
-        area(Navigation)
+        area(Navigation)               //Navigation em italiano significa Correlato
         {
             action(ShowBookList)
             {

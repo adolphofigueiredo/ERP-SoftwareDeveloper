@@ -28,10 +28,10 @@ pageextension 50103 "ITS Customer List Extension" extends "Customer List"
                     Message(VarGlobal);
                 end;
             }
-            action(ControlExample)
+            action(IFExample)
             {
                 ApplicationArea = All;
-                Caption = 'Esempio Controlli';
+                Caption = 'Esempio IF';
                 Image = TestFile;
 
                 trigger OnAction()                                             //Enquanto o trigger nao e criado, o botao nao

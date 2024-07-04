@@ -78,6 +78,22 @@ pageextension 50103 "ITS Customer List Extension" extends "Customer List"
                     Message('Il risultato della potenza di 2 alla %1 e: %2', MaxInt, Result)
                 end;
             }
+            action(RecordExample)
+            {
+                ApplicationArea = All;
+                Caption = 'Esempio Record';
+                Image = RelatedInformation;
+
+                trigger OnAction()
+                var
+                    CustomerVar: Record Customer;
+                begin
+                    if CustomerVar.Get('40000') then
+                        Message('Nome: %1 / Contatto: %2', CustomerVar.Name, CustomerVar.Contact)
+                    else
+                        Message('Cliente non trovato!');
+                end;
+            }
         }
     }
     var

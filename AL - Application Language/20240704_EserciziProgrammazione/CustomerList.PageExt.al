@@ -88,10 +88,18 @@ pageextension 50103 "ITS Customer List Extension" extends "Customer List"
                 var
                     CustomerVar: Record Customer;
                 begin
+                    //Esempio Get
                     if CustomerVar.Get('40000') then
                         Message('Nome: %1 / Contatto: %2', CustomerVar.Name, CustomerVar.Contact)
                     else
                         Message('Cliente non trovato!');
+
+                    //Esempio con FindFirst
+                    CustomerVar.FindFirst();
+                    Message('Nome: %1 / Contatto: %2', CustomerVar.Name, CustomerVar.Contact);
+                    //Esempio con FindLast
+                    CustomerVar.FindLast();
+                    Message('Nome: %1 / Contatto: %2', CustomerVar.Name, CustomerVar.Contact)
                 end;
             }
         }

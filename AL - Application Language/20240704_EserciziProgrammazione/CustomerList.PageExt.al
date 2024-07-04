@@ -53,6 +53,31 @@ pageextension 50103 "ITS Customer List Extension" extends "Customer List"
                     end;
                 end;
             }
+            action(LoopExample)
+            {
+                ApplicationArea = All;
+                Caption = 'Esempio Loop';
+                Image = UpdateDescription;
+
+                trigger OnAction()
+                var
+                    MaxInt: Integer;
+                    I: Integer;
+                    Result: Integer;
+                begin
+                    //definire variabile per numero massimo
+                    //definire una variabile per ciclo for
+                    //all'interno del ciclo eseguire la potenza del 2
+                    MaxInt := 4;
+                    Result := 1;
+                    for I := 1 to MaxInt do begin
+                        Result *= 2;
+                    end;
+
+                    //Stampare risultato
+                    Message('Il risultato della potenza di 2 alla %1 e: %2', MaxInt, Result)
+                end;
+            }
         }
     }
     var

@@ -22,4 +22,4 @@ C = int(input("Enter the third number: "))
 if (B - A) == (C - B):
     print("Arithmetic progression!")
 else:
-    print("Not in arithmetic progression!")
+    print("Not in arithmetic progression!!")

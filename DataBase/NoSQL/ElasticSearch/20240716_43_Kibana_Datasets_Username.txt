@@ -1,0 +1,10 @@
+H06riaXcPQaJ0C3GCXCfx2pV
+
+
+O endereço correto foi encontrado no Management>Index Management
+
+curl --user elastic:H06riaXcPQaJ0C3GCXCfx2pV -H "Content-Type: application/x-ndjson" -XPOST "https://c67958bdbdb64e1cbc1161ec1dc00e0c.us-central1.gcp.cloud.es.io:443/accounts/_bulk" --data-binary @accounts.json
+
+curl --user elastic:H06riaXcPQaJ0C3GCXCfx2pV -H "Content-Type: application/x-ndjson" -XPOST "https://c67958bdbdb64e1cbc1161ec1dc00e0c.us-central1.gcp.cloud.es.io:443/shakespeare/_bulk" --data-binary @shakespeare_6.0.json
+
+curl --user elastic:H06riaXcPQaJ0C3GCXCfx2pV -H "Content-Type: application/x-ndjson" -XPOST "https://c67958bdbdb64e1cbc1161ec1dc00e0c.us-central1.gcp.cloud.es.io:443/_bulk" --data-binary @logs.jsonl

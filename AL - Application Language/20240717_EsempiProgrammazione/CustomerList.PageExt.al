@@ -63,6 +63,35 @@ pageextension 50106 "ITS CustomerList Extension" extends "Customer List"
                     Message('La potenza di %1 alla %2 è %3.', Base, Esponente, Result);
                 end;
             }
+            action(EsempiLettura)                       //Esse botao nao faz muito sentido, mas esta sendo
+                                                        //explicado como usar a funcao get na tabela.
+            {
+                ApplicationArea = All;
+                Caption = 'Esempi Lettura';
+
+                trigger OnAction()
+                var
+                    ItemRec: Record Item;
+                begin
+                    //ricerca per chiave primaria
+                    //Rec.Get('1908-S-NonEsiste');
+                    //Message(ItemRec.Description);
+
+                    //primo elemento tramite ricerca senza chiave
+                    //Rec.FindFirst();
+                    //Message(ItemRec.Description);
+
+                    //ultimo elemento tramite ricerca senza chiave
+                    //Rec.FindLast();
+                    //Message(ItemRec.Description);
+
+                    //Prendo l'ultimo elemento filtrati per tipo
+                    ItemRec.SetRange(type, Enum::"Item Type"::Inventory);
+                    ItemRec.FindLast();
+                    Message(ItemRec.Description);
+
+                end;
+            }
         }
     }
     var

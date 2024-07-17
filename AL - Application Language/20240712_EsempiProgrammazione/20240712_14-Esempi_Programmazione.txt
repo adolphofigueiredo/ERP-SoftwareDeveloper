@@ -1,0 +1,26 @@
+1) Creare un nuovo progetto con AL:GO con nome "EsempiProgrammazione"
+
+2) Creare un'estensione della Customer List e aggiungere i seguenti punti:
+
+3) Un pulsante chiamato "Message Trigger"
+   che deve stampare il seguente messaggio "La variabile contiene il valore %1".
+   Dove %1 sarà il valore di una varibile intera definita nel Trigger.
+   Ad ogni avvio del trigger la variabile deve incrementarsi di 2.
+   Il pulsante deve essere il primo del menù "Azioni"
+
+4) Definire una variabile GLOBALE chiamata VarIntGlobal 
+   e inizializzarla a 5 all'interno del trigger OnOpenPage
+
+5) Un pulsante chiamato "IF Trigger"
+    che deve controllare il valore della variabile VarIntGlobal:
+    Se il valore è maggiore o uguale a 10 allora deve stampare il messaggio
+    'Variabile X maggiore o uguale a 10' e decrementare di 2 il valore della variabile
+    Altrimenti se il valore è minore di 10 allora deve stampare il messaggio
+    'Variabile X inferiore a 10' e incrementare di 2 il valore della variabile.
+   Il pulsante deve essere sotto il pulsante "Message Trigger".
+
+6) Un pulsante chiamato "Loop Trigger"
+   che inizializzata una variabile Esponente (intera) con un intero a piacere,
+   ne calcoli la relativa potenza di 2 e stampi un messaggio "La potenza di 2 alla %1 è %2"
+   Dove %1 è l'esponente e %2 è il risultato.
+   Esempio con esponente = 4 -> "La potenza di 2 alla 4 è 16"

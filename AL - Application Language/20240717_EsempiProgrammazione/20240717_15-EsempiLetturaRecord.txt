@@ -1,0 +1,14 @@
+1) Continuare nel progetto "EsempiProgrammazione"
+
+2) Aggiungere alla Customer List i seguenti punti:
+
+3) Un pulsante chiamato "Show Country" che vada a prendere il nome della nazione a partire dal campo "Country/Region Code" del Customer
+e stampi il seguente messaggio "Cliente {nome cliente} - Nazione {nome nazione}". Il pulsante deve nel menù "Correlato"
+
+4) Un pulsante chiamato "Cust. Count by Region" che dato il region code del customer selezionato, vada a contare il numero di customer
+con lo stesso region code e stampi il seguente messaggio "I clienti per la nazione {nome nazione} sono {numero calcolato}". Il pulsante
+deve essere nel menù "Azioni"
+
+5) Un pulsante chiamato "Calc. Sales Order Amount" che a partire dal cliente selezionato calcoli la sommatoria di tutti gli importi
+degli ordini di vendita collegati al cliente e stampi il seguente messaggio "L'importo totale degli ordini di vendita per il cliente
+{nome cliente} è: {numero calcolato}". Il pulsante deve essere nel menù "Azioni"

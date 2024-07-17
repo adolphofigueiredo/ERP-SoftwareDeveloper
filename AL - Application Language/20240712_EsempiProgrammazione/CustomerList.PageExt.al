@@ -9,7 +9,7 @@ pageextension 50105 "ITS Customer List Extension" extends "Customer List" //Ja e
             {
                 ApplicationArea = All;
                 Image = Workflow;
-                Caption = 'Scatenare Messaggio';
+                Caption = 'Scatenare Messaggio';                          //Nao usar caption em pagina
                 ToolTip = 'Press to read a message.';
                 trigger OnAction()
                 var
@@ -24,7 +24,7 @@ pageextension 50105 "ITS Customer List Extension" extends "Customer List" //Ja e
             {
                 ApplicationArea = All;
                 Image = Administration;
-                Caption = 'If Trigger / If Trigger';
+                Caption = 'If Trigger / If Trigger';                      //Nao usar caption em pagina
                 ToolTip = 'Pressione para ler a mensagem.';
                 trigger OnAction()
                 begin
@@ -42,7 +42,7 @@ pageextension 50105 "ITS Customer List Extension" extends "Customer List" //Ja e
             {
                 ApplicationArea = All;
                 Image = Account;
-                Caption = 'Loop Trigger / Loop Trigger';
+                Caption = 'Loop Trigger / Loop Trigger';                  //Nao usar caption em pagina
                 ToolTip = 'Press to calculate.';
                 trigger OnAction()
                 var

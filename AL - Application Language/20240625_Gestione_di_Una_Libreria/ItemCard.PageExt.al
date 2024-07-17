@@ -13,7 +13,7 @@ pageextension 50100 "ITS Item Card Extension" extends "Item Card"
 {
     layout
     {
-        addafter(Item)
+        addafter(Item)                                 //se nao sei onde colocar adicionar addlast(content)
         {
             group(Book)
             {

@@ -1,0 +1,37 @@
+Esercizio "Bill-To Address"
+RICHIESTA:
+  0) Creare un nuovo progetto Business Central dentro visual
+studio code con il comando AL: GO, nome del progetto
+"BillToAddressProject"
+
+  1) Creare una tabella chiamata "Bill-To Address", formata da
+    - Entry No. : integer - Autoincrement = true - chiave primaria
+    - Customer No.: Code 20 - table relation con customer
+    - Name : Text 100
+    - Address: Text 250
+    - Country/Region Code: Code 10 -> collegata alla tabella
+Country/Region
+    - City : Text 30
+
+  2a) Creare una pagina List con nome "Bill-To Address List"
+(caption a video "Indirizzi di fatturazione") collegata alla
+tabella "Bill-To Address", campi: Entry no, Customer no, name
+
+  2b) Creare una pagina Card con nome "Bill-To Address Card"
+(caption "Inidirizzo di fatturazione") collegata alla tabella
+"Bill-To Address" e collegare la pagina alla lista "Bill-To
+Address List". Tutti i campi in due gruppi (Generale, Dati)
+
+  3) Creare un pulsante sulla Customer Card (Scheda cliente) 
+    che apra la pagina "Bill-To Address List" 
+    con i record "Bill-To Address" filtrati/collegati a quel
+cliente
+
+  4) Aggiungere un campo alla tabella Customer chiamato "Bill-to
+Address Exist" di tipo booleano, è un flowfield, strutturare la
+calcformula in modo che il campo dice se esiste un record "Bill-to
+Address" collegato al cliente
+
+  5) Inserire il campo "Bill-to Address Exist" nel gruppo "General"
+della Customer Card (Scheda cliente) e dopo il campo Name
+all'interno della Customer List (lista clienti) 

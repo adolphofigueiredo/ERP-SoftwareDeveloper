@@ -3,7 +3,7 @@ page 50102 "ITS Book List"    //usar o comando tpage -> list para criar uma pagi
     Caption = 'Book List';
     PageType = List;
     ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = Lists;                //Usado para dizer que a pagina vai aparecer no menu
     SourceTable = "ITS Book";
     CardPageId = "ITS Book Card"; //Associar a a card para abrir desta lista
     Editable = false;     //Agora esta lista nao pode ser mais editada diretamente, mais

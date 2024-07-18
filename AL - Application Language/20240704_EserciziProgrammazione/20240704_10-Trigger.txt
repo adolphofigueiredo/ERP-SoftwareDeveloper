@@ -1,0 +1,12 @@
+1) Creare un nuovo progetto con il comando AL:GO, chiamato
+"EserciziProgrammazione"
+
+2) Estendere la Customer List con un pulsante con nome
+TriggerExample
+
+3) Nel pulsante inserite un trigger onaction con l'apertura di
+un Messaggio con scritto "Pulsante premuto"
+
+4) Estendere la Customer Card inserendo un trigger all'apertura
+della pagina, il trigger deve contenere un messaggio con scritto
+'Pagina Customer aperta'

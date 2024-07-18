@@ -20,11 +20,11 @@ table 50110 Course
             FieldClass = FlowField;
             CalcFormula = count(Student where("Enrolled Course" = field("No.")));
         }
-        field(5; "Total Cost"; Decimal)
+        field(6; "Total Cost"; Decimal)
         {
-            //Editable = false;
-            //FieldClass = FlowField;
-            //CalcFormula = sum(Module."Hourly Cost" where("Course No." = field("No.")));
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = sum(Module."Total Cost" where("Course No." = field("No.")));
         }
 
     }
@@ -36,4 +36,3 @@ table 50110 Course
         }
     }
 }
-

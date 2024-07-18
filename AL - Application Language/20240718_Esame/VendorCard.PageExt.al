@@ -31,6 +31,11 @@ pageextension 50118 "Vendor Card Extension" extends "Vendor Card"
 
                 end;
             }
+
+            // 15) Nella pagina "Vendor Card" inserire un pulsante nel menu "Navigation",
+            // con caption "Mostra Lista Moduli", che apra la lista dei moduli collegati
+            // al vendor. Questo pulsante deve essere abilitato solo se il campo
+            // "Prof.Fiscal Code" è stato compilato.        
         }
 
     }

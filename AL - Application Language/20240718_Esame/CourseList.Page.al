@@ -44,7 +44,7 @@ page 50118 "Course List"
         {
             action("Show Student List ")
             {
-                Caption = 'Mostra Lista Moduli';
+                Caption = 'Mostra Lista Studenti';
                 ApplicationArea = All;
 
                 trigger OnAction()
@@ -52,6 +52,11 @@ page 50118 "Course List"
 
                 end;
             }
+
+            // 10) Nella pagina "Course List" inserire un pulsante nel menu "Navigation",
+            // con caption "Mostra Lista Studenti", che apra la lista degli studenti collegati al corso.
+
+
             action("Show Module List")
             {
                 Caption = 'Mostra Lista Moduli';
@@ -62,7 +67,8 @@ page 50118 "Course List"
 
                 end;
             }
-
+            // 13) Nella pagina "Course List" inserire un pulsante nel menu "Navigation",
+            // con caption "Mostra Lista Moduli", che apra la lista dei moduli collegati al corso.
         }
     }
 

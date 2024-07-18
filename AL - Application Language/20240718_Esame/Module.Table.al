@@ -14,6 +14,14 @@ table 50114 Module
             //FieldClass = FlowField;
             //CalcFormula = Vendor where("Prof. Fiscal Code" = field(Code));
         }
+
+
+        // 7) Creare una tabella "Module" con i seguenti campi:
+        // - Vendor No. - Relazione con Fornitore (Vendor) solo con i record che hanno "Prof. Fiscal Code" diverso da vuoto (AIUTO:
+        // utilizzare il where nel table relation con il seguente filtro: filter(<> ''))
+
+
+
         field(4; "Vendor Name"; Text[100])
         {
             Editable = false;

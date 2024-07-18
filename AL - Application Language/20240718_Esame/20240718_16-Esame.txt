@@ -86,36 +86,3 @@ campi: Prof. Fiscal Code, Prof. Full Name
 caption "Mostra Lista Moduli", che apra la lista dei moduli collegati al vendor.
 Questo pulsante deve essere abilitato solo se il campo "Prof. Fiscal Code" è
 stato compilato.
-
-
-
-
-
-
-
-
-
-
-
-7) Creare una tabella "Module" con i seguenti campi:
-- Vendor No. - Relazione con Fornitore (Vendor) solo con i
-record che hanno "Prof. Fiscal Code" diverso da vuoto (AIUTO:
-utilizzare il where nel table relation con il seguente filtro:
-filter(<> ''))
-
-
-10) Nella pagina "Course List" inserire un pulsante nel menu
-"Navigation", con caption "Mostra Lista Studenti", che apra
-la lista degli studenti collegati al corso.
-
-
-13) Nella pagina "Course List" inserire un pulsante nel menu
-"Navigation", con caption "Mostra Lista Moduli", che apra la
-lista dei moduli collegati al corso.
-
-
-15) Nella pagina "Vendor Card" inserire un pulsante nel
-menu "Navigation", con caption "Mostra Lista Moduli", che
-apra la lista dei moduli collegati al vendor. Questo
-pulsante deve essere abilitato solo se il campo "Prof.
-Fiscal Code" è stato compilato.

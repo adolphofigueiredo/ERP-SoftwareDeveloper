@@ -1,0 +1,88 @@
+Esame 2024/07/18: Una scuola deve gestire i propri corsi all'interno del
+gestionale Business Central, mappandoli attraverso tabelle che rappresentano
+corsi, studenti e docenti. Dato che la scuola impiega solo docenti a partita IVA,
+questi vengono gestiti come fornitori. Gli studenti possono iscriversi a un solo
+corso, mentre ogni corso può comprendere diversi moduli. I moduli sono tenuti da
+un docente e hanno un numero di ore e un costo calcolato moltiplicando il numero
+di ore per la tariffa oraria assegnata al docente. Segui i punti elencati per
+configurare correttamente il sistema e gestire tutte le entità coinvolte nel
+processo. (Esempio esplicativo: Corso "ERP System Developer", tipo corso "ICT",
+ha circa 20 moduli e 30 studenti. Un modulo è chiamato "Microsoft Business Central"
+ed è tenuto dal docente "Thomas Cristofaro", che sarà rappresentato come un
+fornitore all'interno del gestionale)
+
+1) Creare un nuovo progetto Business Central utilizzando il comando "AL:GO" di
+visual studio code. Nome del progetto "Esame20240718"
+
+2) Creare un'enumerazione chiamata "Course Type" contenente i seguenti valori:
+ICT, Turismo, Meccatronico
+
+3) Creare una tabella "Course" con i seguenti campi:
+- No.			Code 20
+- Name			Text 50
+- Type 			Enum "Course Type"
+- Students Number 	Integer - NON Editabile - Conta il numero degli studenti
+iscritti al corso
+- Total Cost		Decimal - NON Editabile - Somma il costo totali dei
+moduli del corso
+Chiave Primaria: No.
+
+4) Creare una tabella "Student" con i seguenti campi:
+- Fiscal Code		Code 20
+- Full Name		Text 100
+- Birth Date 		Date
+- Enrolled Course 	Code 20 - Relazione con Corso
+Chiave Primaria: Fiscal Code
+
+5) Estendere la tabella Vendor con i seguenti campi:
+- Prof. Fiscal Code	Code 20
+- Prof. Full Name	Text 100
+
+6) Creare un'enumerazione chiamata "Hourly Cost Range" contenente i seguenti
+valori: 40€, 50€, 60€
+
+7) Creare una tabella "Module" con i seguenti campi:
+- Code			Code 20
+- Course No.		Code 20	- Relazione con Corso
+- Vendor No.		Code 20 - Relazione con Fornitore (Vendor) solo con i
+record che hanno "Prof. Fiscal Code" diverso da vuoto (AIUTO: utilizzare il where
+nel table relation con il seguente filtro: filter(<> ''))
+- Vendor Name		Text 100 - NON Editabile - Campo che mostra il "Prof.
+Full Name" connesso al Vendor No.
+- Name			    Text 100 
+- Hour Number		Integer
+- Hourly Cost		Enum "Hourly Cost Range"
+- Total Cost		Decimal
+Chiave Primaria: Code, Course No., Vendor No.
+
+8) Creare la pagina di tipo List "Course List", apribile da menu, editabile, con
+caption "Lista Corsi" e contenente tutti i campi della tabella "Course".
+
+9) Creare la pagina di tipo List "Student List", editabile, con caption "Lista
+Studenti" e contenente tutti i campi della tabella "Student".
+Inserire anche la proprietà di pagina DelayedInsert = true;
+
+10) Nella pagina "Course List" inserire un pulsante nel menu "Navigation", con
+caption "Mostra Lista Studenti", che apra la lista degli studenti collegati al
+corso.
+
+11) Creare la pagina di tipo List "Module List", apribile da menu, NON editabile,
+con caption "Lista Moduli" e contenente i seguenti campi della tabella Module:
+Code, Course No., Name, Total Cost
+
+12) Creare la pagina di tipo Card "Module Card" contenente tutti i campi della
+tabella Module, devono essere divisi in due gruppi: 
+- Gruppo General: Code, Course No., Vendor No. Vendor Name
+- Gruppo Data: Name, Hour Number, Hourly Cost, Total Cost
+Collegare la pagina "Module Card" alla "Module List".
+
+13) Nella pagina "Course List" inserire un pulsante nel menu "Navigation", con
+caption "Mostra Lista Moduli", che apra la lista dei moduli collegati al corso.
+
+14) Estendere la pagina "Vendor Card" aggiungendo un Gruppo "Professor" con i
+campi: Prof. Fiscal Code, Prof. Full Name
+
+15) Nella pagina "Vendor Card" inserire un pulsante nel menu "Navigation", con
+caption "Mostra Lista Moduli", che apra la lista dei moduli collegati al vendor.
+Questo pulsante deve essere abilitato solo se il campo "Prof. Fiscal Code" è
+stato compilato.

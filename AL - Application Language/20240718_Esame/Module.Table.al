@@ -36,15 +36,10 @@ table 50114 Module
 
     keys
     {
-        key(Key1; Code)
+        key(Key1; Code, "Course No.", "Vendor No.")
         {
             Clustered = true;
         }
-        key(Key2; "Course No.")
-        {
-        }
-        key(Key3; "Vendor No.")
-        {
-        }
+
     }
 }

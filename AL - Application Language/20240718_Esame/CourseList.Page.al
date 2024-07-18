@@ -6,7 +6,6 @@ page 50118 "Course List"
     UsageCategory = Lists;
     SourceTable = Course;
     Editable = true;
-
     layout
     {
         area(Content)
@@ -34,9 +33,7 @@ page 50118 "Course List"
                     ApplicationArea = All;
                 }
             }
-
         }
-
     }
     actions
     {
@@ -46,30 +43,16 @@ page 50118 "Course List"
             {
                 Caption = 'Mostra Lista Studenti';
                 ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
+                RunObject = page "Student List";
+                RunPageLink = "Enrolled Course" = field("No.");
             }
-
-            // 10) Nella pagina "Course List" inserire un pulsante nel menu "Navigation",
-            // con caption "Mostra Lista Studenti", che apra la lista degli studenti collegati al corso.
-
-
             action("Show Module List")
             {
                 Caption = 'Mostra Lista Moduli';
                 ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
+                RunObject = page "Module List";
+                RunPageLink = "Course No." = field("No.");
             }
-            // 13) Nella pagina "Course List" inserire un pulsante nel menu "Navigation",
-            // con caption "Mostra Lista Moduli", che apra la lista dei moduli collegati al corso.
         }
     }
-
 }

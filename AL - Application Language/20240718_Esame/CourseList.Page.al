@@ -1,4 +1,4 @@
-page 50119 "Course List"
+page 50118 "Course List"
 {
     Caption = 'Lista Corsi';
     PageType = List;
@@ -42,7 +42,7 @@ page 50119 "Course List"
     {
         area(Navigation)
         {
-            action("Show List")
+            action("Show Student List ")
             {
                 Caption = 'Mostra Lista Moduli';
                 ApplicationArea = All;
@@ -52,6 +52,17 @@ page 50119 "Course List"
 
                 end;
             }
+            action("Show Module List")
+            {
+                Caption = 'Mostra Lista Moduli';
+                ApplicationArea = All;
+
+                trigger OnAction()
+                begin
+
+                end;
+            }
+
         }
     }
 

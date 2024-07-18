@@ -12,7 +12,7 @@ table 50114 Module
         field(3; "Vendor No."; Code[20])
         {
             //FieldClass = FlowField;
-            //Enabled = Rec."Prof. Fiscal Code" <> '';
+            //CalcFormula = Vendor where("Prof. Fiscal Code" = field(Code));
         }
         field(4; "Vendor Name"; Text[100])
         {

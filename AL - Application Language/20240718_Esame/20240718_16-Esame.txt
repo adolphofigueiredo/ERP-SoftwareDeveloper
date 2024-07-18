@@ -104,41 +104,34 @@ utilizzare il where nel table relation con il seguente filtro:
 filter(<> ''))
 
 
-8) Creare la pagina di tipo List "Course List", apribile da menu, editabile, con
-caption "Lista Corsi" e contenente tutti i campi della tabella "Course".
+10) Nella pagina "Course List" inserire un pulsante nel menu
+"Navigation", con caption "Mostra Lista Studenti", che apra
+la lista degli studenti collegati al corso.
 
 
-9) Creare la pagina di tipo List "Student List", editabile, con caption "Lista
-Studenti" e contenente tutti i campi della tabella "Student".
-Inserire anche la proprietà di pagina DelayedInsert = true;
+11) Creare la pagina di tipo List "Module List", apribile da menu,
+NON editabile, con caption "Lista Moduli" e contenente i seguenti
+campi della tabella Module: Code, Course No., Name, Total Cost
 
 
-10) Nella pagina "Course List" inserire un pulsante nel menu "Navigation", con
-caption "Mostra Lista Studenti", che apra la lista degli studenti collegati al
-corso.
-
-
-11) Creare la pagina di tipo List "Module List", apribile da menu, NON editabile,
-con caption "Lista Moduli" e contenente i seguenti campi della tabella Module:
-Code, Course No., Name, Total Cost
-
-
-12) Creare la pagina di tipo Card "Module Card" contenente tutti i campi della
-tabella Module, devono essere divisi in due gruppi: 
+12) Creare la pagina di tipo Card "Module Card" contenente tutti i
+campi della tabella Module, devono essere divisi in due gruppi: 
 - Gruppo General: Code, Course No., Vendor No. Vendor Name
 - Gruppo Data: Name, Hour Number, Hourly Cost, Total Cost
 Collegare la pagina "Module Card" alla "Module List".
 
 
-13) Nella pagina "Course List" inserire un pulsante nel menu "Navigation", con
-caption "Mostra Lista Moduli", che apra la lista dei moduli collegati al corso.
+13) Nella pagina "Course List" inserire un pulsante nel menu
+"Navigation", con caption "Mostra Lista Moduli", che apra la
+lista dei moduli collegati al corso.
 
 
-14) Estendere la pagina "Vendor Card" aggiungendo un Gruppo "Professor" con i
-campi: Prof. Fiscal Code, Prof. Full Name
+14) Estendere la pagina "Vendor Card" aggiungendo un Gruppo
+"Professor" con i campi: Prof. Fiscal Code, Prof. Full Name
 
 
-15) Nella pagina "Vendor Card" inserire un pulsante nel menu "Navigation", con
-caption "Mostra Lista Moduli", che apra la lista dei moduli collegati al vendor.
-Questo pulsante deve essere abilitato solo se il campo "Prof. Fiscal Code" è
-stato compilato.
+15) Nella pagina "Vendor Card" inserire un pulsante nel
+menu "Navigation", con caption "Mostra Lista Moduli", che
+apra la lista dei moduli collegati al vendor. Questo
+pulsante deve essere abilitato solo se il campo "Prof.
+Fiscal Code" è stato compilato.

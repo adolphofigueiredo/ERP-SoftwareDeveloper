@@ -22,9 +22,9 @@ table 50110 Course
         }
         field(5; "Total Cost"; Decimal)
         {
-            Editable = false;
-            FieldClass = FlowField;
-            CalcFormula = sum(Module."Hourly Cost" where("Course No." = field("No.")));
+            //Editable = false;
+            //FieldClass = FlowField;
+            //CalcFormula = sum(Module."Hourly Cost" where("Course No." = field("No.")));
         }
 
     }

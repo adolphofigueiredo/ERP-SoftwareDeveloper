@@ -25,6 +25,7 @@ pageextension 50118 "Vendor Card Extension" extends "Vendor Card"
             {
                 Caption = 'Mostra Lista Moduli';
                 ApplicationArea = All;
+                Enabled = Rec."Prof. Fiscal Code" <> '';
                 RunObject = page "Module List";
                 RunPageLink = "Course No." = field("No.");
             }

@@ -3,7 +3,8 @@ pageextension 50106 "ITS CustomerList Extension" extends "Customer List"
 
     actions
     {
-        addfirst(Processing)      //Processing, Navigation, Creation e Reporting sao os agrupamentos que podem ser utilizados.
+        addfirst(Processing)      //Processing - Azioni, Navigation - Correlato, Creation
+                                  //e Reporting sao os agrupamentos que podem ser utilizados.
         {
             action("Message Trigger")
             {
@@ -90,6 +91,32 @@ pageextension 50106 "ITS CustomerList Extension" extends "Customer List"
                     ItemRec.FindLast();
                     Message(ItemRec.Description);
 
+                end;
+            }
+            action("Cust. Count by Region")
+            {
+                ApplicationArea = All;
+                trigger OnAction()
+                begin
+                    Message('I clienti per la nazione {nome nazione} sono {numero calcolato}');
+                end;
+            }
+        }
+        addfirst(navigation)      //Processing - Azioni, Navigation - Correlato, Creation
+                                  //e Reporting sao os agrupamentos que podem ser utilizados.
+        {
+            action("Show Country")
+            {
+                ApplicationArea = All;
+                Image = Absence;
+                Caption = 'Show Country';
+                trigger OnAction()
+                var
+                    VarNaz: Record "Country/Region";                    //Primeiro digo que tabela acessar e criei a variavel que recebera os valores
+                begin
+                    VarNaz.Get(Rec."Country/Region Code");              //Agora estou dizendo a variavel que recebera todas as informacoes daquela linha
+                    Message('Cliente: %1 - Nazione: %2', Rec.Name, VarNaz.Name);   //Agora na VarNaz eu estou dizendo que
+                                                                                   //so quero imprimir o nome e nao todas as informacoes.
                 end;
             }
         }

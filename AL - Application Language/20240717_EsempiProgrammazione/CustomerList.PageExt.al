@@ -105,10 +105,10 @@ pageextension 50106 "ITS CustomerList Extension" extends "Customer List"
                     Counter: Integer;
                 begin
                     CountryVar.Get(Rec."Country/Region Code");
-                    Customer.SetFilter("Country/Region Code", Rec."Country/Region Code");
-                    if        then
-                    repeat
-                        Counter += 1;
+                    Customer.SetRange("Country/Region Code", Rec."Country/Region Code");
+                    if Customer.FindSet() then
+                        repeat
+                            Counter += 1;
                         until (Rec.Next = 0);
                     Message('I clienti per la nazione %1 sono %2.', CountryVar.Name, Counter);
                 end;

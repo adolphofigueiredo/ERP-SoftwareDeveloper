@@ -95,10 +95,22 @@ pageextension 50106 "ITS CustomerList Extension" extends "Customer List"
             }
             action("Cust. Count by Region")
             {
+                Caption = 'Cust. Count by Region';
+                Image = Workflow;
                 ApplicationArea = All;
                 trigger OnAction()
+                var
+                    Customer: Record Customer;
+                    CountryVar: Record "Country/Region";
+                    Counter: Integer;
                 begin
-                    Message('I clienti per la nazione {nome nazione} sono {numero calcolato}');
+                    CountryVar.Get(Rec."Country/Region Code");
+                    Customer.SetFilter("Country/Region Code", Rec."Country/Region Code");
+                    if        then
+                    repeat
+                        Counter += 1;
+                        until (Rec.Next = 0);
+                    Message('I clienti per la nazione %1 sono %2.', CountryVar.Name, Counter);
                 end;
             }
         }
@@ -112,14 +124,14 @@ pageextension 50106 "ITS CustomerList Extension" extends "Customer List"
                 Caption = 'Show Country';
                 trigger OnAction()
                 var
-                    VarNaz: Record "Country/Region";                    //Primeiro digo que tabela acessar e crio a variavel
+                    CountryVar: Record "Country/Region";                //Primeiro digo que tabela acessar e crio a variavel
                                                                         //que recebera os valores. Veja que a variavel é do tipo Record.
                 begin
-                    VarNaz.Get(Rec."Country/Region Code");              //Agora estou dizendo a variavel que recebera todas as informacoes daquela
+                    CountryVar.Get(Rec."Country/Region Code");          //Agora estou dizendo a variavel que recebera todas as informacoes daquela
                                                                         //linha. Lembre que esta variavel receber todas as informacoes deste registro.
 
-                    Message('Cliente: %1 - Nazione: %2', Rec.Name, VarNaz.Name);   //Agora na VarNaz eu estou dizendo que
-                                                                                   //so quero imprimir o nome e nao todas as informacoes.
+                    Message('Cliente: %1 - Nazione: %2', Rec.Name, CountryVar.Name);   //Agora na VarNaz eu estou dizendo que
+                                                                                       //so quero imprimir o nome e nao todas as informacoes.
                 end;
             }
         }

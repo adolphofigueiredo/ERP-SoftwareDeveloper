@@ -112,9 +112,12 @@ pageextension 50106 "ITS CustomerList Extension" extends "Customer List"
                 Caption = 'Show Country';
                 trigger OnAction()
                 var
-                    VarNaz: Record "Country/Region";                    //Primeiro digo que tabela acessar e crio a variavel que recebera os valores.
+                    VarNaz: Record "Country/Region";                    //Primeiro digo que tabela acessar e crio a variavel
+                                                                        //que recebera os valores. Veja que a variavel é do tipo Record.
                 begin
-                    VarNaz.Get(Rec."Country/Region Code");              //Agora estou dizendo a variavel que recebera todas as informacoes daquela linha.
+                    VarNaz.Get(Rec."Country/Region Code");              //Agora estou dizendo a variavel que recebera todas as informacoes daquela
+                                                                        //linha. Lembre que esta variavel receber todas as informacoes deste registro.
+
                     Message('Cliente: %1 - Nazione: %2', Rec.Name, VarNaz.Name);   //Agora na VarNaz eu estou dizendo que
                                                                                    //so quero imprimir o nome e nao todas as informacoes.
                 end;

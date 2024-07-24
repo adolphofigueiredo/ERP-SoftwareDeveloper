@@ -12,8 +12,10 @@ namespace ITS_Esempi
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!!!");                        //Comando usado para escrever alguma coisa na tela.
+           
             Console.WriteLine("What's your name?");
             string value01 = Console.ReadLine();                        //Leitura da resposta e armazenamento na variavel.
+            
             Console.WriteLine("Nice to meet you " + value01 + ".");
             Console.ReadLine();                                         //Foi adicionado para o console nao fechar.
                                                                         //Se nao for adicionado o console fecha sem ter tempo de ler.
@@ -25,9 +27,10 @@ namespace ITS_Esempi
 
             int value04 = value02 + value03;                            //Criacao da variavel para fazer a soma.
 
-            Console.WriteLine("The sum of the numbers " + value02 + " and " + value03 + " is " + value04 + ".");
+            Console.WriteLine(value01 + ", the sum of the numbers " + value02 + " and " + value03 + " is " + value04 + ".");
 
             Console.ReadLine();                                         //Foi adicionado para o console nao fechar.
         }
     }
 }
+ 

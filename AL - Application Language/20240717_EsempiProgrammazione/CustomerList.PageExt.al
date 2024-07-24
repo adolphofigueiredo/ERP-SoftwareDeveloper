@@ -113,6 +113,26 @@ pageextension 50106 "ITS CustomerList Extension" extends "Customer List"
                     Message('I clienti per la nazione %1 sono %2.', CountryVar.Name, Counter);
                 end;
             }
+            action("Calc. Sales Order Amount")
+            {
+                ApplicationArea = All;
+                Caption = 'Calc. Sales Order Amount';
+                Image = AddWatch;
+
+                trigger OnAction()
+                var
+                    "Sales Header": Record "Sales Header";
+                    VarTotalAmount: Integer;
+                begin
+
+                    "Sales Header".SetRange("Sell-to Customer No.", Rec."Bill-to Customer No.");
+                    if "Sales Header".FindSet() then
+                        repeat
+                            VarTotalAmount += "Sales Header".Amount;
+                        until (Rec.Next = 0);
+                    Message('Limporto totale degli ordini di vendita per il cliente %1 è: %2.  %3     %4', Rec.Name, VarTotalAmount, "Sales Header"."Sell-to Customer No.", Rec."Bill-to Customer No.");
+                end;
+            }
         }
         addfirst(navigation)      //Processing - Azioni, Navigation - Correlato, Creation
                                   //e Reporting sao os agrupamentos que podem ser utilizados.

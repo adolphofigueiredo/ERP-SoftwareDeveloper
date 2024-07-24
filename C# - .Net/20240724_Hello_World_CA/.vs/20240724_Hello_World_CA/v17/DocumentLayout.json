@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\20240724_Hello_World_CA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{25077603-F6B4-4D54-AA6F-26C671B66680}|ITS_Esempi\\ITS_Esempi.csproj|z:\\erp-softwaredeveloper\\c# - .net\\20240724_hello_world_ca\\its_esempi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25077603-F6B4-4D54-AA6F-26C671B66680}|ITS_Esempi\\ITS_Esempi.csproj|solutionrelative:its_esempi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\20240724_Hello_World_CA\\ITS_Esempi\\Program.cs",
+              "RelativeDocumentMoniker": "ITS_Esempi\\Program.cs",
+              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\20240724_Hello_World_CA\\ITS_Esempi\\Program.cs",
+              "RelativeToolTip": "ITS_Esempi\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAB5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T15:28:16.521Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

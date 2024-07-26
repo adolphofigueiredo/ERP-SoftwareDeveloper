@@ -32,13 +32,41 @@ namespace _20240726_Calculator
 
             int value02 = RichiediValoreNumerico("Enter the first number:");
 
+
             int value03 = RichiediValoreNumerico("Enter the second number:");
 
+            
+            Console.WriteLine("Select operator: ");
+            string operation = Console.ReadLine();
 
-            int value04 = value02 + value03;                                                    //Criacao da variavel para fazer a soma.
+            int value04 = 0;
+
+            switch (operation)
+            {
+                case "+":
+                    value04 = value02 + value03;
+                    break;
+
+                case "-":
+                    value04 = value02 - value03;
+                    break;
+
+                case "/":
+                    value04 = value02 / value03;
+                    break;
+
+                case "*":
+                    value04 = value02 * value03;
+                    break;
+
+                default:
+                    Console.WriteLine("Errore");
+                    break;
+            }
 
             Console.WriteLine("The result is " + value04 + ".");
 
+            Console.ReadLine();                                         //Foi adicionado para o console nao fechar.
         }
     }
 }

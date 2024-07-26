@@ -1,0 +1,7 @@
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240726_Calculator\20240726_Calculator\bin\Debug\20240726_Calculator.exe.config
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240726_Calculator\20240726_Calculator\bin\Debug\20240726_Calculator.exe
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240726_Calculator\20240726_Calculator\bin\Debug\20240726_Calculator.pdb
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240726_Calculator\20240726_Calculator\obj\Debug\20240726_Calculator.csproj.AssemblyReference.cache
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240726_Calculator\20240726_Calculator\obj\Debug\20240726_Calculator.csproj.CoreCompileInputs.cache
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240726_Calculator\20240726_Calculator\obj\Debug\20240726_Calculator.exe
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240726_Calculator\20240726_Calculator\obj\Debug\20240726_Calculator.pdb

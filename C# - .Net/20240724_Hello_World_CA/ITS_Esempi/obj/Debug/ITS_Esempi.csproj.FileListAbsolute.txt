@@ -1,7 +1,0 @@
-Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World_CA\ITS_Esempi\bin\Debug\ITS_Esempi.exe.config
-Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World_CA\ITS_Esempi\bin\Debug\ITS_Esempi.exe
-Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World_CA\ITS_Esempi\bin\Debug\ITS_Esempi.pdb
-Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World_CA\ITS_Esempi\obj\Debug\ITS_Esempi.csproj.AssemblyReference.cache
-Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World_CA\ITS_Esempi\obj\Debug\ITS_Esempi.csproj.CoreCompileInputs.cache
-Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World_CA\ITS_Esempi\obj\Debug\ITS_Esempi.exe
-Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World_CA\ITS_Esempi\obj\Debug\ITS_Esempi.pdb

@@ -1,0 +1,7 @@
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World\20240724_Hello_World\bin\Debug\20240724_Hello_World.exe.config
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World\20240724_Hello_World\bin\Debug\20240724_Hello_World.exe
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World\20240724_Hello_World\bin\Debug\20240724_Hello_World.pdb
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World\20240724_Hello_World\obj\Debug\20240724_Hello_World.csproj.AssemblyReference.cache
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World\20240724_Hello_World\obj\Debug\20240724_Hello_World.csproj.CoreCompileInputs.cache
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World\20240724_Hello_World\obj\Debug\20240724_Hello_World.exe
+Z:\ERP-SoftwareDeveloper\C# - .Net\20240724_Hello_World\20240724_Hello_World\obj\Debug\20240724_Hello_World.pdb

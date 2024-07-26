@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{25077603-F6B4-4D54-AA6F-26C671B66680}</ProjectGuid>
+    <ProjectGuid>{30436128-F8D0-4F7D-A9D6-A5350172D18D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ITS_Esempi</RootNamespace>
-    <AssemblyName>ITS_Esempi</AssemblyName>
+    <RootNamespace>_20240724_Hello_World</RootNamespace>
+    <AssemblyName>20240724_Hello_World</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

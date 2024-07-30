@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\20240903_Calculator_V3.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A6DCD654-BE45-40B3-90CC-4F08245966B9}|20240903_Calculator_V3.0.csproj|c:\\erp-softwaredeveloper\\c# - .net\\20240903_calculator_v3.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6DCD654-BE45-40B3-90CC-4F08245966B9}|20240903_Calculator_V3.0.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\20240903_Calculator_V3.0\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\20240903_Calculator_V3.0\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T20:45:32.922Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

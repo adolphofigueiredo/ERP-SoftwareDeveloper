@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8ACDB4FD-93EB-45D9-A739-D3E07B114F14}</ProjectGuid>
+    <ProjectGuid>{A6DCD654-BE45-40B3-90CC-4F08245966B9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_20240726_Calculator_V3._0</RootNamespace>
-    <AssemblyName>20240726_Calculator_V3.0</AssemblyName>
+    <RootNamespace>_20240903_Calculator_V3._0</RootNamespace>
+    <AssemblyName>20240903_Calculator_V3.0</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\20240903_Calculator_V2.0",
+    "\\20240903_Calculator_V3.0"
   ],
-  "SelectedNode": "\\20240903_Calculator_V2.0",
+  "SelectedNode": "\\20240903_Calculator_V2.0\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

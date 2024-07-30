@@ -1,0 +1,13 @@
+Integrare il progetto "20240726_Calculator_V1.0" in modo tale che le operazioni :
+
+
+
+Moltiplicazione (*)  siano effettuate come serie di somme.
+
+Divisione  (/)  siano effettuate come serie di sottrazioni.
+
+Non è piu possibile utilizzare gli operatori aritmetici * e /.
+
+
+
+la funzione di Divisione dovrà restitutire il risultato (quoziente) intero della divisione e il resto (zero è un possibile resto).

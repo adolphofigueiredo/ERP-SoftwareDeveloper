@@ -8,31 +8,6 @@ namespace _20240903_Calculator_V3._0
 {
     internal class Program
     {
-        static string RequestOperation()
-        {
-            string Operation = "";
-            bool OperationEnabled = false;
-            do
-            {
-                Console.WriteLine("\r\nEnter the operation you want to perform [+,-,*,/]:");
-                Operation = Console.ReadLine();                                              //É importante lembrar que apesar de Operation
-                                                                                             //ser usado na função e mais abaixo na função
-                                                                                             //Main, são variáveis diferente com o mesmo
-                                                                                             //nome, já que a variável operations dentro da
-                                                                                             //função não sai de lá.
-                List<string> AvailableOperations = new List<string>(){
-                    "+","-","*","/"
-                };
-                OperationEnabled = AvailableOperations.Contains(Operation);
-                if (!OperationEnabled)
-                    Console.WriteLine("\r\n------------------------------------------------------------" +
-                                      "\r\n              ERROR! - Operation not available!" +
-                                      "\r\n------------------------------------------------------------");
-            }
-            while (!OperationEnabled);
-            return Operation;
-        }
-
         static int RequestNumber(string Message)
         {
             int iNumber = 0;
@@ -44,51 +19,42 @@ namespace _20240903_Calculator_V3._0
                 NoNumber = Console.ReadLine();
                 IsIntegerNumber = int.TryParse(NoNumber, out iNumber);
                 if (!IsIntegerNumber)
-                    Console.WriteLine("\r\n------------------------------------------------------------" +
-                                      "\r\n                  ERROR! - Incorrect input!" +
-                                      "\r\n------------------------------------------------------------");
+                {
+                    Console.WriteLine("\r\n------------------------------------------------------------------------");
+                    Console.WriteLine("                        ERROR! - Incorrect input!                       ");
+                    Console.WriteLine("------------------------------------------------------------------------");
+                }
             }
             while (!IsIntegerNumber);
             return iNumber;
         }
 
-        static int RequestMultiplication(int Number01, int Number02)
+        static string RequestOperation(string Message)
         {
-            int Result = 0;
-            int i = 0;
-            for (i = 0; i < Number01; i++)
-            {
-                Result += Number02;
-            }
-            return Result;
-        }
-
-        static (int Result, int Remainder) RequestDivision(int Number01, int Number02)
-        {
-            int Result = 0;
-            int Remainder = Number01;
+            string Operation = "";
+            bool OperationEnabled = false;
             do
             {
-                Remainder = Remainder - Number02;
-                Result += 1;
+                Console.WriteLine(Message);
+                Operation = Console.ReadLine();
+
+                List<string> AvailableOperations = new List<string>(){
+                    "+","-","*","/","="
+                };
+                OperationEnabled = AvailableOperations.Contains(Operation);
+                if (!OperationEnabled) {
+                    Console.WriteLine("\r\n------------------------------------------------------------------------");
+                    Console.WriteLine("                    ERROR! - Operation not available!                   ");
+                    Console.WriteLine("------------------------------------------------------------------------");
+                }
             }
-            while (Remainder >= Number02);
-            return (Result, Remainder);
+            while (!OperationEnabled);
+            return Operation;
         }
 
-        static void Main(string[] args)
+        static int RequestCalculation(string Operation , int Number01, int Number02)
         {
-            Console.WriteLine("------------------------------------------------------------");
-            Console.WriteLine("                         CALCULATOR                         ");
-            Console.WriteLine("------------------------------------------------------------");
-            string Operation = RequestOperation();                                              //É importante lembrar que apesar de Operation
-                                                                                                //ser usado na função e aqui são variáveis
-                                                                                                //diferente com o mesmo nome, já que a variável
-                                                                                                //operations dentro da função não sai de lá.
-            int Number01 = RequestNumber("\r\nEnter the first number:");
-            int Number02 = RequestNumber("\r\nEnter the second number:");
             int Result = 0;
-            int Remainder = 0;
 
             switch (Operation)
             {
@@ -99,35 +65,64 @@ namespace _20240903_Calculator_V3._0
                     Result = Number01 - Number02;
                     break;
                 case "*":
-                    Result = RequestMultiplication(Number01, Number02);
+                        Result = Number01 * Number02;
                     break;
                 case "/":
-                    if (Number02 != 0)
+                    if (Number02 == 0)
                     {
-                        (Result, Remainder) = RequestDivision(Number01, Number02);
+                        Result = Number01;
+                        Console.WriteLine("\r\n-----------------------------------------------------------------------------");
+                        Console.WriteLine("                        Impossible - Division by zero!                     ");
+                        Console.WriteLine("------------------------------------------------------------------------------");
                     }
                     else
                     {
-                        Console.WriteLine("\r\n------------------------------------------------------------");
-                        Console.WriteLine("                   Impossible - Division by zero!                   ");
+                        Result = Number01 / Number02;
                     }
                     break;
             }
-            if (Number02 == 0 && Operation == "/")
-            {
-                Console.WriteLine("------------------------------------------------------------");
-            }
-            else
-            {
-                Console.WriteLine("\r\n------------------------------------------------------------");
-                Console.WriteLine(" Result: " + Result + " - It's a " + (Result % 2 == 0 ? "even" : "odd") + " number.");
+            return Result;
+        }
 
-                if (Operation == "/")
-                {
-                    Console.WriteLine(" Remainder: " + Remainder);
-                }
-                Console.WriteLine("------------------------------------------------------------");
+        static void Main(string[] args)
+        {
+            Console.WriteLine("------------------------------------------------------------------------------");
+            Console.WriteLine("                                  CALCULATOR                                  ");
+            Console.WriteLine("------------------------------------------------------------------------------");
+            
+            int Number01 = RequestNumber("\r\nEnter the first number:");
+
+            string Operation = RequestOperation("\r\nEnter the operation you want to perform [+,-,*,/]:");
+
+            int Number02 = RequestNumber("\r\nEnter the second number:");
+
+            int Result = RequestCalculation(Operation, Number01, Number02);
+
+            Console.WriteLine("\r\n------------------------------------------------------------------------------");
+            Console.WriteLine(" Partial Result: " + Result);
+            Console.WriteLine("------------------------------------------------------------------------------");
+
+            do
+            {
+                Operation = RequestOperation("\r\nEnter the operation you want to perform [+,-,*,/] or press [=] to finalize:");
+                if (Operation == "=") break;
+                
+                int Number03 = RequestNumber("\r\nEnter the next number:");
+
+                Result = RequestCalculation(Operation, Result, Number03);
+
+                Console.WriteLine("\r\n------------------------------------------------------------------------------");
+                Console.WriteLine(" Partial Result: " + Result);
+                Console.WriteLine("------------------------------------------------------------------------------");
             }
+            while (Operation != "=");
+            Console.WriteLine("\r\n------------------------------------------------------------------------------");
+            Console.WriteLine(" Final Result: " + Result);
+            if (Result % 3 == 0)
+            {
+                Console.WriteLine(" The result is a multiple of 3.");
+            }
+            Console.WriteLine("------------------------------------------------------------------------------");
             Console.ReadLine();
         }
     }

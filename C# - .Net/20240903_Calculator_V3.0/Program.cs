@@ -123,7 +123,7 @@ namespace _20240903_Calculator_V3._0
                 Console.WriteLine(" The result is a multiple of 3.");
             }
             Console.WriteLine("------------------------------------------------------------------------------");
-            Console.ReadLine() ;
+            Console.ReadLine();
         }
     }
 }

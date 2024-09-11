@@ -1,12 +1,23 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\ERP-SoftwareDeveloper\\",
+  "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\",
   "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

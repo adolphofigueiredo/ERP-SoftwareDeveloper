@@ -1,0 +1,104 @@
+Obiettivo: Si vuole creare un sistema di Listino prezzi, collegati a clienti ed articoli, 
+            in modo tale che all'inserimento di una riga di un ordine di vendita, il prezzo 
+            venga calcolato sulla base di questi listini inseriti manualmente dagli utenti 
+
+
+Tabella Prezzi
+    - Creare una tabella "Sales Price Lines" con i seguenti campi:
+        Entry No.       : Integer  - Autoincrement e NON Editabile
+        Customer No.    : Code[20] - Collegata alla tabella Customer
+        Item No.        : Code[20] - Collegata alla tabella Item
+        Unit Price      : Decimal
+        Min. Qty        : Integer
+        Enabled         : Boolean
+    - Collegarsi al trigger OnInsert della tabella "Sales Price Lines" e impostare il campo Enabled a true
+
+
+Pagina Prezzi
+    - Creare una pagina "Sales Price Lines List" di tipo LISTA che esponga tutti i campi della tabella "Sales Price Lines"
+        la pagina deve essere ricercabile da menu
+
+
+Funzione di calcolo prezzo
+    - Creare una tableextension della tabella "Sales Line"
+    - All'interno creare un funzione:
+        GetSalesUnitPrice(CustomerNo: Code[20]; ItemNo: Code[20]; Quantity: Integer): Decimal
+        La funzione deve:
+        - Trovare le righe di "Sales Price Lines" abilitate, collegate alla coppia cliente-articolo e avente "Min. Qty" <= Quantity
+        - Ritornare lo Unit Price più basso tra tutte le righe trovate, se non trova niente deve ritornare 0
+
+
+Utilizzo della funzione
+    - Collegarsi al trigger OnAfterValidate del campo Quantity della Sales Line:
+        - Se la Quantity inserita è maggiore di zero e se la riga è di tipo Articolo allora:
+        - lanciare la funzione GetSalesUnitPrice() con i parametri corretti
+        - Se il valore ritornato è maggiore di 0 allora:
+            - Validare quel valore nel campo "Unit Price" della riga 
+            - Dopo aver Validato lo "Unit Price" inserire una riga di commento con scritto 
+                "Prezzo unitario dell'articolo X scontato a Y"
+                Sostituire X e Y con i valori dell'articolo e dello "Unit Price" 
+                Le righe di commento hanno SalesLine.Type := SalesLine.Type::" "
+
+
+Eliminazione righe collegate al cliente
+    - Creare una tableextension della tabella "Customer"
+    - Collegarsi al trigger OnAfterDelete della tabella Customer 
+        ed eliminare tutte le "Sales Price Lines" collegate
+
+
+Eliminazione righe collegate all'articolo
+    - Creare una tableextension della tabella "Item"
+    - Collegarsi al trigger OnAfterDelete della tabella Item 
+        ed eliminare tutte le "Sales Price Lines" collegate
+
+Aggiunnte 1:
+    - Dalla scheda e della lista clienti aggiungere un pulsante 
+	per aprire la pagina "Sales Price Lines List" 
+        filtrata per il cliente su cui stiamo lavorando
+    
+    - Dalla scheda e dalla lista articoli aggiungere un pulsante
+        per aprire la pagina "Sales Price Lines List" 
+        filtrata per l'articolo su cui stiamo lavorando
+    
+    - modificare la funzione GetSalesUnitPrice:
+	Nel caso in cui non venga trovato nessun prezzo corrispondente
+	allora invece di ritornare 0, ritornare il campo "Unit Price" dell'articolo
+    
+    - Pulsante "crea ordine"
+	Aggiungere un pulsante nella lista dei prezzi chiamato "Crea Ordine".
+	Selezionate N righe nella pagina dei prezzi e cliccando sul pulsante "Crea Ordine",
+	il sistema deve creare un ordine di vendita sul cliente delle righe selezionate
+        e inserire le righe dell'ordine formate dagli articolo, prezzi e quantità dati dalle righe di listino selezionate.
+	Se si selezionano righe di listino che hanno clienti diversi il sistema deve andare in errore.
+    	AIUTO: Per ottenere tutti i record selezionati all'interno di una pagina utilizzare la funzione
+        Currpage.SetSelectionFilter(VariabileRecord)
+
+
+Aggiunte 2:
+    - Creare una codeunit "Sales Price Management":
+        Spostare la funzione di ricerca del prezzo e della creazione dell'ordine di vendita all'interno della codeunit
+    
+    - Collegamento evento: 
+        - All'interno della codeunit creata sopra, 
+          collegarsi all'evento OnBeforeReleaseSalesDoc della codeunit "Release Sales Document"
+          questo farà si che potremmo scrivere del codice che verrà eseguito prima del rilascio di un documento di vendita.
+	- All'interno dell'evento:
+            Lanciare la funzione di ricerca del prezzo minimo per ogni riga
+            Se trovo almeno un prezzo minimo minore per una riga dell'ordine, 
+            allora chiedere conferma all'utente di continuare 
+            "Trovato prezzo inferiore per la riga X dell'ordine Y, continuare?"
+            nel caso di un no da parte dell'utente bloccare l'esecuzione  
+    
+    - Utilizzo funzioni di sistema:
+        Aggiungere altri 4 campi nella tabella "Sales Price Lines":
+        - Starting Date : Date 
+            rapprensenta la data di inizio del prezzo
+        - Date Duration : DateFormula 
+            qui possiamo inserire la formula con cui calcolare la data finale
+        - Ending Date : Date 
+            rapprensenta la data di fine del prezzo
+            inserita manualmente e/o calcolata al validate del campo "Date Duration" e "Starting Date"
+            Al validate del campo azzera il campo "Date Duration"
+        - Creation User Id : Text[50] 
+            Campo non editabile
+            Da compilare in automatico all'inserimento di un record, contiene l'utente che sta inserendo il record

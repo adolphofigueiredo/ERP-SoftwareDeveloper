@@ -1,5 +1,6 @@
 table 50100 "Sales Price Lines"                                      //Use command ttable to open a snippet
 {
+    DataClassification = ToBeClassified;
     Caption = 'Sales Price Lines';                                   //It's used to change the name when it is translated.
                                                                      //'' These symbols are used to say that's a string inside.
                                                                      //Business central cannot handle a field null, so it inserts 0. hutel.
@@ -60,9 +61,7 @@ table 50100 "Sales Price Lines"                                      //Use comma
 
     trigger OnInsert()                                               //It runs automatically after the user chooses to insert a new record in a page from the Web client.
     begin
-        if ("Unit Price" <> 0) then begin                            //Condition created to activate the enabled field when a price is entered.
-            Enabled := true
-        end
+        Rec.Enabled := true;                                         //Condition created to activate the enabled field when a price is entered.
     end;
 
     trigger OnModify()

@@ -62,6 +62,7 @@ table 50100 "Sales Price Lines"                                      //Use comma
     trigger OnInsert()                                               //It runs automatically after the user chooses to insert a new record in a page from the Web client.
     begin
         Rec.Enabled := true;                                         //Condition created to activate the enabled field when a price is entered.
+                                                                     //It is not necessary to write "Rec."
     end;
 
     trigger OnModify()

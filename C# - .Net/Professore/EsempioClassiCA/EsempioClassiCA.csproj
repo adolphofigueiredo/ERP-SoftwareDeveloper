@@ -43,9 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EsempiDiClassi\Automobile.cs" />
-    <Compile Include="EsempiDiClassi\VeicoloAMotore.cs" />
-    <Compile Include="EsempiDiClassi\Veicolo.cs" />
+    <Compile Include="Automobile\Automobile.cs" />
+    <Compile Include="Cellulare\Batteria.cs" />
+    <Compile Include="Cellulare\Cellulare.cs" />
+    <Compile Include="Cellulare\Fotocamera.cs" />
+    <Compile Include="Cellulare\Schermo.cs" />
+    <Compile Include="LogApplicativo\Logger.cs" />
+    <Compile Include="PC\Computer.cs" />
+    <Compile Include="PC\Hd.cs" />
+    <Compile Include="PC\Ram.cs" />
+    <Compile Include="PC\SchedaVideo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -57,6 +64,9 @@
       <Project>{6e886a9c-ea4b-4194-be8f-95aff797eb84}</Project>
       <Name>EsempioClassiNetStd</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EsempiDiClassi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

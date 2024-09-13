@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using EsempioClassiCA.LogApplicativo;
 using EsempioClassiNetStd;
 
 namespace EsempioClassiCA
@@ -11,31 +13,33 @@ namespace EsempioClassiCA
     {
         static void Main(string[] args)
         {
-            Prezzo p = new Prezzo();
-            p.SetValore(-10);
+            Automobile panda = new Automobile("FIAT", "PANDA HYBRID");
+            panda.NumeroDiRuote = 4;
+            try
+            {
+                panda.Avvia();
+                panda.Avvia();
+            }
+            catch (Exception e)
+            {
+                //e.Message  // 'Motore gia avviato' 
+                throw;
+            }
 
-            Console.WriteLine(p.GetValore());
 
-            if (p.GetValore() < 0)
+            /*using (Logger logger = new Logger("./miolog.txt"))
             {
-                Console.WriteLine("é uno sconto");
-            }
-            else
-            {
-                Console.WriteLine("é uno prezzo");
-            }
 
-            if (p.GetESconto())
-            {
-                Console.WriteLine("é uno sconto");
-            }
-            else
-            {
-                Console.WriteLine("é uno prezzo");
-            }
+
+
+
+                logger.WriteLog("messaggio di log");
+                Console.ReadLine();
+            }*/
 
             Console.ReadLine();
-
         }
+
+
     }
 }

@@ -1,0 +1,15 @@
+namespace _20240917_Calculator_V4._0
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_01_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

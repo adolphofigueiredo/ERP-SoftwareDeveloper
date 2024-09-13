@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240913_Windows_Form_APP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{599E5E35-19B1-42F2-8F2A-813A7F68D50F}|20240913_Windows_Form_APP\\20240913_Windows_Form_APP.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240913_windows_form_app\\20240913_windows_form_app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{599E5E35-19B1-42F2-8F2A-813A7F68D50F}|20240913_Windows_Form_APP\\20240913_Windows_Form_APP.csproj|solutionrelative:20240913_windows_form_app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599E5E35-19B1-42F2-8F2A-813A7F68D50F}|20240913_Windows_Form_APP\\20240913_Windows_Form_APP.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240913_windows_form_app\\20240913_windows_form_app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599E5E35-19B1-42F2-8F2A-813A7F68D50F}|20240913_Windows_Form_APP\\20240913_Windows_Form_APP.csproj|solutionrelative:20240913_windows_form_app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599E5E35-19B1-42F2-8F2A-813A7F68D50F}|20240913_Windows_Form_APP\\20240913_Windows_Form_APP.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240913_windows_form_app\\20240913_windows_form_app\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599E5E35-19B1-42F2-8F2A-813A7F68D50F}|20240913_Windows_Form_APP\\20240913_Windows_Form_APP.csproj|solutionrelative:20240913_windows_form_app\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240913_Windows_Form_APP\\20240913_Windows_Form_APP\\Form1.cs",
+              "RelativeDocumentMoniker": "20240913_Windows_Form_APP\\Form1.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240913_Windows_Form_APP\\20240913_Windows_Form_APP\\Form1.cs",
+              "RelativeToolTip": "20240913_Windows_Form_APP\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:38:10.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Progettazione]",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240913_Windows_Form_APP\\20240913_Windows_Form_APP\\Form1.cs",
+              "RelativeDocumentMoniker": "20240913_Windows_Form_APP\\Form1.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240913_Windows_Form_APP\\20240913_Windows_Form_APP\\Form1.cs [Progettazione]",
+              "RelativeToolTip": "20240913_Windows_Form_APP\\Form1.cs [Progettazione]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:38:08.209Z",
+              "EditorCaption": " [Progettazione]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240913_Windows_Form_APP\\20240913_Windows_Form_APP\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "20240913_Windows_Form_APP\\Form1.Designer.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240913_Windows_Form_APP\\20240913_Windows_Form_APP\\Form1.Designer.cs",
+              "RelativeToolTip": "20240913_Windows_Form_APP\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T15:38:04.179Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

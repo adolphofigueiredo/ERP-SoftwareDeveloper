@@ -8,16 +8,38 @@ using static EsempioClassiCA.PC.Computer;
 namespace EsempioClassiCA
 {
 
-    public class Veicolo
-    {
-        public int NumeroDiRuote { get; set; }
-    }
+    public class Veicolo                                                //Criaçãde uma CLASSE
+                                                                        //Se nao definir a visibilidade no inicio é assumido privado,
+                                                                        //mas neste caso foi colocado como publico
 
-    public interface IVeicoloAMotore
     {
-         bool MotoreAvviato { get; }
-        string TipoCarburante { get; set; }
-        int NumeroDiRuote { get; set; }
+        public int NumeroDiRuote { get; set; }                          //Criação de uma PROPRIEDADE da classe, ou seja, as propriedades
+                                                                        //são agrupadas dentro das classes que possuem propositos especificos.
+                                                                        
+                                                                        //Repare que esta classe possui um tipo, que neste caso é integer,
+                                                                        //mas pode ser boleano, sttring e etc...
+    }
+                                                                        //É importante perceber que dentro das propriedades sao incluidas
+                                                                        //as funcoes de acesso get e set, a get significa que ela pode
+                                                                        //acessar os dados e set pode escrever os dados.
+
+                                                                        //Repare que esta propriedade esta como PUBLIC. Isso pode ser
+                                                                        //um grande problema de seguranca, pois qualquer um poderia
+                                                                        //acessar esta informaçùoes e alterar sem utilisar os METODOS
+                                                                        //adequados, criados e fornecidos dentro desta classe.
+
+    public interface IVeicoloAMotore                                    //Criaçãde uma CLASSE
+    {
+        bool MotoreAvviato { get; }                                     //Criação de uma PROPRIEDADE da classe, ou seja, as propriedades
+                                                                        //são agrupadas dentro das classes que possuem propositos especificos.
+        string TipoCarburante { get; set; }                     
+                                                                        //Repare que esta classe possui um tipo, que neste caso é integer,
+        int NumeroDiRuote { get; set; }                                 //mas pode ser boleano, sttring e etc...
+
+                                                                        //É importante perceber que dentro das propriedades sao incluidas
+                                                                        //as funcoes de acesso get e set, a get significa que ela pode
+                                                                        //acessar os dados e set pode escrever os dados.
+
         void Avvia();
         void Spegni();
 
@@ -77,11 +99,23 @@ namespace EsempioClassiCA
             _modello = modello;
         }
 
-        public void ApriLePorte()
+        public void ApriLePorte()                                       //Criacao de um METODO, ou seja, açoes e comportamentos
+                                                                        //realizados por esta classe.
+
+                                                                        //E importante lembrar que o void quer dizer vazio, ou seja,
+                                                                        //significa que as funções não retornam qualquer valor. A
+                                                                        //funçao void nos permite fazer funções que não retornam nada
+                                                                        //e funções que não têm parâmetros.
         {
             if (MotoreAvviato == true) throw new Exception("Impossibile aprire le porte a motore avviato!");
         }
-        public void ChiudiLePorte()
+        public void ChiudiLePorte()                                     //Criacao de um METODO, ou seja, açoes e comportamentos
+                                                                        //realizados por esta classe.
+
+                                                                        //E importante lembrar que o void quer dizer vazio, ou seja,
+                                                                        //significa que as funções não retornam qualquer valor. A
+                                                                        //funçao void nos permite fazer funções que não retornam nada
+                                                                        //e funções que não têm parâmetros.
         {
         }
 

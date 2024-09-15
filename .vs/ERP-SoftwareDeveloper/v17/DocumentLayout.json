@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\",
   "Documents": [
     {
@@ -11,6 +12,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III\\Hello_World_III.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
+=======
+  "WorkspaceRootPath": "C:\\ERP-SoftwareDeveloper\\",
+  "Documents": [],
+>>>>>>> d1ac592b716d22bc34207d2bbdd41046fd03d2b8
   "DocumentGroupContainers": [
     {
       "Orientation": 0,

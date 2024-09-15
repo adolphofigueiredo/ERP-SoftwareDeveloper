@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\",
   "Documents": [
     {
@@ -9,6 +10,21 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III\\Hello_World_III.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III\\Hello_World_III.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "C:\\ERP-SoftwareDeveloper\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> d1ac592b716d22bc34207d2bbdd41046fd03d2b8
     }
   ],
   "DocumentGroupContainers": [
@@ -17,12 +33,56 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
+<<<<<<< HEAD
           "DockedWidth": 11,
           "SelectedChildIndex": -1,
+=======
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+>>>>>>> d1ac592b716d22bc34207d2bbdd41046fd03d2b8
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Program.cs",
+              "RelativeDocumentMoniker": "C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Program.cs",
+              "ToolTip": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Program.cs",
+              "RelativeToolTip": "C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T17:23:57.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.cs",
+              "RelativeDocumentMoniker": "C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.cs",
+              "ToolTip": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.cs",
+              "RelativeToolTip": "C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T17:23:48.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.Designer.cs",
+              "ToolTip": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.Designer.cs",
+              "RelativeToolTip": "C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T17:23:27.956Z",
+              "EditorCaption": ""
             }
           ]
         },

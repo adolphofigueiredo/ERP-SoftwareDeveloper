@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0.csproj": {}
+    "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0.csproj": {}
   },
   "projects": {
-    "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0.csproj": {
+    "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0.csproj",
+        "projectUniqueName": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0.csproj",
         "projectName": "20240917_Calculator_V4.0",
-        "projectPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0.csproj",
-        "packagesPath": "C:\\Users\\ICTS23-25.432\\.nuget\\packages\\",
-        "outputPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\obj\\",
+        "projectPath": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0.csproj",
+        "packagesPath": "C:\\Users\\adolp\\.nuget\\packages\\",
+        "outputPath": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ICTS23-25.432\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\adolp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

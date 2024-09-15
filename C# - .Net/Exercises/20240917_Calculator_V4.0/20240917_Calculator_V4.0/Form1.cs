@@ -11,5 +11,10 @@ namespace _20240917_Calculator_V4._0
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

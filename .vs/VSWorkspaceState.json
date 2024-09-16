@@ -3,19 +3,9 @@
     "",
     "\\C# - .Net",
     "\\C# - .Net\\Exercises",
-<<<<<<< HEAD
     "\\C# - .Net\\Exercises\\20240725_Hello_World_III",
-    "\\C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III",
-    "\\C# - .Net\\Professore",
-    "\\C# - .Net\\Professore\\EsempioClassiCA",
-    "\\C# - .Net\\Professore\\EsempioClassiCA\\Automobile",
-    "\\C# - .Net\\Professore\\EsempioClassiCA\\Cellulare"
-=======
-    "\\C# - .Net\\Exercises\\20240917_Calculator_V4.0",
-    "\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0",
-    "\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\obj"
->>>>>>> d1ac592b716d22bc34207d2bbdd41046fd03d2b8
+    "\\C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III"
   ],
-  "SelectedNode": "\\C# - .Net\\Professore\\EsempioClassiCA\\Automobile\\Automobile.cs",
+  "SelectedNode": "\\C# - .Net\\Exercises\\20240916_Exercises.cs",
   "PreviewInSolutionExplorer": false
 }

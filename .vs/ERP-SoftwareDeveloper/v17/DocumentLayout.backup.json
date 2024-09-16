@@ -1,5 +1,16 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Professore\\EsempioClassiCA\\Automobile\\Automobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Professore\\EsempioClassiCA\\Automobile\\Automobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III\\Hello_World_III.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III\\Hello_World_III.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
   "WorkspaceRootPath": "C:\\ERP-SoftwareDeveloper\\",
   "Documents": [
     {
@@ -13,6 +24,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20240917_Calculator_V4.0\\20240917_Calculator_V4.0\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> d1ac592b716d22bc34207d2bbdd41046fd03d2b8
     }
   ],
   "DocumentGroupContainers": [
@@ -21,8 +33,13 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
+<<<<<<< HEAD
+          "DockedWidth": 11,
+          "SelectedChildIndex": -1,
+=======
           "DockedWidth": 200,
           "SelectedChildIndex": 2,
+>>>>>>> d1ac592b716d22bc34207d2bbdd41046fd03d2b8
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,6 +82,48 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-15T17:23:27.956Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 133,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 689,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Automobile.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Professore\\EsempioClassiCA\\Automobile\\Automobile.cs",
+              "RelativeDocumentMoniker": "C# - .Net\\Professore\\EsempioClassiCA\\Automobile\\Automobile.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Professore\\EsempioClassiCA\\Automobile\\Automobile.cs",
+              "RelativeToolTip": "C# - .Net\\Professore\\EsempioClassiCA\\Automobile\\Automobile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T17:40:10.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Hello_World_III.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III\\Hello_World_III.cs",
+              "RelativeDocumentMoniker": "C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III\\Hello_World_III.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III\\Hello_World_III.cs",
+              "RelativeToolTip": "C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III\\Hello_World_III.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T21:31:09.458Z",
               "EditorCaption": ""
             }
           ]

@@ -1,0 +1,7 @@
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240725_Hello_World_III\20240725_Hello_World_III\bin\Debug\20240725_Hello_World_III.exe.config
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240725_Hello_World_III\20240725_Hello_World_III\bin\Debug\20240725_Hello_World_III.exe
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240725_Hello_World_III\20240725_Hello_World_III\bin\Debug\20240725_Hello_World_III.pdb
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240725_Hello_World_III\20240725_Hello_World_III\obj\Debug\20240725_Hello_World_III.csproj.AssemblyReference.cache
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240725_Hello_World_III\20240725_Hello_World_III\obj\Debug\20240725_Hello_World_III.csproj.CoreCompileInputs.cache
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240725_Hello_World_III\20240725_Hello_World_III\obj\Debug\20240725_Hello_World_III.exe
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240725_Hello_World_III\20240725_Hello_World_III\obj\Debug\20240725_Hello_World_III.pdb

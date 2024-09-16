@@ -1,0 +1,70 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Cellulare iPhone = new Cellulare();						//Estou criando uma INSTANCIA
+		iPhone.Fotocamera = new Fotocamera();						//É importante saber que podemos criar varias instancias de uma mesma classe,
+		iPhone.Batteria = new Batteria();						//todas elas serão criadas e arquivadas na memoria, mas se eu não salvar
+		iPhone.Schermo = new Schermo();							//em algum arquivo ou banco de dados, tudo será perdido quando o programa
+												//for fechado
+		
+		
+		iPhone.Fotocamera.Risoluzione = "1280x740";					//Esta é uma estruura de adiçao de propriedades nesta instancia.
+		iPhone.Batteria.CapacitaW = 10;
+		iPhone.Schermo.LuminositaLUMENS = 500;
+		
+		iPhone.Chiama("0112345678");
+		
+		iPhone.Chiama("8765431210");							//Repare que quando faz esta chamada é informado um erro
+
+	}
+}
+
+public class Fotocamera{									//criacao de uma classe
+	public string Risoluzione{get;set;}							//criacao de uma propriedade da classe e dizer que é
+	}											//leitura e escritura através do get e do set
+
+public class Batteria{										//criacao de uma classe
+	public int CapacitaW{get;set;}								//criacao de uma propriedade da classe e dizer que é
+	}											//leitura e escritura através do get e do set
+
+public class Schermo{										//criacao de uma classe
+	public int LuminositaLUMENS{get;set;}							//criacao de uma propriedade da classe e dizer que é
+	}											//leitura e escritura através do get e do set
+
+public class Cellulare {
+	private bool _sonoInChiamata = false;							//é privado pois nao interessa a todos saberem se o telefone esta ocupado ou nao	
+												//se nao definir a visibilidade no inicio é assumido privado
+	public Fotocamera Fotocamera {get;set;}							//non sostuibile  //Se escreve duas vezes pq o primeiro é o tipo e o segundo é o nome
+	public Schermo Schermo {get;set;}
+	public Batteria Batteria {get;set;}							//non sostuibile
+
+	public delegate void ChiamataIniziataDelegate();
+	public event ChiamataIniziataDelegate ChiamataIniziata;
+		
+	public Cellulare() {									
+	}
+	public Cellulare(Fotocamera fotocamera, Schermo schermo, Batteria batteria){		//É um CONSTRUTOR com o mesmo nome da classe. Um construtor parece muito
+		this.Fotocamera = fotocamera;							//com um METODO, mas é diferente. Ele não é chamado separadamente, ele é
+		this.Schermo = schermo;								//chamado no momento da inicialização da classe, quando ela está sendo instanciada.
+		this.Batteria = batteria;							//Os construtores permitem que o programador defina valores padrão, limite a
+												//instanciação e escreva código flexível e fácil de ler.
+	}
+	
+public void Chiama(string numeroDaChiamare){							//criacao de um metodo, uma açao do objeto
+												//controllo se non sono gia in chiamata
+	if(this._sonoInChiamata == true){							//Esta dizendo que se ja estiver em ligacao ele nao atende
+		throw new Exception("Operazione non supportata");
+	}
+	
+	Console.WriteLine("Chiamata Iniziata");
+	
+	this._sonoInChiamata = true;
+	}
+
+public void HangUp(){
+	if(this._sonoInChiamata == true) this._sonoInChiamata = false;
+	}
+}

@@ -1,0 +1,100 @@
+//Creare una classe computer
+//con proprietà: dimensioneHd, velocità processore,
+//metodi Accendi, Spegni, StandBy
+//spegni genera errore se la macchina è in standby
+//accendi genera errore se la macchina è accesa
+//standBy genera errore se la macchina è accesa
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Computer MacBookPRO = new Computer();							//Criacao de uma instancia para poder rodar o programa
+		MacBookPRO.DimensioneHD = 1000;								//Adiçao da propriedade nesta instancia
+		MacBookPRO.VelocitaProcessore = "M7";							//Adiçao da propriedade nesta instancia
+	
+		MacBookPRO.Accendi();									//Inicio de um metodo
+		//MacBookPRO.Accendi();									//Inicio de um metodo para testar as possibilidades do programa
+		MacBookPRO.StandBy();									//Inicio de um metodo
+		//MacBookPRO.StandBy();									//Inicio de um metodo para testar as possibilidades do programa
+		MacBookPRO.Accendi();									//Inicio de um metodo para testar as possibilidades do programa
+		//MacBookPRO.Spegni();									//Inicio de um metodo
+		MacBookPRO.Spegni();									//Inicio de um metodo para testar as possibilidades do programa
+		//MacBookPRO.StandBy();									//Inicio de um metodo para testar as possibilidades do programa
+	}
+	
+}
+
+public class Computer {											//Criaçao da classe
+	public int DimensioneHD {get;set;}								//Criaçao da propriedade da classe e dizer que é leitura e escritura
+	public string VelocitaProcessore {get;set;}							//Criaçao da propriedade da classe e dizer que é leitura e escritura
+	private bool _sonoAcceso = false;								//Boleano criado para saber se o computador esta ligado ou nao
+													//Este boleano é colocado em privado pois nao interessa fora do
+													//programa o status do computador, é um controle que é usado apenas internamente
+													//Se a gente nao define a visibilidade no inicio, o programa assume a visibilidade como privada
+	private bool _sonoInStandBy = false;								//Boleano criado para saber se o computador esta em stand by ou nao
+
+
+public void Accendi(){											//Criaçao de um metodo, ou seja, uma açao do objeto
+	if (this._sonoAcceso == true){
+		if (this._sonoInStandBy == false){
+		throw new Exception ("Computer gia acceso!");						//Criacao de uma exceçao, nao é uma mensagem de tela, é como se fosse uma mensagem para aparecer no
+													//log da "tela azul" do windows
+	}
+	}
+	_sonoAcceso = true;										//Atualizacao do boleano que mostra o status do computador
+	_sonoInStandBy = false;										//Atualizacao do boleano que mostra o status do computador
+	
+	Console.WriteLine("Computer Acceso!!");								//Aviso de que o computador foi ligado
+	Console.WriteLine("	_sonoAcceso = " + _sonoAcceso);						//Informando o estado do boleano para ficar mais facil de entender o que esta acontecendo
+	Console.WriteLine("	_sonoInStandBy = " + _sonoInStandBy);					//Informando o estado do boleano para ficar mais facil de entender o que esta acontecendo
+}
+
+public void Spegni(){											//Criaçao de um metodo, ou seja, uma açao do objeto
+	if (this._sonoAcceso == true){
+	if (this._sonoInStandBy == true){
+	throw new Exception ("Computer in stand by!");							//Criacao de uma exceçao, nao é uma mensagem de tela, é como se fosse uma mensagem para aparecer no
+													//log da "tela azul" do windows		
+	}
+	}
+	
+	if (this._sonoAcceso == false){
+	if (this._sonoInStandBy == false){
+	throw new Exception ("Computer gia Spento!");							//Criacao de uma exceçao, nao é uma mensagem de tela, é como se fosse uma mensagem para aparecer no
+													//log da "tela azul" do windows		
+	}
+	}
+	
+	_sonoAcceso = false;										//Atualizacao do boleano que mostra o status do computador
+	_sonoInStandBy = false;										//Atualizacao do boleano que mostra o status do computador
+	
+	Console.WriteLine("Computer Spento!!");								//Aviso de que o computador foi desligado
+	Console.WriteLine("	_sonoAcceso = " + _sonoAcceso);						//Informando o estado do boleano para ficar mais facil de entender o que esta acontecendo
+	Console.WriteLine("	_sonoInStandBy = " + _sonoInStandBy);					//Informando o estado do boleano para ficar mais facil de entender o que esta acontecendo
+}
+
+public void StandBy(){											//Criaçao de um metodo, ou seja, uma açao do objeto
+	if (this._sonoAcceso == true){
+	if (this._sonoInStandBy == true){
+	throw new Exception ("Computer gia in stand by!");						//Criacao de uma exceçao, nao é uma mensagem de tela, é como se fosse uma mensagem para aparecer no
+													//log da "tela azul" do windows		
+	}
+	}
+	
+	if (this._sonoAcceso == false){
+	if (this._sonoInStandBy == false){
+	throw new Exception ("Computer gia Spento!");							//Criacao de uma exceçao, nao é uma mensagem de tela, é como se fosse uma mensagem para aparecer no
+													//log da "tela azul" do windows		
+	}
+	}
+	
+	_sonoAcceso = true;										//Atualizacao do boleano que mostra o status do computador
+	_sonoInStandBy = true;										//Atualizacao do boleano que mostra o status do computador
+	
+	Console.WriteLine("Computer in Stand By!!");							//Aviso de que o computador entrou em Stand By
+	Console.WriteLine("	_sonoAcceso = " + _sonoAcceso);						//Informando o estado do boleano para ficar mais facil de entender o que esta acontecendo
+	Console.WriteLine("	_sonoInStandBy = " + _sonoInStandBy);					//Informando o estado do boleano para ficar mais facil de entender o que esta acontecendo
+}
+}

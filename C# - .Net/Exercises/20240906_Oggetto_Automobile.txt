@@ -1,0 +1,63 @@
+//Oggetto Automobile
+//Con proprietà Numero Porte
+//Un metodo Avvia Motore
+//Un metodo Spegni Motore
+//Un evento di Accensione
+//Un evento di Spegnimento
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Automobile Panda = new Automobile();
+		Panda.Porte = 5;
+		Panda.Accensione += OnAccensione;
+		Panda.Spegnimento += OnSpegnimento;
+		
+		Panda.Spegni();
+		
+		Panda.Avvia();
+		
+		Panda.Avvia();
+		
+		Panda.Spegni();
+	}
+	
+	public static void OnAccensione(){Console.WriteLine("Machina accesa!");}
+	
+	public static void OnSpegnimento(){Console.WriteLine("Machina spenta!");}
+	
+}
+
+public class Automobile {
+	public int Porte {get;set;}
+	private bool _acceso = false;
+	
+public delegate void AccensioneDelegate();
+public event AccensioneDelegate Accensione;
+	
+public void Avvia(){
+	if(this._acceso == true) {
+	throw new Exception ("Motore gia acceso");
+	}
+	_acceso = true;
+	Console.WriteLine("Motore acceso!");
+
+if (Accensione != null) Accensione();
+
+}
+
+public delegate void SpegnimentoDelegate();
+public event SpegnimentoDelegate Spegnimento;
+	
+public void Spegni(){
+	_acceso = false;
+	Console.WriteLine("Motore spento!");
+	
+if (Spegnimento != null) Spegnimento();
+
+}
+	
+}

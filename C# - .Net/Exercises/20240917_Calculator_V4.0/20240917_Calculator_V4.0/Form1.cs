@@ -16,5 +16,15 @@ namespace _20240917_Calculator_V4._0
         {
 
         }
+
+        private void btn_multiplication_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

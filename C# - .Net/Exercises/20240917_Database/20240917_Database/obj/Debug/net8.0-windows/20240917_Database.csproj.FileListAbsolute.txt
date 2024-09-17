@@ -1,0 +1,17 @@
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\bin\Debug\net8.0-windows\20240917_Database.exe
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\bin\Debug\net8.0-windows\20240917_Database.deps.json
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\bin\Debug\net8.0-windows\20240917_Database.runtimeconfig.json
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\bin\Debug\net8.0-windows\20240917_Database.dll
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\bin\Debug\net8.0-windows\20240917_Database.pdb
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\_20240917_Database.Form1.resources
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917_Database.csproj.GenerateResource.cache
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917_Database.GeneratedMSBuildEditorConfig.editorconfig
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917_Database.AssemblyInfoInputs.cache
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917_Database.AssemblyInfo.cs
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917_Database.csproj.CoreCompileInputs.cache
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917_Database.sourcelink.json
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917_Database.dll
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\refint\20240917_Database.dll
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917_Database.pdb
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917_Database.genruntimeconfig.cache
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\ref\20240917_Database.dll

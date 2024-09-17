@@ -45,11 +45,13 @@
             btn_division = new Button();
             label1 = new Label();
             label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // btn_00
             // 
-            btn_00.Location = new Point(10, 235);
+            btn_00.Location = new Point(10, 149);
             btn_00.Name = "btn_00";
             btn_00.Size = new Size(75, 23);
             btn_00.TabIndex = 0;
@@ -58,7 +60,7 @@
             // 
             // btn_01
             // 
-            btn_01.Location = new Point(10, 206);
+            btn_01.Location = new Point(10, 120);
             btn_01.Name = "btn_01";
             btn_01.Size = new Size(75, 23);
             btn_01.TabIndex = 1;
@@ -68,7 +70,7 @@
             // 
             // btn_02
             // 
-            btn_02.Location = new Point(91, 206);
+            btn_02.Location = new Point(91, 120);
             btn_02.Name = "btn_02";
             btn_02.Size = new Size(75, 23);
             btn_02.TabIndex = 2;
@@ -77,7 +79,7 @@
             // 
             // btn_03
             // 
-            btn_03.Location = new Point(172, 206);
+            btn_03.Location = new Point(172, 120);
             btn_03.Name = "btn_03";
             btn_03.Size = new Size(75, 23);
             btn_03.TabIndex = 3;
@@ -86,7 +88,7 @@
             // 
             // btn_04
             // 
-            btn_04.Location = new Point(10, 177);
+            btn_04.Location = new Point(10, 91);
             btn_04.Name = "btn_04";
             btn_04.Size = new Size(75, 23);
             btn_04.TabIndex = 4;
@@ -95,7 +97,7 @@
             // 
             // btn_05
             // 
-            btn_05.Location = new Point(91, 177);
+            btn_05.Location = new Point(91, 91);
             btn_05.Name = "btn_05";
             btn_05.Size = new Size(75, 23);
             btn_05.TabIndex = 5;
@@ -104,7 +106,7 @@
             // 
             // btn_06
             // 
-            btn_06.Location = new Point(172, 177);
+            btn_06.Location = new Point(172, 91);
             btn_06.Name = "btn_06";
             btn_06.Size = new Size(75, 23);
             btn_06.TabIndex = 6;
@@ -113,7 +115,7 @@
             // 
             // btn_07
             // 
-            btn_07.Location = new Point(10, 148);
+            btn_07.Location = new Point(10, 62);
             btn_07.Name = "btn_07";
             btn_07.Size = new Size(75, 23);
             btn_07.TabIndex = 7;
@@ -122,7 +124,7 @@
             // 
             // btn_08
             // 
-            btn_08.Location = new Point(91, 148);
+            btn_08.Location = new Point(91, 62);
             btn_08.Name = "btn_08";
             btn_08.Size = new Size(75, 23);
             btn_08.TabIndex = 8;
@@ -131,7 +133,7 @@
             // 
             // btn_09
             // 
-            btn_09.Location = new Point(172, 148);
+            btn_09.Location = new Point(172, 62);
             btn_09.Name = "btn_09";
             btn_09.Size = new Size(75, 23);
             btn_09.TabIndex = 9;
@@ -140,7 +142,7 @@
             // 
             // btn_Equal
             // 
-            btn_Equal.Location = new Point(91, 235);
+            btn_Equal.Location = new Point(91, 149);
             btn_Equal.Name = "btn_Equal";
             btn_Equal.Size = new Size(156, 23);
             btn_Equal.TabIndex = 10;
@@ -149,7 +151,7 @@
             // 
             // btn_plus
             // 
-            btn_plus.Location = new Point(253, 235);
+            btn_plus.Location = new Point(253, 149);
             btn_plus.Name = "btn_plus";
             btn_plus.Size = new Size(75, 23);
             btn_plus.TabIndex = 11;
@@ -158,7 +160,7 @@
             // 
             // btn_minus
             // 
-            btn_minus.Location = new Point(253, 206);
+            btn_minus.Location = new Point(253, 120);
             btn_minus.Name = "btn_minus";
             btn_minus.Size = new Size(75, 23);
             btn_minus.TabIndex = 12;
@@ -167,16 +169,17 @@
             // 
             // btn_multiplication
             // 
-            btn_multiplication.Location = new Point(253, 177);
+            btn_multiplication.Location = new Point(253, 91);
             btn_multiplication.Name = "btn_multiplication";
             btn_multiplication.Size = new Size(75, 23);
             btn_multiplication.TabIndex = 13;
             btn_multiplication.Text = "*";
             btn_multiplication.UseVisualStyleBackColor = true;
+            btn_multiplication.Click += btn_multiplication_Click;
             // 
             // btn_division
             // 
-            btn_division.Location = new Point(253, 148);
+            btn_division.Location = new Point(253, 62);
             btn_division.Name = "btn_division";
             btn_division.Size = new Size(75, 23);
             btn_division.TabIndex = 14;
@@ -186,26 +189,48 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(10, 130);
+            label1.Location = new Point(12, 44);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(160, 23);
             label1.TabIndex = 15;
-            label1.Text = "label1";
+            label1.Text = "Risultato";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(58, 50);
+            label2.Location = new Point(91, 44);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(38, 23);
             label2.TabIndex = 16;
             label2.Text = "label2";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(253, 44);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 23);
+            label3.TabIndex = 17;
+            label3.Text = "label3";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(12, 18);
+            label4.Name = "label4";
+            label4.Size = new Size(38, 23);
+            label4.TabIndex = 18;
+            label4.Text = "label4";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(337, 268);
+            ClientSize = new Size(337, 182);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btn_division);
@@ -249,5 +274,7 @@
         private Button btn_division;
         private Label label1;
         private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }

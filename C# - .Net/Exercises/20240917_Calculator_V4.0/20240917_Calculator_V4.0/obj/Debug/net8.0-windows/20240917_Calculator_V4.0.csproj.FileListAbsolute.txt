@@ -1,0 +1,17 @@
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\bin\Debug\net8.0-windows\20240917_Calculator_V4.0.exe
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\bin\Debug\net8.0-windows\20240917_Calculator_V4.0.deps.json
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\bin\Debug\net8.0-windows\20240917_Calculator_V4.0.runtimeconfig.json
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\bin\Debug\net8.0-windows\20240917_Calculator_V4.0.dll
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\bin\Debug\net8.0-windows\20240917_Calculator_V4.0.pdb
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\_20240917_Calculator_V4._0.Form1.resources
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\20240917_Calculator_V4.0.csproj.GenerateResource.cache
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\20240917_Calculator_V4.0.GeneratedMSBuildEditorConfig.editorconfig
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\20240917_Calculator_V4.0.AssemblyInfoInputs.cache
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\20240917_Calculator_V4.0.AssemblyInfo.cs
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\20240917_Calculator_V4.0.csproj.CoreCompileInputs.cache
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\20240917_Calculator_V4.0.sourcelink.json
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\20240917_Calculator_V4.0.dll
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\refint\20240917_Calculator_V4.0.dll
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\20240917_Calculator_V4.0.pdb
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\20240917_Calculator_V4.0.genruntimeconfig.cache
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Calculator_V4.0\20240917_Calculator_V4.0\obj\Debug\net8.0-windows\ref\20240917_Calculator_V4.0.dll

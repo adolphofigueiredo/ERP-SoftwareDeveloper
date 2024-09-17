@@ -31,10 +31,10 @@
             btn_CheckConnection = new Button();
             txt_ConnectionString = new TextBox();
             txt_QueryString = new TextBox();
+            btn_CountQuery = new Button();
+            dgv_Data = new DataGridView();
             btn_ExecuteQuery = new Button();
-            dataGridView1 = new DataGridView();
-            btn_ShowQuery = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Data).BeginInit();
             SuspendLayout();
             // 
             // btn_CheckConnection
@@ -45,6 +45,7 @@
             btn_CheckConnection.TabIndex = 0;
             btn_CheckConnection.Text = "Check Connection";
             btn_CheckConnection.UseVisualStyleBackColor = true;
+            btn_CheckConnection.Click += btn_CheckConnection_Click;
             // 
             // txt_ConnectionString
             // 
@@ -61,49 +62,50 @@
             txt_QueryString.Size = new Size(685, 205);
             txt_QueryString.TabIndex = 2;
             // 
+            // btn_CountQuery
+            // 
+            btn_CountQuery.Location = new Point(12, 251);
+            btn_CountQuery.Name = "btn_CountQuery";
+            btn_CountQuery.Size = new Size(340, 43);
+            btn_CountQuery.TabIndex = 3;
+            btn_CountQuery.Text = "Count Records";
+            btn_CountQuery.UseVisualStyleBackColor = true;
+            btn_CountQuery.Click += btn_CountQuery_Click;
+            // 
+            // dgv_Data
+            // 
+            dgv_Data.AllowUserToAddRows = false;
+            dgv_Data.AllowUserToDeleteRows = false;
+            dgv_Data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Data.Location = new Point(12, 300);
+            dgv_Data.Name = "dgv_Data";
+            dgv_Data.ReadOnly = true;
+            dgv_Data.Size = new Size(685, 302);
+            dgv_Data.TabIndex = 4;
+            // 
             // btn_ExecuteQuery
             // 
-            btn_ExecuteQuery.Location = new Point(12, 251);
+            btn_ExecuteQuery.Location = new Point(358, 252);
             btn_ExecuteQuery.Name = "btn_ExecuteQuery";
-            btn_ExecuteQuery.Size = new Size(340, 43);
-            btn_ExecuteQuery.TabIndex = 3;
+            btn_ExecuteQuery.Size = new Size(340, 42);
+            btn_ExecuteQuery.TabIndex = 5;
             btn_ExecuteQuery.Text = "Execute";
             btn_ExecuteQuery.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 300);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(685, 302);
-            dataGridView1.TabIndex = 4;
-            // 
-            // btn_ShowQuery
-            // 
-            btn_ShowQuery.Location = new Point(358, 252);
-            btn_ShowQuery.Name = "btn_ShowQuery";
-            btn_ShowQuery.Size = new Size(340, 42);
-            btn_ShowQuery.TabIndex = 5;
-            btn_ShowQuery.Text = "Show";
-            btn_ShowQuery.UseVisualStyleBackColor = true;
             // 
             // DataBase_Connection
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(709, 614);
-            Controls.Add(btn_ShowQuery);
-            Controls.Add(dataGridView1);
             Controls.Add(btn_ExecuteQuery);
+            Controls.Add(dgv_Data);
+            Controls.Add(btn_CountQuery);
             Controls.Add(txt_QueryString);
             Controls.Add(txt_ConnectionString);
             Controls.Add(btn_CheckConnection);
             Name = "DataBase_Connection";
             Text = "DataBase Connection";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Data).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -113,8 +115,8 @@
         private Button btn_CheckConnection;
         private TextBox txt_ConnectionString;
         private TextBox txt_QueryString;
+        private Button btn_CountQuery;
+        private DataGridView dgv_Data;
         private Button btn_ExecuteQuery;
-        private DataGridView dataGridView1;
-        private Button btn_ShowQuery;
     }
 }

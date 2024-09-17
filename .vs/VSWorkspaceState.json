@@ -2,10 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\C# - .Net",
-    "\\C# - .Net\\Exercises",
-    "\\C# - .Net\\Exercises\\20240725_Hello_World_III",
-    "\\C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III"
+    "\\C# - .Net\\Exercises\\20240725_Hello_World_III\\20240725_Hello_World_III",
+    "\\C# - .Net\\Professore",
+    "\\C# - .Net\\Professore\\CalcolatriceWinApp\\Properties",
+    "\\C# - .Net\\Professore\\Calcolatrice_CA\\Properties",
+    "\\C# - .Net\\Professore\\DbExplorer_WinApp",
+    "\\C# - .Net\\Professore\\DbExplorer_WinApp\\Properties",
+    "\\C# - .Net\\Professore\\EsempioClassiCA",
+    "\\C# - .Net\\Professore\\EsempioClassiCA\\Automobile"
   ],
-  "SelectedNode": "\\C# - .Net\\Exercises\\20240916_Exercises.cs",
+  "SelectedNode": "\\C# - .Net\\Professore\\DbExplorer_WinApp\\Form1.Designer.cs",
   "PreviewInSolutionExplorer": false
 }

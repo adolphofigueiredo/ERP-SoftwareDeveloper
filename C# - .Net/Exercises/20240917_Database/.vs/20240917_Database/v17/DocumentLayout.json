@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240917_database\\20240917_database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240917_database\\20240917_database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|solutionrelative:20240917_database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|solutionrelative:20240917_database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -24,7 +28,7 @@
         },
         {
           "DockedWidth": 50,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -32,7 +36,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_Database\\Form1.cs",
               "RelativeDocumentMoniker": "20240917_Database\\Form1.cs",
@@ -41,6 +45,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T22:12:36.27Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_Database\\Form1.cs",
+              "RelativeDocumentMoniker": "20240917_Database\\Form1.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_Database\\Form1.cs",
+              "RelativeToolTip": "20240917_Database\\Form1.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T22:16:42.197Z",
+              "EditorCaption": ""
             }
           ]
         }

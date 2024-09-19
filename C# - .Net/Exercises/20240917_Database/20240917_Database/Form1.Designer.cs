@@ -31,7 +31,7 @@
             btn_CheckConnection = new Button();
             txt_ConnectionString = new TextBox();
             txt_QueryString = new TextBox();
-            btn_CountQuery = new Button();
+            btn_CountRecords = new Button();
             dgv_Data = new DataGridView();
             btn_ExecuteQuery = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_Data).BeginInit();
@@ -62,15 +62,15 @@
             txt_QueryString.Size = new Size(685, 205);
             txt_QueryString.TabIndex = 2;
             // 
-            // btn_CountQuery
+            // btn_CountRecords
             // 
-            btn_CountQuery.Location = new Point(12, 251);
-            btn_CountQuery.Name = "btn_CountQuery";
-            btn_CountQuery.Size = new Size(340, 43);
-            btn_CountQuery.TabIndex = 3;
-            btn_CountQuery.Text = "Count Records";
-            btn_CountQuery.UseVisualStyleBackColor = true;
-            btn_CountQuery.Click += btn_CountQuery_Click;
+            btn_CountRecords.Location = new Point(357, 252);
+            btn_CountRecords.Name = "btn_CountRecords";
+            btn_CountRecords.Size = new Size(340, 43);
+            btn_CountRecords.TabIndex = 3;
+            btn_CountRecords.Text = "Count Records";
+            btn_CountRecords.UseVisualStyleBackColor = true;
+            btn_CountRecords.Click += btn_CountQuery_Click;
             // 
             // dgv_Data
             // 
@@ -85,12 +85,13 @@
             // 
             // btn_ExecuteQuery
             // 
-            btn_ExecuteQuery.Location = new Point(358, 252);
+            btn_ExecuteQuery.Location = new Point(12, 252);
             btn_ExecuteQuery.Name = "btn_ExecuteQuery";
             btn_ExecuteQuery.Size = new Size(340, 42);
             btn_ExecuteQuery.TabIndex = 5;
             btn_ExecuteQuery.Text = "Execute";
             btn_ExecuteQuery.UseVisualStyleBackColor = true;
+            btn_ExecuteQuery.Click += btn_ExecuteQuery_Click;
             // 
             // DataBase_Connection
             // 
@@ -99,7 +100,7 @@
             ClientSize = new Size(709, 614);
             Controls.Add(btn_ExecuteQuery);
             Controls.Add(dgv_Data);
-            Controls.Add(btn_CountQuery);
+            Controls.Add(btn_CountRecords);
             Controls.Add(txt_QueryString);
             Controls.Add(txt_ConnectionString);
             Controls.Add(btn_CheckConnection);
@@ -115,7 +116,7 @@
         private Button btn_CheckConnection;
         private TextBox txt_ConnectionString;
         private TextBox txt_QueryString;
-        private Button btn_CountQuery;
+        private Button btn_CountRecords;
         private DataGridView dgv_Data;
         private Button btn_ExecuteQuery;
     }

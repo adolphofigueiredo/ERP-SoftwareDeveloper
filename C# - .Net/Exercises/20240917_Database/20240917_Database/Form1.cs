@@ -2,6 +2,7 @@
 // 2; mostrare un messaggio a video (Messagebox) con il risultato scalare della query inputata dall'utente.
 // 3: visualizzare in forma tabellare i dati estratti da una query inputata dall'utente.
 
+using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
@@ -38,12 +39,47 @@ namespace _20240917_Database
                                                                                                                     //aparecer depois que executa a acao
         }
 
-        private void btn_CountQuery_Click(object sender, EventArgs e)                                               //Estou criando um metodo para quando se clica no
+
+        private void btn_ExecuteQuery_Click (object sender, EventArgs e)                                               //Estou criando um metodo para quando se clica no
                                                                                                                     //botao que deve verificar a conexao.
         {
             if (string.IsNullOrEmpty(txt_QueryString.Text)) throw new Exception("Query vuota!");                    //Aqui estou dizendo que ao ser clicado a condicao
                                                                                                                     //deve verificar no campo de texto onde deve ser
             btn_ExecuteQuery.Enabled = false;                                                                       //Faz o botao check connection ficar meio
+                                                                                                                    //apagado enquanto pensa                                                                                                   //colocada a string de conexao esta preenchida
+            using (SqlConnection sqlConnection = new SqlConnection(txt_ConnectionString.Text))
+            {
+                try
+                {
+                    sqlConnection.Open();
+                    
+                    SqlDataAdapter adapter = new SqlDataAdapter(txt_QueryString.Text , sqlConnection);
+                    DataSet setDiDati = new DataSet();
+                    adapter.Fill(setDiDati , "Dati");
+
+                    sqlConnection.Close();
+
+                    dgv_Data.AutoGenerateColumns = true;
+                    dgv_Data.DataSource = setDiDati;
+                    dgv_Data.DataMember = "Dati";
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Eccezione:", ex.Message);
+                }
+            }
+            btn_ExecuteQuery.Enabled = true;                                                                        //Faz o botao check connection voltar a
+                                                                                                                    //aparecer depois que executa a acao
+        }
+
+
+        private void btn_CountQuery_Click(object sender, EventArgs e)                                               //Estou criando um metodo para quando se clica no
+                                                                                                                    //botao que deve verificar a conexao.
+        {
+            if (string.IsNullOrEmpty(txt_QueryString.Text)) throw new Exception("Query vuota!");                    //Aqui estou dizendo que ao ser clicado a condicao
+                                                                                                                    //deve verificar no campo de texto onde deve ser
+            btn_CountRecords.Enabled = false;                                                                       //Faz o botao check connection ficar meio
                                                                                                                     //apagado enquanto pensa                                                                                                   //colocada a string de conexao esta preenchida
             using (SqlConnection sqlConnection = new SqlConnection(txt_ConnectionString.Text))
             {
@@ -63,8 +99,8 @@ namespace _20240917_Database
                     MessageBox.Show("Eccezione:" , ex.Message);
                 }
             }
-            btn_ExecuteQuery.Enabled = true;                                                                        //Faz o botao check connection voltar a
-                                                                                                                    //aparecer depois que executa a acao
+            btn_CountRecords.Enabled = true;                                                                        //Faz o botao check connection voltar a
+                                                                                                                     //aparecer depois que executa a acao
         }
     }
 }

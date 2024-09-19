@@ -13,17 +13,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 43,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 207,
+          "DockedWidth": 232,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -34,7 +24,7 @@
               "RelativeDocumentMoniker": "20240917_Database\\Form1.cs",
               "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_Database\\Form1.cs",
               "RelativeToolTip": "20240917_Database\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T22:16:42.197Z",
               "EditorCaption": ""

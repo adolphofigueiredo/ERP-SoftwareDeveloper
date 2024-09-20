@@ -125,6 +125,15 @@ namespace _20240917_Database                                                    
                                                                                                                     //O throw new Exception("Query vuota!"), lança ma nova exceção do tipo Exception, interrompendo a execução do método. A mensagem
                                                                                                                     //"Query vuota!" será exibida como a descrição do erro.
 
+
+            
+
+
+
+
+            
+            
+            
             btn_ExecuteQuery.Enabled = false;                                                                       //O btn_ExecuteQuery.Enabled e a propriedade Enabled controla se o botão está ativo ou desativado. Quando false, o botão fica
                                                                                                                     //desabilitado, cinza e não clicável. Ele desativa o botão para evitar múltiplos cliques durante o processamento
 
@@ -148,6 +157,26 @@ namespace _20240917_Database                                                    
                     adapter.Fill(setDiDati, "Dati");                                                                //Usa o adapter.Fill para preencher o DataSet com os resultados da consulta SQL.
                                                                                                                     //A tabela de resultados dentro do DataSet é chamada de "Dati".
                                                                                                                     //O DataSet é usado para armazenar os resultados da query de maneira estruturada e em memória, para que possam ser exibidos no aplicativo.
+                    
+                    
+                    
+                    
+                    DataTableCollection tables = setDiDati.Tables;
+
+                    
+                    
+                    
+                    
+                    foreach (DataTable table in tables) 
+                    
+                    
+                    {
+                        TabPage tabPage = new TabPage();
+                    }
+                    
+
+
+
 
 
                     sqlConnection.Close();                                                                          //O sqlConnection.Close() fecha a conexão com o banco de dados, isso é importante para liberar a conexão após o uso. Embora o using já
@@ -166,10 +195,10 @@ namespace _20240917_Database                                                    
                                                                                                                     //O ex é o nome da variável que vai armazenar a exceção capturada. Através dela, e possivel acessar informações sobre o erro, como
                                                                                                                     //a mensagem de erro e o tipo de exceção.
                 {
-                    MessageBox.Show("Eccezione:", ex.Message);                                                     //o MessageBox.Show abre uma caixa de diálogo que exibe uma mensagem para o usuário.
-                                                                                                                   //O "Eccezione: " e um Texto fixo que informa que ocorreu uma exceção.
-                                                                                                                   //o codigo ex.Message e a mensagem da exceção ex que contém uma descrição do erro que ocorreu. Cada tipo de exceção pode ter
-                                                                                                                   //uma mensagem diferente, explicando o que deu errado.
+                    MessageBox.Show("Eccezione:", ex.Message);                                                      //o MessageBox.Show abre uma caixa de diálogo que exibe uma mensagem para o usuário.
+                                                                                                                    //O "Eccezione: " e um Texto fixo que informa que ocorreu uma exceção.
+                                                                                                                    //o codigo ex.Message e a mensagem da exceção ex que contém uma descrição do erro que ocorreu. Cada tipo de exceção pode ter
+                                                                                                                    //uma mensagem diferente, explicando o que deu errado.
                 }
             }
             btn_ExecuteQuery.Enabled = true;                                                                        //O btn_ExecuteQuery.Enabled e a propriedade Enabled controla se o botão está ativo ou desativado. Quando true, o botão fica

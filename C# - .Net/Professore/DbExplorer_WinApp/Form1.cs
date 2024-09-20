@@ -51,6 +51,8 @@ namespace DbExplorer_WinApp
         {
             if (string.IsNullOrEmpty(txtQuery.Text)) throw new Exception("query vuota!");
 
+            tabQueryResult.TabPages.Clear();
+
             btnExecuteQuery.Enabled = false;
             using (SqlConnection sqlConnection = new SqlConnection(txtConnectionString.Text))
             {
@@ -60,14 +62,30 @@ namespace DbExplorer_WinApp
 
                     SqlDataAdapter adapter = new SqlDataAdapter(txtQuery.Text, sqlConnection);
                     DataSet setDiDati = new DataSet();
-                    adapter.Fill(setDiDati,"Dati");
+                    adapter.Fill(setDiDati);
 
                     sqlConnection.Close();
 
-                    dgvData.AutoGenerateColumns = true;
-                    dgvData.DataSource = setDiDati;
-                    dgvData.DataMember = "Dati";
+                    DataTableCollection tables = setDiDati.Tables;
 
+                    foreach (DataTable table in tables)
+                    {
+                        var tab= new TabPage()
+                        {
+                            Text=table.TableName,
+                        };
+                        //tab.Text=table.TableName;
+
+                        var dgvData = new DataGridView()
+                        {
+                            AutoGenerateColumns = true,
+                            DataSource = setDiDati,
+                            DataMember = table.TableName,
+                            Dock = DockStyle.Fill
+                        };
+                        tab.Controls.Add(dgvData);
+                        tabQueryResult.TabPages.Add(tab);
+                    }
                 }
                 catch (Exception ex)
                 {

@@ -32,9 +32,8 @@
             this.btnCheckConnection = new System.Windows.Forms.Button();
             this.txtQuery = new System.Windows.Forms.TextBox();
             this.btnExecuteQuery = new System.Windows.Forms.Button();
-            this.dgvData = new System.Windows.Forms.DataGridView();
             this.btnCountQuery = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            this.tabQueryResult = new System.Windows.Forms.TabControl();
             this.SuspendLayout();
             // 
             // txtConnectionString
@@ -43,6 +42,7 @@
             this.txtConnectionString.Name = "txtConnectionString";
             this.txtConnectionString.Size = new System.Drawing.Size(652, 22);
             this.txtConnectionString.TabIndex = 0;
+            this.txtConnectionString.Text = "Server=localhost\\SQLEXPRESS;Database=ITS_CORSI_ESAMI;Trusted_Connection=True;";
             // 
             // btnCheckConnection
             // 
@@ -72,19 +72,6 @@
             this.btnExecuteQuery.UseVisualStyleBackColor = true;
             this.btnExecuteQuery.Click += new System.EventHandler(this.btnExecuteQuery_Click);
             // 
-            // dgvData
-            // 
-            this.dgvData.AllowUserToAddRows = false;
-            this.dgvData.AllowUserToDeleteRows = false;
-            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(13, 258);
-            this.dgvData.Name = "dgvData";
-            this.dgvData.ReadOnly = true;
-            this.dgvData.RowHeadersWidth = 51;
-            this.dgvData.RowTemplate.Height = 24;
-            this.dgvData.Size = new System.Drawing.Size(780, 326);
-            this.dgvData.TabIndex = 4;
-            // 
             // btnCountQuery
             // 
             this.btnCountQuery.Location = new System.Drawing.Point(416, 220);
@@ -95,20 +82,27 @@
             this.btnCountQuery.UseVisualStyleBackColor = true;
             this.btnCountQuery.Click += new System.EventHandler(this.btnCountQuery_Click);
             // 
+            // tabQueryResult
+            // 
+            this.tabQueryResult.Location = new System.Drawing.Point(12, 259);
+            this.tabQueryResult.Name = "tabQueryResult";
+            this.tabQueryResult.SelectedIndex = 0;
+            this.tabQueryResult.Size = new System.Drawing.Size(776, 325);
+            this.tabQueryResult.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 596);
+            this.Controls.Add(this.tabQueryResult);
             this.Controls.Add(this.btnCountQuery);
-            this.Controls.Add(this.dgvData);
             this.Controls.Add(this.btnExecuteQuery);
             this.Controls.Add(this.txtQuery);
             this.Controls.Add(this.btnCheckConnection);
             this.Controls.Add(this.txtConnectionString);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,8 +114,8 @@
         private System.Windows.Forms.Button btnCheckConnection;
         private System.Windows.Forms.TextBox txtQuery;
         private System.Windows.Forms.Button btnExecuteQuery;
-        private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Button btnCountQuery;
+        private System.Windows.Forms.TabControl tabQueryResult;
     }
 }
 

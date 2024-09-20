@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240917_database\\20240917_database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|solutionrelative:20240917_database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240917_database\\20240917_database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|solutionrelative:20240917_database\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240917_database\\20240917_database\\models\\itscorsiesamicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C807F5CC-5203-44B3-96BF-7264DB612365}|20240917_Database\\20240917_Database.csproj|solutionrelative:20240917_database\\models\\itscorsiesamicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 11,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_Database\\Form1.cs",
-              "RelativeDocumentMoniker": "20240917_Database\\Form1.cs",
-              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_Database\\Form1.cs [Design]",
-              "RelativeToolTip": "20240917_Database\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T11:52:14.347Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_Database\\Form1.cs",
-              "RelativeDocumentMoniker": "20240917_Database\\Form1.cs",
-              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_Database\\Form1.cs",
-              "RelativeToolTip": "20240917_Database\\Form1.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAwwNsAAAARAAAAAAAAAA==",
+              "Title": "ItsCorsiEsamiContext.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_Database\\Models\\ItsCorsiEsamiContext.cs",
+              "RelativeDocumentMoniker": "20240917_Database\\Models\\ItsCorsiEsamiContext.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240917_Database\\20240917_Database\\Models\\ItsCorsiEsamiContext.cs",
+              "RelativeToolTip": "20240917_Database\\Models\\ItsCorsiEsamiContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T11:53:36.58Z",
+              "WhenOpened": "2024-09-20T15:19:11.805Z",
               "EditorCaption": ""
             }
           ]

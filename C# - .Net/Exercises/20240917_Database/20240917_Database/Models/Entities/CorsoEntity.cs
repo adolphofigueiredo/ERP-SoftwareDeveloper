@@ -10,7 +10,7 @@ namespace _20240917_Database.Models.Entities
     {
 
         public int Id { get; set; }
-        public string NomeCorso { get; set; }
+        public string Nome { get; set; }
 
         public DateTime DataValiditaInizio { get; set; }
 

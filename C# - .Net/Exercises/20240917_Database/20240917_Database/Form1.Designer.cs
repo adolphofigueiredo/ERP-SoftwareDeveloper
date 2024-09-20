@@ -34,10 +34,10 @@
             btn_CountRecords = new Button();
             dgv_Data = new DataGridView();
             btn_ExecuteQuery = new Button();
-            tabControl1 = new TabControl();
+            tab_QueryResult = new TabControl();
             tabPage1 = new TabPage();
             ((System.ComponentModel.ISupportInitialize)dgv_Data).BeginInit();
-            tabControl1.SuspendLayout();
+            tab_QueryResult.SuspendLayout();
             tabPage1.SuspendLayout();
             SuspendLayout();
             // 
@@ -98,14 +98,14 @@
             btn_ExecuteQuery.UseVisualStyleBackColor = true;
             btn_ExecuteQuery.Click += btn_ExecuteQuery_Click;
             // 
-            // tabControl1
+            // tab_QueryResult
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Location = new Point(12, 300);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(685, 302);
-            tabControl1.TabIndex = 6;
+            tab_QueryResult.Controls.Add(tabPage1);
+            tab_QueryResult.Location = new Point(12, 300);
+            tab_QueryResult.Name = "tab_QueryResult";
+            tab_QueryResult.SelectedIndex = 0;
+            tab_QueryResult.Size = new Size(685, 302);
+            tab_QueryResult.TabIndex = 6;
             // 
             // tabPage1
             // 
@@ -123,7 +123,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(707, 614);
-            Controls.Add(tabControl1);
+            Controls.Add(tab_QueryResult);
             Controls.Add(btn_ExecuteQuery);
             Controls.Add(btn_CountRecords);
             Controls.Add(txt_QueryString);
@@ -132,7 +132,7 @@
             Name = "DataBase_Connection";
             Text = "DataBase Connection";
             ((System.ComponentModel.ISupportInitialize)dgv_Data).EndInit();
-            tabControl1.ResumeLayout(false);
+            tab_QueryResult.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -146,7 +146,7 @@
         private Button btn_CountRecords;
         private DataGridView dgv_Data;
         private Button btn_ExecuteQuery;
-        private TabControl tabControl1;
+        private TabControl tab_QueryResult;
         private TabPage tabPage1;
     }
 }

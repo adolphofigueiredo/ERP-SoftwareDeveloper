@@ -38,6 +38,10 @@ namespace _20240917_Database                                                    
                                                                                                                     //Isso significa que a classe DataBase_Connection é um formulário de janela gráfica que pode conter botões,
                                                                                                                     //campos de texto e outros controles visuais.
     {
+        public bool AutoGenerateColumns { get; private set; }
+        public DataSet DataSource { get; private set; }
+        public string DataMember { get; private set; }
+
         public DataBase_Connection()                                                                                //public DataBase_Connection(): Este é o construtor da classe DataBase_Connection. Ele é chamado automaticamente quando
                                                                                                                     //uma nova instância da classe é criada. O papel do construtor é inicializar o objeto, ou seja, configurar qualquer
                                                                                                                     //estado ou dados iniciais necessários.
@@ -125,15 +129,8 @@ namespace _20240917_Database                                                    
                                                                                                                     //O throw new Exception("Query vuota!"), lança ma nova exceção do tipo Exception, interrompendo a execução do método. A mensagem
                                                                                                                     //"Query vuota!" será exibida como a descrição do erro.
 
-
-            
-
-
-
-
-            
-            
-            
+            tab_QueryResult.TabPages.Clear();                                                                       //
+                        
             btn_ExecuteQuery.Enabled = false;                                                                       //O btn_ExecuteQuery.Enabled e a propriedade Enabled controla se o botão está ativo ou desativado. Quando false, o botão fica
                                                                                                                     //desabilitado, cinza e não clicável. Ele desativa o botão para evitar múltiplos cliques durante o processamento
 
@@ -154,38 +151,37 @@ namespace _20240917_Database                                                    
                                                                                                                     //banco de dados e o aplicativo, facilitando a recuperação de dados de forma fácil.
                     
                     DataSet setDiDati = new DataSet();                                                              //O DataSet é um contêiner de dados, como uma "tabela" em memória)
-                    adapter.Fill(setDiDati, "Dati");                                                                //Usa o adapter.Fill para preencher o DataSet com os resultados da consulta SQL.
+                    adapter.Fill(setDiDati);                                                                        //Usa o adapter.Fill para preencher o DataSet com os resultados da consulta SQL.
                                                                                                                     //A tabela de resultados dentro do DataSet é chamada de "Dati".
                                                                                                                     //O DataSet é usado para armazenar os resultados da query de maneira estruturada e em memória, para que possam ser exibidos no aplicativo.
                     
-                    
-                    
-                    
-                    DataTableCollection tables = setDiDati.Tables;
-
-                    
-                    
-                    
-                    
-                    foreach (DataTable table in tables) 
-                    
-                    
-                    {
-                        TabPage tabPage = new TabPage();
-                    }
-                    
-
-
-
-
-
                     sqlConnection.Close();                                                                          //O sqlConnection.Close() fecha a conexão com o banco de dados, isso é importante para liberar a conexão após o uso. Embora o using já
                                                                                                                     //garanta o fechamento, é uma boa prática fechar explicitamente.
 
-                    dgv_Data.AutoGenerateColumns = true;                                                            //O AutoGenerateColumns habilita a geração automática de colunas no DataGridView com base nos dados que foram retornados.
-                    dgv_Data.DataSource = setDiDati;                                                                //O DataSource define o setDiDati como a fonte de dados para o DataGridView
-                    dgv_Data.DataMember = "Dati";                                                                   //O DataMember especifica qual "tabela" dentro do DataSet será exibida e neste caso, a tabela é "Dati"
+                    DataTableCollection tables = setDiDati.Tables;
 
+                    foreach (DataTable table in tables)
+                    {
+                        var tab = new TabPage();
+                        {
+                            Text = table.TableName;
+                        };
+                        //tab.Text = table.TableName;
+
+                        var dgvData = new DataGridView();
+                        {
+                            AutoGenerateColumns = true;
+                            DataSource = setDiDati;
+                            DataMember = table.TableName;
+                            Dock = DockStyle.Fill;
+
+                            //dgv_Data.AutoGenerateColumns = true;                                                            //O AutoGenerateColumns habilita a geração automática de colunas no DataGridView com base nos dados que foram retornados.
+                            //dgv_Data.DataSource = setDiDati;                                                                //O DataSource define o setDiDati como a fonte de dados para o DataGridView
+                            //dgv_Data.DataMember = "Dati";                                                                   //O DataMember especifica qual "tabela" dentro do DataSet será exibida e neste caso, a tabela é "Dati"
+                        };
+                        tab.Controls.Add(dgvData);
+                        tab_QueryResult.TabPages.Add(tab);
+                    }
                 }
                 catch (Exception ex)                                                                                //O catch (Exception) e o bloco que captura exceções geradas dentro do try e se ocorrer um erro durante a tentativa de abrir a conexão
                                                                                                                     //ele será capturado aqui.

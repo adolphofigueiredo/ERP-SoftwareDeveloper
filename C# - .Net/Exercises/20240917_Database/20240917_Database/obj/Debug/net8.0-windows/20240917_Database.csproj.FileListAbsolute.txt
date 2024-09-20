@@ -23,3 +23,5 @@ W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20
 W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917_Database.csproj.AssemblyReference.cache
 W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\obj\Debug\net8.0-windows\20240917.928D64A2.Up2Date
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\bin\Debug\net8.0-windows\EntityFramework.SqlServer.dll
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240917_Database\20240917_Database\bin\Debug\net8.0-windows\EntityFramework.dll

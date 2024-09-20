@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace _20240918_Database_FrameWork.Models.Entity
 {
-    internal class StudenteEntity
+    public class StudenteEntity
     {
+
+        public int Id { get; set; }
+        public string Nome { get; set; }
+
+        public string Cognome { get; set; }
+
+        public string CodiceFiscale { get; set; }
+
+        public DateTime DataDiNascita { get; set; }
+
+        public int CorsoId { get; set; }
     }
+
 }

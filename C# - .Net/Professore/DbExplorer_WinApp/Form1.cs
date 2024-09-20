@@ -1,8 +1,9 @@
-﻿using System;
+﻿using System.ComponentModel.Design;
+using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -14,7 +15,6 @@ using System.Windows.Forms;
 // 1: verificare connessione al db passando la connection string attraverso una textbox
 // 2; mostrare un messaggio a video (Messagebox) con il risultato scalare della query inputata dall'utente.
 // 3: visualizzare in forma tabellare i dati estratti da una query inputata dall'utente.
-
 
 namespace DbExplorer_WinApp
 {

@@ -1,6 +1,6 @@
 ﻿namespace _20240918_Database_FrameWork
 {
-    partial class Form1
+    partial class DataBase_Connection
     {
         /// <summary>
         /// Required designer variable.
@@ -28,78 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_ConnectionString = new System.Windows.Forms.TextBox();
+            this.btn_CheckConnection = new System.Windows.Forms.Button();
+            this.txt_QueryString = new System.Windows.Forms.TextBox();
+            this.btn_ExecuteQuery = new System.Windows.Forms.Button();
+            this.btn_CountRecords = new System.Windows.Forms.Button();
+            this.tab_QueryResult = new System.Windows.Forms.TabControl();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_ConnectionString
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(619, 23);
-            this.textBox1.TabIndex = 1;
+            this.txt_ConnectionString.Location = new System.Drawing.Point(12, 12);
+            this.txt_ConnectionString.Multiline = true;
+            this.txt_ConnectionString.Name = "txt_ConnectionString";
+            this.txt_ConnectionString.Size = new System.Drawing.Size(619, 23);
+            this.txt_ConnectionString.TabIndex = 0;
+            this.txt_ConnectionString.Text = "Server=localhost\\SQLEXPRESS;Database=ITS_CORSI_ESAMI;Trusted_Connection=True;";
             // 
-            // button1
+            // btn_CheckConnection
             // 
-            this.button1.Location = new System.Drawing.Point(637, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_CheckConnection.Location = new System.Drawing.Point(637, 12);
+            this.btn_CheckConnection.Name = "btn_CheckConnection";
+            this.btn_CheckConnection.Size = new System.Drawing.Size(151, 23);
+            this.btn_CheckConnection.TabIndex = 1;
+            this.btn_CheckConnection.Text = "Check Connection";
+            this.btn_CheckConnection.UseVisualStyleBackColor = true;
+            this.btn_CheckConnection.Click += new System.EventHandler(this.btn_CheckConnection_Click);
             // 
-            // textBox2
+            // txt_QueryString
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 41);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(776, 236);
-            this.textBox2.TabIndex = 3;
+            this.txt_QueryString.Location = new System.Drawing.Point(12, 41);
+            this.txt_QueryString.Multiline = true;
+            this.txt_QueryString.Name = "txt_QueryString";
+            this.txt_QueryString.Size = new System.Drawing.Size(776, 236);
+            this.txt_QueryString.TabIndex = 2;
             // 
-            // button2
+            // btn_ExecuteQuery
             // 
-            this.button2.Location = new System.Drawing.Point(12, 283);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(383, 46);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_ExecuteQuery.Location = new System.Drawing.Point(12, 283);
+            this.btn_ExecuteQuery.Name = "btn_ExecuteQuery";
+            this.btn_ExecuteQuery.Size = new System.Drawing.Size(383, 46);
+            this.btn_ExecuteQuery.TabIndex = 3;
+            this.btn_ExecuteQuery.Text = "Execute";
+            this.btn_ExecuteQuery.UseVisualStyleBackColor = true;
+            this.btn_ExecuteQuery.Click += new System.EventHandler(this.btn_ExecuteQuery_Click);
             // 
-            // button3
+            // btn_CountRecords
             // 
-            this.button3.Location = new System.Drawing.Point(402, 283);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(386, 46);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_CountRecords.Location = new System.Drawing.Point(402, 283);
+            this.btn_CountRecords.Name = "btn_CountRecords";
+            this.btn_CountRecords.Size = new System.Drawing.Size(386, 46);
+            this.btn_CountRecords.TabIndex = 4;
+            this.btn_CountRecords.Text = "Count Records";
+            this.btn_CountRecords.UseVisualStyleBackColor = true;
+            this.btn_CountRecords.Click += new System.EventHandler(this.btn_CountQuery_Click);
             // 
-            // textBox3
+            // tab_QueryResult
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 335);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(776, 254);
-            this.textBox3.TabIndex = 6;
+            this.tab_QueryResult.Location = new System.Drawing.Point(12, 335);
+            this.tab_QueryResult.Name = "tab_QueryResult";
+            this.tab_QueryResult.SelectedIndex = 0;
+            this.tab_QueryResult.Size = new System.Drawing.Size(776, 254);
+            this.tab_QueryResult.TabIndex = 6;
             // 
-            // Form1
+            // DataBase_Connection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 601);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(799, 601);
+            this.Controls.Add(this.tab_QueryResult);
+            this.Controls.Add(this.btn_CountRecords);
+            this.Controls.Add(this.btn_ExecuteQuery);
+            this.Controls.Add(this.txt_QueryString);
+            this.Controls.Add(this.btn_CheckConnection);
+            this.Controls.Add(this.txt_ConnectionString);
+            this.Name = "DataBase_Connection";
+            this.Text = "DataBase Connection";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,12 +111,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_ConnectionString;
+        private System.Windows.Forms.Button btn_CheckConnection;
+        private System.Windows.Forms.TextBox txt_QueryString ;
+        private System.Windows.Forms.Button btn_ExecuteQuery;
+        private System.Windows.Forms.Button btn_CountRecords;
+        private System.Windows.Forms.TabControl tab_QueryResult;
     }
 }
 

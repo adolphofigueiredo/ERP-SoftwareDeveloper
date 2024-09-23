@@ -15,80 +15,83 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _20240918_Database_FrameWork                                                             //O namespace e uma maneira de organizar o código em diferentes áreas ou seções lógicas. O namespace pode
+namespace _20240918_Database_FrameWork                                                             //O namespace é uma maneira de organizar o código em diferentes áreas ou seções lógicas. O namespace pode
                                                                                                    //ser visto como um contêiner que agrupa classes relacionadas, permitindo que você evite conflitos de
                                                                                                    //nome quando diferentes partes do programa usam nomes semelhantes.
 {
-    public partial class DataBase_Connection : Form                                                //O public e um modificador de acesso que significa que a classe pode ser acessada de qualquer lugar no código.
-                                                                                                   //O partial permite que a definição da classe seja dividida em vários arquivos. Isso é comum em
-                                                                                                   //aplicações Windows Forms, onde o designer visual (arranjo de botões, campos de texto, etc.)
-                                                                                                   //fica em um arquivo separado.
-                                                                                                   //O class DataBase_Connection : Define uma classe chamada DataBase_Connection. É o nome da classe que será usada
-                                                                                                   //para gerenciar a conexão com o banco de dados, ou para lidar com a interface da aplicação relacionada a isso.
-                                                                                                   //O : Form diz que a classe DataBase_Connection herda da classe Form, que faz parte do Windows Forms (System.Windows.Forms).
-                                                                                                   //Isso significa que a classe DataBase_Connection é um formulário de janela gráfica que pode conter botões,
-                                                                                                   //campos de texto e outros controles visuais.
+    public partial class DataBase_Connection : Form                                                //O public é um modificador de acesso que significa que a classe pode ser acessada de qualquer lugar no código.
+                                                                                                   //O partial permite que a definição da classe seja dividida em vários arquivos. Isso é comum em aplicações
+                                                                                                   //Windows Forms, onde o design visual (arranjo de botões, campos de texto, etc.) fica em um arquivo separado.
+                                                                                                   //O class DataBase_Connection é a definição de uma classe chamada DataBase_Connection. É o nome da classe que
+                                                                                                   //será usada para gerenciar a conexão com o banco de dados, ou para lidar com a interface da aplicação
+                                                                                                   //relacionada a isso.
+                                                                                                   //O : Form diz que a classe DataBase_Connection herda os atributos e métodos da classe Form, que faz parte do
+                                                                                                   //Windows Forms (System.Windows.Forms). Isso significa que a classe DataBase_Connection é um formulário de
+                                                                                                   //janela gráfica que pode conter botões, campos de texto e outros controles visuais.
     {
-        public DataBase_Connection()                                                               //public DataBase_Connection(): Este é o construtor da classe DataBase_Connection. Ele é chamado automaticamente quando
-                                                                                                   //uma nova instância da classe é criada. O papel do construtor é inicializar o objeto, ou seja, configurar qualquer
-                                                                                                   //estado ou dados iniciais necessários.
+        public DataBase_Connection()                                                               //O public DataBase_Connection() é o construtor da classe DataBase_Connection. Ele é chamado automaticamente
+                                                                                                   //quando uma nova instância da classe é criada. O papel do construtor é inicializar o objeto, ou seja,
+                                                                                                   //configurar qualquer estado ou dados iniciais necessários.
         {
-            InitializeComponent();                                                                 //Esse método é responsável por inicializar todos os controles visuais (como botões, caixas de texto, labels) que
-                                                                                                   //estão no formulário. Ele é gerado automaticamente pelo Windows Forms Designer e fica em um arquivo separado
-                                                                                                   //(geralmente no arquivo .Designer.cs associado à classe).
+            InitializeComponent();                                                                 //Esse método é responsável por inicializar todos os controles visuais (como botões, caixas de texto, labels)
+                                                                                                   //que estão no formulário. Ele é gerado automaticamente pelo Windows Forms Designer e fica em um arquivo
+                                                                                                   //separado (geralmente no arquivo .Designer.cs associado à classe).
                                                                                                    //O método InitializeComponent() configura o layout da interface, posiciona os elementos no formulário e pode
                                                                                                    //associar eventos(como cliques de botão) a seus respectivos métodos.
         }
-        private void btn_CheckConnection_Click(object sender, EventArgs e)                         //Estou criando um metodo para quando clicar no botao que deve verificar a conexao.
+        private void btn_CheckConnection_Click(object sender, EventArgs e)                         //Estou criando um método para, que o botão ao ser clicado verifique a conexão.
                                                                                                    //O private define que o método só pode ser acessado de dentro da própria classe.
                                                                                                    //O void diz que o método não retorna nenhum valor.
-                                                                                                   //O btn_CheckConnection_Click +e o nome do método, que será chamado quando o botão for clicado.
+                                                                                                   //O btn_CheckConnection_Click é o nome do método que será chamado quando o botão for clicado.
                                                                                                    //O parâmetro object sender refere-se ao objeto que disparou o evento, neste caso, o botão. Ele permite
                                                                                                    //acessar informações sobre o botão que foi clicado.
         {
-            if (string.IsNullOrEmpty(txt_ConnectionString.Text)) throw new Exception("Connection string vuota!");   //Aqui estou dizendo que ao ser clicado a condicao deve verificar no campo de texto se ele foi preenchido ou nao.
-                                                                                                   //O string.IsNullOrEmpty é um método estático da classe String, que retorna true se a string for nula ou vazia.
-                                                                                                   //O txt_ConnectionString.Text refere-se ao conteúdo digitado no componente de texto txt_ConnectionString, e o nome da caixa
-                                                                                                   //de texto (TextBox) que está no formulário. Esse controle permite que o usuário insira informações, como a string de conexão ao
-                                                                                                   //banco de dados. A propriedade .Text é usada para obter ou definir o conteúdo textual do controle txt_ConnectionString.
-                                                                                                   //Nesse caso, quando você lê txt_ConnectionString.Text, você está pegando o texto que o usuário digitou no campo de entrada.
-                                                                                                   //Quando você define txt_ConnectionString.Text, você altera o conteúdo desse campo. Resumindo, a propriedade .Text contém
-                                                                                                   //o texto exibido ou digitado dentro da caixa de texto.
-                                                                                                   //O throw new Exception("Connection string vuota!"), lança ma nova exceção do tipo Exception, interrompendo a execução
-                                                                                                   //do método. A mensagem "Connection string vuota!" será exibida como a descrição do erro.
+            if (string.IsNullOrEmpty(txt_ConnectionString.Text)) throw new Exception("Connection string vuota!");
+                                                                                                   //Aqui estou dizendo que quando o botão foi acionado a condição deve verificar no campo de texto se ele foi
+                                                                                                   //preenchido ou não. O string.IsNullOrEmpty é um método estático da classe String, que retorna true se a
+                                                                                                   //string for nula ou vazia. O txt_ConnectionString.Text refere-se ao conteúdo digitado no componente de texto
+                                                                                                   //txt_ConnectionString, e o nome da caixa de texto (TextBox) que está no formulário. Esse controle permite que
+                                                                                                   //o usuário insira informações, como a string de conexão ao banco de dados. A propriedade .Text é usada para
+                                                                                                   //obter ou definir o conteúdo textual do controle txt_ConnectionString. Nesse caso, quando você lê
+                                                                                                   //txt_ConnectionString.Text, você está pegando o texto que o usuário digitou no campo de entrada. Quando você
+                                                                                                   //define txt_ConnectionString.Text, você altera o conteúdo desse campo. Resumindo, a propriedade .Text contém
+                                                                                                   //o texto exibido ou digitado dentro da caixa de texto. O throw new Exception("Connection string vuota!"),
+                                                                                                   //lança ma nova exceção do tipo Exception, interrompendo a execução do método. A mensagem "Connection string
+                                                                                                   //vuota!" será exibida como a descrição do erro.
 
-            btn_CheckConnection.Enabled = false;                                                   //O btn_CheckConnection.Enabled e a propriedade Enabled controla se o botão está ativo ou desativado. Quando false, o botão fica
-                                                                                                   //desabilitado, cinza e não clicável. Ele desativa o botão para evitar múltiplos cliques durante o processamento da verificação
-                                                                                                   //de conexão.
+            btn_CheckConnection.Enabled = false;                                                   //O btn_CheckConnection.Enabled e a propriedade Enabled controlam se o botão está ativo ou desativado. Quando
+                                                                                                   //está como false, o botão fica desabilitado, cinza e não clicável. Ele desativa o botão para evitar múltiplos
+                                                                                                   //cliques durante o processamento do que foi solicitado.
 
-            using (SqlConnection sqlConnection = new SqlConnection(txt_ConnectionString.Text))     //O using, declara um bloco de código onde o objeto sqlConnection será utilizado. Ao final do bloco, o objeto será automaticamente
-                                                                                                   //descartado (chama o método Dispose), liberando recursos de forma eficiente. O SqlConnection e uma Classe que representa uma
-                                                                                                   //conexão SQL com um banco de dados. Está localizada no namespace System.Data.SqlClient. O new SqlConnection(txt_ConnectionString.Text)
-                                                                                                   //cria uma nova instância de SqlConnection, usando o texto da caixa txt_ConnectionString.Text como o parâmetro de conexão.Isso estabelece
-                                                                                                   //os parâmetros para a conexão com o banco de dados especificado.
+            using (SqlConnection sqlConnection = new SqlConnection(txt_ConnectionString.Text))     //O using, declara um bloco de código onde o objeto sqlConnection será utilizado. Ao final do bloco, o objeto
+                                                                                                   //será automaticamente descartado (chama o método Dispose), liberando recursos de forma eficiente. O
+                                                                                                   //SqlConnection é uma Classe que representa uma conexão SQL com um banco de dados. Está localizada no
+                                                                                                   //namespace System.Data.SqlClient. O new SqlConnection(txt_ConnectionString.Text) cria uma nova instância
+                                                                                                   //de SqlConnection, usando o texto da caixa txt_ConnectionString.Text como o parâmetro de conexão. Assim,
+                                                                                                   //estabelecendo os parâmetros para a conexão com o banco de dados especificado.
             {
-                try                                                                                //O try e um bloco de código onde serão feitas tentativas que podem gerar exceções e se ocorrer uma exceção, o controle será passado
-                                                                                                   //para o bloco catch.
+                try                                                                                //O try é um bloco de código onde serão feitas tentativas que podem gerar exceções e se ocorrer uma exceção,
+                                                                                                   //o controle será passado para o bloco catch.
                 {
-                    sqlConnection.Open();                                                          //O sqlConnection.Open() tenta abrir a conexão com o banco de dados usando a string de conexão fornecida. Se a conexão falhar, será
-                                                                                                   //gerada uma exceção, enviando o fluxo do programa para o bloco catch.
+                    sqlConnection.Open();                                                          //O sqlConnection.Open() tenta abrir a conexão com o banco de dados usando a string de conexão fornecida.
+                                                                                                   //Se a conexão falhar, será gerada uma exceção, enviando o fluxo do programa para o bloco catch.
 
-                    sqlConnection.Close();                                                         //O sqlConnection.Close() fecha a conexão com o banco de dados, isso é importante para liberar a conexão após o uso. Embora o using já
-                                                                                                   //garanta o fechamento, é uma boa prática fechar explicitamente.
+                    sqlConnection.Close();                                                         //O sqlConnection.Close() fecha a conexão com o banco de dados, isso é importante para liberar a conexão
+                                                                                                   //após o uso. Embora o using já garanta o fechamento, fechar explicitamente é uma boa prática.
 
-                    MessageBox.Show("Connessione OK");                                             //Exibe uma caixa de diálogo ao usuário com uma mensagem "Connessione OK", indicanso que a conexão foi estabelecida com sucesso.
+                    MessageBox.Show("Connessione OK");                                             //Exibe uma caixa de diálogo ao usuário com uma mensagem "Connessione OK", indicanso que a conexão foi
+                                                                                                   //estabelecida com sucesso.
                 }
-                catch (Exception)                                                                  //O catch (Exception) e o bloco que captura exceções geradas dentro do try e se ocorrer um erro durante a tentativa de abrir a conexão
-                                                                                                   //ele será capturado aqui.
-
-                                                                                                   //Este Exception e o tipo mais genérico de exceção em C#. Isso captura qualquer tipo de erro que ocorra no bloco try.
+                catch (Exception)                                                                  //O catch (Exception) é o bloco que captura exceções geradas dentro do try e se ocorrer um erro durante a
+                                                                                                   //tentativa de abrir a conexão ele será capturado aqui. Este Exception é o tipo mais genérico de exceção
+                                                                                                   //em C#. Isso captura qualquer tipo de erro que ocorra no bloco try.
                 {
                     MessageBox.Show("Conessione Fallita!");                                        //Exibe uma mensagem ao usuário informando que a tentativa de conexão falhou.
                 }
             }
-            btn_CheckConnection.Enabled = true;                                                    //O btn_CheckConnection.Enabled e a propriedade Enabled controla se o botão está ativo ou desativado. Quando true, o botão fica
-                                                                                                   //habilitado e clicável. Reativa o botão, permitindo que ele seja clicado novamente. Isso ocorre independentemente do sucesso ou
-                                                                                                   //falha na tentativa de conexão.
+            btn_CheckConnection.Enabled = true;                                                    //O btn_CheckConnection.Enabled e a propriedade Enabled controlam se o botão está ativo ou desativado. Quando
+                                                                                                   //está como true, o botão fica habilitado e clicável. Reativa o botão, permitindo que ele seja clicado
+                                                                                                   //novamente. Isso ocorre independentemente do sucesso ou falha na tentativa de execução do que foi pedido.
         }
         private void btn_ExecuteQuery_Click(object sender, EventArgs e)                            //O private diz que o método é acessível apenas dentro da classe DataBase_Connection.
                                                                                                    //O void diz que o método não retorna nenhum valor.
@@ -105,35 +108,40 @@ namespace _20240918_Database_FrameWork                                          
                                                                                                    //simples, como clique de botão, EventArgs é genérico, mas em eventos mais complexos, classes derivadas podem fornecer detalhes
                                                                                                    //adicionais como coordenadas do mouse, teclas pressionadas, etc.
         {
-            if (string.IsNullOrEmpty(txt_QueryString.Text)) throw new Exception("Query vuota!");   //Aqui estou dizendo que ao ser clicado a condicao deve verificar no campo de texto se ele foi preenchido ou nao.
-                                                                                                   //O string.IsNullOrEmpty é um método estático da classe String, que retorna true se a string for nula ou vazia.
-                                                                                                   //O txt_QueryString.Text refere-se ao conteúdo digitado no componente de texto txt_QueryString, e o nome da caixa
-                                                                                                   //de texto (TextBox) que está no formulário. Esse controle permite que o usuário insira informações, como a query de interrogacao ao
-                                                                                                   //banco de dados. A propriedade .Text é usada para obter ou definir o conteúdo textual do controle txt_QueryString.
-                                                                                                   //Nesse caso, quando você lê txt_QueryString.Text, você está pegando o texto que o usuário digitou no campo de entrada.
-                                                                                                   //Quando você define txt_QueryString.Text, você altera o conteúdo desse campo. Resumindo, a propriedade .Text contém
-                                                                                                   //o texto exibido ou digitado dentro da caixa de texto.
-                                                                                                   //O throw new Exception("Query vuota!"), lança ma nova exceção do tipo Exception, interrompendo a execução do método. A mensagem
-                                                                                                   //"Query vuota!" será exibida como a descrição do erro.
+            if (string.IsNullOrEmpty(txt_QueryString.Text)) throw new Exception("Query vuota!");   
+                                                                                                   //Aqui estou dizendo que quando o botão foi acionado a condição deve verificar no campo de texto se ele foi
+                                                                                                   //preenchido ou não. O string.IsNullOrEmpty é um método estático da classe String, que retorna true se a
+                                                                                                   //string for nula ou vazia. O txt_QueryString.Text refere-se ao conteúdo digitado no componente de texto
+                                                                                                   //txt_QueryString, e o nome da caixa de texto (TextBox) que está no formulário. Esse controle permite que
+                                                                                                   //o usuário insira informações, como a string de conexão ao banco de dados. A propriedade .Text é usada para
+                                                                                                   //obter ou definir o conteúdo textual do controle txt_QueryString. Nesse caso, quando você lê
+                                                                                                   //txt_QueryString.Text, você está pegando o texto que o usuário digitou no campo de entrada. Quando você
+                                                                                                   //define txt_QueryString.Text, você altera o conteúdo desse campo. Resumindo, a propriedade .Text contém
+                                                                                                   //o texto exibido ou digitado dentro da caixa de texto. O throw new Exception("Query vuota!"),
+                                                                                                   //lança ma nova exceção do tipo Exception, interrompendo a execução do método. A mensagem "Query vuota!"
+                                                                                                   //será exibida como a descrição do erro.
 
             tab_QueryResult.TabPages.Clear();                                                      //
 
-            btn_ExecuteQuery.Enabled = false;                                                      //O btn_ExecuteQuery.Enabled e a propriedade Enabled controla se o botão está ativo ou desativado. Quando false, o botão fica
-                                                                                                   //desabilitado, cinza e não clicável. Ele desativa o botão para evitar múltiplos cliques durante o processamento
+            btn_ExecuteQuery.Enabled = false;                                                      //O btn_CheckConnection.Enabled e a propriedade Enabled controlam se o botão está ativo ou desativado. Quando
+                                                                                                   //está como false, o botão fica desabilitado, cinza e não clicável. Ele desativa o botão para evitar múltiplos
+                                                                                                   //cliques durante o processamento do que foi solicitado.
 
-            using (SqlConnection sqlConnection = new SqlConnection(txt_ConnectionString.Text))     //O using, declara um bloco de código onde o objeto sqlConnection será utilizado. Ao final do bloco, o objeto será automaticamente
-                                                                                                   //descartado (chama o método Dispose), liberando recursos de forma eficiente. O SqlConnection e uma Classe que representa uma
-                                                                                                   //conexão SQL com um banco de dados. Está localizada no namespace System.Data.SqlClient. O new SqlConnection(txt_ConnectionString.Text)
-                                                                                                   //cria uma nova instância de SqlConnection, usando o texto da caixa txt_ConnectionString.Text como o parâmetro de conexão.Isso estabelece
-                                                                                                   //os parâmetros para a conexão com o banco de dados especificado.
+            using (SqlConnection sqlConnection = new SqlConnection(txt_ConnectionString.Text))     //O using, declara um bloco de código onde o objeto sqlConnection será utilizado. Ao final do bloco, o objeto
+                                                                                                   //será automaticamente descartado (chama o método Dispose), liberando recursos de forma eficiente. O
+                                                                                                   //SqlConnection é uma Classe que representa uma conexão SQL com um banco de dados. Está localizada no
+                                                                                                   //namespace System.Data.SqlClient. O new SqlConnection(txt_ConnectionString.Text) cria uma nova instância
+                                                                                                   //de SqlConnection, usando o texto da caixa txt_ConnectionString.Text como o parâmetro de conexão. Assim,
+                                                                                                   //estabelecendo os parâmetros para a conexão com o banco de dados especificado.
             {
-                try                                                                                //O try e um bloco de código onde serão feitas tentativas que podem gerar exceções e se ocorrer uma exceção, o controle será passado
-                                                                                                   //para o bloco catch.
+                try                                                                                //O try é um bloco de código onde serão feitas tentativas que podem gerar exceções e se ocorrer uma exceção,
+                                                                                                   //o controle será passado para o bloco catch.
                 {
-                    sqlConnection.Open();                                                          //O sqlConnection.Open() tenta abrir a conexão com o banco de dados usando a string de conexão fornecida. Se a conexão falhar, será
-                                                                                                   //gerada uma exceção, enviando o fluxo do programa para o bloco catch.
+                    sqlConnection.Open();                                                          //O sqlConnection.Open() tenta abrir a conexão com o banco de dados usando a string de conexão fornecida.
+                                                                                                   //Se a conexão falhar, será gerada uma exceção, enviando o fluxo do programa para o bloco catch.
 
-                    SqlDataAdapter adapter = new SqlDataAdapter(txt_QueryString.Text, sqlConnection);   //O SqlDataAdapter é responsável por executar a query SQL e trazer os resultados da txt_QueryString.Text que e a consulta SQL que o
+                    SqlDataAdapter adapter = new SqlDataAdapter(txt_QueryString.Text, sqlConnection);   
+                                                                                                   //O SqlDataAdapter é responsável por executar a query SQL e trazer os resultados da txt_QueryString.Text que e a consulta SQL que o
                                                                                                    //usuário digitou. O sqlConnection e a conexão aberta com o banco de dados, ou seja, O SqlDataAdapter age como uma ponte entre o
                                                                                                    //banco de dados e o aplicativo, facilitando a recuperação de dados de forma fácil.
 
@@ -142,8 +150,8 @@ namespace _20240918_Database_FrameWork                                          
                                                                                                    //A tabela de resultados dentro do DataSet é chamada de "Dati".
                                                                                                    //O DataSet é usado para armazenar os resultados da query de maneira estruturada e em memória, para que possam ser exibidos no aplicativo.
 
-                    sqlConnection.Close();                                                         //O sqlConnection.Close() fecha a conexão com o banco de dados, isso é importante para liberar a conexão após o uso. Embora o using já
-                                                                                                   //garanta o fechamento, é uma boa prática fechar explicitamente.
+                    sqlConnection.Close();                                                         //O sqlConnection.Close() fecha a conexão com o banco de dados, isso é importante para liberar a conexão
+                                                                                                   //após o uso. Embora o using já garanta o fechamento, fechar explicitamente é uma boa prática
 
                     DataTableCollection tables = setDiDati.Tables;
 
@@ -153,7 +161,6 @@ namespace _20240918_Database_FrameWork                                          
                         {
                             tab.Text = table.TableName;
                         };
-       //tab.Text = table.TableName;
 
                         var dgvData = new DataGridView();
                         {
@@ -170,40 +177,55 @@ namespace _20240918_Database_FrameWork                                          
                         tab_QueryResult.TabPages.Add(tab);
                     }
                 }
-                catch (Exception ex)                                                               //O catch (Exception) e o bloco que captura exceções geradas dentro do try e se ocorrer um erro durante a tentativa de abrir a conexão
-                                                                                                   //ele será capturado aqui.
-
-                                                                                                   //Este Exception e o tipo mais genérico de exceção em C#. Isso captura qualquer tipo de erro que ocorra no bloco try.
-
-                                                                                                   //O ex é o nome da variável que vai armazenar a exceção capturada. Através dela, e possivel acessar informações sobre o erro, como
-                                                                                                   //a mensagem de erro e o tipo de exceção.
+                catch (Exception ex)                                                               //O catch (Exception) é o bloco que captura exceções geradas dentro do try e se ocorrer um erro durante a
+                                                                                                   //tentativa de abrir a conexão ele será capturado aqui. Este Exception é o tipo mais genérico de exceção
+                                                                                                   //em C#. Isso captura qualquer tipo de erro que ocorra no bloco try. O ex é o nome da variável que vai
+                                                                                                   //armazenar a exceção capturada. Através dela, é possível acessar informações sobre o erro, como a
+                                                                                                   //mensagem de erro e o tipo de exceção.
                 {
                     MessageBox.Show("Eccezione:", ex.Message);                                     //o MessageBox.Show abre uma caixa de diálogo que exibe uma mensagem para o usuário.
-                                                                                                   //O "Eccezione: " e um Texto fixo que informa que ocorreu uma exceção.
-                                                                                                   //o codigo ex.Message e a mensagem da exceção ex que contém uma descrição do erro que ocorreu. Cada tipo de exceção pode ter
-                                                                                                   //uma mensagem diferente, explicando o que deu errado.
+                                                                                                   //O "Eccezione: " é um Texto fixo que informa que ocorreu uma exceção. O código
+                                                                                                   //ex.Message é a mensagem da exceção ex que contém uma descrição do erro que ocorreu.
+                                                                                                   //Cada tipo de exceção pode teruma mensagem diferente, explicando o que deu errado.
                 }
             }
-            btn_ExecuteQuery.Enabled = true;                                                       //O btn_ExecuteQuery.Enabled e a propriedade Enabled controla se o botão está ativo ou desativado. Quando true, o botão fica
-                                                                                                   //habilitado e clicável. Reativa o botão, permitindo que ele seja clicado novamente. Isso ocorre independentemente do sucesso ou
-                                                                                                   //não do comando.
+            btn_ExecuteQuery.Enabled = true;                                                       //O btn_CheckConnection.Enabled e a propriedade Enabled controlam se o botão está ativo ou desativado. Quando
+                                                                                                   //está como true, o botão fica habilitado e clicável. Reativa o botão, permitindo que ele seja clicado
+                                                                                                   //novamente. Isso ocorre independentemente do sucesso ou falha na tentativa de execução do que foi pedido.
         }
 
 
         private void btn_CountQuery_Click(object sender, EventArgs e)                              //Estou criando um metodo para quando se clica no botao que deve verificar a conexao.
         {
-            if (string.IsNullOrEmpty(txt_QueryString.Text)) throw new Exception("Query vuota!");   //Aqui estou dizendo que ao ser clicado a condicao deve verificar no campo de texto onde deve ser
+            if (string.IsNullOrEmpty(txt_QueryString.Text)) throw new Exception("Query vuota!");
+                                                                                                   //Aqui estou dizendo que quando o botão foi acionado a condição deve verificar no campo de texto se ele foi
+                                                                                                   //preenchido ou não. O string.IsNullOrEmpty é um método estático da classe String, que retorna true se a
+                                                                                                   //string for nula ou vazia. O txt_QueryString.Text refere-se ao conteúdo digitado no componente de texto
+                                                                                                   //txt_QueryString, e o nome da caixa de texto (TextBox) que está no formulário. Esse controle permite que
+                                                                                                   //o usuário insira informações, como a string de conexão ao banco de dados. A propriedade .Text é usada para
+                                                                                                   //obter ou definir o conteúdo textual do controle txt_QueryString. Nesse caso, quando você lê
+                                                                                                   //txt_QueryString.Text, você está pegando o texto que o usuário digitou no campo de entrada. Quando você
+                                                                                                   //define txt_QueryString.Text, você altera o conteúdo desse campo. Resumindo, a propriedade .Text contém
+                                                                                                   //o texto exibido ou digitado dentro da caixa de texto. O throw new Exception("Query vuota!"),
+                                                                                                   //lança ma nova exceção do tipo Exception, interrompendo a execução do método. A mensagem "Query vuota!"
+                                                                                                   //será exibida como a descrição do erro.
 
-            btn_CountRecords.Enabled = false;                                                      //O btn_CountRecords.Enabled e a propriedade Enabled controla se o botão está ativo ou desativado. Quando false, o botão fica
-                                                                                                   //desabilitado, cinza e não clicável. Ele desativa o botão para evitar múltiplos cliques durante o processamento
-                                                                                                   
-            using (SqlConnection sqlConnection = new SqlConnection(txt_ConnectionString.Text))
+            btn_CountRecords.Enabled = false;                                                      //O btn_CheckConnection.Enabled e a propriedade Enabled controlam se o botão está ativo ou desativado. Quando
+                                                                                                   //está como false, o botão fica desabilitado, cinza e não clicável. Ele desativa o botão para evitar múltiplos
+                                                                                                   //cliques durante o processamento do que foi solicitado.
+
+            using (SqlConnection sqlConnection = new SqlConnection(txt_ConnectionString.Text))     //O using, declara um bloco de código onde o objeto sqlConnection será utilizado. Ao final do bloco, o objeto
+                                                                                                   //será automaticamente descartado (chama o método Dispose), liberando recursos de forma eficiente. O
+                                                                                                   //SqlConnection é uma Classe que representa uma conexão SQL com um banco de dados. Está localizada no
+                                                                                                   //namespace System.Data.SqlClient. O new SqlConnection(txt_ConnectionString.Text) cria uma nova instância
+                                                                                                   //de SqlConnection, usando o texto da caixa txt_ConnectionString.Text como o parâmetro de conexão. Assim,
+                                                                                                   //estabelecendo os parâmetros para a conexão com o banco de dados especificado.
             {
-                try                                                                                //O try e um bloco de código onde serão feitas tentativas que podem gerar exceções e se ocorrer uma exceção, o controle será passado
-                                                                                                   //para o bloco catch.
+                try                                                                                //O try é um bloco de código onde serão feitas tentativas que podem gerar exceções e se ocorrer uma exceção,
+                                                                                                   //o controle será passado para o bloco catch.
                 {
-                    sqlConnection.Open();                                                          //O sqlConnection.Open() tenta abrir a conexão com o banco de dados usando a string de conexão fornecida. Se a conexão falhar, será
-                                                                                                   //gerada uma exceção, enviando o fluxo do programa para o bloco catch.
+                    sqlConnection.Open();                                                          //O sqlConnection.Open() tenta abrir a conexão com o banco de dados usando a string de conexão fornecida.
+                                                                                                   //Se a conexão falhar, será gerada uma exceção, enviando o fluxo do programa para o bloco catch.
 
                     SqlCommand cmd = sqlConnection.CreateCommand();                                //O SqlCommand cmd declara uma variável cmd do tipo SqlCommand. O SqlCommand é uma classe que representa uma instrução SQL a ser
                                                                                                    //executada em um banco de dados.
@@ -225,29 +247,28 @@ namespace _20240918_Database_FrameWork                                          
                                                                                                    //retornar valores de diferentes tipos (int, string, etc.). Se a consulta retornou um valor, num conterá esse valor. Se a consulta
                                                                                                    //não retornar nada, se a tabela estiver vazia, num será null.
 
-                    sqlConnection.Close();                                                         //O sqlConnection.Close() fecha a conexão com o banco de dados, isso é importante para liberar a conexão após o uso. Embora o using já
-                                                                                                   //garanta o fechamento, é uma boa prática fechar explicitamente.
+                    sqlConnection.Close();                                                         //O sqlConnection.Close() fecha a conexão com o banco de dados, isso é importante para liberar a conexão
+                                                                                                   //após o uso. Embora o using já garanta o fechamento, fechar explicitamente é uma boa prática
 
-                    MessageBox.Show(num.ToString());                                               //Ao chamar ToString(), garantimos que o valor de num, independentemente do seu tipo original (pode ser um número, texto, etc.), seja
-                                                                                                   //convertido corretamente para um formato de string que pode ser exibido na caixa de diálogo.
+                    MessageBox.Show(num.ToString());                                               //Ao chamar ToString(), garantimos que o valor de num, independentemente do seu tipo original (pode ser
+                                                                                                   //um número, texto, etc.), seja~convertido corretamente para um formato de string que pode ser exibido
+                                                                                                   //na caixa de diálogo.
                 }
-                catch (Exception ex)                                                               //O catch (Exception) e o bloco que captura exceções geradas dentro do try e se ocorrer um erro durante a tentativa de abrir a conexão
-                                                                                                   //ele será capturado aqui.
-
-                                                                                                   //Este Exception e o tipo mais genérico de exceção em C#. Isso captura qualquer tipo de erro que ocorra no bloco try.
-
-                                                                                                   //O ex é o nome da variável que vai armazenar a exceção capturada. Através dela, e possivel acessar informações sobre o erro, como
-                                                                                                   //a mensagem de erro e o tipo de exceção.
+                catch (Exception ex)                                                               //O catch (Exception) é o bloco que captura exceções geradas dentro do try e se ocorrer um erro durante a
+                                                                                                   //tentativa de abrir a conexão ele será capturado aqui. Este Exception é o tipo mais genérico de exceção
+                                                                                                   //em C#. Isso captura qualquer tipo de erro que ocorra no bloco try. O ex é o nome da variável que vai
+                                                                                                   //armazenar a exceção capturada. Através dela, é possível acessar informações sobre o erro, como a
+                                                                                                   //mensagem de erro e o tipo de exceção.
                 {
                     MessageBox.Show("Eccezione:", ex.Message);                                     //o MessageBox.Show abre uma caixa de diálogo que exibe uma mensagem para o usuário.
-                                                                                                   //O "Eccezione: " e um Texto fixo que informa que ocorreu uma exceção.
-                                                                                                   //o codigo ex.Message e a mensagem da exceção ex que contém uma descrição do erro que ocorreu. Cada tipo de exceção pode ter
-                                                                                                   //uma mensagem diferente, explicando o que deu errado.
+                                                                                                   //O "Eccezione: " é um Texto fixo que informa que ocorreu uma exceção. O código
+                                                                                                   //ex.Message é a mensagem da exceção ex que contém uma descrição do erro que ocorreu.
+                                                                                                   //Cada tipo de exceção pode teruma mensagem diferente, explicando o que deu errado.
                 }
             }
-            btn_CountRecords.Enabled = true;                                                       //O btn_CountRecords.Enabled e a propriedade Enabled controla se o botão está ativo ou desativado. Quando true, o botão fica
-                                                                                                   //habilitado e clicável. Reativa o botão, permitindo que ele seja clicado novamente. Isso ocorre independentemente do sucesso ou
-                                                                                                   //não do comando.
+            btn_CountRecords.Enabled = true;                                                       //O btn_CheckConnection.Enabled e a propriedade Enabled controlam se o botão está ativo ou desativado. Quando
+                                                                                                   //está como true, o botão fica habilitado e clicável. Reativa o botão, permitindo que ele seja clicado
+                                                                                                   //novamente. Isso ocorre independentemente do sucesso ou falha na tentativa de execução do que foi pedido.
         }
     }
 }

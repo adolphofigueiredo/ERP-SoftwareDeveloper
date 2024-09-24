@@ -23,7 +23,7 @@ namespace _20240918_Database_FrameWork
 
         private void btnCerca_Click(object sender, EventArgs e)
         {
-            btnCerca.Enabled = false;
+            btnCercaStudenti.Enabled = false;
             try
             {
                 using (ItsCorsiEsamiContext ctx = new ItsCorsiEsamiContext(Configurazioni.GetConnectionString()))
@@ -54,7 +54,7 @@ namespace _20240918_Database_FrameWork
             }
             finally
             { 
-                btnCerca.Enabled = true;
+                btnCercaStudenti.Enabled = true;
             }
         
         }

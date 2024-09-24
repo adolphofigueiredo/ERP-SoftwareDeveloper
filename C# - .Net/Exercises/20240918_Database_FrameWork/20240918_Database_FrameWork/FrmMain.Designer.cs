@@ -59,6 +59,7 @@
             this.corsiToolStripMenuItem.Name = "corsiToolStripMenuItem";
             this.corsiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.corsiToolStripMenuItem.Text = "Corsi";
+            this.corsiToolStripMenuItem.Click += new System.EventHandler(this.corsiToolStripMenuItem_Click);
             // 
             // proToolStripMenuItem
             // 

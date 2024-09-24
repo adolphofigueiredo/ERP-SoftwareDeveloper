@@ -32,7 +32,7 @@
             this.lbNatoA = new System.Windows.Forms.Label();
             this.lblDataDa = new System.Windows.Forms.Label();
             this.lblNominativo = new System.Windows.Forms.Label();
-            this.btnCerca = new System.Windows.Forms.Button();
+            this.btnCercaStudenti = new System.Windows.Forms.Button();
             this.dtpNatoAFilter = new System.Windows.Forms.DateTimePicker();
             this.dtpNatoDaFilter = new System.Windows.Forms.DateTimePicker();
             this.txtNominativoFilter = new System.Windows.Forms.TextBox();
@@ -45,10 +45,13 @@
             // 
             // pnlCriterieRicerca
             // 
+            this.pnlCriterieRicerca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCriterieRicerca.Controls.Add(this.lbNatoA);
             this.pnlCriterieRicerca.Controls.Add(this.lblDataDa);
             this.pnlCriterieRicerca.Controls.Add(this.lblNominativo);
-            this.pnlCriterieRicerca.Controls.Add(this.btnCerca);
+            this.pnlCriterieRicerca.Controls.Add(this.btnCercaStudenti);
             this.pnlCriterieRicerca.Controls.Add(this.dtpNatoAFilter);
             this.pnlCriterieRicerca.Controls.Add(this.dtpNatoDaFilter);
             this.pnlCriterieRicerca.Controls.Add(this.txtNominativoFilter);
@@ -84,16 +87,16 @@
             this.lblNominativo.TabIndex = 4;
             this.lblNominativo.Text = "Nominativo (Nome e/o Cognome)";
             // 
-            // btnCerca
+            // btnCercaStudenti
             // 
-            this.btnCerca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerca.Location = new System.Drawing.Point(627, 17);
-            this.btnCerca.Name = "btnCerca";
-            this.btnCerca.Size = new System.Drawing.Size(149, 23);
-            this.btnCerca.TabIndex = 3;
-            this.btnCerca.Text = "Search";
-            this.btnCerca.UseVisualStyleBackColor = true;
-            this.btnCerca.Click += new System.EventHandler(this.btnCerca_Click);
+            this.btnCercaStudenti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCercaStudenti.Location = new System.Drawing.Point(627, 17);
+            this.btnCercaStudenti.Name = "btnCercaStudenti";
+            this.btnCercaStudenti.Size = new System.Drawing.Size(149, 23);
+            this.btnCercaStudenti.TabIndex = 3;
+            this.btnCercaStudenti.Text = "Search";
+            this.btnCercaStudenti.UseVisualStyleBackColor = true;
+            this.btnCercaStudenti.Click += new System.EventHandler(this.btnCerca_Click);
             // 
             // dtpNatoAFilter
             // 
@@ -108,7 +111,6 @@
             // 
             // dtpNatoDaFilter
             // 
-            this.dtpNatoDaFilter.Checked = false;
             this.dtpNatoDaFilter.Location = new System.Drawing.Point(214, 18);
             this.dtpNatoDaFilter.MaxDate = new System.DateTime(2500, 12, 31, 0, 0, 0, 0);
             this.dtpNatoDaFilter.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
@@ -116,7 +118,7 @@
             this.dtpNatoDaFilter.ShowCheckBox = true;
             this.dtpNatoDaFilter.Size = new System.Drawing.Size(200, 20);
             this.dtpNatoDaFilter.TabIndex = 1;
-            this.dtpNatoDaFilter.Value = new System.DateTime(2200, 12, 31, 0, 0, 0, 0);
+            this.dtpNatoDaFilter.Value = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             // 
             // txtNominativoFilter
             // 
@@ -137,8 +139,10 @@
             // 
             this.dgvRisultati.AllowUserToAddRows = false;
             this.dgvRisultati.AllowUserToDeleteRows = false;
+            this.dgvRisultati.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRisultati.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRisultati.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRisultati.Location = new System.Drawing.Point(0, 0);
             this.dgvRisultati.Name = "dgvRisultati";
             this.dgvRisultati.ReadOnly = true;
@@ -171,7 +175,7 @@
         private System.Windows.Forms.Label lbNatoA;
         private System.Windows.Forms.Label lblDataDa;
         private System.Windows.Forms.Label lblNominativo;
-        private System.Windows.Forms.Button btnCerca;
+        private System.Windows.Forms.Button btnCercaStudenti;
         private System.Windows.Forms.DateTimePicker dtpNatoAFilter;
         private System.Windows.Forms.DateTimePicker dtpNatoDaFilter;
         private System.Windows.Forms.DataGridView dgvRisultati;

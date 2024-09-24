@@ -16,3 +16,4 @@ W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20
 W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240918_Database_FrameWork\20240918_Database_FrameWork\obj\Debug\_20240918_Database_FrameWork.FrmEntityFrameworkExample.resources
 W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240918_Database_FrameWork\20240918_Database_FrameWork\obj\Debug\_20240918_Database_FrameWork.FrmMain.resources
 W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240918_Database_FrameWork\20240918_Database_FrameWork\obj\Debug\_20240918_Database_FrameWork.FrmStudenti.resources
+W:\ESD_23-25\studente\ICTS23-25.432\ERP-SoftwareDeveloper\C# - .Net\Exercises\20240918_Database_FrameWork\20240918_Database_FrameWork\obj\Debug\_20240918_Database_FrameWork.FrmCorsi.resources

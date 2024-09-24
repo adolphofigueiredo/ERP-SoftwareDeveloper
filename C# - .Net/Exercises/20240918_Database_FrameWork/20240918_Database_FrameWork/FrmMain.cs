@@ -23,5 +23,11 @@ namespace _20240918_Database_FrameWork
             formStudenti.MdiParent = this;
             formStudenti.Show();
         }
+        private void corsiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCorsi formCorsi = new FrmCorsi();
+            formCorsi.MdiParent = this;
+            formCorsi.Show();
+        }
     }
 }

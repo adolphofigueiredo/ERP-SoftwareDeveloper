@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DbExplorer_WinApp.Models.Entities
 {
@@ -15,6 +11,7 @@ namespace DbExplorer_WinApp.Models.Entities
         public DateTime DataDiNascita { get; set; }
 
         public int CorsoId { get; set; }
+        public virtual CorsoEntity Corso { get; set; }
 
     }
 }

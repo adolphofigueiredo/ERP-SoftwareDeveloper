@@ -72,7 +72,7 @@ namespace _20240918_Database_FrameWork                                          
                                                                                                    //cliques durante o processamento do que foi solicitado.
 
             using (SqlConnection sqlConnection = new SqlConnection(txt_ConnectionString.Text))     //O using, declara um bloco de código onde o objeto sqlConnection será utilizado. Ao final do bloco, o objeto
-                                                                                                   //será automaticamente descartado (chama o método Dispose), liberando recursos de forma eficiente. O
+                                                                                                   //será automaticamente descartado (Garbage Colector) (chama o método Dispose), liberando recursos de forma eficiente. O
                                                                                                    //SqlConnection é uma Classe que representa uma conexão SQL com um banco de dados. Está localizada no
                                                                                                    //namespace System.Data.SqlClient. O new SqlConnection(txt_ConnectionString.Text) cria uma nova instância
                                                                                                    //de SqlConnection, usando o texto da caixa txt_ConnectionString.Text como o parâmetro de conexão. Assim,

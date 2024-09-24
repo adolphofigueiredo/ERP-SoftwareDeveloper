@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240918_Database_FrameWork\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{110F27E7-A72A-492D-9161-3EB17B5FB118}|20240918_Database_FrameWork\\20240918_Database_FrameWork.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240918_database_framework\\20240918_database_framework\\models\\itscorsiesamicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{110F27E7-A72A-492D-9161-3EB17B5FB118}|20240918_Database_FrameWork\\20240918_Database_FrameWork.csproj|solutionrelative:20240918_database_framework\\models\\itscorsiesamicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{110F27E7-A72A-492D-9161-3EB17B5FB118}|20240918_Database_FrameWork\\20240918_Database_FrameWork.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240918_database_framework\\20240918_database_framework\\frmstudenti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{110F27E7-A72A-492D-9161-3EB17B5FB118}|20240918_Database_FrameWork\\20240918_Database_FrameWork.csproj|solutionrelative:20240918_database_framework\\frmstudenti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{110F27E7-A72A-492D-9161-3EB17B5FB118}|20240918_Database_FrameWork\\20240918_Database_FrameWork.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20240918_database_framework\\20240918_database_framework\\frmstudenti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{110F27E7-A72A-492D-9161-3EB17B5FB118}|20240918_Database_FrameWork\\20240918_Database_FrameWork.csproj|solutionrelative:20240918_database_framework\\frmstudenti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 11,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +26,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ItsCorsiEsamiContext.cs",
-              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240918_Database_FrameWork\\20240918_Database_FrameWork\\Models\\ItsCorsiEsamiContext.cs",
-              "RelativeDocumentMoniker": "20240918_Database_FrameWork\\Models\\ItsCorsiEsamiContext.cs",
-              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240918_Database_FrameWork\\20240918_Database_FrameWork\\Models\\ItsCorsiEsamiContext.cs",
-              "RelativeToolTip": "20240918_Database_FrameWork\\Models\\ItsCorsiEsamiContext.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAwwHQAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FrmStudenti.cs [Design]",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240918_Database_FrameWork\\20240918_Database_FrameWork\\FrmStudenti.cs",
+              "RelativeDocumentMoniker": "20240918_Database_FrameWork\\FrmStudenti.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240918_Database_FrameWork\\20240918_Database_FrameWork\\FrmStudenti.cs [Design]",
+              "RelativeToolTip": "20240918_Database_FrameWork\\FrmStudenti.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:53:53.195Z",
+              "WhenOpened": "2024-09-24T13:54:44.853Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmStudenti.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240918_Database_FrameWork\\20240918_Database_FrameWork\\FrmStudenti.cs",
+              "RelativeDocumentMoniker": "20240918_Database_FrameWork\\FrmStudenti.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20240918_Database_FrameWork\\20240918_Database_FrameWork\\FrmStudenti.cs",
+              "RelativeToolTip": "20240918_Database_FrameWork\\FrmStudenti.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T13:54:52.793Z",
               "EditorCaption": ""
             }
           ]

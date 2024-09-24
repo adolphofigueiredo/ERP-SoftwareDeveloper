@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _20240918_Database_FrameWork.Models.Entity
+namespace DbExplorer_WinApp.Models.Dtos
 {
-    public class StudenteEntity
+    public class StudenteDto
     {
-
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cognome { get; set; }
@@ -16,6 +15,5 @@ namespace _20240918_Database_FrameWork.Models.Entity
         public DateTime DataDiNascita { get; set; }
 
         public int CorsoId { get; set; }
-        public virtual CorsoEntity Corso { get; set; }
     }
 }

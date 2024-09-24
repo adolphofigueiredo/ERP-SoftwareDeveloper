@@ -38,19 +38,17 @@
             // 
             // txtConnectionString
             // 
-            this.txtConnectionString.Location = new System.Drawing.Point(10, 11);
-            this.txtConnectionString.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConnectionString.Location = new System.Drawing.Point(13, 13);
             this.txtConnectionString.Name = "txtConnectionString";
-            this.txtConnectionString.Size = new System.Drawing.Size(490, 20);
+            this.txtConnectionString.Size = new System.Drawing.Size(652, 22);
             this.txtConnectionString.TabIndex = 0;
             this.txtConnectionString.Text = "Server=localhost\\SQLEXPRESS;Database=ITS_CORSI_ESAMI;Trusted_Connection=True;";
             // 
             // btnCheckConnection
             // 
-            this.btnCheckConnection.Location = new System.Drawing.Point(503, 6);
-            this.btnCheckConnection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheckConnection.Location = new System.Drawing.Point(671, 8);
             this.btnCheckConnection.Name = "btnCheckConnection";
-            this.btnCheckConnection.Size = new System.Drawing.Size(92, 26);
+            this.btnCheckConnection.Size = new System.Drawing.Size(122, 32);
             this.btnCheckConnection.TabIndex = 1;
             this.btnCheckConnection.Text = "Check connection";
             this.btnCheckConnection.UseVisualStyleBackColor = true;
@@ -58,19 +56,17 @@
             // 
             // txtQuery
             // 
-            this.txtQuery.Location = new System.Drawing.Point(9, 33);
-            this.txtQuery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuery.Location = new System.Drawing.Point(12, 41);
             this.txtQuery.Multiline = true;
             this.txtQuery.Name = "txtQuery";
-            this.txtQuery.Size = new System.Drawing.Size(587, 141);
+            this.txtQuery.Size = new System.Drawing.Size(781, 173);
             this.txtQuery.TabIndex = 2;
             // 
             // btnExecuteQuery
             // 
-            this.btnExecuteQuery.Location = new System.Drawing.Point(9, 179);
-            this.btnExecuteQuery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExecuteQuery.Location = new System.Drawing.Point(12, 220);
             this.btnExecuteQuery.Name = "btnExecuteQuery";
-            this.btnExecuteQuery.Size = new System.Drawing.Size(298, 26);
+            this.btnExecuteQuery.Size = new System.Drawing.Size(398, 32);
             this.btnExecuteQuery.TabIndex = 3;
             this.btnExecuteQuery.Text = "Esegui query";
             this.btnExecuteQuery.UseVisualStyleBackColor = true;
@@ -78,10 +74,9 @@
             // 
             // btnCountQuery
             // 
-            this.btnCountQuery.Location = new System.Drawing.Point(312, 179);
-            this.btnCountQuery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCountQuery.Location = new System.Drawing.Point(416, 220);
             this.btnCountQuery.Name = "btnCountQuery";
-            this.btnCountQuery.Size = new System.Drawing.Size(283, 26);
+            this.btnCountQuery.Size = new System.Drawing.Size(377, 32);
             this.btnCountQuery.TabIndex = 5;
             this.btnCountQuery.Text = "Esegui count query";
             this.btnCountQuery.UseVisualStyleBackColor = true;
@@ -89,25 +84,23 @@
             // 
             // tabQueryResult
             // 
-            this.tabQueryResult.Location = new System.Drawing.Point(9, 210);
-            this.tabQueryResult.Margin = new System.Windows.Forms.Padding(2);
+            this.tabQueryResult.Location = new System.Drawing.Point(12, 259);
             this.tabQueryResult.Name = "tabQueryResult";
             this.tabQueryResult.SelectedIndex = 0;
-            this.tabQueryResult.Size = new System.Drawing.Size(582, 264);
+            this.tabQueryResult.Size = new System.Drawing.Size(776, 325);
             this.tabQueryResult.TabIndex = 6;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 484);
+            this.ClientSize = new System.Drawing.Size(800, 596);
             this.Controls.Add(this.tabQueryResult);
             this.Controls.Add(this.btnCountQuery);
             this.Controls.Add(this.btnExecuteQuery);
             this.Controls.Add(this.txtQuery);
             this.Controls.Add(this.btnCheckConnection);
             this.Controls.Add(this.txtConnectionString);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

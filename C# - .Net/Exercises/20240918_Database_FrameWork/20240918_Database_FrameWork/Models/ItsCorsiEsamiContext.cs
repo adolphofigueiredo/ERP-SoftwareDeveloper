@@ -15,7 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace _20240918_Database_FrameWork.Models
 {
-    internal class ItsCorsiEsamiContext : DbContext                                                //A classe ItsCorsiEsamiContext herda de DbContext, que é a classe principal do Entity
+    public class ItsCorsiEsamiContext : DbContext                                                  //A classe ItsCorsiEsamiContext herda de DbContext, que é a classe principal do Entity
                                                                                                    //Framework usada para interagir com o banco de dados. O DbContext encapsula todas as
                                                                                                    //operações de banco de dados, incluindo consultas e salvamento de dados.
     {
@@ -26,6 +26,12 @@ namespace _20240918_Database_FrameWork.Models
                                                                                                    //O DbSet<StudenteEntity> Studenti mapeia para uma tabela onde serão armazenados dados
                                                                                                    //de estudantes. O DbSet<CorsoEntity> Corsi mapeia para uma tabela onde serão
                                                                                                    //armazenados dados de cursos.
+
+        public ItsCorsiEsamiContext(string connectionString) : base(connectionString)
+        { 
+        
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)                       //O método protected override está indica que esta implementação customizada irá
                                                                                                    //substituir ou complementar a original. O OnModelCreating(modelBuilder) chama a
                                                                                                    //implementação base do método para garantir que o comportamento padrão do Entity
@@ -79,15 +85,23 @@ namespace _20240918_Database_FrameWork.Models
                 .Property(p => p.DataDiNascita)                                                    //Define que esta propriedade da entidade será configurada.
                 .IsRequired();                                                                     //Torna essa propriedade obrigatória no banco de dados, ou seja, não pode ser nula.
 
-            
-            
-            
-            
-            
-            modelBuilder.Entity<StudenteEntity>()
-                .Property(p => p.CorsoId);
+
+
+
+
+
+
+
+
+            modelBuilder.Entity<StudenteEntity>()                                                  //RELAZIONI
+                .HasRequired(p => p.Corso)
+                .WithMany(p => p.Studente)
+                .HasForeignKey(p => p.CorsoId);
                             
-            //RELAZIONI
+
+
+
+
 
 
 
@@ -123,13 +137,20 @@ namespace _20240918_Database_FrameWork.Models
                 .Property(p => p.DataValiditaInizio)                                               //Define que esta propriedade da entidade será configurada.
                 .IsRequired();                                                                     //Torna essa propriedade obrigatória no banco de dados, ou seja, não pode ser nula.
 
-
-
-
             modelBuilder.Entity<CorsoEntity>()
                 .Property(p => p.DataValiditaFine);                                                //Define que esta propriedade da entidade será configurada.
 
-            //RELAZIONI
+
+
+
+
+
+
+
+            modelBuilder.Entity<CorsoEntity>()                                                     //RELAZIONI
+                .HasMany(p => p.Studente)
+                .WithRequired(p => p.Corso)
+                .HasForeignKey(p => p.CorsoId);
 
         }
     }

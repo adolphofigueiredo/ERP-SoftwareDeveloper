@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using DbExplorer_WinApp.Models.Entities;
 
 namespace DbExplorer_WinApp.Models
@@ -12,6 +7,11 @@ namespace DbExplorer_WinApp.Models
     {
         public DbSet<StudenteEntity> Studenti { get; set; }
         public DbSet<CorsoEntity> Corsi { get; set; }
+
+        public ItsCorsiEsamiContext(string connectionString) : base(connectionString)
+        {
+            
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -48,6 +48,10 @@ namespace DbExplorer_WinApp.Models
 
             // RELAZIONI
 
+            modelBuilder.Entity<StudenteEntity>()
+                .HasRequired(p => p.Corso)
+                .WithMany(p => p.Studenti)
+                .HasForeignKey(p => p.CorsoId);
 
 
             modelBuilder.Entity<CorsoEntity>()
@@ -72,6 +76,11 @@ namespace DbExplorer_WinApp.Models
                .Property(p => p.DataValiditaFine);
 
             // RELAZIONI
+
+            modelBuilder.Entity<CorsoEntity>()
+                .HasMany(p=>p.Studenti)
+                .WithRequired(p => p.Corso)
+                .HasForeignKey(p => p.CorsoId);
 
         }
     }

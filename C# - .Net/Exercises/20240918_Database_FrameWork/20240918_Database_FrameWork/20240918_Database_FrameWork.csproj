@@ -62,13 +62,45 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEntityFrameworkExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEntityFrameworkExample.Designer.cs">
+      <DependentUpon>FrmEntityFrameworkExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStudenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudenti.Designer.cs">
+      <DependentUpon>FrmStudenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Configurazioni.cs" />
+    <Compile Include="Models\Dtos\CorsoDto.cs" />
+    <Compile Include="Models\Dtos\StudenteDto.cs" />
     <Compile Include="Models\Entity\CorsoEntity.cs" />
     <Compile Include="Models\Entity\StudenteEntity.cs" />
     <Compile Include="Models\ItsCorsiEsamiContext.cs" />
+    <Compile Include="Models\Mappers\CorsoMapper.cs" />
+    <Compile Include="Models\Mappers\StudentiMapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEntityFrameworkExample.resx">
+      <DependentUpon>FrmEntityFrameworkExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudenti.resx">
+      <DependentUpon>FrmStudenti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

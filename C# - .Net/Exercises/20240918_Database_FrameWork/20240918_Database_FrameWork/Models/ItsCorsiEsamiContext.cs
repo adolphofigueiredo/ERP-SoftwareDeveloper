@@ -95,7 +95,7 @@ namespace _20240918_Database_FrameWork.Models
 
             modelBuilder.Entity<StudenteEntity>()                                                  //RELAZIONI
                 .HasRequired(p => p.Corso)
-                .WithMany(p => p.Studente)
+                .WithMany(p => p.Studenti)
                 .HasForeignKey(p => p.CorsoId);
                             
 
@@ -148,7 +148,7 @@ namespace _20240918_Database_FrameWork.Models
 
 
             modelBuilder.Entity<CorsoEntity>()                                                     //RELAZIONI
-                .HasMany(p => p.Studente)
+                .HasMany(p => p.Studenti)
                 .WithRequired(p => p.Corso)
                 .HasForeignKey(p => p.CorsoId);
 

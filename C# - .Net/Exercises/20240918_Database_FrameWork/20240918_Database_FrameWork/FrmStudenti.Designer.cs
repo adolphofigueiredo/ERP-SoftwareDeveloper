@@ -93,26 +93,30 @@
             this.btnCerca.TabIndex = 3;
             this.btnCerca.Text = "Search";
             this.btnCerca.UseVisualStyleBackColor = true;
+            this.btnCerca.Click += new System.EventHandler(this.btnCerca_Click);
             // 
             // dtpNatoAFilter
             // 
             this.dtpNatoAFilter.Location = new System.Drawing.Point(420, 18);
-            this.dtpNatoAFilter.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
+            this.dtpNatoAFilter.MaxDate = new System.DateTime(2500, 12, 31, 0, 0, 0, 0);
             this.dtpNatoAFilter.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpNatoAFilter.Name = "dtpNatoAFilter";
             this.dtpNatoAFilter.ShowCheckBox = true;
             this.dtpNatoAFilter.Size = new System.Drawing.Size(200, 20);
             this.dtpNatoAFilter.TabIndex = 2;
+            this.dtpNatoAFilter.Value = new System.DateTime(2200, 12, 31, 0, 0, 0, 0);
             // 
             // dtpNatoDaFilter
             // 
+            this.dtpNatoDaFilter.Checked = false;
             this.dtpNatoDaFilter.Location = new System.Drawing.Point(214, 18);
-            this.dtpNatoDaFilter.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
+            this.dtpNatoDaFilter.MaxDate = new System.DateTime(2500, 12, 31, 0, 0, 0, 0);
             this.dtpNatoDaFilter.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpNatoDaFilter.Name = "dtpNatoDaFilter";
             this.dtpNatoDaFilter.ShowCheckBox = true;
             this.dtpNatoDaFilter.Size = new System.Drawing.Size(200, 20);
             this.dtpNatoDaFilter.TabIndex = 1;
+            this.dtpNatoDaFilter.Value = new System.DateTime(2200, 12, 31, 0, 0, 0, 0);
             // 
             // txtNominativoFilter
             // 

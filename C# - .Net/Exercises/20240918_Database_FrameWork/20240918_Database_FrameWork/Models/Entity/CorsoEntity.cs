@@ -10,7 +10,7 @@ namespace _20240918_Database_FrameWork.Models.Entity
     {
         public CorsoEntity()
         { 
-            Studente = new HashSet<StudenteEntity>();
+            Studenti = new HashSet<StudenteEntity>();
         }
 
         public int Id { get; set; }
@@ -18,9 +18,9 @@ namespace _20240918_Database_FrameWork.Models.Entity
 
         public DateTime DataValiditaInizio { get; set; }
 
-        public DateTime DataValiditaFine { get; set; }
+        public DateTime? DataValiditaFine { get; set; }
 
-        public virtual ICollection<StudenteEntity> Studente { get; set; }
+        public virtual ICollection<StudenteEntity> Studenti { get; set; }
 
     }
 }

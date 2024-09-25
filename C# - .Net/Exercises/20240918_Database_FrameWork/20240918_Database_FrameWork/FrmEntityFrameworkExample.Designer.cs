@@ -59,6 +59,7 @@
             this.btnCheckConnection.TabIndex = 1;
             this.btnCheckConnection.Text = "Check";
             this.btnCheckConnection.UseVisualStyleBackColor = true;
+            this.btnCheckConnection.Click += new System.EventHandler(this.btnCheckConnection_Click);
             // 
             // dgvStudentiList
             // 
@@ -115,6 +116,7 @@
             this.btnCercaStudenti.TabIndex = 7;
             this.btnCercaStudenti.Text = "Cerca Studenti";
             this.btnCercaStudenti.UseVisualStyleBackColor = true;
+            this.btnCercaStudenti.Click += new System.EventHandler(this.btnCercaStudenti_Click);
             // 
             // btnCercaCorsi
             // 
@@ -124,6 +126,7 @@
             this.btnCercaCorsi.TabIndex = 9;
             this.btnCercaCorsi.Text = "Cerca Corsi";
             this.btnCercaCorsi.UseVisualStyleBackColor = true;
+            this.btnCercaCorsi.Click += new System.EventHandler(this.btnCercaCorsi_Click);
             // 
             // dgvCorsiList
             // 

@@ -32,6 +32,9 @@
             this.studentiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corsiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.form01ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formEntityFrameworkExampleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +43,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentiToolStripMenuItem,
             this.corsiToolStripMenuItem,
-            this.proToolStripMenuItem});
+            this.proToolStripMenuItem,
+            this.oldToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(884, 24);
@@ -67,6 +71,29 @@
             this.proToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.proToolStripMenuItem.Text = "Pro";
             // 
+            // oldToolStripMenuItem
+            // 
+            this.oldToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.form01ToolStripMenuItem,
+            this.formEntityFrameworkExampleToolStripMenuItem});
+            this.oldToolStripMenuItem.Name = "oldToolStripMenuItem";
+            this.oldToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.oldToolStripMenuItem.Text = "Old";
+            // 
+            // form01ToolStripMenuItem
+            // 
+            this.form01ToolStripMenuItem.Name = "form01ToolStripMenuItem";
+            this.form01ToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.form01ToolStripMenuItem.Text = "Form01";
+            this.form01ToolStripMenuItem.Click += new System.EventHandler(this.Form1_Click);
+            // 
+            // formEntityFrameworkExampleToolStripMenuItem
+            // 
+            this.formEntityFrameworkExampleToolStripMenuItem.Name = "formEntityFrameworkExampleToolStripMenuItem";
+            this.formEntityFrameworkExampleToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.formEntityFrameworkExampleToolStripMenuItem.Text = "FormEntityFrameworkExample";
+            this.formEntityFrameworkExampleToolStripMenuItem.Click += new System.EventHandler(this.FrmEntityFrameworkExample_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,5 +117,8 @@
         private System.Windows.Forms.ToolStripMenuItem studentiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem corsiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem oldToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem form01ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formEntityFrameworkExampleToolStripMenuItem;
     }
 }

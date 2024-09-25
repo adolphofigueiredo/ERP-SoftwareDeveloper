@@ -1,15 +1,19 @@
 ﻿using _20240918_Database_FrameWork.Models.Entity;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.IO.Ports;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.Remoting.Contexts;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Windows.Forms.LinkLabel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
@@ -27,11 +31,31 @@ namespace _20240918_Database_FrameWork.Models
                                                                                                    //de estudantes. O DbSet<CorsoEntity> Corsi mapeia para uma tabela onde serão
                                                                                                    //armazenados dados de cursos.
 
-        public ItsCorsiEsamiContext(string connectionString) : base(connectionString)
-        { 
-        
-        }
-
+        public ItsCorsiEsamiContext(string connectionString) : base(connectionString)              
+        {
+        }                                                                                          //Esta linha é um construtor da classe ItsCorsiEsamiContext, lembrando que os construtores
+                                                                                                   //são métodos especiais que são chamados automaticamente quando um objeto dessa classe é
+                                                                                                   //instanciado. O public é um modificador de acesso, Isso significa que o construtor é
+                                                                                                   //acessível de qualquer lugar onde o ItsCorsiEsamiContext for usado.
+                                                                                                   
+                                                                                                   //O string connectionString diz que o construtor aceita um parâmetro do tipo string, que
+                                                                                                   //é a string de conexão do banco de dados. Isso permite que, ao criar uma nova instância
+                                                                                                   //de ItsCorsiEsamiContext, o usuário possa fornecer a string de conexão que será usada
+                                                                                                   //para conectar-se ao banco de dados. Já o base(connectionString) é a parte chamada de
+                                                                                                   //inicialização da classe base. O ItsCorsiEsamiContext herda de DbContext, que faz
+                                                                                                   //parte do Entity Framework. O base(connectionString) chama o construtor da classe
+                                                                                                   //DbContext e passa a connectionString como argumento. O DbContext utiliza essa string
+                                                                                                   //de conexão para gerenciar as interações com o banco de dados, como abrir conexões e
+                                                                                                   //executar comandos SQL. Essencialmente, o DbContext precisa de uma string de conexão
+                                                                                                   //para saber como se conectar ao banco de dados. E quando você usa : base(connectionString),
+                                                                                                   //você está delegando essa responsabilidade para a classe DbContext. Como o bloco está
+                                                                                                   //vazio { } significa que nenhuma lógica adicional é executada dentro do construtor da
+                                                                                                   //classe ItsCorsiEsamiContext. O único trabalho desse construtor é chamar o construtor
+                                                                                                   //da classe base (DbContext) e passar a string de conexão. Resumindo, este construtor
+                                                                                                   //permite criar instâncias da classe ItsCorsiEsamiContext usando uma string de conexão
+                                                                                                   //personalizada, que será passada para o DbContext. O DbContext utiliza essa string de
+                                                                                                   //conexão para configurar o provedor de banco de dados, o servidor, o nome do banco de
+                                                                                                   //dados, e outras opções necessárias para o acesso ao banco de dados.
         protected override void OnModelCreating(DbModelBuilder modelBuilder)                       //O método protected override está indica que esta implementação customizada irá
                                                                                                    //substituir ou complementar a original. O OnModelCreating(modelBuilder) chama a
                                                                                                    //implementação base do método para garantir que o comportamento padrão do Entity
@@ -85,27 +109,26 @@ namespace _20240918_Database_FrameWork.Models
                 .Property(p => p.DataDiNascita)                                                    //Define que esta propriedade da entidade será configurada.
                 .IsRequired();                                                                     //Torna essa propriedade obrigatória no banco de dados, ou seja, não pode ser nula.
 
+            modelBuilder.Entity<StudenteEntity>()                                                  //Ponto em que se cria a relação
+                .HasRequired(p => p.Corso)                                                         //HasRequired especifica que a propriedade Corso na entidade StudenteEntity é
+                                                                                                   //obrigatória. Isso significa que todo estudante (instância de StudenteEntity)
+                                                                                                   //deve estar associado a um curso (instância de CorsoEntity). Já o p => p.Corso
+                                                                                                   //é uma expressão lambda que indica qual propriedade de navegação(o curso)
+                                                                                                   //está sendo configurada na entidade StudenteEntity. Aqui, p.Corso refere-se
+                                                                                                   //à propriedade de navegação que conecta um estudante a seu curso.
 
+                .WithMany(p => p.Studenti)                                                         //WithMany indica que a entidade CorsoEntity (curso) está associada a muitos
+                                                                                                   //estudantes. Essa parte da configuração define a relação do lado inverso, ou
+                                                                                                   //seja, do curso para os estudantes. Já o p => p.Studenti indica que na entidade
+                                                                                                   //CorsoEntity, existe uma coleção chamada Studenti que armazena os estudantes
+                                                                                                   //que estão associados a esse curso.
 
-
-
-
-
-
-
-            modelBuilder.Entity<StudenteEntity>()                                                  //RELAZIONI
-                .HasRequired(p => p.Corso)
-                .WithMany(p => p.Studenti)
-                .HasForeignKey(p => p.CorsoId);
-                            
-
-
-
-
-
-
-
-
+                .HasForeignKey(p => p.CorsoId);                                                    //HasForeignKey especifica que a chave estrangeira da relação entre
+                                                                                                   //StudenteEntity e CorsoEntity é a propriedade CorsoId. Isso significa que o
+                                                                                                   //ID do curso será armazenado na tabela de estudantes(StudenteEntity) como uma
+                                                                                                   //chave estrangeira, apontando para a tabela de cursos(CorsoEntity). Já o
+                                                                                                   //parâmetro p => p.CorsoId indica que a propriedade CorsoId na entidade
+                                                                                                   //StudenteEntity é a foreign key que estabelece essa relação.
 
             modelBuilder.Entity<CorsoEntity>()
                     .ToTable("AnagraficheCorsi")                                                   //O ToTable("AnagraficheCorsi"): Define que a entidade CorsiEntity será
@@ -116,17 +139,10 @@ namespace _20240918_Database_FrameWork.Models
                     .HasKey(t => t.Id);                                                            //Define que a propriedade Id será usada como a chave primária da tabela, crucial
                                                                                                    //para identificar registros de forma única.
 
-            
-            
-            
-            
             modelBuilder.Entity<CorsoEntity>()
                 .Property(p => p.Id)                                                               //Define que esta propriedade da entidade será configurada.
                 .IsRequired();                                                                     //Torna essa propriedade obrigatória no banco de dados, ou seja, não pode ser nula.
             //AUTOINC
-
-
-
 
             modelBuilder.Entity<CorsoEntity>()
                 .Property(p => p.Nome)                                                             //Define que esta propriedade da entidade será configurada.
@@ -140,18 +156,23 @@ namespace _20240918_Database_FrameWork.Models
             modelBuilder.Entity<CorsoEntity>()
                 .Property(p => p.DataValiditaFine);                                                //Define que esta propriedade da entidade será configurada.
 
+            modelBuilder.Entity<CorsoEntity>()                                                     //Ponto em que se cria a relação
+                .HasMany(p => p.Studenti)                                                          //HasMany indica que a entidade CorsoEntity (curso) está associada a muitos estudantes.
+                                                                                                   //Já o p => p.Studenti é uma expressão lambda que especifica que a entidade CorsoEntity
+                                                                                                   //possui uma propriedade de navegação chamada Studenti, que é uma coleção(normalmente
+                                                                                                   //uma lista) de StudenteEntity. Ou seja, um curso pode ter vários estudantes.
 
+                .WithRequired(p => p.Corso)                                                        //O WithRequired define que a entidade relacionada (StudenteEntity) tem uma relação
+                                                                                                   //obrigatória com CorsoEntity. Isso significa que cada estudante deve estar associado
+                                                                                                   //a um curso. Já a expressão p => p.Corso especifica que a propriedade Corso em
+                                                                                                   //StudenteEntity é a propriedade de navegação que aponta para o curso relacionado.
+                                                                                                   //Ou seja, cada estudante pertence a exatamente um curso.
 
-
-
-
-
-
-            modelBuilder.Entity<CorsoEntity>()                                                     //RELAZIONI
-                .HasMany(p => p.Studenti)
-                .WithRequired(p => p.Corso)
-                .HasForeignKey(p => p.CorsoId);
-
+                .HasForeignKey(p => p.CorsoId);                                                    //O HasForeignKey especifica a chave estrangeira que será usada para representar
+                                                                                                   //essa relação no banco de dados. Já o p => p.CorsoId define que a propriedade CorsoId
+                                                                                                   //na entidade StudenteEntity será a chave estrangeira que faz referência à entidade
+                                                                                                   //CorsoEntity. Isso indica que, para cada estudante, o campo CorsoId armazena o
+                                                                                                   //identificador do curso ao qual ele está associado.
         }
     }
 }

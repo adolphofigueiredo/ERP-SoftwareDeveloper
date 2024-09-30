@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace _20240918_Database_FrameWork.Models.Entity                                               //Dentro do namespace _20240918_Database_FrameWork.Models.Entity existe a
                                                                                                    //classe StudenteEntie do projeto que fica dentro da pasta Models.Entity.

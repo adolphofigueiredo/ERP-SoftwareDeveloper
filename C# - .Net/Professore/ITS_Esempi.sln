@@ -13,11 +13,31 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsempioClassiNetStd", "Esem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{463DA735-8188-4DCD-98F4-C6B9DDC532E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsempioFile_CA", "EsempioFile_CA\EsempioFile_CA.csproj", "{B45C6C90-5A7C-4D96-8AD5-1F93637F9083}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcolatriceWinApp", "CalcolatriceWinApp\CalcolatriceWinApp.csproj", "{EB7E277B-3855-4E6D-8918-AA3F9D22169B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbExplorer_WinApp", "DbExplorer_WinApp\DbExplorer_WinApp.csproj", "{B25F92F8-0B20-4E52-97A4-8E787EB379B2}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebForm", "WebForm\", "{95A989C7-15FE-4952-8EFA-F0C88AB157D7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50531"
+		Debug.AspNetCompiler.PhysicalPath = "WebForm\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50531\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50531"
+		Release.AspNetCompiler.PhysicalPath = "WebForm\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50531\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50531"
+		SlnRelativePath = "WebForm\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +65,6 @@ Global
 		{463DA735-8188-4DCD-98F4-C6B9DDC532E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{463DA735-8188-4DCD-98F4-C6B9DDC532E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{463DA735-8188-4DCD-98F4-C6B9DDC532E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B45C6C90-5A7C-4D96-8AD5-1F93637F9083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B45C6C90-5A7C-4D96-8AD5-1F93637F9083}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B45C6C90-5A7C-4D96-8AD5-1F93637F9083}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B45C6C90-5A7C-4D96-8AD5-1F93637F9083}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EB7E277B-3855-4E6D-8918-AA3F9D22169B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EB7E277B-3855-4E6D-8918-AA3F9D22169B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB7E277B-3855-4E6D-8918-AA3F9D22169B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +73,10 @@ Global
 		{B25F92F8-0B20-4E52-97A4-8E787EB379B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B25F92F8-0B20-4E52-97A4-8E787EB379B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B25F92F8-0B20-4E52-97A4-8E787EB379B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95A989C7-15FE-4952-8EFA-F0C88AB157D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A989C7-15FE-4952-8EFA-F0C88AB157D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95A989C7-15FE-4952-8EFA-F0C88AB157D7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A989C7-15FE-4952-8EFA-F0C88AB157D7}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

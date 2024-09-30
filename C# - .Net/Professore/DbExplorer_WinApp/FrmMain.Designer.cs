@@ -32,6 +32,8 @@
             this.studentiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corsiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ricercaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aggiungiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,22 +52,39 @@
             // 
             // studentiToolStripMenuItem
             // 
+            this.studentiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ricercaToolStripMenuItem,
+            this.aggiungiToolStripMenuItem});
             this.studentiToolStripMenuItem.Name = "studentiToolStripMenuItem";
             this.studentiToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.studentiToolStripMenuItem.Text = "Studenti";
-            this.studentiToolStripMenuItem.Click += new System.EventHandler(this.studentiToolStripMenuItem_Click);
             // 
             // corsiToolStripMenuItem
             // 
             this.corsiToolStripMenuItem.Name = "corsiToolStripMenuItem";
             this.corsiToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
             this.corsiToolStripMenuItem.Text = "Corsi";
+            this.corsiToolStripMenuItem.Click += new System.EventHandler(this.corsiToolStripMenuItem_Click);
             // 
             // proToolStripMenuItem
             // 
             this.proToolStripMenuItem.Name = "proToolStripMenuItem";
             this.proToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
             this.proToolStripMenuItem.Text = "Pro";
+            // 
+            // ricercaToolStripMenuItem
+            // 
+            this.ricercaToolStripMenuItem.Name = "ricercaToolStripMenuItem";
+            this.ricercaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ricercaToolStripMenuItem.Text = "Ricerca...";
+            this.ricercaToolStripMenuItem.Click += new System.EventHandler(this.ricercaToolStripMenuItem_Click);
+            // 
+            // aggiungiToolStripMenuItem
+            // 
+            this.aggiungiToolStripMenuItem.Name = "aggiungiToolStripMenuItem";
+            this.aggiungiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aggiungiToolStripMenuItem.Text = "Aggiungi ...";
+            this.aggiungiToolStripMenuItem.Click += new System.EventHandler(this.aggiungiToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -90,5 +109,7 @@
         private System.Windows.Forms.ToolStripMenuItem studentiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem corsiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ricercaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aggiungiToolStripMenuItem;
     }
 }

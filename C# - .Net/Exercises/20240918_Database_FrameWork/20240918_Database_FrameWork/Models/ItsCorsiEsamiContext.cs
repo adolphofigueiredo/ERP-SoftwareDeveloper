@@ -1,21 +1,5 @@
 ﻿using _20240918_Database_FrameWork.Models.Entity;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.IO.Ports;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Reflection.Emit;
-using System.Runtime.ConstrainedExecution;
-using System.Runtime.Remoting.Contexts;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.LinkLabel;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace _20240918_Database_FrameWork.Models
 {
@@ -102,7 +86,7 @@ namespace _20240918_Database_FrameWork.Models
             modelBuilder.Entity<StudenteEntity>()
                 .Property(p => p.CodiceFiscale)                                                    //Define que esta propriedade da entidade será configurada.
                 .HasColumnName("CF")                                                               //Este método especifica como a coluna correspondente à propriedade deve ser chamada
-                .HasMaxLength(50)                                                                  //Define que o campo no banco de dados terá um comprimento máximo de 21 caracteres.
+                .HasMaxLength(21)                                                                  //Define que o campo no banco de dados terá um comprimento máximo de 21 caracteres.
                 .IsRequired();                                                                     //Torna essa propriedade obrigatória no banco de dados, ou seja, não pode ser nula.
 
             modelBuilder.Entity<StudenteEntity>()
@@ -156,7 +140,7 @@ namespace _20240918_Database_FrameWork.Models
             modelBuilder.Entity<CorsoEntity>()
                 .Property(p => p.DataValiditaFine);                                                //Define que esta propriedade da entidade será configurada.
 
-            modelBuilder.Entity<CorsoEntity>()                                                     //Ponto em que se cria a relação
+            modelBuilder.Entity<CorsoEntity>()                                                   //Ponto em que se cria a relação
                 .HasMany(p => p.Studenti)                                                          //HasMany indica que a entidade CorsoEntity (curso) está associada a muitos estudantes.
                                                                                                    //Já o p => p.Studenti é uma expressão lambda que especifica que a entidade CorsoEntity
                                                                                                    //possui uma propriedade de navegação chamada Studenti, que é uma coleção(normalmente

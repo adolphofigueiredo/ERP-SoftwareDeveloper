@@ -1,13 +1,6 @@
 ﻿using _20240918_Database_FrameWork.Models.Dtos;
 using _20240918_Database_FrameWork.Models.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.ConstrainedExecution;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Resources.ResXFileRef;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
+
 namespace _20240918_Database_FrameWork.Models.Mappers
 {
     public static class StudenteMapper                                                             //É uma classe estática, o que significa que ela não pode ser instanciada.

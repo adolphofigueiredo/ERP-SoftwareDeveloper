@@ -1,10 +1,5 @@
 ﻿using _20240918_Database_FrameWork.Models.Dtos;
 using _20240918_Database_FrameWork.Models.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _20240918_Database_FrameWork.Models.Mappers
 {

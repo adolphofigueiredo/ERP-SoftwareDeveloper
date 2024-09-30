@@ -30,8 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.studentiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corsiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.oldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form01ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formEntityFrameworkExampleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +46,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentiToolStripMenuItem,
             this.corsiToolStripMenuItem,
-            this.proToolStripMenuItem,
             this.oldToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -53,23 +55,49 @@
             // 
             // studentiToolStripMenuItem
             // 
+            this.studentiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
+            this.searchToolStripMenuItem});
             this.studentiToolStripMenuItem.Name = "studentiToolStripMenuItem";
             this.studentiToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.studentiToolStripMenuItem.Text = "Studenti";
-            this.studentiToolStripMenuItem.Click += new System.EventHandler(this.studentiToolStripMenuItem_Click);
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.studentiEditToolStripMenuItem_Click);
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchToolStripMenuItem.Text = "Search";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.studentiSearchStripMenuItem_Click);
             // 
             // corsiToolStripMenuItem
             // 
+            this.corsiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem1,
+            this.searchToolStripMenuItem1});
             this.corsiToolStripMenuItem.Name = "corsiToolStripMenuItem";
             this.corsiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.corsiToolStripMenuItem.Text = "Corsi";
-            this.corsiToolStripMenuItem.Click += new System.EventHandler(this.corsiToolStripMenuItem_Click);
             // 
-            // proToolStripMenuItem
+            // newToolStripMenuItem1
             // 
-            this.proToolStripMenuItem.Name = "proToolStripMenuItem";
-            this.proToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.proToolStripMenuItem.Text = "Pro";
+            this.newToolStripMenuItem1.Name = "newToolStripMenuItem1";
+            this.newToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem1.Text = "New";
+            this.newToolStripMenuItem1.Click += new System.EventHandler(this.corsiEditToolStripMenuItem_Click);
+            // 
+            // searchToolStripMenuItem1
+            // 
+            this.searchToolStripMenuItem1.Name = "searchToolStripMenuItem1";
+            this.searchToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.searchToolStripMenuItem1.Text = "Search";
+            this.searchToolStripMenuItem1.Click += new System.EventHandler(this.corsiSearchStripMenuItem_Click);
             // 
             // oldToolStripMenuItem
             // 
@@ -98,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 511);
+            this.ClientSize = new System.Drawing.Size(884, 811);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -116,9 +144,12 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem studentiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem corsiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem proToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oldToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem form01ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formEntityFrameworkExampleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem1;
     }
 }

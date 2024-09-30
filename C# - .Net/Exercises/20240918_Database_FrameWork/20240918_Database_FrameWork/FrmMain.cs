@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.Design;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.LinkLabel;
-using System.Runtime.ConstrainedExecution;
 
 namespace _20240918_Database_FrameWork
 {
@@ -26,7 +14,7 @@ namespace _20240918_Database_FrameWork
                                                                                                    //por inicializar e configurar os controles visuais do formulário (gerado
                                                                                                    //automaticamente pelo designer do Windows Forms).
         }
-        private void studentiToolStripMenuItem_Click(object sender, EventArgs e)                   //É o método handler de evento associado ao clique no item de menu
+        private void studentiSearchStripMenuItem_Click(object sender, EventArgs e)                   //É o método handler de evento associado ao clique no item de menu
                                                                                                    //studentiToolStripMenuItem.
         {
             FrmStudenti formStudenti = new FrmStudenti();                                          //Esta linha cria uma nova instância do formulário FrmStudenti. Essa instância
@@ -44,7 +32,26 @@ namespace _20240918_Database_FrameWork
                                                                                                    //chamada inicia o ciclo de vida do formulário, onde o usuário pode realizar
                                                                                                    //ações como preencher campos e clicar em botões.
         }
-        private void corsiToolStripMenuItem_Click(object sender, EventArgs e)                      //É o método handler de evento associado ao clique no item de menu
+
+        private void studentiEditToolStripMenuItem_Click(object sender, EventArgs e)               //É o método handler de evento associado ao clique no item de menu
+                                                                                                   //studentiToolStripMenuItem.
+        {
+            FrmEditStudente formEditStudente = new FrmEditStudente();                              //Esta linha cria uma nova instância do formulário FrmStudenti. Essa instância
+                                                                                                   //é um objeto que representa a janela ou tela onde as interações com os dados
+                                                                                                   //dos estudantes podem ocorrer. O formStudenti é do tipo FrmStudenti, que é uma
+                                                                                                   //classe derivada de Form. Isso significa que formStudenti é um objeto que
+                                                                                                   //possui todas as propriedades e métodos de um formulário do Windows.
+
+            formEditStudente.MdiParent = this;                                                     //Quando executado, você está configurando formStudenti para ser um "filho" da
+                                                                                                   //janela principal (que neste caso é FrmMain). Isso organiza o layout da interface
+                                                                                                   //do usuário, permitindo que múltiplos formulários sejam exibidos dentro da mesma
+                                                                                                   //janela principal, facilitando a navegação e a experiência do usuário.
+
+            formEditStudente.Show();                                                                   //Exibe a janela do formulário, permitindo que o usuário interaja com ela. Essa
+                                                                                                   //chamada inicia o ciclo de vida do formulário, onde o usuário pode realizar
+                                                                                                   //ações como preencher campos e clicar em botões.
+        }
+        private void corsiSearchStripMenuItem_Click(object sender, EventArgs e)                      //É o método handler de evento associado ao clique no item de menu
                                                                                                    //corsiToolStripMenuItem.
         {
             FrmCorsi formCorsi = new FrmCorsi();                                                   //Esta linha cria uma nova instância do formulário FrmStudenti. Essa instância
@@ -57,6 +64,23 @@ namespace _20240918_Database_FrameWork
                                                                                                    //janela principal, facilitando a navegação e a experiência do usuário.
 
             formCorsi.Show();                                                                      //Exibe a janela do formulário, permitindo que o usuário interaja com ela. Essa
+                                                                                                   //chamada inicia o ciclo de vida do formulário, onde o usuário pode realizar
+                                                                                                   //ações como preencher campos e clicar em botões.
+        }
+
+        private void corsiEditToolStripMenuItem_Click(object sender, EventArgs e)                  //É o método handler de evento associado ao clique no item de menu
+                                                                                                   //corsiToolStripMenuItem.
+        {
+            FrmEditCorso formEditCorsi = new FrmEditCorso();                                       //Esta linha cria uma nova instância do formulário FrmStudenti. Essa instância
+                                                                                                   //é um objeto que representa a janela ou tela onde as interações com os dados
+                                                                                                   //dos estudantes podem ocorrer.
+
+            formEditCorsi.MdiParent = this;                                                        //Quando executado, você está configurando formCorsi para ser um "filho" da
+                                                                                                   //janela principal (que neste caso é FrmMain). Isso organiza o layout da interface
+                                                                                                   //do usuário, permitindo que múltiplos formulários sejam exibidos dentro da mesma
+                                                                                                   //janela principal, facilitando a navegação e a experiência do usuário.
+
+            formEditCorsi.Show();                                                                      //Exibe a janela do formulário, permitindo que o usuário interaja com ela. Essa
                                                                                                    //chamada inicia o ciclo de vida do formulário, onde o usuário pode realizar
                                                                                                    //ações como preencher campos e clicar em botões.
         }
@@ -78,6 +102,8 @@ namespace _20240918_Database_FrameWork
                                                                                                    //chamada inicia o ciclo de vida do formulário, onde o usuário pode realizar
                                                                                                    //ações como preencher campos e clicar em botões.
         }
+
+//*** CUIDADO *** CURIOSIDADE CTRL + R + R --> É um atalho para renomear, do mesmo modo, mais de um campo que ja é igual.
 
         private void Form1_Click(object sender, EventArgs e)                                       //É o método handler de evento associado ao clique no item de menu
                                                                                                    //Frm01_Click.

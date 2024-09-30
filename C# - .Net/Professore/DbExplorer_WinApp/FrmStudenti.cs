@@ -7,6 +7,8 @@ using DbExplorer_WinApp.Models.Entities;
 using DbExplorer_WinApp.Models.Mappers;
 using DbExplorer_WinApp.Models;
 using DbExplorer_WinApp.Models.Dtos;
+using DbExplorer_WinApp.Repositories;
+using DbExplorer_WinApp.Models.Filters;
 
 namespace DbExplorer_WinApp
 {
@@ -22,25 +24,21 @@ namespace DbExplorer_WinApp
             btnCerca.Enabled = false;
             try
             {
-                using (ItsCorsiEsamiContext ctx = new ItsCorsiEsamiContext(Configurazioni.GetConnectionString()))
+                StudentiRepository repository = new StudentiRepository();
+                var filtro = new StudenteFilter
                 {
-                    IQueryable<StudenteEntity> query = ctx.Studenti;
+                    Nominativo = txtNominativoFilter.Text,
+                    Da = null,
+                    A = null
+                };
 
-                    if (!string.IsNullOrEmpty(txtNominativoFilter.Text))
-                        query = query.Where(r => r.Nome.Contains(txtNominativoFilter.Text)
-                            || r.Cognome.Contains(txtNominativoFilter.Text));
+                if (dtpNatoDaFilter.Checked) filtro.Da = dtpNatoDaFilter.Value;
+                if (dtpNatoAFilter.Checked) filtro.A = dtpNatoAFilter.Value;
 
-                    if (dtpNatoDaFilter.Checked)
-                        query = query.Where(r => r.DataDiNascita >= dtpNatoDaFilter.Value);
-                    if (dtpNatoAFilter.Checked)
-                        query = query.Where(r => r.DataDiNascita <= dtpNatoAFilter.Value);
-
-                    List<StudenteEntity> studentiList = query.ToList(); // SELECT * FROM AnagreaficheStudenti WHERE  nome or cognome contains filter ....
-
-                    List<StudenteDto> studentiDto = studentiList.Select(r => StudenteMapper.Map(r)).ToList();
-                    dgvRisultati.AutoGenerateColumns = true;
-                    dgvRisultati.DataSource = studentiDto;
-                }
+                ICollection<StudenteEntity> studentiList = repository.Find(filtro);
+                List<StudenteDto> studentiDto = studentiList.Select(r => StudenteMapper.Map(r)).ToList();
+                dgvRisultati.AutoGenerateColumns = true;
+                dgvRisultati.DataSource = studentiDto;
             }
             catch (Exception ex)
             {

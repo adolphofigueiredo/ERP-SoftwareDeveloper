@@ -4,20 +4,9 @@ using _20240918_Database_FrameWork.Models.Entity;
 using _20240918_Database_FrameWork.Models.Mappers;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.ConstrainedExecution;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Resources.ResXFileRef;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace _20240918_Database_FrameWork
 {
@@ -193,7 +182,7 @@ namespace _20240918_Database_FrameWork
                     //}
                     //List<StudenteDto> studentiDto2 = studentiList.Select(e=> StudenteMapper.Map(e)).ToList();
 
-                    dgvCorsiList.AutoGenerateColumns = true;                                       //AutoGenerateColumns é uma propriedade do DataGridView que controla como as colunas da grade de dados são
+                    dgvStudentiList.AutoGenerateColumns = true;                                       //AutoGenerateColumns é uma propriedade do DataGridView que controla como as colunas da grade de dados são
                                                                                                    //geradas quando você vincula uma fonte de dados. Quando AutoGenerateColumns está definido como true, as
                                                                                                    //colunas do DataGridView são geradas automaticamente com base nas propriedades dos objetos na fonte de dados.
 

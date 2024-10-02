@@ -1,0 +1,1 @@
+﻿A business layer é como se fosse um repositorio para mais de um projeto dentro de uma mesma soluçao

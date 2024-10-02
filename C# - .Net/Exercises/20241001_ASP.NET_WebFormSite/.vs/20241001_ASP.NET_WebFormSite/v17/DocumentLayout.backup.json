@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\checkconnection.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:checkconnection.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CheckConnection.aspx",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CheckConnection.aspx",
+              "RelativeDocumentMoniker": "CheckConnection.aspx",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CheckConnection.aspx",
+              "RelativeToolTip": "CheckConnection.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-02T13:13:56.966Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

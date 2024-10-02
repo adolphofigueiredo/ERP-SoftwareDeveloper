@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DbExplorer_WinApp.Models.Dtos;
-using DbExplorer_WinApp.Models.Entities;
-using DbExplorer_WinApp.Models.Mappers;
-using DbExplorer_WinApp.Models;
+using BusinessLayer.Models.Entities;
+using BusinessLayer.Models.Dtos;
+using BusinessLayer.Models;
+using BusinessLayer.Models.Mappers;
+using BusinessLayer.Models.Filters;
+using BusinessLayer.Repositories;
 
 namespace DbExplorer_WinApp
 {
@@ -26,29 +28,21 @@ namespace DbExplorer_WinApp
             btnCerca.Enabled = false;
             try
             {
-                using (ItsCorsiEsamiContext ctx = new ItsCorsiEsamiContext(Configurazioni.GetConnectionString()))
+                CorsiRepository repository = new CorsiRepository();
+                var filtro = new CorsoFilter
                 {
-                    IQueryable<CorsoEntity> query = ctx.Corsi;
+                    Nome = txtNomeCorsoFilter.Text,
+                    Da = null,
+                    A = null
+                };
 
-                    if (!string.IsNullOrEmpty(txtNomeCorsoFilter.Text))
-                        query = query.Where(r => r.Nome.Contains(txtNomeCorsoFilter.Text));
+                if (dtpValiditaDaFilter.Checked) filtro.Da = dtpValiditaDaFilter.Value;
+                if (dtpValiditaAFilter.Checked) filtro.A = dtpValiditaAFilter.Value;
 
-                    if (dtpValiditaDaFilter.Checked && dtpValiditaAFilter.Checked)
-                    {
-                        query = query.Where(db => dtpValiditaAFilter.Value >= db.DataValiditaInizio &&
-                            dtpValiditaDaFilter.Value <= db.DataValiditaFine);
-                    }
-                    else if (dtpValiditaDaFilter.Checked)
-                        query = query.Where(db => db.DataValiditaInizio <= dtpValiditaDaFilter.Value);
-                    else if (dtpValiditaAFilter.Checked)
-                        query = query.Where(db => db.DataValiditaFine >= dtpValiditaAFilter.Value);
-
-                    List<CorsoEntity> corsiList = query.ToList(); // SELECT * FROM AnagreaficheStudenti WHERE  nome or cognome contains filter ....
-
-                    List<CorsoDto> corsiDto = corsiList.Select(r => CorsoMapper.Map(r)).ToList();
-                    dgvRisultatiRicerca.AutoGenerateColumns = true;
-                    dgvRisultatiRicerca.DataSource = corsiDto;
-                }
+                ICollection<CorsoEntity> studentiList = repository.Find(filtro);
+                List<CorsoDto> studentiDto = studentiList.Select(r => CorsoMapper.Map(r)).ToList();
+                dgvRisultatiRicerca.AutoGenerateColumns = true;
+                dgvRisultatiRicerca.DataSource = studentiDto;
             }
             catch (Exception ex)
             {

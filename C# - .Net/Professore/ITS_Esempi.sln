@@ -20,6 +20,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebForm", "WebForm\", "{95A989C7-15FE-4952-8EFA-F0C88AB157D7}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		ProjectReferences = "{7dc899c8-0e3e-4dd7-a1b0-1debc16c4a61}|BusinessLayer.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_50531"
 		Debug.AspNetCompiler.PhysicalPath = "WebForm\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50531\"
@@ -38,6 +39,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebForm", "WebForm\", "{95A
 		SlnRelativePath = "WebForm\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{7DC899C8-0E3E-4DD7-A1B0-1DEBC16C4A61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +80,10 @@ Global
 		{95A989C7-15FE-4952-8EFA-F0C88AB157D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95A989C7-15FE-4952-8EFA-F0C88AB157D7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{95A989C7-15FE-4952-8EFA-F0C88AB157D7}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7DC899C8-0E3E-4DD7-A1B0-1DEBC16C4A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC899C8-0E3E-4DD7-A1B0-1DEBC16C4A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC899C8-0E3E-4DD7-A1B0-1DEBC16C4A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC899C8-0E3E-4DD7-A1B0-1DEBC16C4A61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

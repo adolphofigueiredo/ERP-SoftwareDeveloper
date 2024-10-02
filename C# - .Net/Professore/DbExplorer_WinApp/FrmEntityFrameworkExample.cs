@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using DbExplorer_WinApp.Models;
-using DbExplorer_WinApp.Models.Entities;
-using DbExplorer_WinApp.Models.Mappers;
+using BusinessLayer;
+using BusinessLayer.Models;
+using BusinessLayer.Models.Entities;
+using BusinessLayer.Models.Filters;
+using BusinessLayer.Models.Mappers;
+using BusinessLayer.Repositories;
 
 namespace DbExplorer_WinApp
 {
@@ -18,29 +21,17 @@ namespace DbExplorer_WinApp
 
         private void btnCheckConnection_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtConnectionString.Text)) throw new Exception("Connectionstring vuota!");
             btnCheckConnection.Enabled = false;
             try
             {
-                using (ItsCorsiEsamiContext ctx = new ItsCorsiEsamiContext(txtConnectionString.Text))
-                {
-                    if (ctx.Database.Exists())
-                    {
-                        MessageBox.Show("Connessione OK");
-
-                        int countStudenti = ctx.Studenti.Count();// SELECT count(*) FROM AnagreaficheStudenti
-                        lblCountStudenti.Text = countStudenti.ToString();
-
-                        int countCorsi = ctx.Corsi.Count();// SELECT count(*) FROM AnagreaficheCorsi
-                        lblCountCorsi.Text = countCorsi.ToString();
-                    }
-                    else MessageBox.Show("DB non esiste!");
-                }
+                if (CheckConnectionUtility.CheckConnectionString(txtConnectionString.Text))
+                    MessageBox.Show("Connessione OK");
+                else
+                    MessageBox.Show("Connessione KO");
             }
-            catch (Exception ex)
+            catch (ArgumentException ex)
             {
-                MessageBox.Show($"Errore di connessione: {ex.Message}");
-                throw;
+                MessageBox.Show("Errore: " + ex.Message);
             }
             finally
             {
@@ -54,37 +45,11 @@ namespace DbExplorer_WinApp
             btnCercaStudenti.Enabled = false;
             try
             {
-                using (ItsCorsiEsamiContext ctx = new ItsCorsiEsamiContext(txtConnectionString.Text))
-                {
-                    List<StudenteEntity> studentiList = ctx.Studenti.ToList(); // SELECT * FROM AnagreaficheStudenti
+                StudentiRepository studentiRepository = new StudentiRepository();
+                var studentiList = studentiRepository.Find(new StudenteFilter());
+                dgvStudentiList.AutoGenerateColumns = true;
+                dgvStudentiList.DataSource = studentiList.Select(r => StudenteMapper.Map(r)).ToList();
 
-                    /*List<StudenteDto> studentiDto = new List<StudenteDto>();
-                    foreach (var studenteEntity in studentiList)
-                    {
-                        studentiDto.Add(new StudenteDto()
-                        {
-                            CodiceFiscale = studenteEntity.CodiceFiscale,
-                            Cognome = studenteEntity.Cognome,
-                            Nome = studenteEntity.Nome,
-                            CorsoId = studenteEntity.CorsoId,
-                            DataDiNascita = studenteEntity.DataDiNascita,
-                            Id = studenteEntity.Id,
-                        }
-                        );
-
-                        studentiDto.Add(StudenteMapper.Map(studenteEntity)); // uguale a fare studentiDto.Add(new StudenteDto() ...
-                    }
-
-                    List<StudenteDto> studentiDto2 = studentiList.Select(e=> StudenteMapper.Map(e)).ToList();
-                    */
-
-
-
-
-
-                    dgvStudentiList.AutoGenerateColumns = true;
-                    dgvStudentiList.DataSource = studentiList.Select(r => StudenteMapper.Map(r)).ToList();
-                }
             }
             catch (Exception ex)
             {
@@ -102,11 +67,11 @@ namespace DbExplorer_WinApp
             btnCercaStudenti.Enabled = false;
             try
             {
-                using (ItsCorsiEsamiContext ctx = new ItsCorsiEsamiContext(txtConnectionString.Text))
-                {
-                    dgvCorsiList.AutoGenerateColumns = true;
-                    dgvCorsiList.DataSource = ctx.Corsi.ToList().Select(r => CorsoMapper.Map(r)).ToList();
-                }
+                CorsiRepository corsiRepository = new CorsiRepository();
+                var corsiList = corsiRepository.Find(new CorsoFilter());
+                dgvCorsiList.AutoGenerateColumns = true;
+                dgvCorsiList.DataSource = corsiList.Select(r => CorsoMapper.Map(r)).ToList();
+
             }
             catch (Exception ex)
             {

@@ -3,8 +3,10 @@
     "",
     "\\C# - .Net",
     "\\C# - .Net\\Exercises",
-    "\\C# - .Net\\Professore",
-    "\\C# - .Net\\Professore\\DbExplorer_WinApp\\Properties"
+    "\\C# - .Net\\Exercises\\20240917_Database",
+    "\\C# - .Net\\Exercises\\20240918_Database_FrameWork",
+    "\\C# - .Net\\Exercises\\20240918_Database_FrameWork\\20240918_Database_FrameWork"
   ],
+  "SelectedNode": "\\C# - .Net\\Exercises\\20240918_Database_FrameWork\\20240918_Database_FrameWork\\FrmEditCorso.cs",
   "PreviewInSolutionExplorer": false
 }

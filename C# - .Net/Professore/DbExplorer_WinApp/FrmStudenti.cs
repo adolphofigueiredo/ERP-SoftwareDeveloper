@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using DbExplorer_WinApp.Models.Entities;
-using DbExplorer_WinApp.Models.Mappers;
-using DbExplorer_WinApp.Models;
-using DbExplorer_WinApp.Models.Dtos;
-using DbExplorer_WinApp.Repositories;
-using DbExplorer_WinApp.Models.Filters;
+using BusinessLayer.Repositories;
+using BusinessLayer.Models.Filters;
+using BusinessLayer.Models.Entities;
+using BusinessLayer.Models.Dtos;
+using BusinessLayer.Models.Mappers;
 
 namespace DbExplorer_WinApp
 {

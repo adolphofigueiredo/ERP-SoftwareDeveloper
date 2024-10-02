@@ -42,7 +42,7 @@ namespace DbExplorer_WinApp.Repositories
             return query;
         }
 
-        public StudenteEntity? Get(int id)
+        public StudenteEntity Get(int id)
         {
             using (ItsCorsiEsamiContext ctx = new ItsCorsiEsamiContext(Configurazioni.GetConnectionString()))
             {

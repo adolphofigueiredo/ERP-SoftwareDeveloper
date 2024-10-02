@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DbExplorer_WinApp.Models.Dtos;
-using DbExplorer_WinApp.Models.Entities;
-using DbExplorer_WinApp.Models.Mappers;
-using DbExplorer_WinApp.Models;
-using DbExplorer_WinApp.Repositories;
+
+using BusinessLayer.Repositories;
+using BusinessLayer.Models.Entities;
+using BusinessLayer.Models;
 
 namespace DbExplorer_WinApp
 {
@@ -20,21 +14,19 @@ namespace DbExplorer_WinApp
         public FrmEditStudente()
         {
             InitializeComponent();
-            using (ItsCorsiEsamiContext ctx = new ItsCorsiEsamiContext(Configurazioni.GetConnectionString()))
-            {
-                cboCorso.DataSource = ctx.Corsi.Where(c =>
-                    c.DataValiditaInizio <= DateTime.Now &&
-                    c.DataValiditaFine == null || c.DataValiditaFine > DateTime.Now).ToList();
 
-                cboCorso.DisplayMember = nameof(CorsoEntity.Nome);
-                cboCorso.ValueMember = nameof(CorsoEntity.Id);
-            }
+            var corsiRepository = new CorsiRepository();
+            
+            cboCorso.DataSource = corsiRepository.GetCorsiValidi(DateTime.Now);
+
+            cboCorso.DisplayMember = nameof(CorsoEntity.Nome);
+            cboCorso.ValueMember = nameof(CorsoEntity.Id);
+            
         }
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
             btnSalva.Enabled = false;
-
 
             try
             {

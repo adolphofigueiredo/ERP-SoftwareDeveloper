@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 // 1: verificare connessione al db passando la connection string attraverso una textbox
 // 2; mostrare un messaggio a video (Messagebox) con il risultato scalare della query inputata dall'utente.
@@ -27,24 +28,22 @@ namespace DbExplorer_WinApp
 
         private void btnCheckConnection_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtConnectionString.Text)) throw new Exception("Connectionstring vuota!");
-
             btnCheckConnection.Enabled = false;
-            using (SqlConnection sqlConnection = new SqlConnection(txtConnectionString.Text))
+            try
             {
-                try
-                {
-                    sqlConnection.Open();
-                    sqlConnection.Close();
+                if (CheckConnectionUtility.CheckConnectionString(txtConnectionString.Text))
                     MessageBox.Show("Connessione OK");
-                }
-                catch (Exception)
-                {
+                else
                     MessageBox.Show("Connessione KO");
-                }
             }
-            btnCheckConnection.Enabled = true;
-
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show("Errore: " + ex.Message);
+            }
+            finally
+            {
+                btnCheckConnection.Enabled = true;
+            }
         }
 
         private void btnExecuteQuery_Click(object sender, EventArgs e)
@@ -70,9 +69,9 @@ namespace DbExplorer_WinApp
 
                     foreach (DataTable table in tables)
                     {
-                        var tab= new TabPage()
+                        var tab = new TabPage()
                         {
-                            Text=table.TableName,
+                            Text = table.TableName,
                         };
                         //tab.Text=table.TableName;
 

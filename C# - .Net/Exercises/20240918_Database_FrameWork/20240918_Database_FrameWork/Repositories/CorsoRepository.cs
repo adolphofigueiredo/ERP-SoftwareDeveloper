@@ -52,7 +52,7 @@ namespace _20240918_Database_FrameWork.Repositories
             return query;
         }
 
-        public CorsoEntity Get(int id)
+        public CorsoEntity? Get(int id)
         {
             using (ItsCorsiEsamiContext ctx = new ItsCorsiEsamiContext(Configurazioni.GetConnectionString()))
             {

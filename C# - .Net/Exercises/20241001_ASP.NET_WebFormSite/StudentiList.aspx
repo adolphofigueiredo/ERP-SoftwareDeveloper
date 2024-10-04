@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="StudentiList.aspx.cs" Inherits="StudentiList" %>
+﻿<%@ Page Title="Lista Studenti" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="StudentiList.aspx.cs" Inherits="StudentiList" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     
@@ -17,9 +17,20 @@
     
         <div>
             
-            <asp:GridView ID="grdRisultati" runat="server"></asp:GridView>
-        
-        </div>
+            <asp:GridView ID="grdRisultati" runat="server">
+            <columns>
+
+                <asp:TemplateField HeaderText="Hyperlink">
+                    <ItemTemplate>
+                        <asp:HyperLink ID="HyperLink1" runat="server"
+                            NavigateUrl="~/EditStudente.aspx"
+                            Text='edit'>
+                        </asp:HyperLink>
+                    </ItemTemplate>
+                </asp:TemplateField>
+             </columns>
+        </asp:GridView>
+    </div>
 
 </asp:Content>
 

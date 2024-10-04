@@ -99,5 +99,17 @@ namespace _20241001_BusinessLayer.Repositories
                 return dbValue;
             }
         }
+        public ICollection<CorsoEntity> GetCorsiValidi(DateTime dt)
+        {
+            using (ItsCorsiEsamiContext ctx = new ItsCorsiEsamiContext(Configurazioni.GetConnectionString()))
+            {
+                var q = ctx.Corsi.Where(c =>
+                    c.DataValiditaInizio <= dt &&
+                    c.DataValiditaFine == null || c.DataValiditaFine > DateTime.Now).ToList();
+
+                return q.ToList();
+            }
+
+        }
     }
 }

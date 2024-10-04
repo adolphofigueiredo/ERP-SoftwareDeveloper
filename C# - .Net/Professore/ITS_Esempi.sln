@@ -42,6 +42,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebForm", "WebForm\", "{95A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{7DC899C8-0E3E-4DD7-A1B0-1DEBC16C4A61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC-aspnetcore", "MVC-aspnetcore\MVC-aspnetcore.csproj", "{5BA7F11C-9F94-477F-B282-7058EC6105E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +86,10 @@ Global
 		{7DC899C8-0E3E-4DD7-A1B0-1DEBC16C4A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DC899C8-0E3E-4DD7-A1B0-1DEBC16C4A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DC899C8-0E3E-4DD7-A1B0-1DEBC16C4A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA7F11C-9F94-477F-B282-7058EC6105E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA7F11C-9F94-477F-B282-7058EC6105E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA7F11C-9F94-477F-B282-7058EC6105E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA7F11C-9F94-477F-B282-7058EC6105E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

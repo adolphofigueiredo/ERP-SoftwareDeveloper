@@ -10,13 +10,25 @@
         <asp:Calendar ID="calDataDiNascitaDa" runat="server"></asp:Calendar>
         <asp:Label ID="lblDataDiNascitaA" AssociatedControlID="calDataDiNascitaA" runat="server" Text="Data di nascita a:"></asp:Label>
         <asp:Calendar ID="calDataDiNascitaA" runat="server"></asp:Calendar>
-        
+
         <asp:Button ID="btnRicerca" runat="server" Text="Ricerca" OnClick="btnRicerca_Click" />
 
     </div>
 
     <div>
-        <asp:GridView ID="grdRisultati" runat="server"></asp:GridView>
+        <asp:GridView ID="grdRisultati" runat="server" OnSelectedIndexChanged="grdRisultati_SelectedIndexChanged">
+            <Columns>
+
+                <asp:TemplateField HeaderText="Hyperlink">
+                    <ItemTemplate>
+                        <asp:HyperLink ID="HyperLink1" runat="server"
+                            NavigateUrl='<%# Eval("Id", @"EditStudente.aspx?id={0}") %>'
+                            Text='edit'>
+                        </asp:HyperLink>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
     </div>
 
 </asp:Content>

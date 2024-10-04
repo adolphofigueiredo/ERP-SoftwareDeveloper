@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\corsilist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:corsilist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\studentilist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:studentilist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\corsilist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:corsilist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\studentilist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:studentilist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\editstudente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:editstudente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,54 +30,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StudentiList.aspx",
-              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\StudentiList.aspx",
-              "RelativeDocumentMoniker": "StudentiList.aspx",
-              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\StudentiList.aspx",
-              "RelativeToolTip": "StudentiList.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-02T21:37:26.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StudentiList.aspx.cs",
-              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\StudentiList.aspx.cs",
-              "RelativeDocumentMoniker": "StudentiList.aspx.cs",
-              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\StudentiList.aspx.cs",
-              "RelativeToolTip": "StudentiList.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T21:25:47.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CorsiList.aspx.cs",
-              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CorsiList.aspx.cs",
-              "RelativeDocumentMoniker": "CorsiList.aspx.cs",
-              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CorsiList.aspx.cs*",
-              "RelativeToolTip": "CorsiList.aspx.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAArAAAAAAAAAA==",
+              "Title": "EditStudente.aspx.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\EditStudente.aspx.cs",
+              "RelativeDocumentMoniker": "EditStudente.aspx.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\EditStudente.aspx.cs",
+              "RelativeToolTip": "EditStudente.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T21:23:47.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CorsiList.aspx",
-              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CorsiList.aspx",
-              "RelativeDocumentMoniker": "CorsiList.aspx",
-              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CorsiList.aspx",
-              "RelativeToolTip": "CorsiList.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-02T21:20:30.846Z",
+              "WhenOpened": "2024-10-04T21:24:48.684Z",
               "EditorCaption": ""
             }
           ]

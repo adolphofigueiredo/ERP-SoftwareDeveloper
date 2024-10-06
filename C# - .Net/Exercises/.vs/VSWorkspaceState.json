@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\20241001_ASP.NET_WebFormSite",
+    "\\20241004_ASP.NET_CoreWebApp_ModelViewControl"
   ],
-  "SelectedNode": "\\20240903_Calculator_V2.0",
+  "SelectedNode": "\\20241001_ASP.NET_WebFormSite\\20241001_ASP.NET_WebFormSite.sln",
   "PreviewInSolutionExplorer": false
 }

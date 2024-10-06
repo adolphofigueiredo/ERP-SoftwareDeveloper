@@ -3,9 +3,10 @@
     "",
     "\\C# - .Net",
     "\\C# - .Net\\Exercises",
-    "\\C# - .Net\\Exercises\\20240918_Database_FrameWork\\20240918_Database_FrameWork",
-    "\\C# - .Net\\Exercises\\ASP.NET_CoreWebApp_ModelViewControl"
+    "\\C# - .Net\\Exercises\\20241001_BusinessLayer",
+    "\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models",
+    "\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Repositories"
   ],
-  "SelectedNode": "\\C# - .Net\\Exercises\\ASP.NET_CoreWebApp_ModelViewControl\\ASP.NET_CoreWebApp_ModelViewControl.csproj",
+  "SelectedNode": "\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\ItsCorsiEsamiContext.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,50 +1,110 @@
 using _20241004_ASP.NET_CoreWebApp_ModelViewControl.Models;
 using _20241004_ASP.NET_CoreWebApp_ModelViewControl.Repositories;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
+using System;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.Intrinsics.X86;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static System.Net.WebRequestMethods;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
-internal class Program
-{
-    private static void Main(string[] args)
-    {
-        var builder = WebApplication.CreateBuilder(args);
+internal class Program                                               //Define uma classe chamada Program, que é a classe principal da aplicação.
+                                                                     //O modificador de acesso internal significa que a classe é acessível apenas
+                                                                     //dentro do mesmo assembly.
+{   
+    private static void Main(string[] args)                          //Define o método Main, que é o ponto de entrada da aplicação. O método é
+                                                                     //estático, o que significa que ele pertence à classe e não a uma instância
+                                                                     //da classe. O string[] args permite que argumentos sejam passados para a
+                                                                     //aplicação a partir da linha de comando. Esses argumentos podem ser usados
+                                                                     //para alterar o comportamento da aplicação ao iniciá-la.
+	{
+        var builder = WebApplication.CreateBuilder(args);            //Esta linha cria uma instância de WebApplicationBuilder, que é usada para
+                                                                     //configurar e construir a aplicação ASP.NET Core. O CreateBuilder(args) é
+                                                                     //o método que aceita um array de strings como argumento, que representa os
+                                                                     //parâmetros de linha de comando. Essa configuração inicializa a aplicação
+                                                                     //com as opções padrão, permitindo que você adicione serviços e configurações
+                                                                     //necessárias antes de construir a aplicação.
+				// Add services to the container.
+				builder.Services.AddControllersWithViews();          //O builder.Services.AddControllersWithViews(); registra os serviços
+                                                                     //necessários para suportar controladores e views em uma aplicação MVC. Isso
+                                                                     //permite que a aplicação responda a requisições HTTP com ações de controladores
+                                                                     //e renderize views correspondentes. Sem essa linha, a aplicação não conseguiria
+                                                                     //atender a requisições para páginas web.
 
-        // Add services to the container.
-        builder.Services.AddControllersWithViews();
-
-        builder.Services.AddDbContext<ItsCorsiEsamiContext>(
-            dbContextOptionsBuilder =>
-            {
-                string connectionString = builder.Configuration.GetConnectionString("ITSEsempidb");
+		builder.Services.AddDbContext<ItsCorsiEsamiContext>(         //Adiciona o contexto de banco de dados ItsCorsiEsamiContext ao contêiner de
+                                                                     //injeção de dependência. O DbContext é uma classe que representa uma sessão
+                                                                     //com o banco de dados, permitindo realizar operações CRUD(Create, Read, Update, Delete).
+			dbContextOptionsBuilder =>                               //Define uma função lambda para configurar as opções do contexto de banco de dados.
+			{
+                string connectionString = builder.Configuration.GetConnectionString("ITSEsempiDB");
                 dbContextOptionsBuilder.UseSqlServer(connectionString);
-            });
+            });                                                      //O string connectionString = builder.Configuration.GetConnectionString("ITSEsempidb");
+																	 //Obtém a string de conexão chamada "ITSEsempiDB" do arquivo de configuração (geralmente
+																	 //appsettings.json). A string de conexão contém informações sobre como conectar-se ao
+																	 //banco de dados, incluindo o servidor, nome do banco de dados e credenciais.
+																	 //O dbContextOptionsBuilder.UseSqlServer(connectionString); configura o Entity Framework
+                                                                     //Core para usar o SQL Server como provedor de banco de dados. A string de conexão obtida
+                                                                     //anteriormente é passada para configurar a conexão.
 
-        builder.Services.AddScoped<StudentiRepository>();
+		builder.Services.AddScoped<StudentiRepository>();            //Registra a classe StudentiRepository como um serviço com ciclo de vida "scoped". Isso
+                                                                     //significa que uma nova instância do repositório será criada para cada solicitação HTTP.
+                                                                     //O repositório é responsável por encapsular a lógica de acesso a dados, permitindo que
+                                                                     //você acesse os dados da entidade Studente de forma abstrata, facilitando a manutenção
+                                                                     //e o teste da aplicação.
+		
+        var app = builder.Build();                                   //Constrói a aplicação usando as configurações e serviços que foram definidos. O objeto
+                                                                     //app agora representa a aplicação ASP.NET Core, pronta para ser configurada para tratar
+                                                                     //solicitações.
 
-        var app = builder.Build();
+		// Configure the HTTP request pipeline.
+		if (!app.Environment.IsDevelopment())                        //Verifica se o ambiente atual não é de desenvolvimento.
+		{
+            app.UseExceptionHandler("/Home/Error");                  //Configura um manipulador de exceções global. Se uma exceção não tratada ocorrer durante
+                                                                     //o processamento de uma solicitação, o usuário será redirecionado para a página de erro / 
+                                                                     //Home / Error. Isso ajuda a melhorar a experiência do usuário, apresentando uma página
+                                                                     //amigável em vez de uma mensagem de erro do servidor.
 
-        // Configure the HTTP request pipeline.
-        if (!app.Environment.IsDevelopment())
-        {
-            app.UseExceptionHandler("/Home/Error");
-            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-            app.UseHsts();
-        }
+						// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+						app.UseHsts();                               //O HSTS é uma política de segurança que informa aos navegadores que devem se conectar
+                                                                     //ao servidor apenas por HTTPS. Isso é importante para proteger a aplicação contra ataques
+                                                                     //de downgrade e outras ameaças de segurança.   
+		}
 
-        app.UseHttpsRedirection();
-        app.UseStaticFiles();
+        app.UseHttpsRedirection();                                   //Habilita o redirecionamento de HTTP para HTTPS. Qualquer solicitação recebida por HTTP
+                                                                     //será automaticamente redirecionada para HTTPS, garantindo que todas as comunicações
+                                                                     //sejam feitas de forma segura.
 
-        app.UseRouting();
+				app.UseStaticFiles();                                //Permite que a aplicação sirva arquivos estáticos, como imagens, CSS e JavaScript. Os
+                                                                     //arquivos estáticos são aqueles que não mudam com frequência e podem ser entregues diretamente
+                                                                     //ao cliente. Essa linha é essencial para o funcionamento de qualquer frontend que dependa de recursos estáticos.
 
-        app.UseAuthorization();
+				app.UseRouting();                                    //Habilita o roteamento na aplicação. O roteamento é a funcionalidade que mapeia as URLs das
+                                                                     //solicitações para os métodos dos controladores apropriados. Essa linha deve ser chamada
+                                                                     //antes de definir as permissões de autorização ou mapear rotas, garantindo que o ASP.NET
+                                                                     //Core possa reconhecer as solicitações que chegam.
 
-        app.MapControllerRoute(
-            name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
+		app.UseAuthorization();                                      //Ativa o middleware de autorização. Essa linha verifica se o usuário tem permissão para
+                                                                     //acessar recursos ou executar ações específicas, conforme configurado nas políticas de
+                                                                     //autorização da aplicação.
 
-        app.Run();
-    }
+		app.MapControllerRoute(                                      //Define uma rota padrão para a aplicação. Isso estabelece como as URLs serão mapeadas para
+                                                                     //os controladores e suas ações.
+
+			name: "default",                                         //Define o nome da rota, que pode ser usado para referência.
+			pattern: "{controller=Home}/{action=Index}/{id?}");      //Define o padrão de rota que descreve como a URL será estruturada. O {controller = Home}
+                                                                     //diz que se o nome do controlador não for especificado na URL, Home será usado como o
+                                                                     //controlador padrão. O {action = Index} diz que se o nome da ação não for especificado,
+                                                                     //Index será a ação padrão a ser executada. O {id ?} diz que o parâmetro id é opcional,
+                                                                     //indicado pelo ?. Isso permite que a rota funcione corretamente, mesmo se nenhum ID for fornecido na URL.
+
+		app.Run();                                                   //Inicia a aplicação ASP.NET Core. Este método faz com que a aplicação comece a escutar
+                                                                     //solicitações HTTP e execute o pipeline de middleware que foi configurado. Após esta
+                                                                     //chamada, a aplicação está pronta para receber e processar requisições.
+	}
 }
-
 
 //builder.Services.AddScoped<>();
 //builder.Services.AddTransient<>();

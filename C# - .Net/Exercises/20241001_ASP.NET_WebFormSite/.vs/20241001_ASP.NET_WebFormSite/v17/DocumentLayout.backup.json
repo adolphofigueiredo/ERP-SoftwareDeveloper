@@ -1,7 +1,79 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\checkconnectionutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\repositories\\studentirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\repositories\\corsirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\models\\itscorsiesamicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\models\\configurazioni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\models\\mappers\\studentemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\models\\mappers\\corsomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\models\\filters\\studentefilters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\models\\filters\\corsofilters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\models\\entities\\studenteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\models\\entities\\corsoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\models\\dtos\\studentedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024DBE71-A0D2-4867-9191-C536F6C9BA39}|..\\20241001_BusinessLayer\\20241001_BusinessLayer.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_businesslayer\\models\\dtos\\corsodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\studentilist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:studentilist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\studentilist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:studentilist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\editstudente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:editstudente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\editstudente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:editstudente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\corsilist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:corsilist.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\corsilist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:corsilist.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\checkconnection.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:checkconnection.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241001_asp.net_webformsite\\checkconnection.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8A78E8D2-6453-46D6-8C6E-75766BCE3AD5}|W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite|solutionrelative:checkconnection.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +81,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +94,279 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CheckConnectionUtility.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\CheckConnectionUtility.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\CheckConnectionUtility.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\CheckConnectionUtility.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\CheckConnectionUtility.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:32.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentiRepository.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Repositories\\StudentiRepository.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Repositories\\StudentiRepository.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Repositories\\StudentiRepository.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Repositories\\StudentiRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:29.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CorsiRepository.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Repositories\\CorsiRepository.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Repositories\\CorsiRepository.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Repositories\\CorsiRepository.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Repositories\\CorsiRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:27.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ItsCorsiEsamiContext.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\ItsCorsiEsamiContext.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Models\\ItsCorsiEsamiContext.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\ItsCorsiEsamiContext.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Models\\ItsCorsiEsamiContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:25.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Configurazioni.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Configurazioni.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Models\\Configurazioni.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Configurazioni.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Models\\Configurazioni.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:24.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudenteMapper.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Mappers\\StudenteMapper.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Models\\Mappers\\StudenteMapper.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Mappers\\StudenteMapper.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Models\\Mappers\\StudenteMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:23.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CorsoMapper.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Mappers\\CorsoMapper.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Models\\Mappers\\CorsoMapper.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Mappers\\CorsoMapper.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Models\\Mappers\\CorsoMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:22.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudenteFilters.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Filters\\StudenteFilters.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Models\\Filters\\StudenteFilters.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Filters\\StudenteFilters.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Models\\Filters\\StudenteFilters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:21.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CorsoFilters.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Filters\\CorsoFilters.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Models\\Filters\\CorsoFilters.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Filters\\CorsoFilters.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Models\\Filters\\CorsoFilters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:20.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "StudenteEntity.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Entities\\StudenteEntity.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Models\\Entities\\StudenteEntity.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Entities\\StudenteEntity.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Models\\Entities\\StudenteEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:19.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CorsoEntity.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Entities\\CorsoEntity.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Models\\Entities\\CorsoEntity.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Entities\\CorsoEntity.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Models\\Entities\\CorsoEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:18.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StudenteDto.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Dtos\\StudenteDto.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Models\\Dtos\\StudenteDto.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Dtos\\StudenteDto.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Models\\Dtos\\StudenteDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:16.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CorsoDto.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Dtos\\CorsoDto.cs",
+              "RelativeDocumentMoniker": "..\\20241001_BusinessLayer\\Models\\Dtos\\CorsoDto.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Dtos\\CorsoDto.cs",
+              "RelativeToolTip": "..\\20241001_BusinessLayer\\Models\\Dtos\\CorsoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:12:16.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StudentiList.aspx.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\StudentiList.aspx.cs",
+              "RelativeDocumentMoniker": "StudentiList.aspx.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\StudentiList.aspx.cs",
+              "RelativeToolTip": "StudentiList.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:11:56.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StudentiList.aspx",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\StudentiList.aspx",
+              "RelativeDocumentMoniker": "StudentiList.aspx",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\StudentiList.aspx",
+              "RelativeToolTip": "StudentiList.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-05T12:11:55.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EditStudente.aspx",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\EditStudente.aspx",
+              "RelativeDocumentMoniker": "EditStudente.aspx",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\EditStudente.aspx",
+              "RelativeToolTip": "EditStudente.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-05T12:11:04.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CorsiList.aspx.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CorsiList.aspx.cs",
+              "RelativeDocumentMoniker": "CorsiList.aspx.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CorsiList.aspx.cs",
+              "RelativeToolTip": "CorsiList.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:11:44.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CorsiList.aspx",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CorsiList.aspx",
+              "RelativeDocumentMoniker": "CorsiList.aspx",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CorsiList.aspx",
+              "RelativeToolTip": "CorsiList.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-05T12:11:43.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CheckConnection.aspx.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CheckConnection.aspx.cs",
+              "RelativeDocumentMoniker": "CheckConnection.aspx.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CheckConnection.aspx.cs",
+              "RelativeToolTip": "CheckConnection.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T12:11:37.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EditStudente.aspx.cs",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\EditStudente.aspx.cs",
+              "RelativeDocumentMoniker": "EditStudente.aspx.cs",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\EditStudente.aspx.cs",
+              "RelativeToolTip": "EditStudente.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T21:24:48.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CheckConnection.aspx",
+              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CheckConnection.aspx",
+              "RelativeDocumentMoniker": "CheckConnection.aspx",
+              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241001_ASP.NET_WebFormSite\\CheckConnection.aspx",
+              "RelativeToolTip": "CheckConnection.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-05T12:11:36.355Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,4 +1,4 @@
-pageextension 50111 "ITS Customer Card Extension" extends "Customer Card"
+pageextension 50015 "ITS Customer Card Extension" extends "Customer Card"
 {
 
     layout

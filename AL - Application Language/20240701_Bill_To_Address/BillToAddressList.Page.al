@@ -1,4 +1,4 @@
-page 50115 "ITS Bill To Address List"
+page 50013 "ITS Bill To Address List"
 {
     Caption = 'Indirizzi di fatturazione';
     PageType = List;

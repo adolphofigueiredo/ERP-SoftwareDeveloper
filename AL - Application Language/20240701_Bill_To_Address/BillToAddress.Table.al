@@ -1,4 +1,4 @@
-table 50113 "ITS Bill-To Address"
+table 50011 "ITS Bill-To Address"
 {
     Caption = 'Bill-To Address';
 

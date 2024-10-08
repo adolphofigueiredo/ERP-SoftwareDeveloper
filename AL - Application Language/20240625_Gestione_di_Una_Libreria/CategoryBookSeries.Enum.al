@@ -18,5 +18,10 @@ enum 50008 "ITS Category Book Series"
     {
         Caption = 'Fantasy';
     }
+    value(4; Marketing)
+    {
+        Caption = 'Marketing';
+    }
+
 
 }

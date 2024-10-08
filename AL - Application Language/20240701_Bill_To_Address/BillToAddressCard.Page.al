@@ -1,4 +1,4 @@
-page 50114 "ITS Bill-To Address Card"
+page 50012 "ITS Bill-To Address Card"
 {
     Caption = 'Inidirizzo di fatturazione';
     PageType = Card;

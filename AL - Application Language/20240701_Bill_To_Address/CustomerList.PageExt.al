@@ -1,4 +1,4 @@
-pageextension 50112 "ITS Customer List Extension" extends "Customer List"
+pageextension 50016 "ITS Customer List Extension" extends "Customer List"
 {
     layout
     {

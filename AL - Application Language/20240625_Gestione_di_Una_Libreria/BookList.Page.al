@@ -12,7 +12,7 @@ page 50005 "ITS Book List"    //usar o comando tpage -> list para criar uma pagi
     {
         area(Content)
         {
-            repeater(GroupName)
+            repeater(GroupName) // o repeater possibilita que vire uma lista, se não tivesse pareceria um card
             {
                 field("No."; Rec."No.")
                 {

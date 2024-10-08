@@ -1,4 +1,4 @@
-page 50119 "Module Card"
+page 50026 "Module Card"
 {
     PageType = Card;
     ApplicationArea = All;

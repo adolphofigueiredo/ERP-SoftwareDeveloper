@@ -1,4 +1,4 @@
-enum 50111 "Course Type"
+enum 50023 "Course Type"
 {
     Extensible = true;
 

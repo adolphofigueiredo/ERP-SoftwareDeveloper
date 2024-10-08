@@ -1,4 +1,4 @@
-pageextension 50104 "ITS Customer Card Extension" extends "Customer Card"
+pageextension 50017 "ITS Customer Card Extension" extends "Customer Card"
 {
     trigger OnOpenPage()
     begin

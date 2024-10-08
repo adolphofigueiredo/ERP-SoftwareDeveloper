@@ -1,4 +1,4 @@
-page 50116 "Module List"
+page 50027 "Module List"
 {
     Caption = 'Lista Moduli';
     PageType = List;

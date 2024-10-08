@@ -1,4 +1,4 @@
-table 50112 Student
+table 50028 Student
 {
     fields
     {

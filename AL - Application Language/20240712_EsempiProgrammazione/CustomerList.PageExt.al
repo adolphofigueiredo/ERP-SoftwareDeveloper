@@ -1,4 +1,4 @@
-pageextension 50105 "ITS Customer List Extension" extends "Customer List" //Ja existe uma ITS Customer List Extension e nao tem problema repetir o nome.
+pageextension 50019 "ITS Customer List Extension" extends "Customer List" //Ja existe uma ITS Customer List Extension e nao tem problema repetir o nome.
                                                                           //verificar se deve trocar o nome. O problema é quando repete o ID.
 {
     actions

@@ -1,4 +1,4 @@
-enum 50114 "Hourly Cost Range"
+enum 50024 "Hourly Cost Range"
 {
     Extensible = true;
 

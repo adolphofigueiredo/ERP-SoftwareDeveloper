@@ -1,4 +1,4 @@
-table 50114 Module
+table 50025 Module
 {
     fields
     {

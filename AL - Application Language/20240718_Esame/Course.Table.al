@@ -1,4 +1,4 @@
-table 50110 Course
+table 50021 Course
 {
     fields
     {

@@ -24,31 +24,35 @@
                                                            apenas o texto ou posso colocar configurações especiais como título, subtítulo
                                                            e até mesmo tabelas e etc. -->
 
-        <form method="get" action="Index">                 <!-- O <form> cria um formulário para que o usuário possa enviar informações. -->
+        <form method="get" action ="">                     <!-- O <form> cria um formulário para que o usuário possa enviar informações. -->
                                                            <!-- O method="get" é usado aqui para enviar os dados do formulário. Com o método
                                                            GET, os parâmetros de pesquisa (os valores inseridos) são anexados à URL, o que
                                                            torna a pesquisa visível na barra de endereços do navegador. Esse método é
                                                            comumente usado para pesquisas e não deve ser usado para enviar dados sensíveis. -->
-                                                           <!-- O action="Index" define a URL ou rota onde os dados do formulário serão
+                                                           <!-- O action="" define a URL ou rota onde os dados do formulário serão
                                                            enviados quando o formulário for submetido. Neste caso, a ação é "Index", o
                                                            que significa que os dados do formulário serão enviados para a rota /Index no
                                                            servidor. -->
 
-            <input class="form-control" type="text" name="Nominativo" placeholder="Nominativo" />
+            <input class="form-control" type="text" name="Nominativo" placeholder="Nominativo" value="@Model.Filter?.Nominativo"/>
                                                            <!-- O <input> cria um campo de entrada de dados, seja ele de qualquer tipo
                                                            especificado que será postreiormente. -->
                                                            <!-- O type define o tipo de entrada que será inserido, o tipo "text" permite
                                                            que o usuário digite caracteres alfanuméricos,  o tipo "date" permite que o
                                                            usuário selecione uma data através de um calendário interativo. -->
-            <input class="form-control" type="date" name="Da" placeholder="DateDa" />
+            <input class="form-control" type="date" name="Da" placeholder="DateDa" value="@Model.Filter?.Da?.ToString("yyyy-MM-dd")" />
                                                            <!-- O class="form-control" aplica uma classe de estilo form-control, que
                                                            estiliza o campo de entrada com um layout amigável e uniforme, ele é usado em
                                                            conjunto com o framework CSS Bootstrap para estilizar e padronizar elementos
                                                            de formulários. Ele é aplicado a vários tipos de controles de formulário,
                                                            como entradas de texto, caixas de seleção, e botões de envio, garantindo que
                                                            eles tenham uma aparência consistente e adequada para diferentes dispositivos
-                                                           e tamanhos de tela. (www.getbootstrap.com/)-->
-            <input class="form-control" type="date" name="A" placeholder="DateA" />
+                                                           e tamanhos de tela. (www.getbootstrap.com/) O Model.Filter?.Da?.ToString("yyyy-MM-dd")
+                                                           garante que, se Filter.Da for diferente de null, o valor será formatado como
+                                                           yyyy-MM-dd, que é o formato exigido pelo campo input[type="date"]. A interrogação
+                                                           (?.) é usada para verificar se Filter.Da é nulo antes de tentar acessar o
+                                                           valor e formatá-lo, evitando uma exceção. -->
+            <input class="form-control" type="date" name="A" placeholder="DateA" value="@Model.Filter?.A?.ToString("yyyy-MM-dd")" />
                                                            <!--O name atribui ao campo de texto, que será enviado como parte da consulta
                                                            GET. O valor inserido pelo usuário será acessado no backend com este nome. -->
                                                            <!-- O placeholder exibe um texto de dica dentro do campo, informando o usuário

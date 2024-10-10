@@ -76,13 +76,13 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Repositories
                                                                                //nome do curso contém a string fornecida, o que é útil para buscas flexíveis.
 			if (filter.Da.HasValue && filter.A.HasValue)
             {
-                query = query.Where(db => filter.A.Value >= db.DataValiditaInizio &&
-                    filter.Da.Value <= db.DataValiditaFine);
+                query = query.Where(db => db.DataValiditaInizio >= filter.Da.Value &&
+                    db.DataValiditaFine <= filter.A.Value);
             }
             else if (filter.Da.HasValue)
-                query = query.Where(db => db.DataValiditaInizio <= filter.Da.Value);
+                query = query.Where(db => db.DataValiditaInizio >= filter.Da.Value);
             else if (filter.A.HasValue)
-                query = query.Where(db => db.DataValiditaFine >= filter.A.Value);
+                query = query.Where(db => db.DataValiditaFine <= filter.A.Value);
 
             return query;
         }

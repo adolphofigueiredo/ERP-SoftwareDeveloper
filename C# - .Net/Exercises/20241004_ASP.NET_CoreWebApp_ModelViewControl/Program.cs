@@ -45,7 +45,13 @@ internal class Program                                               //Define um
                                                                      //O repositório é responsável por encapsular a lógica de acesso a dados, permitindo que
                                                                      //você acesse os dados da entidade Studente de forma abstrata, facilitando a manutenção
                                                                      //e o teste da aplicação.
-		
+
+        builder.Services.AddScoped<CorsiRepository>();               //Registra a classe CorsiRepository como um serviço com ciclo de vida "scoped". Isso
+                                                                     //significa que uma nova instância do repositório será criada para cada solicitação HTTP.
+                                                                     //O repositório é responsável por encapsular a lógica de acesso a dados, permitindo que
+                                                                     //você acesse os dados da entidade Studente de forma abstrata, facilitando a manutenção
+                                                                     //e o teste da aplicação.
+
         var app = builder.Build();                                   //Constrói a aplicação usando as configurações e serviços que foram definidos. O objeto
                                                                      //app agora representa a aplicação ASP.NET Core, pronta para ser configurada para tratar
                                                                      //solicitações.
@@ -97,9 +103,9 @@ internal class Program                                               //Define um
 	}
 }
 
-//builder.Services.AddScoped<>();
-//builder.Services.AddTransient<>();
-//builder.Services.AddSingleton<>();
+//builder.Services.AddScoped<>();    --> Cria uma instância para cada solicitação HTTP.
+//builder.Services.AddTransient<>(); --> Cria uma nova instância a cada vez que o serviço é solicitado.
+//builder.Services.AddSingleton<>(); --> Cria uma única instância para toda a aplicação.
 
 
 //Padrões de Arquitetura de Projetos

@@ -1,6 +1,122 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
+@model CorsiIndexViewModel;
+                                                           <!-- Esta linha define o tipo de dado que será passado para a view. No caso
+                                                           a view utiliza o modelo CorsiIndexViewModel, que contém dois elementos
+                                                           principais, um objeto CorsoFilter, contendo critérios de filtragem e
+                                                           ElementiTrovati, uma coleção de objetos StudenteDto, que representam os
+                                                           resultados da pesquisa. Esse é o ponto de entrada da view, onde você
+                                                           especifica o tipo do modelo que será usado para renderizar o conteúdo.
+                                                           O ASP.NET Core MVC utiliza esse ViewModel para conectar a lógica de
+                                                           negócios (ou seja, o que foi filtrado e os resultados encontrados)
+                                                           à interface de usuário. -->
 @{
 }
-CORSI INDEX
+<div class="card">
+                                                           <!-- Estou abrindo um card que é um container de conteúdo flexível e extensível.
+                                                           Ele tem opções para cabeçalhos e rodapés, uma larga variedade de conteúdo, cores
+                                                           de background contextuais e opções de display. -->
+
+    <div class="card-header"> Filtro Corsi</div>           <!--  Estou separando um bloco do card para colocar o título. -->
+
+    <div class="card-body">
+                                                           <!--  Estou separando um bloco do card para colocar o corpo, nele pode conter
+                                                           apenas o texto ou posso colocar configurações especiais como título, subtítulo
+                                                           e até mesmo tabelas e etc. -->
+        <form method="get" action="">
+                                                           <!-- O <form> cria um formulário para que o usuário possa enviar informações. -->
+                                                           <!-- O method="get" é usado aqui para enviar os dados do formulário. Com o método
+                                                           GET, os parâmetros de pesquisa (os valores inseridos) são anexados à URL, o que
+                                                           torna a pesquisa visível na barra de endereços do navegador. Esse método é
+                                                           comumente usado para pesquisas e não deve ser usado para enviar dados sensíveis. -->
+                                                           <!-- O action="" define a URL ou rota onde os dados do formulário serão
+                                                           enviados quando o formulário for submetido. Neste caso, a ação é "Index", o
+                                                           que significa que os dados do formulário serão enviados para a rota /Index no
+                                                           servidor. -->
+            <input class="form-control" type="text" name="Nome" placeholder="Nome" value="@Model.Filter?.Nome"/>
+                                                           <!-- O <input> cria um campo de entrada de dados, seja ele de qualquer tipo
+                                                           especificado que será postreiormente. -->
+                                                           <!-- O type define o tipo de entrada que será inserido, o tipo "text" permite
+                                                           que o usuário digite caracteres alfanuméricos,  o tipo "date" permite que o
+                                                           usuário selecione uma data através de um calendário interativo. -->
+            <input class="form-control" type="date" name="Da" placeholder="DataValiditaInizio" value="@Model.Filter?.Da?.ToString("yyyy-MM-dd")" />
+                                                           <!-- O class="form-control" aplica uma classe de estilo form-control, que
+                                                           estiliza o campo de entrada com um layout amigável e uniforme, ele é usado em
+                                                           conjunto com o framework CSS Bootstrap para estilizar e padronizar elementos
+                                                           de formulários. Ele é aplicado a vários tipos de controles de formulário,
+                                                           como entradas de texto, caixas de seleção, e botões de envio, garantindo que
+                                                           eles tenham uma aparência consistente e adequada para diferentes dispositivos
+                                                           e tamanhos de tela. (www.getbootstrap.com/)-->
+            <input class="form-control" type="date" name="A" placeholder="DataValiditaFine" value="@Model.Filter?.A?.ToString("yyyy-MM-dd")" />
+                                                           <!--O name atribui ao campo de texto, que será enviado como parte da consulta
+                                                           GET. O valor inserido pelo usuário será acessado no backend com este nome. -->
+                                                           <!-- O placeholder exibe um texto de dica dentro do campo, informando o usuário
+                                                           sobre o que deve ser inserido. No caso, é "DateA". -->
+            <button class="btn" type="submit"> <i class="fa fa-search"></i> Ricerca</button>
+                                                           <!-- O <button> apenas cria um botão interativo. -->
+                                                           <!-- O class="btn" aplica a classe btn, um estilo pré-definido (provavelmente
+                                                           do Bootstrap) para garantir que o botão tenha um layout e comportamento consistente.. -->
+                                                           <!-- O type="submit" define o tipo do botão como submit, o que significa que
+                                                           quando ele é clicado, ele enviará o formulário. -->
+                                                           <!-- O <i class="fa fa-search"></i> adiciona um ícone de lupa(fa fa-search)
+                                                           utilizando a biblioteca Font Awesome. Perceba que o <i abre o argumento e o
+                                                           ></i> encerra. (www.fontawesome.com) -->
+                                                           <!-- Ricerca é um texto exibido ao lado do ícone. -->
+        </form>
+    </div>
+                                                           <!-- A tag "div" é uma das mais utilizadas no HTML. Ela é uma abreviação para
+                                                           "division". No contexto do HTML, a tag "div" é usada para agrupar blocos de
+                                                           elementos e aplicar estilos CSS a eles. Resumindo, o elemento de divisão HTML
+                                                           <div> é um container genérico para conteúdo de fluxo, que de certa forma não
+                                                           representa nada. Ele pode ser utilizado para agrupar elementos para fins de
+                                                           estilos (usando class ou id), ou porque eles compartilham valores de atributos,
+                                                           como lang. -->
+</div>
+                                                           <!-- O código acima funciona da seguinte maneira, primeiro o formulário é preenchido com um nome ou sobrenome no campo "Nominativo", uma
+                                                           data inicial no campo "Da" e uma data final no campo "A" que ao clicar no botão "Ricerca", o formulário é submetido e os valores dos campos
+                                                           são enviados como uma consulta GET para a rota /Search, por exemplo (Search?Nominativo=Adolpho&Da=1980-01-01&A=1984-12-31).
+                                                           O servidor, ao receber essa requisição, usará os parâmetros enviados para processar a pesquisa, provavelmente retornando resultados filtrados
+                                                           com base no nome e no intervalo de datas fornecido. -->
+<div class="card">
+                                                           <!-- Estou abrindo um card que é um container de conteúdo flexível e extensível.
+                                                           Ele tem opções para cabeçalhos e rodapés, uma larga variedade de conteúdo, cores
+                                                           de background contextuais e opções de display. -->
+    <div class="card-header">Risultati:</div>			   <!--  Estou separando um bloco do card para colocar o título. -->
+    <div class="card-body">
+                                                           <!--  Estou separando um bloco do card para colocar o corpo, nele pode conter
+                                                           apenas o texto ou posso colocar configurações especiais como título, subtítulo
+                                                           e até mesmo tabelas e etc. -->
+        <table class="table table-striped">
+                                                           <!-- Esse comando indica que estamos começando a desenhar uma tabela. -->
+            <tr>
+                                                           <!-- Esse comando <tr>, table row indica que está começando uma linha da
+                                                           tabela. -->
+                <th>Corso</th>
+                                                           <!-- Esse comando <th>, table header indica que está inserindo um título da
+                                                           tabela. -->
+                <th>Inizio</th>
+                <th>Fine</th>
+            </tr>
+            @foreach (var item in Model.CorsiTrovati)
+            {
+                <tr>
+                    <td>@item.Nome</td>
+                                                           <!-- Esse comando <td>, table data indica que está inserindo os dados daquela
+                                                           linha na tabela. -->
+                    <td>@item.DataValiditaInizio </td>
+                                                           <!-- O item é o nome de variável usada para representar cada objeto em uma
+                                                           coleção (no caso, a coleção de estudantes do tipo IEnumerable<StudenteDto>).
+                                                           O nome item é definido dentro do loop foreach. Cada item no loop representa
+                                                           um objeto do tipo StudenteDto. O arroba em Razor, é usado para indicar que
+                                                           o que vem a seguir é código C#. Isso é necessário para misturar HTML com C#
+                                                           dentro da view. Então, quando você usa @item.Nome, o Razor sabe que deve
+                                                           buscar o valor da propriedade Nome do objeto item em C#. -->
+                    <td>@item.DataValiditaFine</td>
+                </tr>
+            }
+        </table>
+
+    </div>
+</div>

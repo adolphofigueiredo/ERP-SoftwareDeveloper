@@ -93,6 +93,8 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Models
                 .Property(p => p.DataDiNascita)                                //Define que esta propriedade da entidade será configurada.
                 .IsRequired();                                                 //Torna essa propriedade obrigatória no banco de dados, ou seja, não pode ser nula.
 
+//RELAZIONI
+
             modelBuilder.Entity<StudenteEntity>()                              //Ponto em que se cria a relação
                 .HasOne(p => p.Corso)                                          //HasOne especifica que a propriedade Corso na entidade StudenteEntity é
                                                                                //obrigatória. Isso significa que todo estudante (instância de StudenteEntity)
@@ -139,6 +141,8 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Models
 
             modelBuilder.Entity<CorsoEntity>()
                 .Property(p => p.DataValiditaFine);                            //Define que esta propriedade da entidade será configurada.
+
+//RELAZIONI
 
             modelBuilder.Entity<CorsoEntity>()                                 //Ponto em que se cria a relação
                 .HasMany(p => p.Studenti)                                      //HasMany indica que a entidade CorsoEntity (curso) está associada a muitos estudantes.

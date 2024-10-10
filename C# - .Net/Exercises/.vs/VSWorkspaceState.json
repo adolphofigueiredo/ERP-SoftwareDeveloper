@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\20240913_Windows_Form_APP",
+    "\\20240913_Windows_Form_APP\\20240913_Windows_Form_APP",
+    "\\20240917_Database",
+    "\\20240917_Database\\20240917_Database",
     "\\20241001_ASP.NET_WebFormSite",
     "\\20241004_ASP.NET_CoreWebApp_ModelViewControl"
   ],
-  "SelectedNode": "\\20241001_ASP.NET_WebFormSite\\20241001_ASP.NET_WebFormSite.sln",
+  "SelectedNode": "\\20240917_Database\\20240917_Database\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }

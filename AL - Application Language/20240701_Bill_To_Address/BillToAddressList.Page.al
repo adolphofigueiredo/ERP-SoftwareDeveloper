@@ -5,14 +5,14 @@ page 50013 "ITS Bill To Address List"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "ITS Bill-To Address";
-    CardPageId = "ITS Bill-To Address Card"; //duplo clique abre esta card
+    CardPageId = "ITS Bill-To Address Card"; //Duplo clique abre esta card
     Editable = false;
 
     layout
     {
         area(Content)
         {
-            repeater(GroupName)
+            repeater(GroupName)  //o repeater possibilista a lista
             {
                 field("Entry No."; Rec."Entry No.")
                 {

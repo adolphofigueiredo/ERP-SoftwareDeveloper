@@ -2,6 +2,7 @@
 using MVC_aspnetcore.Models.Dtos;
 using MVC_aspnetcore.Models.Filters;
 using MVC_aspnetcore.Models.Mappers;
+using MVC_aspnetcore.Models.PageViewModels;
 using MVC_aspnetcore.Models.Repositories;
 
 namespace MVC_aspnetcore.Controllers
@@ -14,19 +15,19 @@ namespace MVC_aspnetcore.Controllers
 		{
 			_studentiRepository = studentiRepository;
 		}
-		public IActionResult Index()
-		{
-			return View();
-		}
-		public IActionResult Search([FromQuery] StudenteFilter filter)
+		public IActionResult Index([FromQuery] StudenteFilter filter)
 		{
 			var studentiTrovati = _studentiRepository.Find(filter);
 			List<StudenteDto> studentiDto = studentiTrovati
 				.Select(r => StudenteMapper.Map(r))
 				.ToList();
 
-			return View(studentiDto);
-		}
 
+			return View(new StudentiIndexViewModel()
+			{
+				Filter = filter,
+				ElementiTrovati = studentiDto,
+			});
+		}
 	}
 }

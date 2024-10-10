@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using static System.Net.Mime.MediaTypeNames;
 using System;
 using System.Runtime.Intrinsics.X86;
+using _20241004_ASP.NET_CoreWebApp_ModelViewControl.Models.PageViewModels;
 
 namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Controllers
 {                                                          //A declaração de namespace organiza o código e evita conflitos de
@@ -45,17 +46,7 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Controllers
                                                            //Com isso, o controlador pode usar _studentiRepository para interagir com
                                                            //a camada de dados.
 		}
-        public IActionResult Index()                       //O método index geralmente corresponde à rota padrão de um controller
-                                                           //(exemplo: /Studenti/Index ou simplesmente /Studenti). O método
-                                                           //retorna uma View(), que indica ao framework para renderizar uma View
-                                                           //associada ao método. No caso de Index, a View provavelmente se chamará
-                                                           //Index.cshtml e será localizada na pasta Views/Studenti.
-        {
-            return View();                                 //Se a View (como Index.cshtml e Search.cshtml) estiver corretamente
-                                                           //configurada na pasta Views/Studenti/, elas serão exibidas quando
-                                                           //as ações forem chamadas.
-        }
-        public IActionResult Search([FromQuery] StudenteFilter filter)
+        public IActionResult Index([FromQuery] StudenteFilter filter)
 														   //O método index geralmente corresponde à rota padrão de um controller
 														   //(exemplo: /Studenti/Search). O método retorna uma View(), que indica
 														   //ao framework para renderizar uma View associada ao método. No caso
@@ -93,15 +84,22 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Controllers
                                                            //os dados são projetados para o frontend.
 				.ToList();                                 //O .ToList(): Converte o resultado do mapeamento em uma lista.
 
-			return View(studentiDto);                      //Se a View (como Index.cshtml e Search.cshtml) estiver corretamente
-														   //configurada na pasta Views/Studenti/, elas serão exibidas quando
-														   //as ações forem chamadas.
-														   //O método Search() recebe critérios de busca por meio da query string,
-                                                           //usa o repositório para encontrar estudantes que correspondem ao filtro,
+            return View(new StudentiIndexViewModel()       //Se a View (como Index.cshtml ou Search.cshtml) estiver corretamente
+            {                                              //configurada na pasta Views/Studenti/, elas serão exibidas quando
+                Filter = filter,                           //as ações forem chamadas.
+                ElementiTrovati = studentiDto,             //O método Index() recebe critérios de busca por meio da query string,
+            });                                            //usa o repositório para encontrar estudantes que correspondem ao filtro,
                                                            //converte os estudantes em um formato DTO usando o StudenteMapper, e
                                                            //então retorna uma view que exibe os dados encontrados. Esse padrão é
                                                            //comum em buscas onde o usuário pode fornecer critérios (como nome, idade,
-                                                           //curso) para filtrar os resultados.
-		}
+                                                           //curso) para filtrar os resultados. Uma nova instância de StudentiIndexViewModel
+                                                           //é criada. Esta view model mantém o filtro atual, que será mantido na
+                                                           //interface (os valores preenchidos pelo usuário devem aparecer nos
+                                                           //campos de filtro). A lista de estudantes filtrados já mapeados para
+                                                           //DTOs(ElementiTrovati), que será exibida na interface ao usuário. O método
+                                                           //View() renderiza a página associada, passando a view model
+                                                           //(StudentiIndexViewModel) para a View, que poderá exibir os filtros e
+                                                           //os resultados encontrados.
+        }
 	}
 }

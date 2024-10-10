@@ -21,8 +21,8 @@ pageextension 50015 "ITS Customer Card Extension" extends "Customer Card"
                 Image = Navigate;
                 ApplicationArea = All;
                 Caption = 'Indirizzi di fatturazione';
-                RunObject = page "ITS Bill To Address List";
-                RunPageLink = "Customer No." = field("No.");
+                RunObject = page "ITS Bill To Address List"; //Abre a "Bill-To Address List".
+                RunPageLink = "Customer No." = field("No."); //Filtra a "Bill-To Address List" de acordo com o registro que estava posicionado antes.
             }
         }
     }

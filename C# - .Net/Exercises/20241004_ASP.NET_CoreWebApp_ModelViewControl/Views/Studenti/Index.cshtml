@@ -1,6 +1,17 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
+@model StudentiIndexViewModel;
+                                                           <!-- Esta linha define o tipo de dado que será passado para a view. No caso
+                                                           a view utiliza o modelo StudentiIndexViewModel, que contém dois elementos
+                                                           principais, um objeto StudenteFilter, contendo critérios de filtragem e
+                                                           ElementiTrovati, uma coleção de objetos StudenteDto, que representam os
+                                                           resultados da pesquisa. Esse é o ponto de entrada da view, onde você
+                                                           especifica o tipo do modelo que será usado para renderizar o conteúdo.
+                                                           O ASP.NET Core MVC utiliza esse ViewModel para conectar a lógica de
+                                                           negócios (ou seja, o que foi filtrado e os resultados encontrados)
+                                                           à interface de usuário. -->
 @{
 }
 <div class="card">                                         <!-- Estou abrindo um card que é um container de conteúdo flexível e extensível.
@@ -13,14 +24,14 @@
                                                            apenas o texto ou posso colocar configurações especiais como título, subtítulo
                                                            e até mesmo tabelas e etc. -->
 
-        <form method="get" action="Search">                <!-- O <form> cria um formulário para que o usuário possa enviar informações. -->
+        <form method="get" action="Index">                 <!-- O <form> cria um formulário para que o usuário possa enviar informações. -->
                                                            <!-- O method="get" é usado aqui para enviar os dados do formulário. Com o método
                                                            GET, os parâmetros de pesquisa (os valores inseridos) são anexados à URL, o que
                                                            torna a pesquisa visível na barra de endereços do navegador. Esse método é
                                                            comumente usado para pesquisas e não deve ser usado para enviar dados sensíveis. -->
-                                                           <!-- O action="Search" define a URL ou rota onde os dados do formulário serão
-                                                           enviados quando o formulário for submetido. Neste caso, a ação é "Search", o
-                                                           que significa que os dados do formulário serão enviados para a rota /Search no
+                                                           <!-- O action="Index" define a URL ou rota onde os dados do formulário serão
+                                                           enviados quando o formulário for submetido. Neste caso, a ação é "Index", o
+                                                           que significa que os dados do formulário serão enviados para a rota /Index no
                                                            servidor. -->
 
             <input class="form-control" type="text" name="Nominativo" placeholder="Nominativo" />
@@ -70,40 +81,41 @@ são enviados como uma consulta GET para a rota /Search, por exemplo (Search?Nom
 O servidor, ao receber essa requisição, usará os parâmetros enviados para processar a pesquisa, provavelmente retornando resultados filtrados
 com base no nome e no intervalo de datas fornecido. -->
 
-<div class="card">
-    <div class="card-header"> Risultati: </div>
-    
-    <div class="card-body">
+<div class="card">								           <!-- Estou abrindo um card que é um container de conteúdo flexível e extensível.
+														   Ele tem opções para cabeçalhos e rodapés, uma larga variedade de conteúdo, cores
+														   de background contextuais e opções de display. -->
+	<div class="card-header">Risultati:</div>			   <!--  Estou separando um bloco do card para colocar o título. -->
+	<div class="card-body">                                <!--  Estou separando um bloco do card para colocar o corpo, nele pode conter
+														   apenas o texto ou posso colocar configurações especiais como título, subtítulo
+									                       e até mesmo tabelas e etc. -->
+		<table class="table table-striped">         	   <!-- Esse comando indica que estamos começando a desenhar uma tabela. -->
+			<tr>                   				           <!-- Esse comando <tr>, table row indica que está começando uma linha da
+														   tabela. -->
+				<th>Nome</th> 				               <!-- Esse comando <th>, table header indica que está inserindo um título da
+					                                       tabela. -->
+				<th>Cognome</th>					
+				<th>Codice fiscale</th>
+				<th>Data di nascita</th>
+				<th>Corso Id</th>
+			</tr>
+			@foreach (var item in Model.ElementiTrovati)				   
+			{
+				<tr>
+					<td>@item.Nome</td>					   <!-- Esse comando <td>, table data indica que está inserindo os dados daquela
+														   linha na tabela. -->
+					<td>@item.Cognome</td>				   <!-- O item é o nome de variável usada para representar cada objeto em uma
+														   coleção (no caso, a coleção de estudantes do tipo IEnumerable<StudenteDto>).
+														   O nome item é definido dentro do loop foreach. Cada item no loop representa
+														   um objeto do tipo StudenteDto. O arroba em Razor, é usado para indicar que
+														   o que vem a seguir é código C#. Isso é necessário para misturar HTML com C#
+														   dentro da view. Então, quando você usa @item.Nome, o Razor sabe que deve
+														   buscar o valor da propriedade Nome do objeto item em C#. -->
+					<td>@item.CodiceFiscale</td>
+					<td>@item.DataDiNascita</td>
+					<td>@item.CorsoId</td>
+				</tr>
+			}
+		</table>
 
-        <table class="table table-striped">                <!-- Esse comando indica que estamos começando a desenhar uma tabela. -->
-
-    <tr>                                                   <!-- Esse comando <tr>, table row indica que está começando uma linha da
-                                                           tabela. -->
-        <th>Nome</th>                                      <!-- Esse comando <th>, table header indica que está inserindo um título da
-                                                           tabela. -->
-        <th>Cognome</th>
-        <th>Codice Fiscale</th>
-        <th>Data di Nascita</th>
-        <th>Corso Id</th>
-    </tr>
-
-    <tr>
-        <td>Mario</td>                                     <!-- Esse comando <td>, table data indica que está inserindo os dados daquela
-                                                           linha na tabela. -->
-        <td>Rossi</td>
-        <td>FSDFFSDF44224</td>
-        <td>09/12/2005</td>
-        <td>1</td>
-    </tr>
-
-    <tr>
-        <td>Adolpho</td>
-        <td>Figueiredo</td>
-        <td>291.266.388-19</td>
-        <td>04/03/1982</td>
-        <td>1</td>
-    </tr>
-</table>
-
-    </div>
+	</div>
 </div>

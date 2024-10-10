@@ -1,15 +1,6 @@
 using _20241004_ASP.NET_CoreWebApp_ModelViewControl.Models;
 using _20241004_ASP.NET_CoreWebApp_ModelViewControl.Repositories;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
-using System;
-using System.Runtime.ConstrainedExecution;
-using System.Runtime.Intrinsics.X86;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-using static System.Net.WebRequestMethods;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 internal class Program                                               //Define uma classe chamada Program, que é a classe principal da aplicação.
                                                                      //O modificador de acesso internal significa que a classe é acessível apenas

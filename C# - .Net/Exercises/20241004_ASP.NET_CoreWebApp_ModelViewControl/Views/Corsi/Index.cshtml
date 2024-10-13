@@ -1,6 +1,11 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@{
+    ViewData["Title"] = "Index";                           //O ViewData é um dicionário que permite passar dados temporários entre o controller e a view.
+                                                           //Aqui, o código está definindo uma chave chamada "Title" no ViewData e atribuindo-lhe o valor
+                                                           //"Index". Essa chave será usada no layout da página (geralmente no arquivo _Layout.cshtml)
+                                                           //para exibir o título da página dentro da tag<title> no HTML. O título também pode ser
+                                                           //utilizado em outras partes da view.
+    Layout = "~/Views/Shared/_Layout.cshtml";              //Em uma view Razor, essa é uma propriedade especial que indica qual arquivo de layout deve ser usado.
+}
 
 @model CorsiIndexViewModel;
                                                            <!-- Esta linha define o tipo de dado que será passado para a view. No caso
@@ -35,22 +40,50 @@
                                                            enviados quando o formulário for submetido. Neste caso, a ação é "Index", o
                                                            que significa que os dados do formulário serão enviados para a rota /Index no
                                                            servidor. -->
-            <input class="form-control" type="text" name="Nome" placeholder="Nome" value="@Model.Filter?.Nome"/>
-                                                           <!-- O <input> cria um campo de entrada de dados, seja ele de qualquer tipo
+            @Html.LabelFor(prop => prop.Filter.Nome)       <!-- Label usada na propriedade Nome em corso filter.-->     
+            @Html.TextBoxFor(prop => prop.Filter.Nome, new { @class = "form-control",})
+            <!-- <input class="form-control" type="text" name="Nome" placeholder="Nome" value="@Model.Filter?.Nome"/>
+                                                           As duas linhas dizem a mesma coisa, porém a linha ativa seria de uma
+                                                           maneira mais elegante, pois tem menos probabilidade de erro e acaba dando
+                                                           menos trabalho. O Html.TextBoxFor é um helper que gera um elemento HTML
+                                                           <input type="text"> associado a uma propriedade específica do modelo,
+                                                           ele é muito útil, pois simplifica a criação de formulários vinculados ao
+                                                           modelo, garante que os nomes e IDs dos campos de formulário estejam
+                                                           alinhados corretamente com o modelo e aplica validações automaticamente
+                                                           quando o modelo contém anotações de validação (DataAnnotations). O
+                                                           prop.Filter.Nome se refere à propriedade Nome dentro do objeto Filter
+                                                           do modelo e Filter é a instância de uma classe de filtro como a
+                                                           StudenteFilter e Nome é uma propriedade de string que será editada
+                                                           neste campo de texto. no arroba classs está passando um objeto anônimo
+                                                           com atributos HTML para o helper. o class = "form-control" com o arroba
+                                                           antes de class é necessário porque class é uma palavra reservada no C#.
+                                                           Isso adiciona a classe CSS form-control ao elemento <input>, que é uma
+                                                           classe padrão do Bootstrap para estilização de formulários.
+                                                           O <input> cria um campo de entrada de dados, seja ele de qualquer tipo
                                                            especificado que será postreiormente. -->
                                                            <!-- O type define o tipo de entrada que será inserido, o tipo "text" permite
                                                            que o usuário digite caracteres alfanuméricos,  o tipo "date" permite que o
                                                            usuário selecione uma data através de um calendário interativo. -->
-            <input class="form-control" type="date" name="Da" placeholder="DataValiditaInizio" value="@Model.Filter?.Da?.ToString("yyyy-MM-dd")" />
-                                                           <!-- O class="form-control" aplica uma classe de estilo form-control, que
+            @Html.LabelFor(prop => prop.Filter.Da)         <!-- Label usada na propriedade Nome em corso filter.-->
+            @Html.EditorFor(prop => prop.Filter.Da, new { @class = "form-control", Type="date" })
+            <!-- <input class="form-control" type="date" name="Da" placeholder="DataValiditaInizio" value="@Model.Filter?.Da?.ToString("yyyy-MM-dd")" />
+                                                           As duas linhas dizem a mesma coisa, porém a linha ativa seria de uma
+                                                           maneira mais elegante, pois tem menos probabilidade de erro e acaba dando
+                                                           menos trabalho.
+                                                           O class="form-control" aplica uma classe de estilo form-control, que
                                                            estiliza o campo de entrada com um layout amigável e uniforme, ele é usado em
                                                            conjunto com o framework CSS Bootstrap para estilizar e padronizar elementos
                                                            de formulários. Ele é aplicado a vários tipos de controles de formulário,
                                                            como entradas de texto, caixas de seleção, e botões de envio, garantindo que
                                                            eles tenham uma aparência consistente e adequada para diferentes dispositivos
                                                            e tamanhos de tela. (www.getbootstrap.com/)-->
-            <input class="form-control" type="date" name="A" placeholder="DataValiditaFine" value="@Model.Filter?.A?.ToString("yyyy-MM-dd")" />
-                                                           <!--O name atribui ao campo de texto, que será enviado como parte da consulta
+            @Html.LabelFor(prop => prop.Filter.A)          <!-- Label usada na propriedade Nome em corso filter.-->
+            @Html.EditorFor(prop => prop.Filter.A, new { @class = "form-control", Type = "date" })
+            <!-- <input class="form-control" type="date" name="A" placeholder="DataValiditaFine" value="@Model.Filter?.A?.ToString("yyyy-MM-dd")" />
+                                                           As duas linhas dizem a mesma coisa, porém a linha ativa seria de uma
+                                                           maneira mais elegante, pois tem menos probabilidade de erro e acaba dando
+                                                           menos trabalho.
+                                                           O name atribui ao campo de texto, que será enviado como parte da consulta
                                                            GET. O valor inserido pelo usuário será acessado no backend com este nome. -->
                                                            <!-- O placeholder exibe um texto de dica dentro do campo, informando o usuário
                                                            sobre o que deve ser inserido. No caso, é "DateA". -->
@@ -73,6 +106,16 @@
                                                            representa nada. Ele pode ser utilizado para agrupar elementos para fins de
                                                            estilos (usando class ou id), ou porque eles compartilham valores de atributos,
                                                            como lang. -->
+<div><a href="@Url.Action(nameof(CorsiController.Aggiungi),"Corsi")">Aggiungi</a></div>
+                                                           <!-- O arrobaUrl.Action é um método que gera uma URL para uma ação em um controlador
+                                                           especificado. O primeiro parâmetro é o nome da ação (neste caso, a ação Aggiungi do
+                                                           CorsiController). O segundo parâmetro é o nome do controlador (neste caso, "Corsi").
+                                                           O nameof(CorsiController.Aggiungi) usa nameof para referenciar o nome da ação Aggiungi
+                                                           de forma segura, evitando erros causados por mudanças de nomes de métodos. Se o método
+                                                           mudar, o compilador sinalizará a necessidade de atualização. Resumindo, essa linha
+                                                           resultará em um link HTML, cujo href apontará para a URL da ação Aggiungi no controlador
+                                                           Corsi e  o texto visível do link será "Aggiungi". -->
+
 </div>
                                                            <!-- O código acima funciona da seguinte maneira, primeiro o formulário é preenchido com um nome ou sobrenome no campo "Nominativo", uma
                                                            data inicial no campo "Da" e uma data final no campo "A" que ao clicar no botão "Ricerca", o formulário é submetido e os valores dos campos
@@ -99,7 +142,7 @@
                 <th>Inizio</th>
                 <th>Fine</th>
             </tr>
-            @foreach (var item in Model.CorsiTrovati)
+            @foreach (var item in Model.ElementiTrovati)
             {
                 <tr>
                     <td>@item.Nome</td>

@@ -13,7 +13,7 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Models.PageViewModels
         public CorsoFilter Filter { get; set; }                                //Esse é um filtro que permite restringir ou ajustar os dados dos estudantes
                                                                                //conforme os critérios fornecidos. Ele contém as propriedades e a lógica para
                                                                                //realizar filtragem com base em parâmetros como nome, sobrenome, ID, etc.
-        public ICollection<CorsoDto> CorsiTrovati { get; set; }                //Representa uma coleção dos estudantes que correspondem aos critérios definidos
+        public ICollection<CorsoDto> ElementiTrovati { get; set; }                //Representa uma coleção dos estudantes que correspondem aos critérios definidos
                                                                                //pelo filtro. Cada item na coleção é uma instância de StudenteDto, que contém
                                                                                //os dados necessários (provavelmente um subconjunto dos campos do modelo
                                                                                //original) para serem exibidos na interface de usuário.

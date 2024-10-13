@@ -7,6 +7,13 @@ using static System.Net.Mime.MediaTypeNames;
 using System;
 using System.Runtime.Intrinsics.X86;
 using _20241004_ASP.NET_CoreWebApp_ModelViewControl.Models.PageViewModels;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Humanizer;
+using System.Security.Cryptography.Xml;
+using Newtonsoft.Json;
+using Microsoft.SqlServer.Server;
+using Microsoft.Extensions.Hosting;
+using System.Security.Policy;
 
 namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Controllers
 {                                                          //A declaração de namespace organiza o código e evita conflitos de
@@ -61,7 +68,7 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Controllers
                                                            //conter propriedades como nome, idade, curso, ou outros atributos que
                                                            //os usuários podem usar para buscar ou filtrar estudantes.
         {
-            var corsiTrovati = _corsiRepository.Find(filter);
+            var elementiTrovati = _corsiRepository.Find(filter);
                                                            //O var studentiTrovati está declaradando uma variável studentiTrovati
                                                            //que vai armazenar os resultados da busca por estudantes. O
                                                            //_studentiRepository.Find(filter) é um método Find do repositório
@@ -71,7 +78,7 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Controllers
                                                            //padrão repositório desacopla a lógica de persistência(banco de dados)
                                                            //da lógica de apresentação(controlador), permitindo flexibilidade e
                                                            //facilidade de manutenção.
-            List<CorsoDto> corsiDto = corsiTrovati         //Aqui está sendo criada uma lista do tipo StudenteDto. Um DTO (Data
+            List<CorsoDto> corsiDto = elementiTrovati      //Aqui está sendo criada uma lista do tipo StudenteDto. Um DTO (Data
                                                            //Transfer Object) é um objeto que contém apenas os dados que você
                                                            //quer transferir entre o backend e o frontend. Ele geralmente contém
                                                            //uma versão simplificada ou filtrada de uma entidade do domínio.
@@ -87,7 +94,7 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Controllers
             return View(new CorsiIndexViewModel()          //Se a View (como Index.cshtml ou Search.cshtml) estiver corretamente
             {                                              //configurada na pasta Views/Studenti/, elas serão exibidas quando
                 Filter = filter,                           //as ações forem chamadas.
-                CorsiTrovati = corsiDto,                   //O método Index() recebe critérios de busca por meio da query string,
+                ElementiTrovati = corsiDto,                //O método Index() recebe critérios de busca por meio da query string,
             });                                            //usa o repositório para encontrar estudantes que correspondem ao filtro,
                                                            //converte os estudantes em um formato DTO usando o StudenteMapper, e
                                                            //então retorna uma view que exibe os dados encontrados. Esse padrão é
@@ -100,6 +107,53 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Controllers
                                                            //View() renderiza a página associada, passando a view model
                                                            //(StudentiIndexViewModel) para a View, que poderá exibir os filtros e
                                                            //os resultados encontrados.
+        }
+
+
+        public IActionResult Aggiungi()                    //Este é o cabeçalho do método. Ele define que o método é público, retornando um
+                                                           //tipo IActionResult. O IActionResult é um tipo de retorno genérico que pode
+                                                           //representar diferentes tipos de resultados de ação (exibir uma view, redirecionar,
+                                                           //retornar um erro, etc.). O método se chama Aggiungi e será o nome da rota associada
+                                                           //à view. Neste caso, uma solicitação GET para /Corsi/Aggiungi irá acionar este método.
+        {
+            return View();                                 //Esta linha indica que o método retornará uma view (a página que renderiza o formulário
+                                                           //de adição de um novo curso). View(): Sem argumentos, ele tentará retornar a view padrão
+                                                           //associada a este método, que, por convenção, será o arquivo Aggiungi.cshtml dentro da
+                                                           //pasta Views / Corsi.
+        }
+
+        [HttpPost]                                         //Este é um atributo que indica que este método responderá a solicitações HTTP POST. Isso
+                                                           //significa que este método será acionado quando o formulário for submetido com o método POST,
+                                                           //ou seja, quando o usuário enviar os dados.
+        public IActionResult Aggiungi(CorsoDto corsoDto)   //Este é o cabeçalho do método, ele recebe um parâmetro do tipo CorsoDto. O método é acessível
+                                                           //publicamente por qualquer requisição. O tipo de retorno è IActionResult, assim como no método
+                                                           //anterior, permite retornar vários tipos de respostas, como uma view, redirecionamento ou
+                                                           //outros tipos de resultados. O Aggiungi(CorsoDto corsoDto)recebe um parâmetro do tipo CorsoDto,
+                                                           //que é um Data Transfer Object (DTO). O CorsoDto é um modelo simplificado que representa os
+                                                           //dados do formulário enviados pelo usuário.
+        {
+            if (ModelState.IsValid != true)                //O ModelState.IsValid verifica se o estado do modelo é válido. O ModelState contém informações
+                                                           //sobre a validação do modelo, baseada nas anotações de dados (como[Required], [StringLength])
+                                                           //definidas no CorsoDto. Caso algum campo do formulário não atenda às regras de validação (por
+                                                           //exemplo, um campo obrigatório esteja vazio), ModelState.IsValid será false.
+            {
+                return View(corsoDto);                     //Se o ModelState for inválido, ou seja, se os dados do formulário não passarem nas regras de
+                                                           //validação, o método retorna a view novamente, mas agora passando o corsoDto como parâmetro.
+            }
+            _corsiRepository.Post(CorsoMapper.Map(corsoDto));
+                                                           //Esta linha é executada se o estado do modelo for válido. O _corsiRepository.Post() chama o
+                                                           //método Post() no repositório de cursos(_corsiRepository), que se encarrega de inserir o novo
+                                                           //curso no banco de dados. Já o CorsoMapper.Map(corsoDto), antes de salvar, os dados do DTO
+                                                           //são convertidos para o modelo de domínio (provavelmente uma entidade que corresponde à tabela
+                                                           //do banco de dados). O CorsoMapper é um mapeador que transforma o corsoDto no formato esperado
+                                                           //pelo repositório. Essa separação entre o DTO e o modelo de domínio é uma boa prática de design
+                                                           //para manter a lógica desacoplada.
+            return Redirect(Url.Action(nameof(Index), "corsi"));
+                                                           //O Redirect(), após salvar o novo curso com sucesso, o usuário é redirecionado para a página
+                                                           //principal de listagem de cursos. O Url.Action(nameof(Index), "Corsi") constrói uma URL para
+                                                           //o método Index no controlador Corsi. O método Index é responsável por exibir a lista de
+                                                           //cursos. O redirecionamento após um POST evita que o formulário seja reenviado se o usuário
+                                                           //atualizar a página(padrão PRG - Post / Redirect / Get).
         }
     }
 }

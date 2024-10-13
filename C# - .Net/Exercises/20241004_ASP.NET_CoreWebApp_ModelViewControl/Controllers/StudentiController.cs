@@ -7,6 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 using System;
 using System.Runtime.Intrinsics.X86;
 using _20241004_ASP.NET_CoreWebApp_ModelViewControl.Models.PageViewModels;
+using System.Security.Policy;
 
 namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Controllers
 {                                                          //A declaração de namespace organiza o código e evita conflitos de
@@ -101,5 +102,52 @@ namespace _20241004_ASP.NET_CoreWebApp_ModelViewControl.Controllers
                                                            //(StudentiIndexViewModel) para a View, que poderá exibir os filtros e
                                                            //os resultados encontrados.
         }
-	}
+	
+        public IActionResult Aggiungi()                    //Este é o cabeçalho do método. Ele define que o método é público, retornando um
+                                                           //tipo IActionResult. O IActionResult é um tipo de retorno genérico que pode
+                                                           //representar diferentes tipos de resultados de ação (exibir uma view, redirecionar,
+                                                           //retornar um erro, etc.). O método se chama Aggiungi e será o nome da rota associada
+                                                           //à view. Neste caso, uma solicitação GET para /Studenti/Aggiungi irá acionar este método.
+        {
+            return View();                                 //Esta linha indica que o método retornará uma view (a página que renderiza o formulário
+                                                           //de adição de um novo estudante). View(): Sem argumentos, ele tentará retornar a view padrão
+                                                           //associada a este método, que, por convenção, será o arquivo Aggiungi.cshtml dentro da
+                                                           //pasta Views / Studenti.
+        }
+
+        [HttpPost]                                         //Este é um atributo que indica que este método responderá a solicitações HTTP POST. Isso
+                                                           //significa que este método será acionado quando o formulário for submetido com o método POST,
+                                                           //ou seja, quando o usuário enviar os dados.
+        public IActionResult Aggiungi(StudenteDto studenteDto)
+                                                           //Este é o cabeçalho do método, ele recebe um parâmetro do tipo StudenteDto. O método é acessível
+                                                           //publicamente por qualquer requisição. O tipo de retorno è IActionResult, assim como no método
+                                                           //anterior, permite retornar vários tipos de respostas, como uma view, redirecionamento ou
+                                                           //outros tipos de resultados. O Aggiungi(StudenteDto studenteDto)recebe um parâmetro do tipo StudenteDto,
+                                                           //que é um Data Transfer Object (DTO). O StudenteDto é um modelo simplificado que representa os
+                                                           //dados do formulário enviados pelo usuário.
+        {
+            if (ModelState.IsValid != true)                //O ModelState.IsValid verifica se o estado do modelo é válido. O ModelState contém informações
+                                                           //sobre a validação do modelo, baseada nas anotações de dados (como[Required], [StringLength])
+                                                           //definidas no StudenteDto. Caso algum campo do formulário não atenda às regras de validação
+                                                           //(por exemplo, um campo obrigatório esteja vazio), ModelState.IsValid será false.
+            {
+                return View(studenteDto);                  //Se o ModelState for inválido, ou seja, se os dados do formulário não passarem nas regras de
+                                                           //validação, o método retorna a view novamente, mas agora passando o studenteDto como parâmetro.
+            }
+            _studentiRepository.Post(StudenteMapper.Map(studenteDto));
+                                                           //Esta linha é executada se o estado do modelo for válido. O _corsiRepository.Post() chama o
+                                                           //método Post() no repositório de cursos(_corsiRepository), que se encarrega de inserir o novo
+                                                           //curso no banco de dados. Já o CorsoMapper.Map(corsoDto), antes de salvar, os dados do DTO
+                                                           //são convertidos para o modelo de domínio (provavelmente uma entidade que corresponde à tabela
+                                                           //do banco de dados). O CorsoMapper é um mapeador que transforma o corsoDto no formato esperado
+                                                           //pelo repositório. Essa separação entre o DTO e o modelo de domínio é uma boa prática de design
+                                                           //para manter a lógica desacoplada.
+            return Redirect(Url.Action(nameof(Index), "studenti"));
+                                                           //O Redirect(), após salvar o novo estudante com sucesso, o usuário é redirecionado para a página
+                                                           //principal de listagem de estudantes. O Url.Action(nameof(Index), "Studenti") constrói uma URL
+                                                           //para o método Index no controlador Studenti. O método Index é responsável por exibir a lista de
+                                                           //estudantes. O redirecionamento após um POST evita que o formulário seja reenviado se o usuário
+                                                           //atualizar a página(padrão PRG - Post / Redirect / Get).
+        }
+    }
 }

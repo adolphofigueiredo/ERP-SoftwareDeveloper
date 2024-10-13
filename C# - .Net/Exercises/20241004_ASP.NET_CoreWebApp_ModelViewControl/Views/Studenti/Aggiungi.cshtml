@@ -1,0 +1,56 @@
+﻿@model StudenteDto
+                                                           <!-- A declaração arroba model CorsoDto em uma view do ASP.NET Core indica que a página recebe
+                                                           um objeto do tipo CorsoDto como seu modelo. Esse tipo é definido no backend e é passado à view
+                                                           para que a interface possa exibir seus dados ou utilizá-los em formulários. -->
+@{
+    ViewData["Title"] = "Index";                           //O ViewData é um dicionário que permite passar dados temporários entre o controller e a view.
+                                                           //Aqui, o código está definindo uma chave chamada "Title" no ViewData e atribuindo-lhe o valor
+                                                           //"Index". Essa chave será usada no layout da página (geralmente no arquivo _Layout.cshtml)
+                                                           //para exibir o título da página dentro da tag<title> no HTML. O título também pode ser
+                                                           //utilizado em outras partes da view.
+    Layout = "~/Views/Shared/_Layout.cshtml";              //Em uma view Razor, essa é uma propriedade especial que indica qual arquivo de layout deve ser usado.
+}
+<div class="card">
+                                                           <!-- Esta estrutura usa classes CSS do framework Bootstrap para criar uma interface estilo "card". O
+                                                           cartão é uma caixa com um cabeçalho e um corpo, muito útil para organizar conteúdo de forma visualmente atraente. -->
+    <div class="card-header">Aggiungi Corso</div>          <!-- O cabeçalho do cartão exibe o título "Aggiungi Corso", informando ao usuário que ele está na
+                                                           página de adição de um novo curso. -->
+    <div class="card-body">                                <!-- O corpo do cartão contém o formulário HTML onde o usuário irá preencher os dados do novo curso. -->
+        <form method="post">                               <!-- Este é o início do formulário. O atributo method="post" indica que os dados do formulário serão
+                                                           enviados via POST quando o formulário for submetido. Isso acionará a ação Aggiungi(CorsoDto corsoDto)
+                                                           no controlador para processar os dados. -->
+            <div class="form-group">                       <!--  A classe form-group geralmente aplica margens, preenchimentos (padding) e alinhamentos automáticos
+                                                           para garantir que os campos não fiquem desorganizados, e que a distância entre os componentes do formulário seja consistente. -->
+                @Html.LabelFor(p => p.Nome)                <!-- Gera uma label HTML para o campo. -->
+                @Html.EditorFor(p => p.Nome)               <!-- Cria o campo de entrada para os dados. -->
+                @Html.ValidationMessageFor(p => p.Nome)    <!-- Exibe uma mensagem de validação para o campono caso de existirem erros. -->
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(p => p.Cognome)             <!-- Gera uma label HTML para o campo. -->
+                @Html.EditorFor(p => p.Cognome)            <!-- Cria o campo de entrada para os dados. -->
+                @Html.ValidationMessageFor(p => p.Cognome)
+                                                           <!-- Exibe uma mensagem de validação para o campono caso de existirem erros. -->
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(p => p.CodiceFiscale)       <!-- Gera uma label HTML para o campo. -->
+                @Html.EditorFor(p => p.CodiceFiscale)      <!-- Cria o campo de entrada para os dados. -->
+                @Html.ValidationMessageFor(p => p.CodiceFiscale)
+                                                           <!-- Exibe uma mensagem de validação para o campono caso de existirem erros. -->
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(p => p.DataDiNascita)       <!-- Gera uma label HTML para o campo. -->
+                @Html.EditorFor(p => p.DataDiNascita)      <!-- Cria o campo de entrada para os dados. -->
+                @Html.ValidationMessageFor(p => p.DataDiNascita)
+                                                           <!-- Exibe uma mensagem de validação para o campono caso de existirem erros. -->
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(p => p.CorsoId)             <!-- Gera uma label HTML para o campo. -->
+                @Html.EditorFor(p => p.CorsoId)            <!-- Cria o campo de entrada para os dados. -->
+                @Html.ValidationMessageFor(p => p.CorsoId)
+                                                           <!-- Exibe uma mensagem de validação para o campono caso de existirem erros. -->
+            </div>
+            <button type="submit">Salva</button>           <!-- Este botão, quando clicado, submete o formulário. O type="submit" indica que o botão acionará o
+                                                           envio dos dados do formulário para o servidor via HTTP POST. -->
+        </form>
+    </div>
+</div>                                                     

@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241004_asp.net_corewebapp_modelviewcontrol\\models\\dtos\\studentedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|solutionrelative:models\\dtos\\studentedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|w:\\esd_23-25\\studente\\icts23-25.432\\erp-softwaredeveloper\\c# - .net\\exercises\\20241004_asp.net_corewebapp_modelviewcontrol\\views\\studenti\\aggiungi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|solutionrelative:views\\studenti\\aggiungi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,32 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Aggiungi.cshtml",
-              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Views\\Studenti\\Aggiungi.cshtml",
-              "RelativeDocumentMoniker": "Views\\Studenti\\Aggiungi.cshtml",
-              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Views\\Studenti\\Aggiungi.cshtml",
-              "RelativeToolTip": "Views\\Studenti\\Aggiungi.cshtml",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAADQAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-13T19:24:25.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StudenteDto.cs",
-              "DocumentMoniker": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models\\Dtos\\StudenteDto.cs",
-              "RelativeDocumentMoniker": "Models\\Dtos\\StudenteDto.cs",
-              "ToolTip": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models\\Dtos\\StudenteDto.cs*",
-              "RelativeToolTip": "Models\\Dtos\\StudenteDto.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T19:51:34.98Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -1,0 +1,6 @@
+@_20241015_BibliotecaWebService_ASP.NET_CoreWebAPI_HostAddress = http://localhost:5027
+
+GET {{_20241015_BibliotecaWebService_ASP.NET_CoreWebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.props" />
+</Project>

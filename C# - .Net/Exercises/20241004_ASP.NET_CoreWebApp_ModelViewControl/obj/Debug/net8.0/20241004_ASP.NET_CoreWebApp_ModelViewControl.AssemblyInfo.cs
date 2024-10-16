@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("20241004_ASP.NET_CoreWebApp_ModelViewControl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbd2ec32ea6c04046b94f3a42ef966fc6a41cd79")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+101ffe5c2a6fec4731a3dca1dfccd76c15ad9014")]
 [assembly: System.Reflection.AssemblyProductAttribute("20241004_ASP.NET_CoreWebApp_ModelViewControl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("20241004_ASP.NET_CoreWebApp_ModelViewControl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NQkVHNrg01w=",
+  "dgSpecHash": "sRL2L4JnL/Q=",
   "success": true,
-  "projectFilePath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj",
+  "projectFilePath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ICTS23-25.432\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ICTS23-25.432\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

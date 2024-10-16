@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj": {}
+    "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj": {}
   },
   "projects": {
-    "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj": {
+    "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj",
+        "projectUniqueName": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj",
         "projectName": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI",
-        "projectPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj",
+        "projectPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj",
         "packagesPath": "C:\\Users\\ICTS23-25.432\\.nuget\\packages\\",
-        "outputPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\obj\\",
+        "outputPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,9 +50,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[6.9.0, )"
             }
           },
           "imports": [

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj": {}
+    "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj": {}
   },
   "projects": {
-    "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj": {
+    "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj",
+        "projectUniqueName": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj",
         "projectName": "20241004_ASP.NET_CoreWebApp_ModelViewControl",
-        "projectPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj",
+        "projectPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj",
         "packagesPath": "C:\\Users\\ICTS23-25.432\\.nuget\\packages\\",
-        "outputPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\obj\\",
+        "outputPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

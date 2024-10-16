@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "W:\\ESD_23-25\\studente\\ICTS23-25.432\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\",
-  "Documents": [],
+  "WorkspaceRootPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241015_gestione_biblioteca\\20241015_bibliotecawebservice_asp.net_corewebapi\\models\\repositories\\librorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|solutionrelative:20241015_bibliotecawebservice_asp.net_corewebapi\\models\\repositories\\librorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241015_gestione_biblioteca\\20241015_bibliotecawebservice_asp.net_corewebapi\\models\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|solutionrelative:20241015_bibliotecawebservice_asp.net_corewebapi\\models\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,8 +18,34 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LibroRepository.cs",
+              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\LibroRepository.cs",
+              "RelativeDocumentMoniker": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\LibroRepository.cs",
+              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\LibroRepository.cs",
+              "RelativeToolTip": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\LibroRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T20:43:27.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "RelativeToolTip": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T20:44:17.999Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"

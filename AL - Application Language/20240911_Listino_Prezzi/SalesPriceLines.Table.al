@@ -27,7 +27,7 @@ table 50100 "Sales Price Lines"                                      //Use comma
 
         field(4; "Unit Price"; Decimal)
         {
-            Caption = 'Unit Price';                                  //It's used to change the name when it is translated.
+            Caption = 'Price';                                       //It's used to change the name when it is translated.
         }
 
         field(5; "Min. Qty"; Integer)

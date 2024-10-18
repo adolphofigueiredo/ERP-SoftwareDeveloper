@@ -1,5 +1,116 @@
 [
   {
+    "ContainingType": "BibliotecaWebService.Controllers.ClientiController",
+    "Method": "Post",
+    "RelativePath": "Clienti",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clienteDto",
+        "Type": "_20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.Models.Dtos.ClienteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BibliotecaWebService.Controllers.ClientiController",
+    "Method": "Get",
+    "RelativePath": "Clienti",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodiceFiscale",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nominativo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BibliotecaWebService.Controllers.ClientiController",
+    "Method": "Put",
+    "RelativePath": "Clienti",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codiceFiscale",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newValue",
+        "Type": "_20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.Models.Dtos.ClienteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BibliotecaWebService.Controllers.ClientiController",
+    "Method": "Delete",
+    "RelativePath": "Clienti",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codiceFiscale",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BibliotecaWebService.Controllers.ClientiController",
+    "Method": "Get",
+    "RelativePath": "Clienti/{codiceFiscale}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codiceFiscale",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BibliotecaWebService.Controllers.ClientiController",
+    "Method": "Count",
+    "RelativePath": "Clienti/Count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodiceFiscale",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nominativo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "_20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

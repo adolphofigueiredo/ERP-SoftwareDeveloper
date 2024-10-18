@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\C# - .Net",
+    "\\C# - .Net\\Exercises",
+    "\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl",
+    "\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models"
   ],
+  "SelectedNode": "\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models\\Mappers",
   "PreviewInSolutionExplorer": false
 }

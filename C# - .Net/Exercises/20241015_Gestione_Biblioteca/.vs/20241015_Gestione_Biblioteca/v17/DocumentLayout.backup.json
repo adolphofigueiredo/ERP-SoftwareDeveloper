@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241015_gestione_biblioteca\\20241015_bibliotecawebservice_asp.net_corewebapi\\controllers\\clienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|solutionrelative:20241015_bibliotecawebservice_asp.net_corewebapi\\controllers\\clienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,19 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClientiController.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
-              "RelativeDocumentMoniker": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
-              "RelativeToolTip": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:07:16.762Z",
-              "EditorCaption": ""
             }
           ]
         }

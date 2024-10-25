@@ -2,10 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Exercises",
+    "\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl",
+    "\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models",
+    "\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models\\Entities",
     "\\Professore",
     "\\Professore\\EsempioClassiCA",
-    "\\Professore\\EsempioClassiCA\\Automobile"
+    "\\Professore\\EsempioClassiCA\\Automobile",
+    "\\Professore\\MVC-aspnetcore\\Models",
+    "\\Professore\\MVC-aspnetcore\\Models\\Entities"
   ],
-  "SelectedNode": "\\Exercises",
+  "SelectedNode": "\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models\\ItsCorsiEsamiContext.cs",
   "PreviewInSolutionExplorer": false
 }

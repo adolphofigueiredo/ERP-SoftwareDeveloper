@@ -1,0 +1,6 @@
+@_20241024_GestioneMagazzino_HostAddress = http://localhost:5134
+
+GET {{_20241024_GestioneMagazzino_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

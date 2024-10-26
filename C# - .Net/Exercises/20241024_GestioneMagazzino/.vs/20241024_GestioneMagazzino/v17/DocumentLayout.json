@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{415C9B87-1915-48CF-84D3-E9408CCDE030}|20241024_GestioneMagazzino\\20241024_GestioneMagazzino.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241024_gestionemagazzino\\20241024_gestionemagazzino\\models\\entities\\prodottoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{415C9B87-1915-48CF-84D3-E9408CCDE030}|20241024_GestioneMagazzino\\20241024_GestioneMagazzino.csproj|solutionrelative:20241024_gestionemagazzino\\models\\entities\\prodottoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{415C9B87-1915-48CF-84D3-E9408CCDE030}|20241024_GestioneMagazzino\\20241024_GestioneMagazzino.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241024_gestionemagazzino\\20241024_gestionemagazzino\\models\\entities\\ordinefornitoredettaglioentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{415C9B87-1915-48CF-84D3-E9408CCDE030}|20241024_GestioneMagazzino\\20241024_GestioneMagazzino.csproj|solutionrelative:20241024_gestionemagazzino\\models\\entities\\ordinefornitoredettaglioentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{415C9B87-1915-48CF-84D3-E9408CCDE030}|20241024_GestioneMagazzino\\20241024_GestioneMagazzino.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241024_gestionemagazzino\\20241024_gestionemagazzino\\models\\gestionemagazzinocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{415C9B87-1915-48CF-84D3-E9408CCDE030}|20241024_GestioneMagazzino\\20241024_GestioneMagazzino.csproj|solutionrelative:20241024_gestionemagazzino\\models\\gestionemagazzinocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{415C9B87-1915-48CF-84D3-E9408CCDE030}|20241024_GestioneMagazzino\\20241024_GestioneMagazzino.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241024_gestionemagazzino\\20241024_gestionemagazzino\\models\\entities\\ordineclientedettaglioentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{415C9B87-1915-48CF-84D3-E9408CCDE030}|20241024_GestioneMagazzino\\20241024_GestioneMagazzino.csproj|solutionrelative:20241024_gestionemagazzino\\models\\entities\\ordineclientedettaglioentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{415C9B87-1915-48CF-84D3-E9408CCDE030}|20241024_GestioneMagazzino\\20241024_GestioneMagazzino.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241024_gestionemagazzino\\20241024_gestionemagazzino\\models\\entities\\movimentomagazzinoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{415C9B87-1915-48CF-84D3-E9408CCDE030}|20241024_GestioneMagazzino\\20241024_GestioneMagazzino.csproj|solutionrelative:20241024_gestionemagazzino\\models\\entities\\movimentomagazzinoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -43,83 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrdineClienteDettaglioEntity.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\20241024_GestioneMagazzino\\Models\\Entities\\OrdineClienteDettaglioEntity.cs",
-              "RelativeDocumentMoniker": "20241024_GestioneMagazzino\\Models\\Entities\\OrdineClienteDettaglioEntity.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\20241024_GestioneMagazzino\\Models\\Entities\\OrdineClienteDettaglioEntity.cs",
-              "RelativeToolTip": "20241024_GestioneMagazzino\\Models\\Entities\\OrdineClienteDettaglioEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:11:45.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrdineFornitoreDettaglioEntity.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\20241024_GestioneMagazzino\\Models\\Entities\\OrdineFornitoreDettaglioEntity.cs",
-              "RelativeDocumentMoniker": "20241024_GestioneMagazzino\\Models\\Entities\\OrdineFornitoreDettaglioEntity.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\20241024_GestioneMagazzino\\Models\\Entities\\OrdineFornitoreDettaglioEntity.cs",
-              "RelativeToolTip": "20241024_GestioneMagazzino\\Models\\Entities\\OrdineFornitoreDettaglioEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:11:49.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProdottoEntity.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\20241024_GestioneMagazzino\\Models\\Entities\\ProdottoEntity.cs",
-              "RelativeDocumentMoniker": "20241024_GestioneMagazzino\\Models\\Entities\\ProdottoEntity.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\20241024_GestioneMagazzino\\Models\\Entities\\ProdottoEntity.cs",
-              "RelativeToolTip": "20241024_GestioneMagazzino\\Models\\Entities\\ProdottoEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:11:51.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MovimentoMagazzinoEntity.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\20241024_GestioneMagazzino\\Models\\Entities\\MovimentoMagazzinoEntity.cs",
-              "RelativeDocumentMoniker": "20241024_GestioneMagazzino\\Models\\Entities\\MovimentoMagazzinoEntity.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\20241024_GestioneMagazzino\\Models\\Entities\\MovimentoMagazzinoEntity.cs",
-              "RelativeToolTip": "20241024_GestioneMagazzino\\Models\\Entities\\MovimentoMagazzinoEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:11:53.021Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GestioneMagazzinoContext.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\20241024_GestioneMagazzino\\Models\\GestioneMagazzinoContext.cs",
-              "RelativeDocumentMoniker": "20241024_GestioneMagazzino\\Models\\GestioneMagazzinoContext.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241024_GestioneMagazzino\\20241024_GestioneMagazzino\\Models\\GestioneMagazzinoContext.cs",
-              "RelativeToolTip": "20241024_GestioneMagazzino\\Models\\GestioneMagazzinoContext.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAHwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T17:29:21.709Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241015_gestione_biblioteca\\20241015_bibliotecawebservice_asp.net_corewebapi\\models\\gestionebibliotecacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|solutionrelative:20241015_bibliotecawebservice_asp.net_corewebapi\\models\\gestionebibliotecacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241015_gestione_biblioteca\\20241015_bibliotecawebservice_asp.net_corewebapi\\models\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|solutionrelative:20241015_bibliotecawebservice_asp.net_corewebapi\\models\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241015_gestione_biblioteca\\20241015_bibliotecawebservice_asp.net_corewebapi\\models\\entities\\libroentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|solutionrelative:20241015_bibliotecawebservice_asp.net_corewebapi\\models\\entities\\libroentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241015_gestione_biblioteca\\20241015_bibliotecawebservice_asp.net_corewebapi\\models\\entities\\clienteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|solutionrelative:20241015_bibliotecawebservice_asp.net_corewebapi\\models\\entities\\clienteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241015_gestione_biblioteca\\20241015_bibliotecawebservice_asp.net_corewebapi\\models\\entities\\prestitoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|solutionrelative:20241015_bibliotecawebservice_asp.net_corewebapi\\models\\entities\\prestitoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241015_gestione_biblioteca\\20241015_bibliotecawebservice_asp.net_corewebapi\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|solutionrelative:20241015_bibliotecawebservice_asp.net_corewebapi\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+      "AbsoluteMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241015_gestione_biblioteca\\20241015_bibliotecawebservice_asp.net_corewebapi\\controllers\\clienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245F8F00-A47F-4DF1-856C-D8434E69BEA7}|20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI.csproj|solutionrelative:20241015_bibliotecawebservice_asp.net_corewebapi\\controllers\\clienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,73 +34,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PrestitoEntity.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\PrestitoEntity.cs",
-              "RelativeDocumentMoniker": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\PrestitoEntity.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\PrestitoEntity.cs",
-              "RelativeToolTip": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\PrestitoEntity.cs",
+              "DocumentIndex": 0,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "RelativeToolTip": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:04:33.384Z",
+              "WhenOpened": "2024-10-25T20:57:08.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LibroEntity.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\LibroEntity.cs",
-              "RelativeDocumentMoniker": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\LibroEntity.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\LibroEntity.cs",
-              "RelativeToolTip": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\LibroEntity.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Title": "ClientiController.cs",
+              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
+              "RelativeDocumentMoniker": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
+              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
+              "RelativeToolTip": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:04:32.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClienteEntity.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\ClienteEntity.cs",
-              "RelativeDocumentMoniker": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\ClienteEntity.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\ClienteEntity.cs",
-              "RelativeToolTip": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Entities\\ClienteEntity.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:04:31.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReadMe.md",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\ReadMe.md",
-              "RelativeDocumentMoniker": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\ReadMe.md",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\ReadMe.md",
-              "RelativeToolTip": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\ReadMe.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2024-10-25T10:31:36.187Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GestioneBibliotecaContext.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\GestioneBibliotecaContext.cs",
-              "RelativeDocumentMoniker": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\GestioneBibliotecaContext.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\GestioneBibliotecaContext.cs",
-              "RelativeToolTip": "20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\GestioneBibliotecaContext.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T17:55:55.238Z",
+              "WhenOpened": "2024-10-25T20:43:48.172Z",
               "EditorCaption": ""
             }
           ]

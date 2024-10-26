@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241004_asp.net_corewebapp_modelviewcontrol\\models\\repositories\\corsirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|solutionrelative:models\\repositories\\corsirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241004_asp.net_corewebapp_modelviewcontrol\\models\\repositories\\studentirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|solutionrelative:models\\repositories\\studentirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241004_asp.net_corewebapp_modelviewcontrol\\controllers\\corsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|solutionrelative:controllers\\corsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,27 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CorsiRepository.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models\\Repositories\\CorsiRepository.cs",
-              "RelativeDocumentMoniker": "Models\\Repositories\\CorsiRepository.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models\\Repositories\\CorsiRepository.cs",
-              "RelativeToolTip": "Models\\Repositories\\CorsiRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABPAAAAAAAAAA==",
+              "Title": "CorsiController.cs",
+              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Controllers\\CorsiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CorsiController.cs",
+              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Controllers\\CorsiController.cs",
+              "RelativeToolTip": "Controllers\\CorsiController.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAHwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T20:56:54.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StudentiRepository.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models\\Repositories\\StudentiRepository.cs",
-              "RelativeDocumentMoniker": "Models\\Repositories\\StudentiRepository.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models\\Repositories\\StudentiRepository.cs",
-              "RelativeToolTip": "Models\\Repositories\\StudentiRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T20:56:53.735Z",
+              "WhenOpened": "2024-10-25T21:23:42.963Z",
               "EditorCaption": ""
             }
           ]

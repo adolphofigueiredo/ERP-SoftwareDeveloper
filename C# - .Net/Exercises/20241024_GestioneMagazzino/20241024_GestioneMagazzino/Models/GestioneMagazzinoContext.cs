@@ -31,7 +31,7 @@ namespace _20241024_GestioneMagazzino.Models
                 t.Property(p => p.Id)
                 .IsRequired();
 
-                t.Property(p => p.Name)
+                t.Property(p => p.Nome)
                 .HasMaxLength(250) .IsRequired();
 
                 t.HasMany(p => p.Ordini)
@@ -75,6 +75,10 @@ namespace _20241024_GestioneMagazzino.Models
                 .WithMany(p => p.Dettagli)
                 .HasForeignKey(p => p.IdOrdineClienteTesta);
 
+                t.HasOne(p => p.Prodotto)
+                .WithMany()
+                .HasForeignKey(p => p.IdProdotto);
+
             });
 
             base.OnModelCreating(modelBuilder);
@@ -86,7 +90,7 @@ namespace _20241024_GestioneMagazzino.Models
                 t.Property(p => p.Id)
                 .IsRequired();
 
-                t.Property(p => p.Name)
+                t.Property(p => p.Nome)
                 .HasMaxLength(250).IsRequired();
 
                 t.HasMany(p => p.Ordini)
@@ -130,6 +134,10 @@ namespace _20241024_GestioneMagazzino.Models
                 .WithMany(p => p.Dettagli)
                 .HasForeignKey(p => p.IdOrdineFornitoreTesta);
 
+                t.HasOne(p => p.Prodotto)
+                .WithMany()
+                .HasForeignKey(p => p.IdProdotto);
+
             });
 
             base.OnModelCreating(modelBuilder);
@@ -151,6 +159,21 @@ namespace _20241024_GestioneMagazzino.Models
 
                 t.Property(p => p.Id)
                 .IsRequired();
+
+                t.HasOne(p => p.OrdineClienteDettaglio)
+                .WithMany()
+                .HasForeignKey(p => p.IdOrdineClienteDettaglio)
+                .OnDelete(DeleteBehavior.NoAction);
+
+                t.HasOne(p => p.OrdineFornitoreDettaglio)
+                .WithMany()
+                .HasForeignKey(p => p.IdOrdineFornitoreDettaglio)
+                .OnDelete(DeleteBehavior.NoAction);
+
+                t.HasOne(p => p.Prodotto)
+                .WithMany()
+                .HasForeignKey(p => p.IdProdotto)
+                .OnDelete(DeleteBehavior.NoAction);
 
             });
         }

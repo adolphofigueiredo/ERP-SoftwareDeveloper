@@ -1,12 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|z:\\erp-softwaredeveloper\\c# - .net\\exercises\\20241004_asp.net_corewebapp_modelviewcontrol\\controllers\\corsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{587389BB-13A7-4B69-A607-40A7CE6EA68C}|20241004_ASP.NET_CoreWebApp_ModelViewControl.csproj|solutionrelative:controllers\\corsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -23,23 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CorsiController.cs",
-              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Controllers\\CorsiController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CorsiController.cs",
-              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Controllers\\CorsiController.cs",
-              "RelativeToolTip": "Controllers\\CorsiController.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAHwAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T21:23:42.963Z",
-              "EditorCaption": ""
             }
           ]
         }

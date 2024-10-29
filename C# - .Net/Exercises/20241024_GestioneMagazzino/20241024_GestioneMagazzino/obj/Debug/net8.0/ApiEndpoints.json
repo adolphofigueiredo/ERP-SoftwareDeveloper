@@ -1,5 +1,53 @@
 [
   {
+    "ContainingType": "_20241024_GestioneMagazzino.Controllers.ClienteController",
+    "Method": "Post",
+    "RelativePath": "Cliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clienteDto",
+        "Type": "_20241024_GestioneMagazzino.Models.Dto.ClienteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "_20241024_GestioneMagazzino.Controllers.FornitoreController",
+    "Method": "Post",
+    "RelativePath": "Fornitore",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fornitoreDto",
+        "Type": "_20241024_GestioneMagazzino.Models.Dto.FornitoreDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "_20241024_GestioneMagazzino.Controllers.ProdottoController",
+    "Method": "Post",
+    "RelativePath": "Prodotto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prodottoDto",
+        "Type": "_20241024_GestioneMagazzino.Models.Dto.ProdottoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "_20241024_GestioneMagazzino.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

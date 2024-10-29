@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("20241015_BibliotecaWebService_ASP.NET_CoreWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54b39606e2c0eabd1bc7bbf17a2bfe1e0f2c66ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afadbb2a1b3093c866d493b2030a79220df063c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("20241015_BibliotecaWebService_ASP.NET_CoreWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("20241015_BibliotecaWebService_ASP.NET_CoreWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

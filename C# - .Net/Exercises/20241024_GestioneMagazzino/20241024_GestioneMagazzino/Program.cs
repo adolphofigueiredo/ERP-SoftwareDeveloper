@@ -3,6 +3,7 @@
 
 
 using _20241024_GestioneMagazzino.Models;
+using _20241024_GestioneMagazzino.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,10 @@ builder.Services.AddDbContext<GestioneMagazzinoContext>(options =>
     options.UseSqlServer(connectionstring);
 
 });
+
+builder.Services.AddScoped<ClienteRepository>();
+builder.Services.AddScoped<FornitoreRepository>();
+builder.Services.AddScoped<ProdottoRepository>();
 
 
 builder.Services.AddControllers();

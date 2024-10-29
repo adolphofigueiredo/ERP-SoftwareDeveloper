@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = Z:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241004_ASP.NET_CoreWebApp_ModelViewControl
 build_property._RazorSourceGeneratorDebug = 
 
+[Z:/ERP-SoftwareDeveloper/C\# - .Net/Exercises/20241004_ASP.NET_CoreWebApp_ModelViewControl/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = SW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [Z:/ERP-SoftwareDeveloper/C\# - .Net/Exercises/20241004_ASP.NET_CoreWebApp_ModelViewControl/Views/Corsi/Aggiungi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29yc2lcQWdnaXVuZ2kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace _20241024_GestioneMagazzino.Controllers
 {
-    public class ClienteController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class ClienteController : ControllerBase
     {
         private readonly ClienteRepository _clienteRepository;
 
@@ -16,35 +18,14 @@ namespace _20241024_GestioneMagazzino.Controllers
         {
             _clienteRepository = clienteRepository;
         }
-        public IActionResult Index([FromQuery] ClienteFilter filter)
-        {
-            var elementiTrovati = _clienteRepository.Find(filter);
-
-            List <ClienteDto> clientiDto = elementiTrovati
-                .Select(r => ClienteMapper.Map(r))
-                .ToList();
-
-            return View(new ClientiIndexViewModel()
-            {
-                Filter = filter,
-                ElementiTrovati = clientiDto,
-            });
-        }
-        public IActionResult Aggiungi()
-        {
-            return View();
-        }
+        
         [HttpPost]
-        public IActionResult Aggiungi(ClienteDto clienteDto)
+        public IActionResult Post(ClienteDto clienteDto)
         {
-            if (ModelState.IsValid != true)
-            {
-                return View(clienteDto);
-            }
-
-            _clienteRepository.Post(ClienteMapper.Map(clienteDto));
-            return Redirect(Url.Action(nameof(Index),"clienti"));
-
+            var clienteEntity = ClientiMapper.From(clienteDto);
+            _clienteRepository.Post(clienteEntity);
+            return Ok();
         }
+        
     }
 }

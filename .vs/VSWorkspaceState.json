@@ -2,10 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\C# - .Net",
-    "\\C# - .Net\\Exercises",
-    "\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl",
-    "\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models"
+    "\\C# - .Net\\Exercises\\20241001_BusinessLayer",
+    "\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models",
+    "\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Dtos",
+    "\\C# - .Net\\Professore",
+    "\\C# - .Net\\Professore\\BusinessLayer\\Models",
+    "\\C# - .Net\\Professore\\MVC-aspnetcore\\Controllers",
+    "\\C# - .Net\\Professore\\MVC-aspnetcore\\Models",
+    "\\C# - .Net\\Professore\\MVC-aspnetcore\\Views",
+    "\\C# - .Net\\Professore\\MVC-aspnetcore\\Views\\Studenti"
   ],
-  "SelectedNode": "\\C# - .Net\\Exercises\\20241004_ASP.NET_CoreWebApp_ModelViewControl\\Models\\Mappers",
+  "SelectedNode": "\\C# - .Net\\Professore\\ITS_Esempi.sln",
   "PreviewInSolutionExplorer": false
 }

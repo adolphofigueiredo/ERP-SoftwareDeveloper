@@ -8,5 +8,6 @@
         public int IdProdotto { get; set; }
         public virtual ProdottoEntity Prodotto { get; set; }
         public decimal Quantita { get; set; }
+
     }
 }

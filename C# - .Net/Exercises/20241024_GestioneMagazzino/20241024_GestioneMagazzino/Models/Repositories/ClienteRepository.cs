@@ -18,14 +18,12 @@ namespace _20241024_GestioneMagazzino.Repositories
         public ICollection<ClienteEntity> Find(ClienteFilter filter)
         { 
             IQueryable<ClienteEntity> query = ApplyFilter(_ctx, filter);
-
             return query.ToList();
         }
 
         public int Count(ClienteFilter filter)
         {
-            IQueryable<ClienteEntity> query = ApplyFilter(_ctx, filter);
-            
+            IQueryable<ClienteEntity> query = ApplyFilter(_ctx, filter);            
             return query.Count();
         }
 
@@ -35,28 +33,35 @@ namespace _20241024_GestioneMagazzino.Repositories
 
             if(!string.IsNullOrEmpty(filter.Nome))
                 query = query.Where(r => r.Nome.Contains(filter.Nome));
-
             return query;
         }
 
         public ClienteEntity Get(int id)
         {
-            return _ctx.Clienti.FirstOrDefault(r => r.Id == id);
-        
+            return _ctx.Clienti.FirstOrDefault(r => r.Id == id);        
         }
 
         public ClienteEntity Post(ClienteEntity input)
         {
-            _ctx.Clienti.Add(input);
-            _ctx.SaveChanges();
-            return input;
+            try
+            {
+                _ctx.Clienti.Add(input);
+                _ctx.SaveChanges();
+                return input;
+            }
+        
+            catch (Exception ex)
+            {
+                throw new Exception("Error adding a client: " + ex.Message);
+            }
         }
+
 
         public ClienteEntity Put(int id, ClienteEntity input)
         {
             var dbValue = _ctx.Clienti.FirstOrDefault(r =>r.Id == id);
 
-            if (dbValue != null) throw new ArgumentException($"Nessun dato trovato con id:{id}");
+            if (dbValue == null) throw new ArgumentException($"Nessun dato trovato con id:{id}");
 
             dbValue.Nome = input.Nome;
 
@@ -68,10 +73,9 @@ namespace _20241024_GestioneMagazzino.Repositories
         {
             var dbValue = _ctx.Clienti.FirstOrDefault(r => r.Id == id);
 
-            if (dbValue != null) throw new ArgumentException($"Nessun dato trovato con id:{id}");
+            if (dbValue == null) throw new ArgumentException($"Nessun dato trovato con id:{id}");
 
             _ctx.Clienti.Remove(dbValue);
-
             _ctx.SaveChanges();
             return dbValue;
         }

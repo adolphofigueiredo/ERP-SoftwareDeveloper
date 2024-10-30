@@ -21,6 +21,12 @@ builder.Services.AddDbContext<GestioneMagazzinoContext>(options =>
 builder.Services.AddScoped<ClienteRepository>();
 builder.Services.AddScoped<FornitoreRepository>();
 builder.Services.AddScoped<ProdottoRepository>();
+builder.Services.AddScoped<OrdineClienteTestaRepository>();
+builder.Services.AddScoped<OrdineClienteDettaglioRepository>();
+builder.Services.AddScoped<OrdineFornitoreTestaRepository>();
+builder.Services.AddScoped<OrdineFornitoreTestaRepository>();
+builder.Services.AddScoped<MovimentoMagazzinoRepository>();
+
 
 
 builder.Services.AddControllers();

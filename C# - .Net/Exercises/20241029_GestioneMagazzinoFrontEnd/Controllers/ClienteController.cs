@@ -14,11 +14,8 @@ namespace _20241029_GestioneMagazzinoFrontEnd.Controllers
             return View();
         }
 
-        
-        
-        
         [HttpPost]
-        public async Task< IActionResult> New(ClienteDto clienteDto)
+        public async Task<IActionResult> New(ClienteDto clienteDto)
         {
             if (ModelState.IsValid != true)
             {
@@ -38,18 +35,26 @@ namespace _20241029_GestioneMagazzinoFrontEnd.Controllers
         }
 
         [HttpGet]
-        public async Task <IActionResult> Index([FromQuery] ClienteFilter filter)
+        public async Task<IActionResult> Index([FromQuery] ClienteFilter filter)
         {
+            if (ModelState.IsValid != true)
+            {
 
+                return View(filter);
 
-            /*
-            var clientiTrovati = _clientiRepository.Find(filter);
-            List<StudenteDto> studentiDto = studentiTrovati
-                .Select(r => StudenteMapper.Map(r))
-                .ToList();
-            */
+            }
 
+            var httpClient = new HttpClient()
+            {
+                BaseAddress = new Uri("https://localhost:7041"),
+            };
 
+            await httpClient.PostAsJsonAsync("Cliente", filter);
 
+            return Redirect(Url.Action(nameof(Index), "index"));
+
+            
         }
     }
+    
+}

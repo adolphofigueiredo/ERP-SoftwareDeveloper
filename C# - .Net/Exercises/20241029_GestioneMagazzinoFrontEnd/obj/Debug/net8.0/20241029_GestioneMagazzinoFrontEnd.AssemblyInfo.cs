@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("20241029_GestioneMagazzinoFrontEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afadbb2a1b3093c866d493b2030a79220df063c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da414ca1695111bf0cc9c1696941ac686bed025e")]
 [assembly: System.Reflection.AssemblyProductAttribute("20241029_GestioneMagazzinoFrontEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("20241029_GestioneMagazzinoFrontEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

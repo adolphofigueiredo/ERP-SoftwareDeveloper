@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "Z:\\ERP-SoftwareDeveloper\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\ClientiMapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\ClientiMapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Filters\\ClienteFilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Filters\\ClienteFilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,8 +26,47 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClientiMapper.cs",
+              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\ClientiMapper.cs",
+              "RelativeDocumentMoniker": "C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\ClientiMapper.cs",
+              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\ClientiMapper.cs",
+              "RelativeToolTip": "C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\ClientiMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T10:05:59.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClienteFilter.cs",
+              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Filters\\ClienteFilter.cs",
+              "RelativeDocumentMoniker": "C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Filters\\ClienteFilter.cs",
+              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Filters\\ClienteFilter.cs",
+              "RelativeToolTip": "C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Filters\\ClienteFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T10:05:56.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "RelativeToolTip": "C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories\\ClienteRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T09:18:10.169Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -22,6 +78,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientiController.cs",
+              "DocumentMoniker": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
+              "RelativeDocumentMoniker": "C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
+              "ToolTip": "Z:\\ERP-SoftwareDeveloper\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
+              "RelativeToolTip": "C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T09:17:46.259Z",
+              "EditorCaption": ""
             }
           ]
         }

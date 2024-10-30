@@ -1,6 +1,25 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<ClienteDto>
+
 @{
+    ViewBag.Title = "Lista de Clientes";
 }
-<h1>Cliente Index!!</h1>
+
+<h1>Clientes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Codice</th>
+            <th>Nome</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var cliente in Model)
+            {
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.Nome</td>
+                </tr>
+            }
+    </tbody>
+</table>

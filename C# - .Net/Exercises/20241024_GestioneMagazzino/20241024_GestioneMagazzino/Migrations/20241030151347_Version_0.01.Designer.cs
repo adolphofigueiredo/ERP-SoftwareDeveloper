@@ -12,7 +12,7 @@ using _20241024_GestioneMagazzino.Models;
 namespace _20241024_GestioneMagazzino.Migrations
 {
     [DbContext(typeof(GestioneMagazzinoContext))]
-    [Migration("20241025200347_Version_0.01")]
+    [Migration("20241030151347_Version_0.01")]
     partial class Version_001
     {
         /// <inheritdoc />
@@ -33,7 +33,7 @@ namespace _20241024_GestioneMagazzino.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
@@ -51,7 +51,7 @@ namespace _20241024_GestioneMagazzino.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");

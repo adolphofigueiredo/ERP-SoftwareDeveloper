@@ -2,8 +2,8 @@
 {
     public class OrdineClienteTestaFilter
     {
-        public int Id { get; set; }
-        public int IdCliente { get; set; }
-        public DateOnly Data { get; set; }
+        public int? IdCliente { get; set; }
+        public DateOnly? DataInizio { get; set; }
+        public DateOnly? DataFine { get; set; }
     }
 }

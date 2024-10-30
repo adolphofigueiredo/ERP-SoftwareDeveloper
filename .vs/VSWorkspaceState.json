@@ -2,16 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\C# - .Net",
-    "\\C# - .Net\\Exercises\\20241001_BusinessLayer",
-    "\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models",
-    "\\C# - .Net\\Exercises\\20241001_BusinessLayer\\Models\\Dtos",
-    "\\C# - .Net\\Professore",
-    "\\C# - .Net\\Professore\\BusinessLayer\\Models",
-    "\\C# - .Net\\Professore\\MVC-aspnetcore\\Controllers",
-    "\\C# - .Net\\Professore\\MVC-aspnetcore\\Models",
-    "\\C# - .Net\\Professore\\MVC-aspnetcore\\Views",
-    "\\C# - .Net\\Professore\\MVC-aspnetcore\\Views\\Studenti"
+    "\\C# - .Net\\Exercises",
+    "\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca",
+    "\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI",
+    "\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers",
+    "\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models",
+    "\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Filters",
+    "\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Models\\Repositories",
+    "\\C# - .Net\\Professore\\MVC-aspnetcore",
+    "\\C# - .Net\\Professore\\MVC-aspnetcore\\Controllers"
   ],
-  "SelectedNode": "\\C# - .Net\\Professore\\ITS_Esempi.sln",
+  "SelectedNode": "\\C# - .Net\\Exercises\\20241015_Gestione_Biblioteca\\20241015_BibliotecaWebService_ASP.NET_CoreWebAPI\\Controllers\\ClientiController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -12,11 +12,9 @@ namespace _20241024_GestioneMagazzino.Models.Mappers
 
             return new ClienteDto()
             {
-
+                Id = e.Id,
                 Nome = e.Nome,
-
             };
-
         }
         public static ClienteEntity Map(ClienteDto e)
         {
@@ -25,33 +23,8 @@ namespace _20241024_GestioneMagazzino.Models.Mappers
 
             return new ClienteEntity()
             {
-
+                Id = e.Id,
                 Nome = e.Nome,
-
-            };
-
-        }
-        public static ClienteDto From(ClienteEntity e)
-        {
-
-            if (e == null) return null;
-
-            return new ClienteDto()
-            {
-
-                Nome = e.Nome,
-
-            };
-        }
-        public static ClienteEntity From(ClienteDto e)
-        {
-            if (e == null) return null;
-
-            return new ClienteEntity()
-            {
-
-                Nome = e.Nome,
-
             };
         }
     }

@@ -7,66 +7,31 @@ namespace _20241024_GestioneMagazzino.Models.Mappers
     {
         public static ProdottoDto Map(ProdottoEntity e)
         {
-
             if (e == null) return null;
 
             return new ProdottoDto()
             {
-
+                Id = e.Id,
                 Descrizione = e.Descrizione,
                 Altezza = e.Altezza,
                 Larghezza = e.Larghezza,
-                Profondita = e.Larghezza,
-                Peso = e.Peso,
+                Profondita = e.Profondita,
+                Peso = e.Peso
             };
-
         }
+
         public static ProdottoEntity Map(ProdottoDto e)
         {
-
             if (e == null) return null;
 
             return new ProdottoEntity()
             {
-
+                Id = e.Id,
                 Descrizione = e.Descrizione,
                 Altezza = e.Altezza,
                 Larghezza = e.Larghezza,
-                Profondita = e.Larghezza,
-                Peso = e.Peso,
-
-            };
-
-        }
-        public static ProdottoDto From(ProdottoEntity e)
-        {
-
-            if (e == null) return null;
-
-            return new ProdottoDto()
-            {
-
-                Descrizione = e.Descrizione,
-                Altezza = e.Altezza,
-                Larghezza = e.Larghezza,
-                Profondita = e.Larghezza,
-                Peso = e.Peso,
-
-            };
-        }
-        public static ProdottoEntity From(ProdottoDto e)
-        {
-            if (e == null) return null;
-
-            return new ProdottoEntity()
-            {
-
-                Descrizione = e.Descrizione,
-                Altezza = e.Altezza,
-                Larghezza = e.Larghezza,
-                Profondita = e.Larghezza,
-                Peso = e.Peso,
-
+                Profondita = e.Profondita,
+                Peso = e.Peso
             };
         }
     }

@@ -7,5 +7,9 @@
         public virtual ClienteEntity Cliente { get; set; }
         public DateOnly Data { get; set; }
         public virtual ICollection<OrdineClienteDettaglioEntity> Dettagli { get; set; }
+
+        public OrdineClienteTestaEntity()
+        {
+        }
     }
 }

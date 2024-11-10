@@ -14,12 +14,11 @@ pageextension 50101 TE50101 extends "Customer Card"
                     SalesPriceLinesList: Page "Sales Price Lines";
                     SalesPriceLines: Record "Sales Price Lines";
                 begin
-                    // filtro tutti i prezzi per il cliente
-                    SalesPriceLines.SetRange("Customer No.", Rec."No.");
-                    // imposto i filtri sulla pagina dei prezzi e la apro
-                    SalesPriceLinesList.SetTableView(SalesPriceLines);
-                    SalesPriceLinesList.Run();
+                    SalesPriceLines.SetRange("Customer No.", Rec."No.");  //Filter all the prices for this customer.
+                    SalesPriceLinesList.SetTableView(SalesPriceLines);    //Set the filters on the price page and open it.
+                    SalesPriceLinesList.Run();                            //Opening
                 end;
+
             }
         }
     }

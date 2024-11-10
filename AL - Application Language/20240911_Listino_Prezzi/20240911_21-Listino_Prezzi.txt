@@ -1,4 +1,5 @@
 Obiettivo:
+
 Si vuole creare un sistema di Listino prezzi, collegati a clienti ed
 articoli, in modo tale che all'inserimento di una riga di un ordine di
 vendita, il prezzo venga calcolato sulla base di questi listini inseriti
@@ -32,6 +33,7 @@ Funzione di Calcolo Prezzo:
 Quantity: Integer): Decimal
 
 La Funzione Deve:
+
 - Trovare le righe di "Sales Price Lines" abilitate, collegate alla
 coppia cliente-articolo e avente "Min. Qty" <= Quantity
 
@@ -42,7 +44,9 @@ trova niente deve ritornare 0
    Collegarsi al trigger OnAfterValidate del campo Quantity della Sales
 Line:
       Se la Quantity inserita è maggiore di zero e se la riga è di tipo
+
 Articolo allora:
+
          Lanciare la funzione GetSalesUnitPrice() con i parametri
 corretti
          Se il valore ritornato è maggiore di 0 allora:
@@ -54,72 +58,82 @@ Price".
             Le righe di commento hanno SalesLine.Type :=
 SalesLine.Type::" ".
 
+Eliminazione Righe Collegate al Cliente:
 
+- Creare una tableextension della tabella "Customer".
 
+- Collegarsi al trigger OnAfterDelete della tabella Customer ed eliminare
+tutte le "Sales Price Lines" collegate.
 
+Eliminazione Righe Collegate all'Articolo:
 
+- Creare una tableextension della tabella "Item".
 
-
-
-Eliminazione righe collegate al cliente
-    - Creare una tableextension della tabella "Customer"
-    - Collegarsi al trigger OnAfterDelete della tabella Customer 
-        ed eliminare tutte le "Sales Price Lines" collegate
-
-
-Eliminazione righe collegate all'articolo
-    - Creare una tableextension della tabella "Item"
-    - Collegarsi al trigger OnAfterDelete della tabella Item 
-        ed eliminare tutte le "Sales Price Lines" collegate
+- Collegarsi al trigger OnAfterDelete della tabella Item ed eliminare
+tutte le "Sales Price Lines" collegate.
 
 Aggiunnte 1:
-    - Dalla scheda e della lista clienti aggiungere un pulsante 
-	per aprire la pagina "Sales Price Lines List" 
-        filtrata per il cliente su cui stiamo lavorando
-    
-    - Dalla scheda e dalla lista articoli aggiungere un pulsante
-        per aprire la pagina "Sales Price Lines List" 
-        filtrata per l'articolo su cui stiamo lavorando
-    
-    - modificare la funzione GetSalesUnitPrice:
-	Nel caso in cui non venga trovato nessun prezzo corrispondente
-	allora invece di ritornare 0, ritornare il campo "Unit Price" dell'articolo
-    
-    - Pulsante "crea ordine"
-	Aggiungere un pulsante nella lista dei prezzi chiamato "Crea Ordine".
-	Selezionate N righe nella pagina dei prezzi e cliccando sul pulsante "Crea Ordine",
-	il sistema deve creare un ordine di vendita sul cliente delle righe selezionate
-        e inserire le righe dell'ordine formate dagli articolo, prezzi e quantità dati dalle righe di listino selezionate.
-	Se si selezionano righe di listino che hanno clienti diversi il sistema deve andare in errore.
-    	AIUTO: Per ottenere tutti i record selezionati all'interno di una pagina utilizzare la funzione
-        Currpage.SetSelectionFilter(VariabileRecord)
 
+- Dalla scheda e della lista clienti aggiungere un pulsante per aprire
+la pagina "Sales Price Lines List" filtrata per il cliente su cui stiamo
+lavorando.
+
+- Dalla scheda e dalla lista articoli aggiungere un pulsante per aprire
+la pagina "Sales Price Lines List" filtrata per l'articolo su cui stiamo
+lavorando.
+
+- Modificare La Funzione GetSalesUnitPrice:
+   Nel caso in cui non venga trovato nessun prezzo corrispondente allora
+invece di ritornare 0, ritornare il campo "Unit Price" dell'articolo.
+
+- Pulsante "crea ordine":
+   Aggiungere un pulsante nella lista dei prezzi chiamato "Crea Ordine".
+   Selezionate N righe nella pagina dei prezzi e cliccando sul pulsante
+"Crea Ordine", il sistema deve creare un ordine di vendita sul cliente
+delle righe selezionate e inserire le righe dell'ordine formate dagli
+articolo, prezzi e quantità dati dalle righe di listino selezionate.
+Se si selezionano righe di listino che hanno clienti diversi il sistema
+deve andare in errore. AIUTO: Per ottenere tutti i record selezionati
+all'interno di una pagina utilizzare la funzione
+Currpage.SetSelectionFilter(VariabileRecord).
 
 Aggiunte 2:
-    - Creare una codeunit "Sales Price Management":
-        Spostare la funzione di ricerca del prezzo e della creazione dell'ordine di vendita all'interno della codeunit
+
+- Creare una codeunit "Sales Price Management":
+   Spostare la funzione di ricerca del prezzo e della creazione
+dell'ordine di vendita all'interno della codeunit.
+
+- Collegamento evento:
+
+   All'interno della codeunit creata sopra, collegarsi all'evento
+OnBeforeReleaseSalesDoc della codeunit "Release Sales Document" questo
+farà si che potremmo scrivere del codice che verrà eseguito prima del
+rilascio di un documento di vendita.
+   
+- All'interno dell'evento:
+
+Lanciare la funzione di ricerca del prezzo minimo per ogni riga
+Se trovo almeno un prezzo minimo minore per una riga dell'ordine, allora
+chiedere conferma all'utente di continuare "Trovato prezzo inferiore per
+la riga X dell'ordine Y, continuare?" nel caso di un no da parte
+dell'utente bloccare l'esecuzione.
     
-    - Collegamento evento: 
-        - All'interno della codeunit creata sopra, 
-          collegarsi all'evento OnBeforeReleaseSalesDoc della codeunit "Release Sales Document"
-          questo farà si che potremmo scrivere del codice che verrà eseguito prima del rilascio di un documento di vendita.
-	- All'interno dell'evento:
-            Lanciare la funzione di ricerca del prezzo minimo per ogni riga
-            Se trovo almeno un prezzo minimo minore per una riga dell'ordine, 
-            allora chiedere conferma all'utente di continuare 
-            "Trovato prezzo inferiore per la riga X dell'ordine Y, continuare?"
-            nel caso di un no da parte dell'utente bloccare l'esecuzione  
+- Utilizzo Funzioni di sistema:
     
-    - Utilizzo funzioni di sistema:
-        Aggiungere altri 4 campi nella tabella "Sales Price Lines":
-        - Starting Date : Date 
-            rapprensenta la data di inizio del prezzo
-        - Date Duration : DateFormula 
-            qui possiamo inserire la formula con cui calcolare la data finale
-        - Ending Date : Date 
-            rapprensenta la data di fine del prezzo
-            inserita manualmente e/o calcolata al validate del campo "Date Duration" e "Starting Date"
-            Al validate del campo azzera il campo "Date Duration"
-        - Creation User Id : Text[50] 
-            Campo non editabile
-            Da compilare in automatico all'inserimento di un record, contiene l'utente che sta inserendo il record
+   Aggiungere altri 4 campi nella tabella "Sales Price Lines":
+      
+      Starting Date : Date
+         Rapprensenta la data di inizio del prezzo.
+
+      Date Duration : DateFormula
+         Qui possiamo inserire la formula con cui calcolare la data finale.
+
+      Ending Date : Date
+         Rrapprensenta la data di fine del prezzo inserita manualmente
+e/o calcolata al validate del campo "Date Duration" e "Starting Date". Al
+validate del campo azzera il campo "Date Duration".
+   
+      Creation User Id : Text[50]
+         Campo non editabile.
+         Da compilare in automatico all'inserimento di un record,
+contiene l'utente che sta inserendo il record.

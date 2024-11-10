@@ -41,11 +41,11 @@ table 50100 "Sales Price Lines"                                      //Use comma
         }
         field(7; "Starting Date"; Date)
         {
-            Caption = 'Starting Date';
+            Caption = 'Starting Date';                               //It's used to change the name when it is translated.
         }
         field(8; "Date Duration"; DateFormula)
         {
-            Caption = 'Date Duration';
+            Caption = 'Date Duration';                               //It's used to change the name when it is translated.
 
             trigger OnValidate()
             begin
@@ -55,7 +55,7 @@ table 50100 "Sales Price Lines"                                      //Use comma
         }
         field(9; "Ending Date"; Date)
         {
-            Caption = 'Ending Date';
+            Caption = 'Ending Date';                                 //It's used to change the name when it is translated.
 
             trigger OnValidate()
             begin
@@ -64,8 +64,8 @@ table 50100 "Sales Price Lines"                                      //Use comma
         }
         field(10; "Creation User Id"; Text[50])
         {
-            Caption = 'Creation User Id';
-            Editable = false;
+            Caption = 'Creation User Id';                            //It's used to change the name when it is translated.
+            Editable = false;                                        //Sets a value that indicates whether a field, page, or control can be edited through the UI.
         }
     }
 

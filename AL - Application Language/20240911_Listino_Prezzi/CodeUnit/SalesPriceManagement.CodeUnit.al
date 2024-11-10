@@ -1,58 +1,50 @@
 codeunit 50100 "Sales Price Management"
 {
-    // collegamento all'evento di rilascio del documento di vendita
+    //Subscribing to the sales document release event.
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Release Sales Document", 'OnBeforeReleaseSalesDoc', '', false, false)]
     local procedure OnBeforeReleaseSalesDoc(var SalesHeader: Record "Sales Header"; PreviewMode: Boolean; var IsHandled: Boolean; SkipCheckReleaseRestrictions: Boolean)
     var
         SalesLine: Record "Sales Line";
         Price: Decimal;
     begin
-        // filtro tutte le righe collegate alla testata dell'OdV passata come parametro all'evento
-        SalesLine.SetRange("Document Type", SalesHeader."Document Type");
-        SalesLine.SetRange("Document No.", SalesHeader."No.");
-        SalesLine.SetRange(Type, Enum::"Sales Line Type"::Item);
+        //Filter all the lines connected to the sales order header passed as a parameter to the event.
+        SalesLine.SetRange("Document Type", SalesHeader."Document Type"); //Set the filters for document type.
+        SalesLine.SetRange("Document No.", SalesHeader."No.");            //Set the filters for document number.
+        SalesLine.SetRange(Type, Enum::"Sales Line Type"::Item);          //Set the filters for item type.
         if SalesLine.FindSet() then
-            // ciclo le righe trovate
-            repeat
-                // per ogni riga calcolo il prezzo minore dal listino prezzi
+            repeat                                                        //Loop through the found lines.
+                                                                          //For each line, calculate the lowest
+                                                                          //price from the price list.
                 Price := GetSalesUnitPrice(SalesLine."Sell-to Customer No.", SalesLine."No.", SalesLine.Quantity);
-                // se trovo un prezzo inferiore allora chiedo conferma all'utente per proseguire 
-                if (Price > 0) and (SalesLine."Unit Price" > Price) then begin
-                    if not Confirm('Trovato prezzo inferiore per la riga %1 dell''ordine %2, continuare?',
+                if (Price > 0) and (SalesLine."Unit Price" > Price) then begin //If a lower price is found, ask
+                                                                               //the user for confirmation to proceed
+                    if not Confirm('Trovato prezzo inferiore per la riga %1 dell''ordine %2, continuare?',   //If the user selects OK, update the
+                                                                                                             //sales price with the found price.
                                     true, SalesLine."Line No.", SalesLine."Document No.") then
                         Error('Esecuzione interrotta');
-
-                    // se l'utente seleziona OK modifico il prezzo di vendita con quello trovato
-                    SalesLine.Validate("Unit Price", Price);
-                    SalesLine.Modify(true);
+                    SalesLine.Validate("Unit Price", Price);              //If the user selects OK, update the sales
+                    SalesLine.Modify(true);                               //price with the found price.
                 end
             until SalesLine.Next() = 0;
     end;
 
-    // funzione per trovare il prezzo minimo dati in input i dati di cliente, articolo e quantità
     procedure GetSalesUnitPrice(CustomerNo: Code[20]; ItemNo: Code[20]; Quantity: Integer): Decimal
+    //Function created to find the minimum price given the input data for customer, item, and quantity.
     var
         SalesPriceLines: Record "Sales Price Lines";
         Item: Record Item;
     begin
-        // ordina i prezzi per unit price per prendere il più piccolo
-        SalesPriceLines.SetCurrentKey("Unit Price");
-        SalesPriceLines.Ascending(true);
-        // imposta i filtri per cliente, articolo e quantità passati in input alla funzione
-        SalesPriceLines.SetRange("Customer No.", CustomerNo);
-        SalesPriceLines.SetRange("Item No.", ItemNo);
-        SalesPriceLines.SetFilter("Min. Qty", '<=%1', Quantity);
-        // imposta il filtro per trovare solo i record Abilitati
-        SalesPriceLines.SetRange(Enabled, true);
-        // se ne trovo almeno uno e lo prende dal database
-        if SalesPriceLines.FindFirst() then
-            // allora ritorna il valore dello Unit Price trovato 
-            exit(SalesPriceLines."Unit Price")
+        SalesPriceLines.SetCurrentKey("Unit Price");                 //Selecting a key for this table.
+        SalesPriceLines.Ascending(true);                             //Sort the prices by unit price to get the lowest.
+        SalesPriceLines.SetRange("Customer No.", CustomerNo);        //Set the filters for customer.
+        SalesPriceLines.SetRange("Item No.", ItemNo);                //Set the filters for item.
+        SalesPriceLines.SetFilter("Min. Qty", '<=%1', Quantity);     //Set the filters for quantity.
+        SalesPriceLines.SetRange(Enabled, true);                     //Set the filter to find only Enabled records.
+        if SalesPriceLines.FindFirst() then                          //If at least one is found, retrieve from database.
+            exit(SalesPriceLines."Unit Price")                       //Then return the found Unit Price value.
         else begin
-            // altrimenti va a prendere l'articolo collegato
-            Item.Get(ItemNo);
-            // e ritorna il valore Unit price dell'articolo
-            exit(Item."Unit Price");
+            Item.Get(ItemNo);                                        //Otherwise, retrieve the linked item.
+            exit(Item."Unit Price");                                 //And return the Unit Price value of this item.
         end;
     end;
 

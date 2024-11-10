@@ -14,11 +14,9 @@ pageextension 50103 TE50103 extends "Item Card"
                     SalesPriceLinesList: Page "Sales Price Lines";
                     SalesPriceLines: Record "Sales Price Lines";
                 begin
-                    // filtro tutti i prezzi per l'articolo
-                    SalesPriceLines.SetRange("Item No.", Rec."No.");
-                    // imposto i filtri sulla pagina dei prezzi e la apro
-                    SalesPriceLinesList.SetTableView(SalesPriceLines);
-                    SalesPriceLinesList.Run();
+                    SalesPriceLines.SetRange("Item No.", Rec."No.");      //Filter all the prices for this item.
+                    SalesPriceLinesList.SetTableView(SalesPriceLines);    //Set the filters on the price page and open it.
+                    SalesPriceLinesList.Run();                            //Opening
                 end;
             }
         }

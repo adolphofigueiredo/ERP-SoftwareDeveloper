@@ -50,28 +50,27 @@ page 50100 "Sales Price Lines"                                       //Use comma
             }
         }
     }
-
     actions
     {
         area(Processing)
         {
             action("Create Sales Order")
             {
-                Caption = 'Create Sales Order';
-                Image = Create;
-                ApplicationArea = All;
-
-                // pulsante per creare un ordine di vendita a partire da righe di prezzo
+                Caption = 'Create Sales Order';                      //It's used to change the name when it is translated.
+                                                                     //'' These symbols are used to say that's a string inside.
+                Image = Create;                                      //Specificate an image icon to associate with this button.
+                ApplicationArea = All;                               //It is used to make the field visible, means that the
+                                                                     //control will always appear in the user interface.
+                                                                     //Button to create a sales order from price lines
                 trigger OnAction()
                 var
                     SalesPriceMgmt: Codeunit "Sales Price Management";
                     SalesPriceLines: Record "Sales Price Lines";
                 begin
-                    // Appunta i records che l'utente ha selezionato nella pagina e 
-                    // imposta un filtro sulla tabella per filtrare solo quei record
-                    Currpage.SetSelectionFilter(SalesPriceLines);
-                    // richiama la funzione per creare un ordine con i record prezzi selezionati dall'utente
-                    SalesPriceMgmt.CreateSalesOrderFromSalesPrice(SalesPriceLines);
+                    Currpage.SetSelectionFilter(SalesPriceLines);    //Notes the records selected by the user on the page and
+                                                                     //sets a filter on the table to only include those records.
+                    SalesPriceMgmt.CreateSalesOrderFromSalesPrice(SalesPriceLines); //Calls the function to create an order with
+                                                                                    //the price records selected by the user.
                 end;
             }
         }

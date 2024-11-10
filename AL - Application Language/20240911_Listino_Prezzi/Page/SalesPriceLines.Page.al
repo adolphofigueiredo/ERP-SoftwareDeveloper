@@ -6,7 +6,7 @@ page 50100 "Sales Price Lines"                                       //Use comma
     SourceTable = "Sales Price Lines";
     Caption = 'Lista Prezzi ITS';                                    //It's used to change the name when it is translated.
                                                                      //'' These symbols are used to say that's a string inside.
-                                                                     //Business central cannot handle a field null, so it inserts 0. hutel.
+                                                                     //Business central cannot handle a field null, so it inserts 0.
 
     layout
     {
@@ -55,18 +55,25 @@ page 50100 "Sales Price Lines"                                       //Use comma
     {
         area(Processing)
         {
-            action(ActionName)
+            action("Create Sales Order")
             {
+                Caption = 'Create Sales Order';
+                Image = Create;
                 ApplicationArea = All;
 
+                // pulsante per creare un ordine di vendita a partire da righe di prezzo
                 trigger OnAction()
+                var
+                    SalesPriceMgmt: Codeunit "Sales Price Management";
+                    SalesPriceLines: Record "Sales Price Lines";
                 begin
-
+                    // Appunta i records che l'utente ha selezionato nella pagina e 
+                    // imposta un filtro sulla tabella per filtrare solo quei record
+                    Currpage.SetSelectionFilter(SalesPriceLines);
+                    // richiama la funzione per creare un ordine con i record prezzi selezionati dall'utente
+                    SalesPriceMgmt.CreateSalesOrderFromSalesPrice(SalesPriceLines);
                 end;
             }
         }
     }
-
-    var
-        myInt: Integer;
 }

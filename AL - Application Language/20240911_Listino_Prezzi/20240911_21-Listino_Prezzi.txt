@@ -1,43 +1,64 @@
-Obiettivo: Si vuole creare un sistema di Listino prezzi, collegati a clienti ed articoli, 
-            in modo tale che all'inserimento di una riga di un ordine di vendita, il prezzo 
-            venga calcolato sulla base di questi listini inseriti manualmente dagli utenti 
+Obiettivo:
+Si vuole creare un sistema di Listino prezzi, collegati a clienti ed
+articoli, in modo tale che all'inserimento di una riga di un ordine di
+vendita, il prezzo venga calcolato sulla base di questi listini inseriti
+manualmente dagli utenti.
+
+Tabella Prezzi:
+
+- Creare una tabella "Sales Price Lines" con i seguenti campi:
+   Entry No.       : Integer  - Autoincrement e NON Editabile
+   Customer No.    : Code[20] - Collegata alla tabella Customer
+   Item No.        : Code[20] - Collegata alla tabella Item
+   Unit Price      : Decimal
+   Min. Qty        : Integer
+   Enabled         : Boolean
+
+- Collegarsi al trigger OnInsert della tabella "Sales Price Lines" e
+impostare il campo Enabled a true
+
+Pagina Prezzi:
+
+- Creare una pagina "Sales Price Lines List" di tipo LISTA che esponga
+tutti i campi della tabella "Sales Price Lines" e la pagina deve essere
+ricercabile da menu.
+
+Funzione di Calcolo Prezzo:
+
+- Creare una tableextension della tabella "Sales Line".
+
+- All'interno creare un funzione:
+   GetSalesUnitPrice(CustomerNo: Code[20]; ItemNo: Code[20];
+Quantity: Integer): Decimal
+
+La Funzione Deve:
+- Trovare le righe di "Sales Price Lines" abilitate, collegate alla
+coppia cliente-articolo e avente "Min. Qty" <= Quantity
+
+- Ritornare lo Unit Price più basso tra tutte le righe trovate, se non
+trova niente deve ritornare 0
+
+- Utilizzo della funzione:
+   Collegarsi al trigger OnAfterValidate del campo Quantity della Sales
+Line:
+      Se la Quantity inserita è maggiore di zero e se la riga è di tipo
+Articolo allora:
+         Lanciare la funzione GetSalesUnitPrice() con i parametri
+corretti
+         Se il valore ritornato è maggiore di 0 allora:
+	    Validare quel valore nel campo "Unit Price" della riga.
+            Dopo aver Validato lo "Unit Price" inserire una riga di
+commento con scritto "Prezzo unitario dell'articolo X scontato a Y".
+            Sostituire X e Y con i valori dell'articolo e dello "Unit
+Price".
+            Le righe di commento hanno SalesLine.Type :=
+SalesLine.Type::" ".
 
 
-Tabella Prezzi
-    - Creare una tabella "Sales Price Lines" con i seguenti campi:
-        Entry No.       : Integer  - Autoincrement e NON Editabile
-        Customer No.    : Code[20] - Collegata alla tabella Customer
-        Item No.        : Code[20] - Collegata alla tabella Item
-        Unit Price      : Decimal
-        Min. Qty        : Integer
-        Enabled         : Boolean
-    - Collegarsi al trigger OnInsert della tabella "Sales Price Lines" e impostare il campo Enabled a true
 
 
-Pagina Prezzi
-    - Creare una pagina "Sales Price Lines List" di tipo LISTA che esponga tutti i campi della tabella "Sales Price Lines"
-        la pagina deve essere ricercabile da menu
 
 
-Funzione di calcolo prezzo
-    - Creare una tableextension della tabella "Sales Line"
-    - All'interno creare un funzione:
-        GetSalesUnitPrice(CustomerNo: Code[20]; ItemNo: Code[20]; Quantity: Integer): Decimal
-        La funzione deve:
-        - Trovare le righe di "Sales Price Lines" abilitate, collegate alla coppia cliente-articolo e avente "Min. Qty" <= Quantity
-        - Ritornare lo Unit Price più basso tra tutte le righe trovate, se non trova niente deve ritornare 0
-
-
-Utilizzo della funzione
-    - Collegarsi al trigger OnAfterValidate del campo Quantity della Sales Line:
-        - Se la Quantity inserita è maggiore di zero e se la riga è di tipo Articolo allora:
-        - lanciare la funzione GetSalesUnitPrice() con i parametri corretti
-        - Se il valore ritornato è maggiore di 0 allora:
-            - Validare quel valore nel campo "Unit Price" della riga 
-            - Dopo aver Validato lo "Unit Price" inserire una riga di commento con scritto 
-                "Prezzo unitario dell'articolo X scontato a Y"
-                Sostituire X e Y con i valori dell'articolo e dello "Unit Price" 
-                Le righe di commento hanno SalesLine.Type := SalesLine.Type::" "
 
 
 Eliminazione righe collegate al cliente

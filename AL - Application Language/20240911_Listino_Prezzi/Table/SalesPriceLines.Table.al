@@ -3,7 +3,7 @@ table 50100 "Sales Price Lines"                                      //Use comma
     DataClassification = ToBeClassified;
     Caption = 'Sales Price Lines';                                   //It's used to change the name when it is translated.
                                                                      //'' These symbols are used to say that's a string inside.
-                                                                     //Business central cannot handle a field null, so it inserts 0. hutel.
+                                                                     //Business central cannot handle a field null, so it inserts 0.
     fields
     {
         field(1; "Entry No."; Integer)
@@ -39,6 +39,34 @@ table 50100 "Sales Price Lines"                                      //Use comma
         {
             Caption = 'Enabled';                                     //It's used to change the name when it is translated.
         }
+        field(7; "Starting Date"; Date)
+        {
+            Caption = 'Starting Date';
+        }
+        field(8; "Date Duration"; DateFormula)
+        {
+            Caption = 'Date Duration';
+
+            trigger OnValidate()
+            begin
+                TestField("Starting Date");
+                "Ending Date" := CalcDate("Date Duration", "Starting Date");
+            end;
+        }
+        field(9; "Ending Date"; Date)
+        {
+            Caption = 'Ending Date';
+
+            trigger OnValidate()
+            begin
+                Clear("Date Duration");
+            end;
+        }
+        field(10; "Creation User Id"; Text[50])
+        {
+            Caption = 'Creation User Id';
+            Editable = false;
+        }
     }
 
     keys
@@ -63,6 +91,7 @@ table 50100 "Sales Price Lines"                                      //Use comma
     begin
         Rec.Enabled := true;                                         //Condition created to activate the enabled field when a price is entered.
                                                                      //It is not necessary to write "Rec."
+        "Creation User Id" := UserId;
     end;
 
     trigger OnModify()

@@ -1,0 +1,110 @@
+L'obiettivo dell'esercizio è implementare il seguente processo:
+ 
+1.	Radio Show (Es. "Rock Classics"): Lo show radiofonico viene creato con tutti i dettagli necessari (durata, qta di canzoni, qta di annunci pubblicitari).
+2.	Playlist Document: Viene creato un documento per pianificare uno show radiofonico. Per esempio, un documento di playlist potrebbe avere lo show "Rock Classics" con data e orario di trasmissione (es. 06/07/23 alle 16:00) e le singole righe che indicano le risorse della playlist:
+o	Risorse (come il conduttore Josephine)
+o	Articoli – canzone, come Thunderstruck e Welcome to the Jungle
+o	Articoli – annunci pubblicitari
+3.	Registra: Il documento della playlist viene poi registrato nel sistema, e le righe della playlist vengono trasformate in Radio Show Entries, ossia le “movimentazioni” della messa in onda per il programma radiofonico.
+4.	Crea Fattura: Il sistema genera una fattura di vendita basata sulle informazioni registrate, andando a fatturare le righe di pubblicità andate in onda. La fattura avrà come cliente un’azienda di marketing impostata a Setup (nella pagina “Setup contabilità clienti” - "Ads Customer No.").
+5.	Registra Fattura Vendita: Il documento di fattura di vendita viene registrato tramite la procedura standard di registrazione della fattura di Business Central.
+6.	Evento OnAfterPostSalesLine: Durante il processo di registrazione standard, si attiva un evento chiamato OnAfterPostSalesLine (un evento di post-registrazione delle righe di vendita), che andrà ad impostare la riga di Radio Show Entry, collegata alla riga di vendita che si sta registrando, come fatturata.
+7.	Fattura Vendita Registrata: Dopo la registrazione standard si ottiene la fattura di vendita registrata.
+Esempi di Programmi:
+Alcuni esempi di programmi radiofonici che saranno utilizzati nell'esercizio includono:
+•	Rock Classics: Un programma musicale dedicato ai classici del rock.
+•	Morning Talk Show: Un talk show mattutino che include discussioni e musica.
+•	Pop Hits Hour: Un'ora dedicata ai più grandi successi pop del momento.
+•	Jazz Evening: Un programma serale con musica jazz e ospiti speciali.
+•	News & Talk: Un programma di attualità che include notizie e interviste.
+Esempi di Programmazione:
+Esempio 1 - Rock Classics:
+•	Programma: Morning Talk Show
+•	Durata: 2 ora
+•	Data/ora inizio: 06/07/23 16:00
+•	Data/ora fine: 06/07/23 18:00
+Playlist Line:
+•	Type: Resource; No.: Josephine // conduttore
+•	Type: Item; No.: Thunderstruck
+•	Type: Item; No.: Welcome to the Jungle
+•	Type: Item; No.: Annuncio Pubblicitario
+•	Type: Resource; No.: Paola // ospite
+
+Esempio 2 - Playlist Header:
+•	Programma: Morning Talk Show
+•	Durata: 1 ora
+•	Data/ora inizio: 07/07/23 09:00
+•	Data/ora fine: 07/07/23 10:00
+Playlist Line:
+•	Type: Resource; No.: Alessandro // conduttore
+•	Type: Item; No.: Imagine
+•	Type: Item; No.: Annuncio Pubblicitario
+•	Type: Item; No.: Stayin' Alive
+•	Type: Item; No.: Annuncio Pubblicitario
+•	Type: Resource; No.: Chiara // ospite speciale
+
+Richiesta
+Le tabelle e le pagine sono già create e strutturate (si possono provare su business central). 
+Bisogna implementare i seguenti punti:
+1) Trasformazione dei campi in FlowField
+Tabella: Radio Show
+•	Royalty Cost (Tipo: Decimal)
+Questo campo deve essere trasformato in un FlowField. Il valore sarà la somma di tutti i valori del campo Royalty Cost nella tabella Radio Show Entry, filtrato per:
+o	Type = Item
+o	Radio Show No. = Radio Show."No."
+•	Advertising Revenue (Tipo: Decimal)
+Anche questo campo deve essere trasformato in un FlowField. Il valore sarà la somma di tutti i valori del campo Advertising Revenue nella tabella Radio Show Entry, filtrato per:
+o	Type = Item
+o	Radio Show No. = Radio Show."No."
+Tabella: Playlist Header
+•	Royalty Cost (Tipo: Decimal)
+Convertire il campo in FlowField, dove il valore sarà la somma dei valori del campo Royalty Cost della tabella Playlist Line, filtrato per:
+o	Type = Item
+o	Playlist No. = Playlist Header."No."
+•	Advertising Revenue (Tipo: Decimal)
+Convertire questo campo in FlowField, con il valore pari alla somma dei valori del campo Advertising Revenue della tabella Playlist Line, filtrato per:
+o	Type = Item
+o	Playlist No. = Playlist Header."No."
+ 
+2) Aggiunta di trigger OnValidate
+Tabella: Playlist Header – Campo: Radio Show No. – Trigger OnValidate:
+•	Quando il campo Radio Show No. viene valorizzato, il sistema dovrà copiare i campi Description, Duration e Radio Show Type dal record collegato in Radio Show e impostarli nella testata Playlist Header.
+Tabella: Playlist Line – Campo No. – Trigger OnValidate:
+•	Se Type = Resource, recuperare il record dalla tabella Resource e impostare il nome della risorsa nel campo Description.
+•	Se Type = Item:
+o	Controllare che il campo Radio Show Type dell’Item corrisponda a quello della Playlist Header. In caso di discordanza, generare un errore.
+o	Impostare i campi Description, Duration e Data Format dall’Item nella riga Playlist Line.
+o	Assegnare il campo Royalty Cost dalla colonna Unit Cost dell'Item.
+o	Se il campo Data Format dell'Item è uguale a Advertisement, impostare il campo Advertising Revenue dalla colonna Unit Price dell'Item.
+
+3) Trigger di cancellazione e creazione Codeunit "Radio Show Management"
+•	Quando si cancella un record nella tabella Playlist Header, tutte le righe associate nella tabella Playlist Line devono essere eliminate.
+•	Creare una Codeunit chiamata Radio Show Management per gestire la logica del processo.
+
+4) Funzione di registrazione e validazione
+•	Aggiungere un pulsante "Registra" nella pagina Playlist Document. Questo pulsante deve chiamare la funzione Posting della Codeunit "Radio Show Management", passando il parametro corretto.
+•	Creare la funzione Posting(PlaylistHeader: Record "Playlist Header") nella Codeunit "Radio Show Management". La funzione deve:
+1.	Verificare che la somma della durata delle righe di Playlist Line (escluse le pubblicità) sia maggiore o uguale al valore del campo Music Min. Time della tabella Radio Show. Se non lo è, lanciare un errore.
+2.	Verificare che la somma della durata delle righe di Playlist Line di tipo pubblicità sia maggiore o uguale al campo Ads Min. Time della tabella Radio Show. Se non soddisfatto, lanciare un errore.
+3.	Verificare che ci sia almeno una riga di tipo Resource nelle Playlist Line. In caso contrario, lanciare un errore.
+4.	Per ogni Playlist Line associata alla testata che si sta registrando, creare un record nella tabella Radio Show Entry.
+5.	Dopo aver creato i record, eliminare la Playlist Header e tutte le Playlist Line collegate.
+
+5) Creazione della fattura
+•	Aggiungere un pulsante "Crea Fattura" nella pagina Radio Show Entries. Questo pulsante deve richiamare la funzione CreateInvoice della Codeunit "Radio Show Management".
+•	Creare la funzione CreateInvoice() nella Codeunit "Radio Show Management". Questa funzione deve:
+1.	Cercare tutte le Radio Show Entry con Type = Item, Data Format = Advertisement e Invoiced = No.
+2.	Se esistono risultati:
+	Creare un record nella tabella Sales Header, impostando Document Type = Invoice e Sell-to Customer No. = Setup."Ads Customer No.".
+	Per ogni Radio Show Entry trovata, creare una riga nella tabella Sales Line, collegata alla testata creata, impostando:
+	Type = Item
+	No. = Radio Show Entry."No."
+	Quantity = 1
+	Unit Price = Radio Show Entry."Advertising Revenue"
+	Radio Show Entry No. = Radio Show Entry."Entry No."
+
+6) Eventi e integrazione con fatturazione
+•	All'interno della Codeunit "Radio Show Management", collegarsi all'evento OnAfterPostSalesLine della Codeunit::"Sales-Post": se il campo SalesLine."Radio Show Entry No." ha un valore, trovare il record corrispondente nella tabella Radio Show Entry e impostare il campo Invoiced a Yes.
+
+
+

@@ -33,10 +33,10 @@ table 50102 "Playlist Header"
         field(50; "Start Time"; Time)                                //Creating a field in the table.
         {
             Caption = 'Start Time';                                  //It's used to change the name when it is translated.
-            trigger OnValidate()
+            trigger OnValidate()                                     //Check if the Start Time is not equal to 0 (meaning it has been set by the user)
             begin
-                if "Start Time" <> 0T then
-                    "End Time" := "Start Time" + Duration;
+                if "Start Time" <> 0T then                           //If Start Time is set and not equal to 0.
+                    "End Time" := "Start Time" + Duration;           //Calculate the End Time by adding the Duration to the Start Time.
             end;
         }
         field(60; "End Time"; Time)                                  //Creating a field in the table.

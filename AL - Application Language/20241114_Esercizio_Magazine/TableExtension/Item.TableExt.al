@@ -1,4 +1,4 @@
-tableextension 50125 ItemExt extends Item
+tableextension 50125 TE50100 extends Item
 {
     fields
     {
@@ -12,13 +12,13 @@ tableextension 50125 ItemExt extends Item
         }
         field(50127; "Published No."; Integer)
         {
-            FieldClass = FlowField;
-            CalcFormula = Sum("Magazine Entry"."Entry No." WHERE(Item = FIELD("No.")));
+            //FieldClass = FlowField;
+            //CalcFormula = Sum("Magazine Entry"."Entry No." WHERE("Item"."No." = field("No.")));
         }
         field(50128; "Publishing No."; Integer)
         {
-            FieldClass = FlowField;
-            CalcFormula = Sum("Publication Line"."Line No." WHERE("Item"."No." = FIELD("No.")));
+            //FieldClass = FlowField;
+            //CalcFormula = Sum("Publication Line"."Line No." WHERE("Item"."No." = field("No.")));
         }
         field(50129; "Publishing Max No."; Integer)
         {

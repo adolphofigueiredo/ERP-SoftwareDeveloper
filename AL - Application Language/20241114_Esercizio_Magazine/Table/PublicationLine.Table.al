@@ -20,25 +20,18 @@ table 50105 "Publication Line"
         {
             Caption = 'No.';
             TableRelation =
-            if (type = const("Article")) Item
-            else
-            if (type = const("Resource")) Resource
-            else
-            if (type = const("Ads")) Item;
-
+            if (type = const("Resource")) Resource else
+            Item;
             trigger OnValidate()
             var
                 ItemRec: Record Item;
                 ResourceRec: Record Resource;
             begin
-                case Type of
-                    Type::Article, Type::Ads:
-                        if ItemRec.Get("No.") then
-                            Description := ItemRec.Description;
-                    Type::Resource:
-                        if ResourceRec.Get("No.") then
-                            Description := ResourceRec.Name;
-                end;
+                if (Type = Type::Resource) and (ResourceRec.Get("No.")) then
+                    Description := ResourceRec.Name
+                else
+                    if (ItemRec.Get("No.")) then
+                        Description := ItemRec.Description;
             end;
         }
         field(5; Description; Text[100])

@@ -14,10 +14,18 @@ table 50104 "Publication Header"
             trigger OnValidate()
             var
                 MagazineRec: Record Magazine;
+                PublicationHdr: Record "Publication Header";
             begin
-                if MagazineRec.Get("Magazine No.") then begin
-                    Rec."Description" := StrSubstNo('%1 - %2', MagazineRec.Name, Rec."No.");
-                end;
+                MagazineRec.Get(Rec."Magazine No.");
+                Rec."Description" := MagazineRec.Name;
+
+                PublicationHdr.SetRange("Magazine No.", Rec."Magazine No.");
+                if PublicationHdr.FindLast() then
+                    Rec.Number := PublicationHdr.Number + 1
+                else
+                    Rec.Number := 1;
+
+                Rec.Description := MagazineRec.Name + ' - ' + Format(Rec.Number);
             end;
         }
         field(3; Number; Integer)

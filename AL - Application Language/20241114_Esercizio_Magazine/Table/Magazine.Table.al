@@ -28,4 +28,12 @@ table 50125 Magazine
 
         }
     }
+    keys
+    {
+        Key(Key1; "No.")
+        {
+            Clustered = true;
+        }
+
+    }
 }

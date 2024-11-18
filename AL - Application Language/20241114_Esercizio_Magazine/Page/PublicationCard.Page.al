@@ -46,9 +46,12 @@ page 50105 "Publication Card"
             {
                 ApplicationArea = All;
                 Caption = 'Registra';
+                Image = PostDocument;
                 trigger OnAction()
+                var
+                    MgzMgmt: Codeunit "Magazine Maganagement";
                 begin
-                    Message('Estou aqui!!!!!');
+                    MgzMgmt.Posting(Rec);
                 end;
             }
         }

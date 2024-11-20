@@ -80,9 +80,10 @@ table 50102 "Playlist Header"
     }
     trigger OnDelete()
     var
-        RadioShowManagement: Codeunit "Radio Show Management";
+        RadioShowMgmt: Codeunit "Radio Show Management";
+
     begin
         // Calls the Codeunit to delete associated Playlist Lines
-        RadioShowManagement.DeleteAssociatedPlaylistLines("No.");
+        RadioShowMgmt.DeleteAssociatedPlaylistLines("No.");
     end;
 }

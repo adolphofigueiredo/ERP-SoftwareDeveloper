@@ -88,4 +88,61 @@ codeunit 50104 "Radio Show Management"
         // Delete the Playlist Header.
         PlaylistHeader.Delete();
     end;
+
+    procedure CreateInvoice()
+    var
+        SalesHeaderRec: Record "Sales Header";
+        SalesLineRec: Record "Sales Line";
+        RadioShowEntryRec: Record "Radio Show Entry";
+        RadioShowSetupRec: Record "Sales & Receivables Setup";
+    begin
+        // Retrieve all Radio Show Entries where Type = Item, Data Format = Advertisement, and Invoiced = No.
+        RadioShowEntryRec.SetRange("Type", RadioShowEntryRec.Type::Item);
+        RadioShowEntryRec.SetRange("Data Format", RadioShowEntryRec."Data Format"::Advertisement);
+        RadioShowEntryRec.SetRange("Invoiced", false); // Only entries where Invoiced = No
+        if RadioShowEntryRec.FindSet() then
+            repeat
+                // Retrieve the setup record for Ads Customer No.
+                if not RadioShowSetupRec.Get() then
+                    Error('Configurazione radio show non trovata.');
+
+                // Create the Sales Header record for the invoice.
+                SalesHeaderRec.Init();
+                SalesHeaderRec."Document Type" := SalesHeaderRec."Document Type"::Invoice;
+                SalesHeaderRec."Sell-to Customer No." := RadioShowSetupRec."Ads Customer No."; // Use Ads Customer No.
+                SalesHeaderRec.Insert();
+
+                // Create the Sales Line record for each Radio Show Entry.
+                SalesLineRec.Init();
+                SalesLineRec."Type" := SalesLineRec."Type"::Item;
+                SalesLineRec."No." := RadioShowEntryRec."No."; // Use No. from Radio Show Entry
+                SalesLineRec.Quantity := 1;
+                SalesLineRec."Unit Price" := RadioShowEntryRec."Advertising Revenue"; // Use Advertising Revenue
+                SalesLineRec."Radio Show Entry No." := RadioShowEntryRec."Entry No."; // Link with Entry No.
+                SalesLineRec."Document Type" := SalesHeaderRec."Document Type";
+                SalesLineRec."Document No." := SalesHeaderRec."No."; // Link to the Sales Header
+                SalesLineRec.Insert();
+
+                // Mark the Radio Show Entry as invoiced.
+                RadioShowEntryRec."Invoiced" := true;
+                RadioShowEntryRec.Modify();
+            until RadioShowEntryRec.Next() = 0;
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnAfterPostSalesLine', '', false, false)]
+    local procedure OnAfterPostSalesLineHandler(SalesHeader: Record "Sales Header"; SalesLine: Record "Sales Line")
+    var
+        RadioShowEntryRec: Record "Radio Show Entry";
+    begin
+        // Check if the Sales Line has a "Radio Show Entry No."
+        if SalesLine."Radio Show Entry No." = 0 then
+            exit;
+
+        // Find the corresponding Radio Show Entry record.
+        if RadioShowEntryRec.Get(SalesLine."Radio Show Entry No.") then begin
+            // Update the "Invoiced" field to Yes.
+            RadioShowEntryRec."Invoiced" := true;
+            RadioShowEntryRec.Modify();
+        end;
+    end;
 }

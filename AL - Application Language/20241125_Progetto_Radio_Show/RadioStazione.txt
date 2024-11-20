@@ -105,32 +105,3 @@ o	Se il campo Data Format dell'Item è uguale a Advertisement, impostare il camp
 
 6) Eventi e integrazione con fatturazione
 •	All'interno della Codeunit "Radio Show Management", collegarsi all'evento OnAfterPostSalesLine della Codeunit::"Sales-Post": se il campo SalesLine."Radio Show Entry No." ha un valore, trovare il record corrispondente nella tabella Radio Show Entry e impostare il campo Invoiced a Yes.
-
-
-
-
-5) Creazione della fattura
-•	Aggiungere un pulsante "Crea Fattura" nella pagina Radio Show Entries. Questo
-pulsante deve richiamare la funzione CreateInvoice della Codeunit "Radio Show
-Management".
-•	Creare la funzione CreateInvoice() nella Codeunit "Radio Show Management". Questa
-funzione deve:
-1.	Cercare tutte le Radio Show Entry con Type = Item, Data Format = Advertisement e
-Invoiced = No.
-2.	Se esistono risultati:
-	Creare un record nella tabella Sales Header, impostando Document Type = Invoice e
-Sell-to Customer No. = Setup."Ads Customer No.".
-	Per ogni Radio Show Entry trovata, creare una riga nella tabella Sales Line,
-collegata alla testata creata, impostando:
-	Type = Item
-	No. = Radio Show Entry."No."
-	Quantity = 1
-	Unit Price = Radio Show Entry."Advertising Revenue"
-	Radio Show Entry No. = Radio Show Entry."Entry No."
-
-
-6) Eventi e integrazione con fatturazione
-•	All'interno della Codeunit "Radio Show Management", collegarsi all'evento
-OnAfterPostSalesLine della Codeunit::"Sales-Post": se il campo SalesLine.
-"Radio Show Entry No." ha un valore, trovare il record corrispondente nella tabella
-Radio Show Entry e impostare il campo Invoiced a Yes.

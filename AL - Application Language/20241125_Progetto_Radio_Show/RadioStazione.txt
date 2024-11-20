@@ -109,14 +109,6 @@ o	Se il campo Data Format dell'Item è uguale a Advertisement, impostare il camp
 
 
 
-
-
-
-
-
-
-
-
 5) Creazione della fattura
 •	Aggiungere un pulsante "Crea Fattura" nella pagina Radio Show Entries. Questo
 pulsante deve richiamare la funzione CreateInvoice della Codeunit "Radio Show
@@ -135,6 +127,7 @@ collegata alla testata creata, impostando:
 	Quantity = 1
 	Unit Price = Radio Show Entry."Advertising Revenue"
 	Radio Show Entry No. = Radio Show Entry."Entry No."
+
 
 6) Eventi e integrazione con fatturazione
 •	All'interno della Codeunit "Radio Show Management", collegarsi all'evento

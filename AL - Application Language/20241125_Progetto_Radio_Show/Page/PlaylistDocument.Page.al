@@ -62,18 +62,19 @@ page 50104 "Playlist Document"
 
     actions
     {
-        area(processing)                                             //Define a new action area for processing actions.
+        area(processing)                                                 //Define a new action area for processing actions.
         {
-            action(Posting)                                          //Define the Posting action.
+            action(Register)                                             //Define the Register action.
             {
-                Caption = 'Post Playlist';                           //Set the action's display name.
-                ApplicationArea = All;                               //Make this action available in all application areas.
-                Image = Post;                                        //Use a suitable icon for the action.
+                Caption = 'Registra';                                    //Set the action's display name in Italian.
+                ApplicationArea = All;                                   //Make this action available in all application areas.
+                Image = PostDocument;                                    //Use a suitable icon for the action.
 
                 trigger OnAction()
+                var
+                    RadioShowMgmt: Codeunit "Radio Show Management";     //Declare a variable for the Radio Show Management codeunit.
                 begin
-                    // Call the Posting function from the "Radio Show Management" Codeunit.
-                    Codeunit.Run(50104, Rec);
+                    RadioShowMgmt.Posting(Rec);                          //Call the Posting method, passing the current record (Playlist Header).
                 end;
             }
         }

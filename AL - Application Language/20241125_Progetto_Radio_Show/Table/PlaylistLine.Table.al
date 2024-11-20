@@ -22,6 +22,48 @@ table 50103 "Playlist Line"
             if (type = const("Item")) Item                           //If the "type" field is "Item," sets up a lookup into another table ("Item").
             else
             if (type = const("Resource")) Resource;                  //If the "type" field is "Item," sets up a lookup into another table ("Resource").
+
+            trigger OnValidate()
+            var
+                ResourceRec: Record Resource;
+                ItemRec: Record Item;
+                PlaylistHeaderRec: Record "Playlist Header";
+            begin
+                case Type of
+                    Type::Resource:
+                        begin
+                            if ResourceRec.Get("No.") then
+                                Description := ResourceRec.Name
+                        end;
+
+                    Type::Item:
+                        begin
+                            if ItemRec.Get("No.") then begin
+                                if PlaylistHeaderRec.Get("Playlist No.") then begin
+                                    if ItemRec."Radio Show Type" <> PlaylistHeaderRec."Radio Show Type" then
+                                        Error('Il tipo di programma dell''''articolo (%1) non corrisponde al tipo di programma della Playlist Header (%2).',
+                                ItemRec."Radio Show Type",
+                                PlaylistHeaderRec."Radio Show Type"
+                            );
+                                end else
+                                    Error('La Playlist Header con il numero %1 non è stata trovata.', "Playlist No.");
+
+                                Description := ItemRec.Description;
+                                Duration := ItemRec.Duration;
+                                "Data Format" := ItemRec."Data Format";
+
+                                "Royalty Cost" := ItemRec."Unit Cost";
+
+                                if ItemRec."Data Format" = "Data Format"::Advertisement then
+                                    "Advertising Revenue" := ItemRec."Unit Price";
+                            end else
+                                Error('L''''articolo con il numero %1 non è stato trovato.', "No.");
+                        end;
+
+                    else
+                        Error('Tipo selezionato non valido. Sono supportati solo Resource o Item.');
+                end;
+            end;
         }
         field(30; "Data Format"; Enum "Data Format Type")            //Creating a field in the table.
         {

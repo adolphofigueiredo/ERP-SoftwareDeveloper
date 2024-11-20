@@ -10,6 +10,15 @@ table 50102 "Playlist Header"
         {
             Caption = 'Radio Show No.';                              //It's used to change the name when it is translated.
             TableRelation = "Radio Show"."No.";                      //Sets up a lookup into another table ("Radio Show"."No.").
+            Trigger OnValidate()
+            var
+                RadioShowRec: Record "Radio Show";
+            begin
+                RadioShowRec.Get(Rec."Radio Show No.");
+                Rec.Description := RadioShowRec.Name;
+                Rec.Duration := RadioShowRec."Run Time";
+                Rec."Radio Show Type" := RadioShowRec.Type;
+            end;
         }
         field(11; "Radio Show Type"; Code[10])                       //Creating a field in the table.
         {
@@ -48,10 +57,16 @@ table 50102 "Playlist Header"
         field(70; "Royalty Cost"; Decimal)                           //Creating a field in the table.
         {
             Caption = 'Royalty Cost';                                //It's used to change the name when it is translated.
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = Sum("Playlist Line"."Royalty Cost" WHERE("Type" = CONST(Item), "Playlist No." = FIELD("No.")));
         }
         field(80; "Advertising Revenue"; Decimal)                    //Creating a field in the table.
         {
             Caption = 'Advertising Revenue';                         //It's used to change the name when it is translated.
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = Sum("Playlist Line"."Advertising Revenue" WHERE("Type" = CONST(Item), "Playlist No." = FIELD("No.")));
         }
     }
     keys
@@ -63,4 +78,11 @@ table 50102 "Playlist Header"
                                                                      //time it takes to retrieve records.
         }
     }
+    trigger OnDelete()
+    var
+        RadioShowManagement: Codeunit "Radio Show Management";
+    begin
+        // Calls the Codeunit to delete associated Playlist Lines
+        RadioShowManagement.DeleteAssociatedPlaylistLines("No.");
+    end;
 }

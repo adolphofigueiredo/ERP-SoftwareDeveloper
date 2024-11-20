@@ -59,4 +59,23 @@ page 50104 "Playlist Document"
             }
         }
     }
+
+    actions
+    {
+        area(processing)                                             //Define a new action area for processing actions.
+        {
+            action(Posting)                                          //Define the Posting action.
+            {
+                Caption = 'Post Playlist';                           //Set the action's display name.
+                ApplicationArea = All;                               //Make this action available in all application areas.
+                Image = Post;                                        //Use a suitable icon for the action.
+
+                trigger OnAction()
+                begin
+                    // Call the Posting function from the "Radio Show Management" Codeunit.
+                    Codeunit.Run(50104, Rec);
+                end;
+            }
+        }
+    }
 }

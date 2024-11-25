@@ -62,4 +62,23 @@ page 50106 "Radio Show Entries"
             }
         }
     }
+    actions
+    {
+        area(processing)                                                 //Define a new action area for processing actions.
+        {
+            action(CreateInvoice)
+            {
+                Caption = 'CreateInvoice';
+                ApplicationArea = All;
+                //Image = ;                                    
+
+                trigger OnAction()
+                var
+                    RadioShowMgmt: Codeunit "Radio Show Management";     //Declare a variable for the Radio Show Management codeunit.
+                begin
+                    RadioShowMgmt.CreateInvoice();                          //Call the Posting method, passing the current record (Playlist Header).
+                end;
+            }
+        }
+    }
 }

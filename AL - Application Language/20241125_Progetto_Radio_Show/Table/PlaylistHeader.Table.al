@@ -57,14 +57,12 @@ table 50102 "Playlist Header"
         field(70; "Royalty Cost"; Decimal)                           //Creating a field in the table.
         {
             Caption = 'Royalty Cost';                                //It's used to change the name when it is translated.
-            Editable = false;
             FieldClass = FlowField;
             CalcFormula = Sum("Playlist Line"."Royalty Cost" WHERE("Type" = CONST(Item), "Playlist No." = FIELD("No.")));
         }
         field(80; "Advertising Revenue"; Decimal)                    //Creating a field in the table.
         {
             Caption = 'Advertising Revenue';                         //It's used to change the name when it is translated.
-            Editable = false;
             FieldClass = FlowField;
             CalcFormula = Sum("Playlist Line"."Advertising Revenue" WHERE("Type" = CONST(Item), "Playlist No." = FIELD("No.")));
         }

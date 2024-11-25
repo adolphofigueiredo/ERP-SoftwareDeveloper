@@ -34,7 +34,6 @@ table 50100 "Radio Show"
         field(10; "Royalty Cost"; Decimal)                           //Creating a field in the table.
         {
             Caption = 'Royalty Cost';                                //It's used to change the name when it is translated.
-            Editable = false;
             FieldClass = FlowField;
             CalcFormula = Sum("Radio Show Entry"."Royalty Cost" WHERE("Type" = CONST(Item), "Radio Show No." = FIELD("No.")));
 
@@ -42,7 +41,6 @@ table 50100 "Radio Show"
         field(11; "Advertising Revenue"; Decimal)                    //Creating a field in the table.
         {
             Caption = 'Advertising Revenue';                         //It's used to change the name when it is translated.
-            Editable = false;
             FieldClass = FlowField;
             CalcFormula = Sum("Radio Show Entry"."Advertising Revenue" WHERE("Type" = CONST(Item), "Radio Show No." = FIELD("No.")));
         }

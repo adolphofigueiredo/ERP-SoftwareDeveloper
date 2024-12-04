@@ -80,6 +80,16 @@ pageextension 50100 ClientListExt extends "Customer List"
 
                 end;
             }
+            action(DeleteAPITrue)
+            {
+                Caption = 'Cancellare i Clienti - API'; //Estou alterando onome do botao
+                ApplicationArea = All; //estou garantindo que o botao seja visivel
+                Image = DeleteQtyToHandle; //Estou vinculando uma imagem ao botao
+                trigger OnAction()
+                begin
+                    Message('xxxxx');
+                end;
+            }
         }
     }
 

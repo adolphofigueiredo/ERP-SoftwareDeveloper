@@ -18,76 +18,117 @@ pageextension 50100 ClientListExt extends "Customer List"
                     content: HttpContent;
                     responseTxt: Text;
                     JToken: JsonToken;
-
+                    JToken2: JsonToken;
                     JArray: JsonArray;
-                /*
-                JToken2: JsonToken;
+                    JObject: JsonObject;
+                    Id: Code[20];
+                    Name: Text;
+                    Username: Text;
+                    Street: Text;
+                    Suite: Text;
+                    City: Text;
+                    Zipcode: Text;
+                    CompanyName: Text;
+                    email: Text;
+                    Phone: Text;
+                    HomePage: Text;
+                    Customer: Record Customer;
+                    CountRecord: Integer;
 
-                JObject: JsonObject;
-                Id: Integer;
-                UserId: Integer;
-                Title: Text;
-                Body: Text;
-                Post: Record Post;
-                CountRecord: Integer;
-                */
                 begin
-                    URL := 'https://jsonplaceholder.typicode.com/users'; //Estou dizendo qual é a URL que deve ser usada para se comunicar com a API
+                    URL := 'https://jsonplaceholder.typicode.com/users';//Estou dizendo qual é a URL que deve ser usada para se comunicar com a API
                     client.Get(URL, response); //Estou pegando as informacoes na url desejada e armazenando a resposta na variavel resposta
 
-                    if not response.IsSuccessStatusCode() then begin //Estou testando o campo resposta para ver se tem algum erro
-                        Error(response.ReasonPhrase()); //no caso de dar erro estou dizendo o motivo
+                    if not response.IsSuccessStatusCode() then begin    //Estou testando o campo resposta para ver se tem algum erro
+                        Error(response.ReasonPhrase());         //no caso de dar erro estou dizendo o motivo
                     end;
 
-                    content := response.Content(); //Estou inserindo o conteudo da resposta em uma variavel.
-                    content.ReadAs(responseTxt); //Estou transformando o valor recebido na variavel em texto.
-                    Message(responseTxt); //Estou fazendo um pop up com o conteudo da resposta.
+                    content := response.Content();              //Estou inserindo o conteudo da resposta em uma variavel.
+                    content.ReadAs(responseTxt);                //Estou transformando o valor recebido na variavel em texto.
+                    Message(responseTxt);                       //Estou fazendo um pop up com o conteudo da resposta.
 
-                    JToken.ReadFrom(responseTxt); //Estou transformando o texto em Token.
+                    JToken.ReadFrom(responseTxt);               //Estou transformando o texto em Token.
+                    JArray := JToken.AsArray();                 //Estou transformando o Token em Array.
 
-                    JArray := JToken.AsArray(); //Estou transformando o Token em Array.
 
-                    /*
-                    // ciclo l'array
+
                     foreach JToken2 in JArray do begin
-                        // conversione di JToken2 in JObject
-                        JObject := JToken2.AsObject();
-                        // Preso il valore relativo alla chiave 'id'
-                        JObject.Get('id', JToken);
-                        // ho convertito il token in valore intero
-                        Id := JToken.AsValue().AsInteger();
-                        // conversione degli altri valori dell'oggetto
-                        JObject.Get('userId', JToken);
-                        UserId := JToken.AsValue().AsInteger();
-                        JObject.Get('title', JToken);
-                        Title := JToken.AsValue().AsText();
-                        JObject.Get('body', JToken);
-                        Body := JToken.AsValue().AsText();
+                        JObject := JToken2.AsObject();          //Conversione di JToken2 in JObject
 
-                        // scrivere un record con i valori presi dall'oggetto JSON
-                        Post.Id := 0;
-                        Post."External Id" := Id;
-                        Post."User Id" := UserId;
-                        Post.Title := Title;
-                        Post.Body := Body;
-                        Post.Insert();
+                        JObject.Get('id', JToken);              //Preso il valore relativo alla chiave 'id'
+                        Id := JToken.AsValue().AsCode();        //Ho convertito il token in valore code
+
+                        JObject.Get('name', JToken);
+                        Name := JToken.AsValue().AsText();
+
+                        JObject.Get('username', JToken);
+                        Username := JToken.AsValue().AsText();
+
+                        JObject.Get('email', JToken);
+                        email := JToken.AsValue().AsText();
+
+                        JObject.Get('phone', JToken);
+                        Phone := JToken.AsValue().AsText();
+
+                        JObject.Get('website', JToken);
+                        HomePage := JToken.AsValue().AsText();
+
+
+                        JObject.Get('address', JToken);
+                        JObject := JToken.AsObject();
+
+                        JObject.Get('street', JToken);
+                        Street := JToken.AsValue().AsText();
+
+                        JObject.Get('suite', JToken);
+                        Suite := JToken.AsValue().AsText();
+
+                        JObject.Get('city', JToken);
+                        City := JToken.AsValue().AsText();
+
+                        JObject.Get('zipcode', JToken);
+                        Zipcode := JToken.AsValue().AsText();
+
+                        JObject := JToken2.AsObject();          //Conversione di JToken2 in JObject
+                        JObject.Get('company', JToken);
+                        JObject := JToken.AsObject();
+                        JObject.Get('name', JToken);
+                        CompanyName := JToken.AsValue().AsText();
+
+                        Customer."No." := '';                     //MAIS UMA ATUALIZACAO NA HORA QUE ESTIVER INSERINDO OS CAMPOS E TIVER TRUE NO INSERT  
+                        //Customer."No." := Id;                   //Scrivere un record con i valori presi dall'oggetto JSON
+                        Customer.API := true;
+                        Customer.Contact := Name;
+                        Customer."Name 2" := Username;
+                        Customer."E-Mail" := email;
+                        Customer."Phone No." := Phone;
+                        Customer."Home Page" := HomePage;
+                        Customer.Address := Street;
+                        Customer."Address 2" := Suite;
+                        Customer.City := City;
+                        Customer."Post Code" := Zipcode;
+                        Customer.Name := CompanyName;
+
+
+                        //Customer.Insert();
+                        Customer.Insert(true);          //So usar com true quando estiver com os campos obrogatorios, isso ativa a validacao de campos.
+
                         CountRecord += 1;
                     end;
                     Message('Record Inseriti %1', CountRecord);
-                end;*/
-
-
-
                 end;
             }
             action(DeleteAPITrue)
             {
-                Caption = 'Cancellare i Clienti - API'; //Estou alterando onome do botao
-                ApplicationArea = All; //estou garantindo que o botao seja visivel
-                Image = DeleteQtyToHandle; //Estou vinculando uma imagem ao botao
+                Caption = 'Cancellare i Clienti - API';         //Estou alterando onome do botao
+                ApplicationArea = All;                          //Estou garantindo que o botao seja visivel
+                Image = DeleteQtyToHandle;                      //Estou vinculando uma imagem ao botao
                 trigger OnAction()
+                var
+                    Customer: Record Customer;
                 begin
-                    Message('xxxxx');
+                    Customer.SetRange(API, true);
+                    Customer.DeleteAll();
                 end;
             }
         }

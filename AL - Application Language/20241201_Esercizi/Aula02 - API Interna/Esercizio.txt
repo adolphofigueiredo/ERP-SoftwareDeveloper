@@ -1,0 +1,15 @@
+Creare un'API interna a BC che risponde al seguente link:
+http://bcserver:7048/BC/api/companyxy/vendita/v1.0/orders?tenant=default
+
+L'API deve leggere i record della tabella "Sales Header" filtrata per "Document Type"=Order
+
+L'API deve rispondere con il seguente body:
+{
+	"customer_name": Sell-To Customer Name,
+	"customer_no": Sell-To Customer No.,
+	"order_no": No.,
+	"external_document": External Document No.,
+	"document_date": Document Date,
+	"status": Status
+	"amount": Amount
+}

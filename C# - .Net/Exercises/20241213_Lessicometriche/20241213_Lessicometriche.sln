@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20241213_Lessicometriche", "20241213_Lessicometriche.csproj", "{41E99561-044C-4940-9B70-CD4B36A951C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41E99561-044C-4940-9B70-CD4B36A951C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E99561-044C-4940-9B70-CD4B36A951C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E99561-044C-4940-9B70-CD4B36A951C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E99561-044C-4940-9B70-CD4B36A951C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A35185D0-197F-44D3-A643-28503F22DE91}
+	EndGlobalSection
+EndGlobal

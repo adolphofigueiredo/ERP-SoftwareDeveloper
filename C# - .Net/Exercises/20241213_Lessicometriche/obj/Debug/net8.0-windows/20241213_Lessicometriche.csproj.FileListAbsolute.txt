@@ -1,0 +1,17 @@
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\_20241213_Lessicometriche.Form1.resources
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\20241213_Lessicometriche.csproj.GenerateResource.cache
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\20241213_Lessicometriche.GeneratedMSBuildEditorConfig.editorconfig
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\20241213_Lessicometriche.AssemblyInfoInputs.cache
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\20241213_Lessicometriche.AssemblyInfo.cs
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\20241213_Lessicometriche.csproj.CoreCompileInputs.cache
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\20241213_Lessicometriche.sourcelink.json
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\bin\Debug\net8.0-windows\20241213_Lessicometriche.exe
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\bin\Debug\net8.0-windows\20241213_Lessicometriche.deps.json
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\bin\Debug\net8.0-windows\20241213_Lessicometriche.runtimeconfig.json
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\bin\Debug\net8.0-windows\20241213_Lessicometriche.dll
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\bin\Debug\net8.0-windows\20241213_Lessicometriche.pdb
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\20241213_Lessicometriche.dll
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\refint\20241213_Lessicometriche.dll
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\20241213_Lessicometriche.pdb
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\20241213_Lessicometriche.genruntimeconfig.cache
+C:\ERP-SoftwareDeveloper\C# - .Net\Exercises\20241213_Lessicometriche\obj\Debug\net8.0-windows\ref\20241213_Lessicometriche.dll

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Crea l'iframe dinamicamente
+            const iframe = document.createElement("iframe");
+            iframe.src = "http://localhost:3000/public/question/8928a9a6-e246-4ccc-86fc-3ae3377671fb";
+            iframe.id = "grafico-andamento-produzione";
+            iframe.frameBorder = "0";
+            iframe.width = "600";
+            iframe.height = "400";
+            iframe.allowTransparency = true;
+
+            // Aggiungi l'iframe sotto l'etichetta <h1>
+            const container = document.querySelector(".newUser");
+            container.insertAdjacentElement("afterend", iframe);
+
+            // Aggiorna l'iframe ogni 5 secondi
+    setInterval(function () {
+        // Opzionale: modifica del timestamp per evitare la cache
+        const timestamp = new Date().getTime();
+        iframe.src = `http://localhost:3000/public/question/ffac126a-b2c1-453b-b434-859a3f0ea6ad?timestamp=${timestamp}`;
+    }, 30000); // Intervallo di 5 secondi
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">BI Dashboard</div>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="overview">
+            <h1>Overview</h1>
+            <div class="card-container">
+                <div class="card">
+                    <h2>Total Sales</h2>
+                    <p>$120,000</p>
+                </div>
+                <div class="card">
+                    <h2 class="newUser">New Users</h2>
+                    <p>450</p>
+                </div>
+                <div class="card">
+                    <h2>Active Sessions</h2>
+                    <p>1,245</p>
+                </div>
+            </div>
+        </section>
+        <section id="analytics">
+            <h1>Analytics</h1>
+            <div class="chart-container">
+                <!-- Placeholder for charts -->
+                <div class="chart">Chart 1</div>
+                <div class="chart">Chart 2</div>
+            </div>
+        </section>
+        <section id="reports">
+            <h1>Reports</h1>
+            <p>Download the latest reports from the dashboard.</p>
+            <button>Download Report</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 BI Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html>

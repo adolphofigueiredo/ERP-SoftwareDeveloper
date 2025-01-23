@@ -1,0 +1,33 @@
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+
+# Pipenv
+Pipfile.lock
+
+# Test output
+nosetests.xml
+coverage.xml
+*.cover
+
+# IDE and editor settings
+.idea/
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Flask instance and config folders
+instance/
+*.log
+
+# Misc
+*.bak
+*.swp
+.DS_Store
